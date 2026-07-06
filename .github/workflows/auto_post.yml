@@ -1,41 +1,37 @@
 name: Auto News Poster
 
 on:
-  # 30 минут тутамд автоматаар ажиллана
+  # 45 минут тутамд ажиллана (GitHub-ийн 2000 минут/сар лимитэд багтаана)
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "*/45 * * * *"
 
-  # Гараар ажиллуулах товч (тест хийхэд)
   workflow_dispatch:
 
 jobs:
   post-news:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # posted_ids.json файл шинэчлэхэд хэрэгтэй
+      contents: write
 
     steps:
-      # 1. Кодыг татах
       - name: Checkout кодыг татах
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # 2. Python тохируулах
       - name: Python тохируулах
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
           cache: "pip"
 
-      # 3. Хамааралт library-уудыг суулгах
       - name: Dependencies суулгах
         run: pip install -r requirements.txt
 
-      # 4. Үндсэн кодыг ажиллуулах
       - name: Мэдээ татаж постлох
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
           IG_ACCOUNT_ID: ${{ secrets.IG_ACCOUNT_ID }}
@@ -45,11 +41,10 @@ jobs:
           X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
         run: python main.py
 
-      # 5. Постолсон ID-уудыг repository-д хадгалах (давхардал хамгаалалт)
       - name: posted_ids.json commit хийх
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add posted_ids.json || true
-          git diff --staged --quiet || git commit -m "📰 posted_ids шинэчлэгдлээ [skip ci]"
+          git diff --staged --quiet || git commit -m "posted_ids шинэчлэгдлээ [skip ci]"
           git push || true
