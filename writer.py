@@ -14,14 +14,20 @@ log = logging.getLogger(__name__)
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 GROQ_MODEL = "llama-3.3-70b-versatile"
 
-SYSTEM_PROMPT = """You are a professional English-to-Mongolian news translator.
+SYSTEM_PROMPT = """You are a senior Mongolian journalist and professional English-to-Mongolian news translator.
 
-STRICT RULES:
-1. TRANSLATE the given news into natural Mongolian (Cyrillic). Do NOT invent facts that are not in the source.
-2. Keep ALL person names, team names, band names, company names, league names in English/Latin script exactly as written (e.g. Embiid, Lakers, NBA, Taylor Swift, Reuters). NEVER transliterate names into Cyrillic.
-3. Country and city names should be written in Mongolian (London -> Лондон, Beijing -> Бээжин).
-4. Format the output as 2-4 short paragraphs or dash (-) bullet lines. No title/headline line.
-5. Output ONLY the Mongolian translation. No preamble, no explanation, no quotes, no JSON, no markdown fences, no English sentences."""
+Translate English news into natural Mongolian suitable for Telegram.
+
+RULES:
+1. Never invent facts.
+2. Rewrite naturally instead of word-for-word.
+3. Keep all person names, companies, teams, bands, products and organizations exactly in English.
+4. Translate countries and cities into Mongolian.
+5. If the source is short, improve flow only. Never add new facts.
+6. Output 3-5 short paragraphs.
+7. No title.
+8. No markdown.
+9. Output only Mongolian."""
 
 
 def _cyrillic_ratio(text: str) -> float:
@@ -50,15 +56,13 @@ def _clean_output(text: str) -> str:
 
 
 def _is_good_mongolian(text: str) -> bool:
-    """
-    Гаралт хангалттай сайн Монгол текст мөн үү?
-    - 80+ тэмдэгт урттай
-    - Үсгийн 50%+ нь кирилл (нэрс латин байж болох тул 50% хангалттай)
-    """
-    if len(text) < 80:
+    if len(text.split()) < 60:
         return False
-    if _cyrillic_ratio(text) < 0.5:
+    if _cyrillic_ratio(text) < 0.65:
         return False
+    for bad in ["Here is","Translation","Орчуулга","Монгол орчуулга","Sure!","Certainly"]:
+        if bad.lower() in text.lower():
+            return False
     return True
 
 
@@ -73,10 +77,21 @@ def write_article(news: dict) -> dict:
         log.warning("GROQ_API_KEY байхгүй — Google Translate ашиглана")
         return _fallback(news)
 
-    user_prompt = f"""Translate this news into Mongolian following the rules.
+    user_prompt = f"""Translate the following news into fluent Mongolian.
 
-TITLE: {news['title']}
-CONTENT: {news.get('summary', '')}"""
+Title:
+{news['title']}
+
+Content:
+{news.get('summary','')}
+
+Requirements:
+- Natural Mongolian.
+- No title.
+- No explanation.
+- Do not invent facts.
+- Write 3-5 short paragraphs.
+"""
 
     try:
         response = requests.post(
@@ -117,9 +132,15 @@ CONTENT: {news.get('summary', '')}"""
 
 
 def _fallback(news: dict) -> dict:
-    """Google Translate-ээр энгийн орчуулга"""
+    """Google Translate fallback"""
     from modules.translator import translate_to_mongolian
     translated = translate_to_mongolian(news)
-    article = f"{translated.get('title_mn', '')}\n\n{translated.get('summary_mn', '')}"
-    news["article_mn"] = article.strip()
+    article = translated.get("summary_mn","").strip()
+    if len(article.split()) < 40:
+        article = (
+            translated.get("title_mn","")
+            + "\n\n"
+            + translated.get("summary_mn","")
+        )
+    news["article_mn"] = article
     return news
