@@ -8,7 +8,6 @@ Model: llama-3.3-70b-versatile (хүчирхэг, хурдан, үнэгүй tie
 """
 
 import os
-import json
 import random
 import logging
 import requests
@@ -31,8 +30,7 @@ SYSTEM_PROMPTS = {
 - Гарчиг ХЭРЭГГҮЙ — шууд агуулгаараа эхэл
 - 4-6 доод зураас (-) мөрөнд хуваа, мөр бүр өөр өнцгөөс өгүүл (тоглолтын явц, тоглогчийн гүйцэтгэл, багийн асуудал, дүгнэлт гэх мэт)
 - Тоо баримт, оноо, статистик дурд (RSS-ийн эх мэдээллээс гаргаж болох бол)
-- Дотоод хэллэг ашигла: "тоглолт хийх", "нөлөөгөө үзүүлэх", "гараагаа алдах" гэх мэт
-- ЗААВАЛ JSON форматаар хариул""",
+- Дотоод хэллэг ашигла: "тоглолт хийх", "нөлөөгөө үзүүлэх", "гараагаа алдах" гэх мэт""",
 
     "music": """Чи хөгжим, шоу бизнесийн мэдээллийг сонирхолтой хэлбэрээр дамжуулдаг 
 Монгол контент бичигч. Залуучуудын хэллэгээр, follow хийхэд таатай байдлаар бичдэг.
@@ -42,8 +40,7 @@ SYSTEM_PROMPTS = {
 - Дууны нэр, киноны нэрийг "" хашилтад Англи хэвээр бич
 - Гарчиг ХЭРЭГГҮЙ — шууд агуулгаараа эхэл
 - 3-5 доод зураас (-) мөрөнд хуваа
-- Хөнгөн, яриа шиг байдлаар бич
-- ЗААВАЛ JSON форматаар хариул""",
+- Хөнгөн, яриа шиг байдлаар бич""",
 
     "world_news": """Чи олон улсын мэдээллийг дэлгэрэнгүй тайлбарладаг Монгол сэтгүүлч. 
 Нейтрал боловч контекст, дэвсгэр мэдээлэл нэмж бичдэг.
@@ -52,8 +49,7 @@ SYSTEM_PROMPTS = {
 - Хүний нэр, байгууллагын нэрийг Англи хэвээр нь бич (жишээ: Trump, NATO, Reuters)
 - Улс, хотын нэрийг Монгол дуудлагаар бич (жишээ: Лондон, Бээжин)
 - Гарчиг ХЭРЭГГҮЙ — шууд агуулгаараа эхэл
-- 3-5 доод зураас (-) мөрөнд хуваа, дэвсгэр контекст нэмж тайлбарла
-- ЗААВАЛ JSON форматаар хариул"""
+- 3-5 доод зураас (-) мөрөнд хуваа, дэвсгэр контекст нэмж тайлбарла"""
 }
 
 # Хувилбар нэмэх зорилготой "өнцөг" саналууд — ижил загвар давтагдахгүйн тулд
@@ -64,16 +60,6 @@ OPENING_STYLES = [
     "харьцуулалт хийж эхэл (өмнөх тоглолт/үйл явдалтай)",
     "тоо баримтаас эхэл",
 ]
-
-
-def _clean_json_response(raw: str) -> str:
-    """Groq-ийн хариунаас markdown code fence арилгах"""
-    raw = raw.strip()
-    if "```" in raw:
-        raw = raw.split("```")[1]
-        if raw.startswith("json"):
-            raw = raw[4:]
-    return raw.strip()
 
 
 def write_article(news: dict) -> dict:
@@ -99,10 +85,8 @@ def write_article(news: dict) -> dict:
 
 Энэ удаагийн нийтлэлээ ингэж {opening_style}.
 
-ЗӨВХӨН дараах JSON форматаар хариул, өөр текст бүү нэмж бич:
-{{
-  "article_mn": "Доод зураас (-) мөрүүдтэй, дэлгэрэнгүй Монгол нийтлэлийн бүтэн текст энд"
-}}"""
+ЧУХАЛ: Зөвхөн нийтлэлийн бүтэн текстийг шууд бич. JSON, markdown code block,
+хашилт, өөр ямар ч нэмэлт форматгүйгээр — зөвхөн цэвэр текст."""
 
     try:
         response = requests.post(
@@ -125,11 +109,15 @@ def write_article(news: dict) -> dict:
         response.raise_for_status()
         data = response.json()
 
-        raw = data["choices"][0]["message"]["content"]
-        cleaned = _clean_json_response(raw)
-        result = json.loads(cleaned)
+        article_text = data["choices"][0]["message"]["content"].strip()
 
-        news["article_mn"] = result.get("article_mn", "").strip()
+        # Хэрэв санамсаргүй markdown code fence ирвэл цэвэрлэнэ
+        if article_text.startswith("```"):
+            article_text = article_text.strip("`").strip()
+            if article_text.lower().startswith("json") or article_text.lower().startswith("text"):
+                article_text = article_text.split("\n", 1)[1] if "\n" in article_text else article_text
+
+        news["article_mn"] = article_text
         log.info(f"Groq нийтлэл бичигдлээ: {news['article_mn'][:60]}...")
         return news
 
