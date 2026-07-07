@@ -207,3 +207,71 @@ def _fallback(news: dict) -> dict:
         news["article_mn"] = ""
 
     return news
+
+
+def filter_relevant_news(news_list: list, max_candidates: int = 20) -> list:
+    """
+    Groq-д БАГЦААР (нэг л дуудлага) мэдээнүүдийг харуулж, Монгол ерөнхий
+    уншигчдад үнэхээр сонирхолтой/ач холбогдолтой зүйлийг сонгуулна.
+    Жижиг, сонин бус мэдээг (жишээ: "тоглогч дасгалжуулалтад ирсэн" гэх мэт)
+    шүүж хаяна.
+
+    API key байхгүй, алдаа гарах, эсвэл хоосон буцах үед АЮУЛГҮЙ fallback:
+    бүх мэдээг хэвээр нь буцаана (систем зогсохгүй, зөвхөн шүүлтүүр алгасна).
+    """
+    api_key = os.environ.get("GROQ_API_KEY")
+    if not api_key or not news_list:
+        return news_list
+
+    candidates = news_list[:max_candidates]
+    listing = "\n".join(
+        f"{i+1}. [{n.get('category_mn', '')}] {n['title']}"
+        for i, n in enumerate(candidates)
+    )
+
+    prompt = f"""Доорх мэдээнүүдээс Монгол ерөнхий уншигчдад ҮНЭХЭЭР
+сонирхолтой, ач холбогдолтой зүйлийг сонго. Жижиг/өдөр тутмын, сонин
+бус мэдээг (жишээ: бэлтгэл, дасгалжуулалт, минорит зочилсон гэх мэт)
+хасаарай.
+
+{listing}
+
+ЗӨВХӨН сонгосон дугааруудыг таслалаар (,) тусгаарлан бич.
+Тайлбар, өөр текст бүү нэм. Жишээ хариу: 1,3,5"""
+
+    try:
+        response = requests.post(
+            GROQ_API_URL,
+            headers={
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json"
+            },
+            json={
+                "model": GROQ_MODEL,
+                "messages": [
+                    {"role": "system", "content": "You are a news editor selecting the most newsworthy items for a general audience."},
+                    {"role": "user", "content": prompt}
+                ],
+                "temperature": 0.3,
+                "max_tokens": 100,
+                "reasoning_effort": "none"
+            },
+            timeout=20
+        )
+        response.raise_for_status()
+        raw = response.json()["choices"][0]["message"]["content"].strip()
+        indices = [int(x) - 1 for x in re.findall(r"\d+", raw)]
+        filtered = [candidates[i] for i in indices if 0 <= i < len(candidates)]
+
+        if filtered:
+            log.info(f"Ач холбогдлын шүүлтүүр: {len(candidates)} -> {len(filtered)} мэдээ")
+            # Шүүгдээгүй үлдсэн (max_candidates-с гадуурх) мэдээг ард нь хавсаргана
+            rest = news_list[max_candidates:]
+            return filtered + rest
+
+        log.warning("Шүүлтүүр хоосон буцсан — бүх мэдээг хэвээр үлдээе")
+        return news_list
+
+    except Exception as e:
+        log.warning(f"Ач холбогдлын шүүлтүүр алдаа: {e} — бүх мэдээг хэвээр үлдээе")
+        return news_list
