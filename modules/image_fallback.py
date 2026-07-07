@@ -1,59 +1,89 @@
 """
 Зургийн нөөц эх сурвалж — Unsplash API (үнэгүй)
-RSS-д зураг байхгүй үед мэдээний сэдэвтэй холбоотой зураг хайж олно.
+Мэдээний гарчигнаас нэр/түлхүүр үгсийг ялгаж, сэдэвт аль болох
+ойр зураг хайна. Олдохгүй бол категорийн ерөнхий зурагт шилжинэ.
 
-Unsplash Developer: https://unsplash.com/developers — үнэгүй "Demo" key
-Үнэгүй tier: цагт 50 хүсэлт (бидний хэрэгцээнд хангалттай)
+Тайлбар: Unsplash бол чөлөөт стok зургийн сан тул тамирчид, дуучдын
+жинхэнэ editorial зураг ховор — сэдэвт ойролцоо зураг л олдоно.
 """
 
 import os
+import re
 import logging
 import requests
 
 log = logging.getLogger(__name__)
 
-UNSPLASH_API_URL = "https://api.unsplash.com/photos/random"
+UNSPLASH_API_URL = "https://api.unsplash.com/search/photos"
 
-# Категори тус бүрийн хайлтын түлхүүр үг (сэдэвтэй тохирсон зураг олоход тусална)
-CATEGORY_SEARCH_TERMS = {
-    "sports": "basketball action sports",
-    "music": "concert music stage",
-    "world_news": "news world city",
+CATEGORY_FALLBACK_TERMS = {
+    "sports": "basketball game arena",
+    "music": "concert stage lights",
+    "world_news": "city skyline news",
 }
+
+# Гарчигнаас хасах нийтлэг үгс (нэр биш)
+_STOPWORDS = {
+    "The", "A", "An", "In", "On", "At", "For", "With", "After", "Before",
+    "How", "Why", "What", "When", "Who", "Sources", "Report", "Reports",
+    "Breaking", "New", "His", "Her", "Their", "This", "That", "As", "But",
+}
+
+
+def _extract_keywords(title: str, max_words: int = 3) -> str:
+    """
+    Гарчигнаас нэр/байгууллага магадлалтай том үсэгтэй үгсийг ялгах.
+    Жишээ: "LeBron James leaves Lakers after 8 years" -> "LeBron James Lakers"
+    """
+    candidates = re.findall(r"\b[A-Z][a-zA-Z'-]+\b", title)
+    keywords = [w for w in candidates if w not in _STOPWORDS]
+    return " ".join(keywords[:max_words])
 
 
 def get_fallback_image(category: str, title: str = "") -> str:
     """
-    Unsplash-с категорит тохирсон санамсаргүй зураг олох.
-    Гарчигт тодорхой түлхүүр үг байвал (жиш нь баг/тоглогчийн нэр) тэрийг
-    хайлтад нэмж илүү тохирсон зураг олох боломж нэмнэ.
+    1) Гарчигны түлхүүр үгсээр (нэрс) хайна — сэдэвт хамгийн ойр
+    2) Олдохгүй бол категорийн ерөнхий зураг
     """
     access_key = os.environ.get("UNSPLASH_ACCESS_KEY")
     if not access_key:
-        log.warning("UNSPLASH_ACCESS_KEY байхгүй — зурагны нөөц эх ашиглагдахгүй")
+        log.warning("UNSPLASH_ACCESS_KEY байхгүй")
         return ""
 
-    query = CATEGORY_SEARCH_TERMS.get(category, "news")
+    queries = []
+    keywords = _extract_keywords(title)
+    if keywords:
+        # Нэрс + категорийн үндсэн үг хослуулах (жишээ: "LeBron James Lakers basketball")
+        base = {"sports": "basketball", "music": "music", "world_news": ""}.get(category, "")
+        queries.append(f"{keywords} {base}".strip())
+    queries.append(CATEGORY_FALLBACK_TERMS.get(category, "news"))
 
-    try:
-        response = requests.get(
-            UNSPLASH_API_URL,
-            params={
-                "query": query,
-                "orientation": "landscape",
-                "content_filter": "high",
-            },
-            headers={"Authorization": f"Client-ID {access_key}"},
-            timeout=10
-        )
-        response.raise_for_status()
-        data = response.json()
+    for query in queries:
+        try:
+            response = requests.get(
+                UNSPLASH_API_URL,
+                params={
+                    "query": query,
+                    "per_page": 1,
+                    "orientation": "landscape",
+                    "content_filter": "high",
+                },
+                headers={"Authorization": f"Client-ID {access_key}"},
+                timeout=10
+            )
+            response.raise_for_status()
+            data = response.json()
+            results = data.get("results", [])
 
-        image_url = data.get("urls", {}).get("regular", "")
-        if image_url:
-            log.info(f"Unsplash-с нөөц зураг олдлоо ({query})")
-        return image_url
+            if results:
+                image_url = results[0].get("urls", {}).get("regular", "")
+                if image_url:
+                    log.info(f"Unsplash зураг олдлоо (хайлт: {query})")
+                    return image_url
 
-    except Exception as e:
-        log.warning(f"Unsplash алдаа: {e}")
-        return ""
+            log.info(f"Unsplash: '{query}' хайлтад зураг олдсонгүй")
+
+        except Exception as e:
+            log.warning(f"Unsplash алдаа ({query}): {e}")
+
+    return ""
