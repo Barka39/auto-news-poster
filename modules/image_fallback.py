@@ -1,30 +1,45 @@
 """
-Зургийн нөөц эх сурвалж:
-1) Wikimedia Commons — үнэгүй, API key шаардахгүй, жинхэнэ хүн/багийн
-   зураг байх магадлал өндөр (CC лицензтэй)
-2) Unsplash — Wikimedia олдохгүй бол ерөнхий сэдэвт зураг
+Зургийн нөөц эх сурвалж (3 давхарга):
+1) Wikimedia Commons — үнэгүй, жинхэнэ хүн/багийн зураг (CC лицензтэй)
+2) Unsplash — жинхэнэ stock зураг, сэдэвт ойролцоо
+3) Pollinations AI — үнэгүй AI зураг үүсгэгч, ЗӨВХӨН ерөнхий (хүнгүй)
+   дүрслэл үүсгэнэ — доорх анхааруулгыг үзнэ үү
 
-Анхаар: Wikimedia Commons-ийн зарим зураг CC-BY / CC-BY-SA лицензтэй тул
-хатуу хэрэглээнд зохиогчийг дурдах шаардлагатай байж болно. Бид энд зөвхөн
-нээлттэй ашиглалттай (public domain/CC0 давамгайлсан) зургийг эрэмбэлж
-ашигладаг ч 100% баталгаа биш — байгууллагын хэмжээнд ашиглахаасаа өмнө
-эрх зүйн зөвлөгөө авахыг зөвлөж байна.
+⚠️ ЧУХАЛ ЗАРЧИМ: Pollinations AI-г бид ЗОРИУДЛАН тодорхой нэртэй жинхэнэ
+хүний "фото шиг" дүрс үүсгэхэд АШИГЛАХГҮЙ. Учир нь:
+- Уншигчид AI зохиомол дүрсийг жинхэнэ зураг гэж андуурч болзошгүй (мэхлэлт)
+- Meta-гийн synthetic/AI-generated media policy зөрчиж Page хаагдах эрсдэлтэй
+- Хүний дүр төрхийн эрхийг (right of publicity) зөрчиж болзошгүй
+Тиймээс Pollinations-д зөвхөн ерөнхий сэдэв (талбай, цомго, арена, туг)
+илгээж, аль ч хүний нэрийг prompt-д ОРУУЛАХГҮЙ.
+
+Wikimedia/Unsplash-ийн зарим зураг CC-BY/CC-BY-SA лицензтэй тул хатуу
+хэрэглээнд эх сурвалж дурдах шаардлагатай байж болно.
 """
 
 import os
 import re
 import logging
+import urllib.parse
 import requests
 
 log = logging.getLogger(__name__)
 
 WIKIMEDIA_API_URL = "https://commons.wikimedia.org/w/api.php"
 UNSPLASH_API_URL = "https://api.unsplash.com/search/photos"
+POLLINATIONS_URL = "https://image.pollinations.ai/prompt/"
 
 CATEGORY_FALLBACK_TERMS = {
     "sports": "basketball game arena",
     "music": "concert stage lights",
     "world_news": "city skyline news",
+}
+
+# Pollinations-д зориулсан хүнгүй, ерөнхий сэдэвт зургийн prompt
+CATEGORY_AI_PROMPTS = {
+    "sports": "empty basketball arena, dramatic stadium lighting, court close-up, photorealistic, no people, no faces",
+    "music": "concert stage with lights, empty venue, dramatic lighting, photorealistic, no people, no faces",
+    "world_news": "city skyline at dusk, global news theme, photorealistic, no people, no faces",
 }
 
 _STOPWORDS = {
@@ -52,8 +67,8 @@ def _search_wikimedia(query: str) -> str:
                 "gsrnamespace": 6,  # File namespace
                 "gsrlimit": 5,
                 "prop": "imageinfo",
-                "iiprop": "url|extmetadata",
-                "iiurlwidth": 1200,
+                "iiprop": "url|extmetadata|size",
+                "iiurlwidth": 1920,  # Өндөр нягтралын thumbnail хүсэх
                 "format": "json",
             },
             headers={"User-Agent": "AutoNewsPoster/1.0 (mongolnews auto-poster bot)"},
@@ -68,9 +83,16 @@ def _search_wikimedia(query: str) -> str:
             if not imageinfo:
                 continue
             info = imageinfo[0]
-            url = info.get("thumburl") or info.get("url", "")
-            # SVG, лого зэрэг зохисгүй файлыг алгасах
-            if url and not url.lower().endswith((".svg", ".pdf")):
+            orig_width = info.get("width", 0)
+
+            # Эх зураг 1920-с бага бол эх URL (хамгийн өндөр чанар), их бол thumbnail
+            if orig_width and orig_width <= 1920:
+                url = info.get("url", "") or info.get("thumburl", "")
+            else:
+                url = info.get("thumburl", "") or info.get("url", "")
+
+            # SVG, лого зэрэг зохисгүй файлыг алгасах, хэт жижиг зургийг бас алгасах
+            if url and not url.lower().endswith((".svg", ".pdf")) and orig_width >= 600:
                 return url
 
         return ""
@@ -98,6 +120,10 @@ def _search_unsplash(query: str) -> str:
         response.raise_for_status()
         results = response.json().get("results", [])
         if results:
+            # "raw" URL дээр өөрсдийн хэмжээ/чанараа тохируулах (regular нь 1080px-д хязгаарлагддаг)
+            raw_url = results[0].get("urls", {}).get("raw", "")
+            if raw_url:
+                return f"{raw_url}&w=1920&q=85&fm=jpg&fit=max"
             return results[0].get("urls", {}).get("regular", "")
         return ""
     except Exception as e:
@@ -105,11 +131,26 @@ def _search_unsplash(query: str) -> str:
         return ""
 
 
+def _generate_pollinations(category: str) -> str:
+    """
+    Pollinations AI-аар ерөнхий (хүнгүй) сэдэвчилсэн зураг үүсгэх.
+    Энэ функц ЗӨВХӨН category-ийн ерөнхий prompt ашиглана — хүний нэр
+    ОРУУЛАХГҮЙ (дээрх модулийн docstring-ийн зарчмыг үз).
+    """
+    prompt = CATEGORY_AI_PROMPTS.get(category, "news theme, photorealistic, no people")
+    encoded = urllib.parse.quote(prompt)
+    url = f"{POLLINATIONS_URL}{encoded}?width=1600&height=900&nologo=true"
+    log.info(f"Pollinations AI зураг үүсгэв (ерөнхий, хүнгүй): {category}")
+    return url
+
+
 def get_fallback_image(category: str, title: str = "") -> str:
     """
-    1) Wikimedia Commons-с нэрээр хайх (жинхэнэ хүн/багийн зураг олох боломжтой)
-    2) Unsplash-с нэрээр хайх
-    3) Unsplash-с категорийн ерөнхий зурагт шилжих
+    1) Wikimedia Commons-с нэрээр хайх (жинхэнэ хүн/багийн зураг)
+    2) Unsplash-с нэрээр хайх (жинхэнэ stock зураг)
+    3) Unsplash-с категорийн ерөнхий зураг
+    4) Pollinations AI-аар ерөнхий (хүнгүй) зураг үүсгэх — ЗУРАГГҮЙ
+       үлдэхээс сэргийлж, баталгаатай эцсийн нөөц болно
     """
     keywords = _extract_keywords(title)
 
@@ -129,4 +170,6 @@ def get_fallback_image(category: str, title: str = "") -> str:
     img = _search_unsplash(fallback_term)
     if img:
         log.info(f"Unsplash ерөнхий зураг ашиглав ({fallback_term})")
-    return img
+        return img
+
+    return _generate_pollinations(category)
