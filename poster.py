@@ -19,45 +19,31 @@ log = logging.getLogger(__name__)
 def format_post(news: dict, platform: str) -> str:
     """
     Платформ тус бүрд тохирсон пост текст үүсгэх.
-    Groq-ийн бичсэн дэлгэрэнгүй article_mn байвал түүнийг ашиглана,
-    байхгүй бол энгийн орчуулгад (title_mn/summary_mn) шилжинэ.
-    Зохиогчийн эрх аюулгүй: хураангуй/дахин бичсэн текст + эх линк.
+    Groq-ийн бичсэн дэлгэрэнгүй article_mn ашиглана.
+    Эх сурвалж, линк ЗОРИУД ДУРДАХГҮЙ (хэрэглэгчийн хүсэлтээр).
     """
     emoji = news.get("category_emoji", "📰")
     category = news.get("category_mn", "Мэдээ")
-    source = news.get("source_name", "")
-    url = news.get("url", "")
-
-    # Groq-ийн бичсэн дэлгэрэнгүй нийтлэл эсвэл fallback орчуулга
     article = news.get("article_mn", "").strip()
-    if not article:
-        title = news.get("title_mn", news.get("title", ""))
-        summary = news.get("summary_mn", "")
-        article = f"{title}\n\n{summary}" if summary else title
 
     if platform == "twitter":
-        # X: 280 тэмдэгт хязгаар — товч хувилбар
+        # X: 280 тэмдэгт хязгаар
         text = f"{emoji} {article}"
-        max_len = 250 - len(url)
-        if len(text) > max_len:
-            text = text[:max_len - 3] + "..."
-        return f"{text}\n\n{url}"
+        if len(text) > 275:
+            text = text[:272] + "..."
+        return text
 
     elif platform in ["facebook", "instagram"]:
-        # FB/IG: Groq-ийн бичсэн дэлгэрэнгүй нийтлэл, plain URL (markdown биш)
         lines = [
             f"{emoji} {category.upper()}",
             "",
             article,
             "",
+            "#МонголМэдээ #Mongolia",
         ]
-        lines.append(f"Эх сурвалж: {source}")
-        lines.append(f"Дэлгэрэнгүй: {url}")
-        lines.append("")
-        lines.append("#МонголМэдээ #Mongolia #News")
         return "\n".join(lines)
 
-    return f"{article}\n{url}"
+    return article
 
 
 # ============================================================
@@ -78,6 +64,7 @@ def post_to_facebook(news: dict) -> dict:
 
     text = format_post(news, "facebook")
     image_url = news.get("image_url", "")
+    log.info(f"FB зураг URL: {'байна (' + image_url[:60] + '...)' if image_url else 'ХООСОН'}")
 
     try:
         if image_url:
@@ -104,10 +91,9 @@ def post_to_facebook(news: dict) -> dict:
             return {"success": True, "id": post_id}
         else:
             error = data.get("error", {}).get("message", str(data))
-            log.error(f"❌ Facebook алдаа: {error}")
-            # Зурагтай постлоход алдаа гарвал зураггүйгээр дахин оролдоно
+            log.error(f"❌ Facebook алдаа (зураг {'байсан' if image_url else 'байхгүй'}): {error}")
             if image_url:
-                log.warning("Зурагтай постлоход алдаа — зураггүй дахин оролдож байна")
+                log.warning(f"Зурагтай постлоход дээрх алдаа гарлаа — зураггүйгээр дахин оролдож байна")
                 return post_to_facebook({**news, "image_url": ""})
             return {"success": False, "error": error}
 
