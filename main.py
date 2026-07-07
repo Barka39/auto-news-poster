@@ -5,10 +5,11 @@ Auto News Poster - Монгол мэдээ автомат постлогч
 
 import logging
 from modules.fetcher import fetch_all_news
-from modules.writer import write_article, is_valid_mongolian
+from modules.writer import write_article, is_valid_mongolian, filter_relevant_news
 from modules.image_fallback import get_fallback_image
 from modules.poster import post_to_all_platforms
 from modules.storage import load_posted, save_posted
+from modules import telegram_approval
 
 logging.basicConfig(
     level=logging.INFO,
@@ -35,6 +36,9 @@ def run():
         log.info("Шинэ мэдээ байхгүй. Дуусгалаа.")
         return
 
+    # Ач холбогдлын шүүлтүүр — Монгол уншигчдад сонирхолгүй жижиг мэдээг хасна
+    new_news = filter_relevant_news(new_news)
+
     to_post = new_news[:MAX_POSTS_PER_RUN]
     log.info(f"Постолох мэдээ: {len(to_post)} ширхэг")
 
@@ -58,6 +62,18 @@ def run():
                     written.get("category", "world_news"),
                     written.get("title", "")
                 )
+
+            # Telegram зөвшөөрлийн систем (тохируулсан бол л идэвхжинэ)
+            if telegram_approval.is_enabled():
+                approval = telegram_approval.request_approval(written)
+                if approval == "rejected":
+                    log.info(f"⏭️ Хэрэглэгч татгалзсан тул алгаслаа: {news['title'][:40]}")
+                    posted_ids.add(news["id"])
+                    continue
+                if approval in ("timeout", "error"):
+                    log.info(f"⏭️ Зөвшөөрөл аваагүй тул энэ удаад алгаслаа: {news['title'][:40]}")
+                    continue
+                # approval == "approved" бол доош үргэлжилнэ
 
             result = post_to_all_platforms(written)
 
