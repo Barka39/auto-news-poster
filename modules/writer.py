@@ -12,7 +12,7 @@ import requests
 log = logging.getLogger(__name__)
 
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
-GROQ_MODEL = "llama-3.3-70b-versatile"
+GROQ_MODEL = "qwen/qwen3.6-27b"
 
 SYSTEM_PROMPTS = {
     "sports": """Чи Монголын шилдэг спортын контент бичигч. Фэнүүдийн дунд хэллэгээр,
@@ -169,7 +169,8 @@ def write_article(news: dict) -> dict:
                     ],
                     "temperature": 0.7,
                     "max_tokens": 600,
-                    "frequency_penalty": 0.8
+                    "frequency_penalty": 0.8,
+                    "reasoning_effort": "none"
                 },
                 timeout=30
             )
