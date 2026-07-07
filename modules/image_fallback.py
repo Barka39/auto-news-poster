@@ -55,6 +55,17 @@ def _extract_keywords(title: str, max_words: int = 3) -> str:
     return " ".join(keywords[:max_words])
 
 
+# Wikimedia файлын нэрэнд эдгээр үг байвал алгасна — учир нь ихэвчлэн
+# broadcast graphic, meme, edit хийсэн зураг байдаг (жишээ: "GOAL" гэсэн
+# текст overlay-той зураг мэргэжлийн бус харагдана)
+_IMAGE_TITLE_BLACKLIST = re.compile(
+    r"(edit|meme|banner|collage|montage|graphic|sticker|watermark|"
+    r"promo|advert|screenshot|screen[\s_-]?shot|goal[\s_-]?graphic|"
+    r"\bvs\b|\bversus\b|thumbnail|wallpaper|poster[\s_-]?art)",
+    re.IGNORECASE
+)
+
+
 def _search_wikimedia(query: str) -> str:
     """Wikimedia Commons-с зураг хайх — жинхэнэ хүн/багийн зураг олох магадлал өндөр"""
     try:
@@ -65,7 +76,7 @@ def _search_wikimedia(query: str) -> str:
                 "generator": "search",
                 "gsrsearch": f"{query} filetype:bitmap",
                 "gsrnamespace": 6,  # File namespace
-                "gsrlimit": 5,
+                "gsrlimit": 8,
                 "prop": "imageinfo",
                 "iiprop": "url|extmetadata|size",
                 "iiurlwidth": 1920,  # Өндөр нягтралын thumbnail хүсэх
@@ -79,6 +90,11 @@ def _search_wikimedia(query: str) -> str:
         pages = data.get("query", {}).get("pages", {})
 
         for page in pages.values():
+            title = page.get("title", "")
+            if _IMAGE_TITLE_BLACKLIST.search(title):
+                log.info(f"Wikimedia үр дүн алгаслаа (graphic/meme магадлалтай): {title}")
+                continue
+
             imageinfo = page.get("imageinfo", [])
             if not imageinfo:
                 continue
