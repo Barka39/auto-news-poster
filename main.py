@@ -9,7 +9,7 @@ from modules.writer import write_article, is_valid_mongolian, filter_relevant_ne
 from modules.image_fallback import get_fallback_image
 from modules.poster import post_to_all_platforms
 from modules.storage import load_posted, save_posted
-from modules import telegram_approval
+from modules import telegram_notify
 
 logging.basicConfig(
     level=logging.INFO,
@@ -63,18 +63,6 @@ def run():
                     written.get("title", "")
                 )
 
-            # Telegram зөвшөөрлийн систем (тохируулсан бол л идэвхжинэ)
-            if telegram_approval.is_enabled():
-                approval = telegram_approval.request_approval(written)
-                if approval == "rejected":
-                    log.info(f"⏭️ Хэрэглэгч татгалзсан тул алгаслаа: {news['title'][:40]}")
-                    posted_ids.add(news["id"])
-                    continue
-                if approval in ("timeout", "error"):
-                    log.info(f"⏭️ Зөвшөөрөл аваагүй тул энэ удаад алгаслаа: {news['title'][:40]}")
-                    continue
-                # approval == "approved" бол доош үргэлжилнэ
-
             result = post_to_all_platforms(written)
 
             if result["success"]:
@@ -83,6 +71,9 @@ def run():
                 log.info(f"✅ Амжилттай: {news['title'][:40]}")
             else:
                 log.warning(f"⚠️ Алдаа: {result['error']}")
+
+            # Telegram мэдэгдэл (хүлээхгүй, зөвхөн FYI)
+            telegram_notify.notify_posted(written, result["success"])
 
             import time
             time.sleep(3)
