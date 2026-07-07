@@ -1,14 +1,13 @@
 """
-Нийтлэл бичих модуль — Groq API (үнэгүй, маш хурдан)
-RSS-ийн гарчиг + хураангуйг авч, Монгол хэлээр дэлгэрэнгүй,
-олон янзын өгүүлбэрийн бүтэцтэй нийтлэл болгон дахин бичнэ.
-
-Groq: https://console.groq.com — үнэгүй API key авах боломжтой
-Model: llama-3.3-70b-versatile (хүчирхэг, хурдан, үнэгүй tier-д багтдаг)
+Нийтлэл бичих модуль — Groq API (үнэгүй)
+RSS-ийн товч мэдээллийг Монгол хэлээр дэлгэрэнгүй, өргөжүүлсэн
+нийтлэл болгож дахин бичнэ (эх сурвалж/линк дурдахгүй).
+Гаралтын чанарыг автоматаар шалгаж, англи хэл холилдсон бол
+дахин оролдож, эцэст нь бүрэн бүтэлгүйтвэл алгасна (муу пост гарахгүй).
 """
 
 import os
-import random
+import re
 import logging
 import requests
 
@@ -17,119 +16,148 @@ log = logging.getLogger(__name__)
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 GROQ_MODEL = "llama-3.3-70b-versatile"
 
-# ============================================================
-# ЗААВАР — категори тус бүрийн бичих стиль
-# ============================================================
 SYSTEM_PROMPTS = {
-    "sports": """Чи спортын дэлгэрэнгүй анализ бичдэг Монгол тоймч. Reddit/фэн хэсгийн 
-дотоод хэллэгээр, дүн шинжилгээтэй, тоо баримт дэлгэрэнгүй дурдаж бичдэг.
+    "sports": """Чи Монгол спортын сонирхолтой контент бичигч. Reddit/фэн хэсгийн
+дотоод хэллэгээр, дэлгэрэнгүй дүн шинжилгээтэй бичдэг.
 
-ЗААВАЛ дагах дүрэм:
-- Тоглогч, багийн нэрийг ЗААВАЛ Англи хэвээр нь бич (жишээ: Embiid, Lakers, Ja Morant) — Монгол галиг хэрэглэхгүй
-- Лиг, тэмцээний товчлолыг Англиар (NBA, MVP, All-Star гэх мэт)
-- Гарчиг ХЭРЭГГҮЙ — шууд агуулгаараа эхэл
-- 4-6 доод зураас (-) мөрөнд хуваа, мөр бүр өөр өнцгөөс өгүүл (тоглолтын явц, тоглогчийн гүйцэтгэл, багийн асуудал, дүгнэлт гэх мэт)
-- Тоо баримт, оноо, статистик дурд (RSS-ийн эх мэдээллээс гаргаж болох бол)
-- Дотоод хэллэг ашигла: "тоглолт хийх", "нөлөөгөө үзүүлэх", "гараагаа алдах" гэх мэт""",
+ДҮРЭМ:
+- Өгөгдсөн мэдээллийг ашиглаж, ДЭЛГЭРЭНГҮЙ, өргөжүүлсэн 3-5 догол мөр/зураас бич
+- ШИНЭ баримт, тоо статистик БҮҮ зохио — зөвхөн өгөгдсөн мэдээлэлд байгаа зүйлийг өргөжүүлж тайлбарла
+- Тоглогч, багийн нэрийг ЗААВАЛ Англи үсгээр бич (жишээ: Embiid, Lakers, NBA) — Монгол галиг хэрэглэхгүй
+- Гарчиг, эх сурвалж, линк БҮҮ дурд
+- Бүх өгүүлбэрийг МОНГОЛ хэлээр бич (нэрсээс бусад)
+- Хөнгөн, ярианы хэллэгээр, шаардлагатай бол emoji хэрэглэ""",
 
-    "music": """Чи хөгжим, шоу бизнесийн мэдээллийг сонирхолтой хэлбэрээр дамжуулдаг 
-Монгол контент бичигч. Залуучуудын хэллэгээр, follow хийхэд таатай байдлаар бичдэг.
+    "music": """Чи Монгол хөгжим/шоу бизнесийн контент бичигч. Залуучуудын
+хэллэгээр, сонирхолтой байдлаар бичдэг.
 
-ЗААВАЛ дагах дүрэм:
-- Дуучин, жүжигчдийн нэрийг ЗААВАЛ Англи хэвээр нь бич — Монгол галиг хэрэглэхгүй
-- Дууны нэр, киноны нэрийг "" хашилтад Англи хэвээр бич
-- Гарчиг ХЭРЭГГҮЙ — шууд агуулгаараа эхэл
-- 3-5 доод зураас (-) мөрөнд хуваа
-- Хөнгөн, яриа шиг байдлаар бич""",
+ДҮРЭМ:
+- Өгөгдсөн мэдээллийг ашиглаж, ДЭЛГЭРЭНГҮЙ 3-4 догол мөр/зураас бич
+- ШИНЭ баримт БҮҮ зохио — зөвхөн өгөгдсөн мэдээлэлд байгаа зүйлийг өргөжүүлж тайлбарла
+- Дуучин, жүжигчний нэрийг ЗААВАЛ Англи үсгээр бич — Монгол галиг хэрэглэхгүй
+- Гарчиг, эх сурвалж, линк БҮҮ дурд
+- Бүх өгүүлбэрийг МОНГОЛ хэлээр бич (нэрсээс бусад)""",
 
-    "world_news": """Чи олон улсын мэдээллийг дэлгэрэнгүй тайлбарладаг Монгол сэтгүүлч. 
-Нейтрал боловч контекст, дэвсгэр мэдээлэл нэмж бичдэг.
+    "world_news": """Чи Монгол олон улсын мэдээллийн контент бичигч.
+Нейтрал боловч дэвсгэр мэдээлэл нэмж тайлбарладаг.
 
-ЗААВАЛ дагах дүрэм:
-- Хүний нэр, байгууллагын нэрийг Англи хэвээр нь бич (жишээ: Trump, NATO, Reuters)
-- Улс, хотын нэрийг Монгол дуудлагаар бич (жишээ: Лондон, Бээжин)
-- Гарчиг ХЭРЭГГҮЙ — шууд агуулгаараа эхэл
-- 3-5 доод зураас (-) мөрөнд хуваа, дэвсгэр контекст нэмж тайлбарла"""
+ДҮРЭМ:
+- Өгөгдсөн мэдээллийг ашиглаж, ДЭЛГЭРЭНГҮЙ 3-4 догол мөр/зураас бич
+- ШИНЭ баримт БҮҮ зохио — зөвхөн өгөгдсөн мэдээлэлд байгаа зүйлийг өргөжүүлж тайлбарла
+- Хүний нэрийг Англи үсгээр, улс/хотын нэрийг Монгол дуудлагаар бич
+- Гарчиг, эх сурвалж, линк БҮҮ дурд
+- Бүх өгүүлбэрийг МОНГОЛ хэлээр бич (нэрсээс бусад)"""
 }
 
-# Хувилбар нэмэх зорилготой "өнцөг" саналууд — ижил загвар давтагдахгүйн тулд
-OPENING_STYLES = [
-    "шууд гол үйл явдлаас эхэл",
-    "хамгийн гайхалтай/сонирхолтой дэлгэрэнгүй мэдээллээс эхэл",
-    "асуулт хэлбэрээр эхэл",
-    "харьцуулалт хийж эхэл (өмнөх тоглолт/үйл явдалтай)",
-    "тоо баримтаас эхэл",
-]
+# Нэр/товчлол мэт латин токенуудыг таних загвар (чанарын шалгалтад тооцохгүйн тулд)
+_PROPER_NOUN_RE = re.compile(r"\b[A-Z][a-zA-Z'.-]*\b")
+
+
+def _clean_output(text: str) -> str:
+    text = text.strip()
+    if text.startswith("```"):
+        parts = text.split("```")
+        text = parts[1] if len(parts) > 1 else text
+        text = text.strip()
+    lines = text.split("\n")
+    if lines and (lines[0].strip().endswith(":") or
+                  re.match(r"^(here|орчуулга|нийтлэл|article|translation)", lines[0].strip(), re.IGNORECASE)):
+        lines = lines[1:]
+    return "\n".join(lines).strip()
+
+
+def is_valid_mongolian(text: str, min_len: int = 120) -> bool:
+    """
+    Гаралт хангалттай Монгол хэлээр бичигдсэн үү шалгах.
+    Нэр/товчлол шиг латин токенуудыг тооцохгүй — зөвхөн үлдсэн үсгийн
+    дундах кирилл харьцааг шалгана.
+    """
+    if not text or len(text) < min_len:
+        return False
+
+    # Нэр/товчлол магадлалтай латин токенуудыг хасах
+    text_no_names = _PROPER_NOUN_RE.sub("", text)
+    letters = [c for c in text_no_names if c.isalpha()]
+    if not letters:
+        return False
+    cyr = [c for c in letters if "\u0400" <= c <= "\u04FF"]
+    ratio = len(cyr) / len(letters)
+    return ratio >= 0.85
 
 
 def write_article(news: dict) -> dict:
     """
-    RSS мэдээг Groq API ашиглан дэлгэрэнгүй Монгол нийтлэл болгож дахин бичнэ.
-    Амжилтгүй бол энгийн орчуулгад буцаж ажиллана (fallback).
+    Groq-оор мэдээг дэлгэрэнгүй Монгол нийтлэл болгоно.
+    Чанар хангалтгүй бол дахин 1 удаа оролдоно, эцэст нь Google Translate
+    fallback руу шилжинэ. Бүгд бүтэлгүйтвэл article_mn хоосон үлдэнэ
+    (main.py үүнийг шалгаад алгасна — англи/эвдэрхий пост гарахгүй).
     """
     api_key = os.environ.get("GROQ_API_KEY")
     category = news.get("category", "world_news")
+    system_prompt = SYSTEM_PROMPTS.get(category, SYSTEM_PROMPTS["world_news"])
+
+    user_prompt = f"""ГАРЧИГ: {news['title']}
+ХУРААНГУЙ: {news.get('summary', '')}
+
+Дээрх мэдээллийг ашиглаж, зөвхөн цэвэр текст хэлбэрээр Монгол нийтлэл бич.
+JSON, markdown, хашилт, тайлбар нэмэлт бүү оруул."""
 
     if not api_key:
-        log.warning("GROQ_API_KEY байхгүй — энгийн орчуулга ашиглана")
+        log.warning("GROQ_API_KEY байхгүй — Google Translate ашиглана")
         return _fallback(news)
 
-    system_prompt = SYSTEM_PROMPTS.get(category, SYSTEM_PROMPTS["world_news"])
-    opening_style = random.choice(OPENING_STYLES)
+    for attempt in range(2):
+        try:
+            response = requests.post(
+                GROQ_API_URL,
+                headers={
+                    "Authorization": f"Bearer {api_key}",
+                    "Content-Type": "application/json"
+                },
+                json={
+                    "model": GROQ_MODEL,
+                    "messages": [
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": user_prompt}
+                    ],
+                    "temperature": 0.6,
+                    "max_tokens": 700
+                },
+                timeout=30
+            )
+            response.raise_for_status()
+            data = response.json()
+            article_text = _clean_output(data["choices"][0]["message"]["content"])
 
-    user_prompt = f"""Дараах Англи хэл дээрх мэдээллийг ашиглаж Монгол хэлээр дэлгэрэнгүй нийтлэл бич.
+            if is_valid_mongolian(article_text):
+                news["article_mn"] = article_text
+                log.info(f"Groq нийтлэл OK (оролдлого {attempt+1}): {article_text[:60]}...")
+                return news
 
-ГАРЧИГ (эх): {news['title']}
-ХУРААНГУЙ (эх): {news.get('summary', '')}
-ЭХ СУРВАЛЖ: {news['source_name']}
+            log.warning(f"Groq гаралт чанаргүй (оролдлого {attempt+1}, {len(article_text)} тэмдэгт) — дахин оролдоно")
 
-Энэ удаагийн нийтлэлээ ингэж {opening_style}.
+        except Exception as e:
+            log.error(f"Groq API алдаа (оролдлого {attempt+1}): {e}")
 
-ЧУХАЛ: Зөвхөн нийтлэлийн бүтэн текстийг шууд бич. JSON, markdown code block,
-хашилт, өөр ямар ч нэмэлт форматгүйгээр — зөвхөн цэвэр текст."""
-
-    try:
-        response = requests.post(
-            GROQ_API_URL,
-            headers={
-                "Authorization": f"Bearer {api_key}",
-                "Content-Type": "application/json"
-            },
-            json={
-                "model": GROQ_MODEL,
-                "messages": [
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt}
-                ],
-                "temperature": 0.8,
-                "max_tokens": 800
-            },
-            timeout=30
-        )
-        response.raise_for_status()
-        data = response.json()
-
-        article_text = data["choices"][0]["message"]["content"].strip()
-
-        # Хэрэв санамсаргүй markdown code fence ирвэл цэвэрлэнэ
-        if article_text.startswith("```"):
-            article_text = article_text.strip("`").strip()
-            if article_text.lower().startswith("json") or article_text.lower().startswith("text"):
-                article_text = article_text.split("\n", 1)[1] if "\n" in article_text else article_text
-
-        news["article_mn"] = article_text
-        log.info(f"Groq нийтлэл бичигдлээ: {news['article_mn'][:60]}...")
-        return news
-
-    except Exception as e:
-        log.error(f"Groq API алдаа: {e} — энгийн орчуулгад шилжлээ")
-        return _fallback(news)
+    log.warning("Groq 2 оролдлого бүтэлгүйтлээ — Google Translate руу шилжлээ")
+    return _fallback(news)
 
 
 def _fallback(news: dict) -> dict:
-    """Groq байхгүй/алдаатай үед Google Translate-ээр энгийн орчуулга хийх"""
+    """Google Translate-ээр энгийн орчуулга (Groq боломжгүй үед)"""
     from modules.translator import translate_to_mongolian
     translated = translate_to_mongolian(news)
-    article = f"{translated.get('title_mn', '')}\n\n{translated.get('summary_mn', '')}"
-    news["article_mn"] = article
+
+    title_mn = translated.get("title_mn", "")
+    summary_mn = translated.get("summary_mn", "")
+    article = f"{title_mn}\n\n{summary_mn}".strip()
+
+    # Хэрэв Google Translate ч бүтэлгүйтэж, англи хэвээр буцсан бол
+    # article_mn-г хоосон үлдээж main.py-д алгасуулна.
+    if is_valid_mongolian(article, min_len=40):
+        news["article_mn"] = article
+    else:
+        log.error("Орчуулга бүрэн бүтэлгүйтлээ — энэ мэдээг алгасна")
+        news["article_mn"] = ""
+
     return news
