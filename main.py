@@ -5,7 +5,7 @@ Auto News Poster - Монгол мэдээ автомат постлогч
 
 import logging
 from modules.fetcher import fetch_all_news
-from modules.writer import write_article
+from modules.writer import write_article, is_valid_mongolian
 from modules.image_fallback import get_fallback_image
 from modules.poster import post_to_all_platforms
 from modules.storage import load_posted, save_posted
@@ -16,7 +16,7 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-MAX_POSTS_PER_RUN = 5
+MAX_POSTS_PER_RUN = 2
 
 
 def run():
@@ -44,6 +44,13 @@ def run():
             log.info(f"Боловсруулж байна: {news['title'][:60]}...")
 
             written = write_article(news)
+
+            # ЧАНАРЫН ХАМГААЛАЛТ: орчуулга/бичвэр бүтэлгүйтсэн бол
+            # (англи хэвээр эсвэл хоосон) энэ мэдээг огт постлохгүй алгасна.
+            if not is_valid_mongolian(written.get("article_mn", ""), min_len=40):
+                log.warning(f"⏭️ Орчуулга/бичвэр чанаргүй тул алгаслаа: {news['title'][:40]}")
+                posted_ids.add(news["id"])  # дахин оролдохгүйн тулд тэмдэглэнэ
+                continue
 
             # RSS-д зураг байхгүй бол Unsplash-с сэдэвтэй зураг хайж олно
             if not written.get("image_url"):
