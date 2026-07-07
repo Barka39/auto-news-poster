@@ -1,11 +1,23 @@
 name: Auto News Poster
 
 on:
-  # 45 минут тутамд ажиллана (GitHub-ийн 2000 минут/сар лимитэд багтаана)
+  # Public repo болсон тул Actions minutes хязгааргүй — цагийн
+  # идэвхжилтэй тохируулсан 3 давхаргатай товлолт (Монгол UTC+8):
+  #   - Оройн peak (МН 19:00-22:59) = UTC 11-14  → 15 минут тутам
+  #   - Өдрийн цаг (МН 08:00-18:59) = UTC 0-10   → 30 минут тутам
+  #   - Шөнийн цаг (МН 23:00-07:59) = UTC 15-23  → 60 минут тутам
   schedule:
-    - cron: "*/45 * * * *"
+    - cron: "*/15 11-14 * * *"
+    - cron: "*/30 0-10 * * *"
+    - cron: "0 15-23 * * *"
 
   workflow_dispatch:
+
+# Telegram зөвшөөрөл хүлээх үед ажиллагаа удаан үргэлжилж болзошгүй тул
+# давхардсан ажиллагаа зэрэгцэн ажиллахгүйгээр дараалалд орно.
+concurrency:
+  group: auto-news-poster
+  cancel-in-progress: false
 
 jobs:
   post-news:
@@ -39,6 +51,8 @@ jobs:
           X_API_SECRET: ${{ secrets.X_API_SECRET }}
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
           X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python main.py
 
       - name: posted_ids.json commit хийх
