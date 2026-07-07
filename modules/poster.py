@@ -22,21 +22,17 @@ def format_post(news: dict, platform: str) -> str:
     Groq-ийн бичсэн дэлгэрэнгүй article_mn ашиглана.
     Эх сурвалж, линк ЗОРИУД ДУРДАХГҮЙ (хэрэглэгчийн хүсэлтээр).
     """
-    emoji = news.get("category_emoji", "📰")
-    category = news.get("category_mn", "Мэдээ")
     article = news.get("article_mn", "").strip()
 
     if platform == "twitter":
         # X: 280 тэмдэгт хязгаар
-        text = f"{emoji} {article}"
+        text = article
         if len(text) > 275:
             text = text[:272] + "..."
         return text
 
     elif platform in ["facebook", "instagram"]:
         lines = [
-            f"{emoji} {category.upper()}",
-            "",
             article,
             "",
             "#МонголМэдээ #Mongolia",

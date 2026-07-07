@@ -77,8 +77,10 @@ def _clean_output(text: str) -> str:
 def _has_repetition(text: str) -> bool:
     """
     Llama-гийн давталтын алдааг илрүүлэх:
-    - Ижил өгүүлбэр 2+ удаа
+    - Ижил өгүүлбэр 2+ удаа (яг таарсан)
     - Ижил 6 үгийн хэлц 2+ удаа
+    - Утгын давхардал: өөр үгээр ижил санааг 2+ удаа хэлсэн
+      (жишээ: "Х өөрчлөгдөж байна" / "Х-ийн өөрчлөлтийг онцолж байна")
     """
     sentences = [s.strip().lower() for s in re.split(r"[.!?]\s+", text) if len(s.strip()) > 20]
     if len(sentences) != len(set(sentences)):
@@ -91,6 +93,23 @@ def _has_repetition(text: str) -> bool:
         if gram in seen:
             return True
         seen.add(gram)
+
+    # Утгын давхардал — өгүүлбэр хоорондын үгийн давхцлыг шалгах (Jaccard)
+    STOP = {"нь", "нэг", "энэ", "тэр", "бол", "гэж", "гэдэг", "болно", "байна",
+            "байгаа", "хэрэг", "явдал", "хийж", "болж", "их", "бас"}
+    sentence_word_sets = []
+    for s in sentences:
+        sig_words = {w for w in re.findall(r"[а-яөүёА-ЯӨҮЁ]{4,}", s) if w not in STOP}
+        if len(sig_words) >= 2:
+            sentence_word_sets.append(sig_words)
+
+    for i in range(len(sentence_word_sets)):
+        for j in range(i + 1, len(sentence_word_sets)):
+            a, b = sentence_word_sets[i], sentence_word_sets[j]
+            overlap = len(a & b) / len(a | b)
+            if overlap >= 0.35:
+                return True
+
     return False
 
 
