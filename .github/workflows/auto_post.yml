@@ -13,12 +13,6 @@ on:
 
   workflow_dispatch:
 
-# Telegram зөвшөөрөл хүлээх үед ажиллагаа удаан үргэлжилж болзошгүй тул
-# давхардсан ажиллагаа зэрэгцэн ажиллахгүйгээр дараалалд орно.
-concurrency:
-  group: auto-news-poster
-  cancel-in-progress: false
-
 jobs:
   post-news:
     runs-on: ubuntu-latest
