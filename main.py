@@ -10,6 +10,8 @@ from modules.image_fallback import get_fallback_image
 from modules.poster import post_to_all_platforms
 from modules.storage import load_posted, save_posted
 from modules import telegram_notify
+from modules import quote_card
+from modules.translator import google_translate
 
 logging.basicConfig(
     level=logging.INFO,
@@ -56,12 +58,32 @@ def run():
                 posted_ids.add(news["id"])  # дахин оролдохгүйн тулд тэмдэглэнэ
                 continue
 
-            # RSS-д зураг байхгүй бол Unsplash-с сэдэвтэй зураг хайж олно
+            # RSS-д зураг байхгүй бол Wikimedia/Unsplash/Gemini-с зураг хайж олно
             if not written.get("image_url"):
-                written["image_url"] = get_fallback_image(
+                fallback = get_fallback_image(
                     written.get("category", "world_news"),
                     written.get("title", "")
                 )
+                written["image_url"] = fallback.get("url", "")
+                written["image_bytes"] = fallback.get("bytes", b"")
+
+            # Quote card: эх сурвалжид БОДИТ ишлэл байвал (жинхэнэ зургийг
+            # хэвээр нь ашиглаад), Pulse Sports загварын quote card үүсгэнэ.
+            source_text = f"{news.get('title', '')} {news.get('summary', '')}"
+            quote_en = quote_card.extract_quote(source_text)
+            if quote_en and (written.get("image_url") or written.get("image_bytes")):
+                quote_mn = google_translate(quote_en)
+                if quote_mn:
+                    card_bytes = quote_card.generate_quote_card(
+                        quote_mn=quote_mn,
+                        source_name=written.get("source_name", "Эх сурвалж"),
+                        image_url=written.get("image_url", ""),
+                        image_bytes=written.get("image_bytes", b"")
+                    )
+                    if card_bytes:
+                        written["image_bytes"] = card_bytes
+                        written["image_url"] = ""
+                        log.info(f"📇 Quote card ашиглав: {quote_mn[:50]}...")
 
             result = post_to_all_platforms(written)
 

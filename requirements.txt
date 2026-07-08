@@ -2,3 +2,4 @@ feedparser==6.0.11
 requests==2.32.3
 tweepy==4.14.0
 deep-translator==1.11.4
+Pillow==11.0.0
