@@ -8,6 +8,7 @@ import os
 import re
 import logging
 import requests
+from modules import gemini_compare
 
 log = logging.getLogger(__name__)
 
@@ -227,6 +228,18 @@ def write_article(news: dict) -> dict:
             if is_valid_mongolian(article_text):
                 news["article_mn"] = article_text
                 log.info(f"Groq нийтлэл OK [{GROQ_MODEL}] (оролдлого {attempt+1}): {article_text[:60]}...")
+
+                # ХАРЬЦУУЛАЛТ: Gemini идэвхтэй бол ижил prompt-оор бичүүлж
+                # лог дээр зэрэгцүүлж харуулна (постлохгүй, зөвхөн диагностик)
+                if gemini_compare.is_enabled():
+                    gemini_text = gemini_compare.compare(system_prompt, user_prompt)
+                    if gemini_text:
+                        log.info("=" * 60)
+                        log.info(f"🔵 QWEN гаралт:\n{article_text}")
+                        log.info("-" * 60)
+                        log.info(f"🟢 GEMINI гаралт:\n{gemini_text}")
+                        log.info("=" * 60)
+
                 return news
 
             log.warning(f"Groq гаралт чанаргүй (оролдлого {attempt+1}) — дахин оролдоно")
