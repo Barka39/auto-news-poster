@@ -215,7 +215,8 @@ def write_article(news: dict) -> dict:
             )
             response.raise_for_status()
             data = response.json()
-            article_text = _clean_output(data["choices"][0]["message"]["content"])
+            message = data["choices"][0]["message"]
+            article_text = _clean_output(message.get("content", ""))
 
             if is_valid_mongolian(article_text):
                 news["article_mn"] = article_text
@@ -223,6 +224,10 @@ def write_article(news: dict) -> dict:
                 return news
 
             log.warning(f"Groq гаралт чанаргүй (оролдлого {attempt+1}) — дахин оролдоно")
+            log.warning(f"  Урт: {len(article_text)} тэмдэгт | Гаралт (эхний 300): {article_text[:300]!r}")
+            log.warning(f"  message-ийн бүх түлхүүр: {list(message.keys())}")
+            if "reasoning" in message:
+                log.warning(f"  reasoning талбар байна (эхний 200): {str(message.get('reasoning'))[:200]!r}")
 
         except Exception as e:
             log.error(f"Groq API алдаа (оролдлого {attempt+1}): {e}")
