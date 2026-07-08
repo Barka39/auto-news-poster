@@ -49,7 +49,10 @@ def format_post(news: dict, platform: str) -> str:
 def post_to_facebook(news: dict) -> dict:
     """
     Facebook Page-д пост хийх.
-    Зураг байвал /photos endpoint ашиглаж caption-тай зураг postолно.
+    Зураг байвал /photos endpoint ашиглаж caption-тай зураг postолно:
+    - image_url байвал: Facebook серверээс URL-г шууд татна
+    - image_bytes байвал: multipart upload хийнэ (жишээ: Gemini-ийн
+      үүсгэсэн зураг, URL биш raw bytes хэлбэртэй ирдэг)
     Зураг байхгүй бол /feed endpoint-оор текст пост хийнэ.
     """
     page_id = os.environ.get("FB_PAGE_ID")
@@ -60,11 +63,21 @@ def post_to_facebook(news: dict) -> dict:
 
     text = format_post(news, "facebook")
     image_url = news.get("image_url", "")
-    log.info(f"FB зураг URL: {'байна (' + image_url[:60] + '...)' if image_url else 'ХООСОН'}")
+    image_bytes = news.get("image_bytes", b"")
+    log.info(f"FB зураг: {'URL байна' if image_url else ('bytes байна (' + str(len(image_bytes)) + ')' if image_bytes else 'ХООСОН')}")
 
     try:
-        if image_url:
-            # Зурагтай пост — /photos endpoint
+        if image_bytes:
+            # Gemini-ийн үүсгэсэн raw зураг — multipart file upload
+            url = f"https://graph.facebook.com/v19.0/{page_id}/photos"
+            response = requests.post(
+                url,
+                data={"caption": text, "access_token": access_token},
+                files={"source": ("image.png", image_bytes, "image/png")},
+                timeout=30
+            )
+        elif image_url:
+            # Зурагтай пост — /photos endpoint (Facebook URL-г татна)
             url = f"https://graph.facebook.com/v19.0/{page_id}/photos"
             response = requests.post(url, data={
                 "caption": text,
@@ -87,10 +100,10 @@ def post_to_facebook(news: dict) -> dict:
             return {"success": True, "id": post_id}
         else:
             error = data.get("error", {}).get("message", str(data))
-            log.error(f"❌ Facebook алдаа (зураг {'байсан' if image_url else 'байхгүй'}): {error}")
-            if image_url:
+            log.error(f"❌ Facebook алдаа (зураг {'байсан' if (image_url or image_bytes) else 'байхгүй'}): {error}")
+            if image_url or image_bytes:
                 log.warning(f"Зурагтай постлоход дээрх алдаа гарлаа — зураггүйгээр дахин оролдож байна")
-                return post_to_facebook({**news, "image_url": ""})
+                return post_to_facebook({**news, "image_url": "", "image_bytes": b""})
             return {"success": False, "error": error}
 
     except Exception as e:
