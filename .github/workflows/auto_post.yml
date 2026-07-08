@@ -31,6 +31,9 @@ jobs:
           python-version: "3.11"
           cache: "pip"
 
+      - name: Font суулгах (Кирилл дэмждэг, quote card-д хэрэгтэй)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-dejavu-core
+
       - name: Dependencies суулгах
         run: pip install -r requirements.txt
 
