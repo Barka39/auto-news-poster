@@ -208,7 +208,8 @@ def write_article(news: dict) -> dict:
                     "temperature": 0.7,
                     "max_tokens": 700,
                     "frequency_penalty": 0.8,
-                    "reasoning_effort": "default"
+                    "reasoning_effort": "default",
+                    "reasoning_format": "hidden"
                 },
                 timeout=30
             )
