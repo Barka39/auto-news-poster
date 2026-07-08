@@ -165,7 +165,20 @@ def write_article(news: dict) -> dict:
     """
     api_key = os.environ.get("GROQ_API_KEY")
     category = news.get("category", "world_news")
+    log.info(f"writer.py ашиглаж буй загвар: {GROQ_MODEL}")
     system_prompt = SYSTEM_PROMPTS.get(category, SYSTEM_PROMPTS["world_news"])
+    system_prompt += """
+
+НАЙРУУЛГЫН ЧУХАЛ ДҮРЭМ:
+- Англи эх текстийг ҮГ ҮГЭЭР бүү орчуул. Утгыг нь бүрэн ойлгоод, эхнээс
+  бүтэн, зөв дүрмийн (нөхцөл, тийн ялгал зөв) МОНГОЛ өгүүлбэрээр дахин
+  найруул. Өгүүлбэр бүр өөрөө дангаараа ойлгомжтой байх ёстой.
+- Хэрэв эх мэдээлэлд ХОЛБООГҮЙ хэд хэдэн сэдэв (жишээ: өөр өөр хүний
+  тухай тусдаа мэдээ) зэрэгцүүлж орсон бол ТЭДГЭЭРИЙГ НЭГ ӨГҮҮЛБЭРТ
+  БҮҮ ХОЛЬЖ ХУТГА. Сэдэв бүрийг тусдаа, тодорхой өгүүлбэрт бич, эсвэл
+  хамгийн гол/анхны сэдвийг сонгож зөвхөн түүн дээр төвлөр.
+- Ижил үг/хэллэгийг ойрхон давтахгүй байх (жишээ: "өнөөдрийн өнөөдөр"
+  гэх мэт санамсаргүй давхардал гаргахгүй)."""
 
     user_prompt = f"""МЭДЭЭЛЭЛ:
 Гарчиг: {news['title']}
@@ -193,9 +206,9 @@ def write_article(news: dict) -> dict:
                         {"role": "user", "content": user_prompt}
                     ],
                     "temperature": 0.7,
-                    "max_tokens": 600,
+                    "max_tokens": 700,
                     "frequency_penalty": 0.8,
-                    "reasoning_effort": "none"
+                    "reasoning_effort": "default"
                 },
                 timeout=30
             )
@@ -205,7 +218,7 @@ def write_article(news: dict) -> dict:
 
             if is_valid_mongolian(article_text):
                 news["article_mn"] = article_text
-                log.info(f"Groq нийтлэл OK (оролдлого {attempt+1}): {article_text[:60]}...")
+                log.info(f"Groq нийтлэл OK [{GROQ_MODEL}] (оролдлого {attempt+1}): {article_text[:60]}...")
                 return news
 
             log.warning(f"Groq гаралт чанаргүй (оролдлого {attempt+1}) — дахин оролдоно")
