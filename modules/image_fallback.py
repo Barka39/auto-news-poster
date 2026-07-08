@@ -49,7 +49,7 @@ _STOPWORDS = {
 }
 
 
-def _extract_keywords(title: str, max_words: int = 3) -> str:
+def _extract_keywords(title: str, max_words: int = 2) -> str:
     candidates = re.findall(r"\b[A-Z][a-zA-Z'-]+\b", title)
     keywords = [w for w in candidates if w not in _STOPWORDS]
     return " ".join(keywords[:max_words])
@@ -160,32 +160,54 @@ def _generate_pollinations(category: str) -> str:
     return url
 
 
-def get_fallback_image(category: str, title: str = "") -> str:
+def get_fallback_image(category: str, title: str = "") -> dict:
     """
     1) Wikimedia Commons-с нэрээр хайх (жинхэнэ хүн/багийн зураг)
     2) Unsplash-с нэрээр хайх (жинхэнэ stock зураг)
     3) Unsplash-с категорийн ерөнхий зураг
-    4) Pollinations AI-аар ерөнхий (хүнгүй) зураг үүсгэх — ЗУРАГГҮЙ
-       үлдэхээс сэргийлж, баталгаатай эцсийн нөөц болно
+    4) Gemini-ээр ерөнхий (хүнгүй) illustration зураг үүсгэх
+    5) Pollinations AI — Gemini боломжгүй/бүтэлгүйтвэл эцсийн нөөц
+
+    Буцаах утга: {"url": str, "bytes": bytes} — зөвхөн нэг нь дүүрэн байна.
+
+    Анхаар: нэр дангаараа (жишээ: "Bad Bunny") хайхад "bunny" гэдэг үг
+    амьтны зурагтай санамсаргүй таарч болдог тул ЭХНЭЭСЭЭ категорийн
+    тодруулагч үг (singer, athlete гэх мэт) хамт, бүхэл хэллэг (quoted
+    phrase) байдлаар хайна.
     """
     keywords = _extract_keywords(title)
+    qualifier = {
+        "sports": "athlete",
+        "music": "singer musician",
+        "world_news": "portrait",
+    }.get(category, "")
 
     if keywords:
-        img = _search_wikimedia(keywords)
+        wiki_query = f'"{keywords}" {qualifier}'.strip()
+        img = _search_wikimedia(wiki_query)
         if img:
-            log.info(f"Wikimedia зураг олдлоо (хайлт: {keywords})")
-            return img
+            log.info(f"Wikimedia зураг олдлоо (хайлт: {wiki_query})")
+            return {"url": img, "bytes": b""}
 
-        base = {"sports": "basketball", "music": "concert", "world_news": ""}.get(category, "")
-        img = _search_unsplash(f"{keywords} {base}".strip())
+        unsplash_query = f"{keywords} {qualifier}".strip()
+        img = _search_unsplash(unsplash_query)
         if img:
-            log.info(f"Unsplash зураг олдлоо (хайлт: {keywords})")
-            return img
+            log.info(f"Unsplash зураг олдлоо (хайлт: {unsplash_query})")
+            return {"url": img, "bytes": b""}
 
     fallback_term = CATEGORY_FALLBACK_TERMS.get(category, "news")
     img = _search_unsplash(fallback_term)
     if img:
         log.info(f"Unsplash ерөнхий зураг ашиглав ({fallback_term})")
-        return img
+        return {"url": img, "bytes": b""}
 
-    return _generate_pollinations(category)
+    # Gemini — тогтмол illustration маягтай, хүнгүй зураг
+    from modules import gemini_image
+    if gemini_image.is_enabled():
+        img_bytes = gemini_image.generate_image_bytes(category)
+        if img_bytes:
+            return {"url": "", "bytes": img_bytes}
+
+    # Эцсийн нөөц: Pollinations
+    img = _generate_pollinations(category)
+    return {"url": img, "bytes": b""}
