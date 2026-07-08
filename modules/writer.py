@@ -159,45 +159,11 @@ def is_valid_mongolian(text: str, min_len: int = 120) -> bool:
     return True
 
 
-def write_article(news: dict) -> dict:
-    """
-    Groq-оор дэлгэрэнгүй Монгол нийтлэл бичих.
-    2 удаа оролдож, бүтэлгүйтвэл Google Translate, эцэст нь алгасна.
-    """
+def _try_qwen(system_prompt: str, user_prompt: str) -> str:
+    """Qwen (Groq)-оор бичих оролдлого хийх, амжилттай бол текстийг буцаана"""
     api_key = os.environ.get("GROQ_API_KEY")
-    category = news.get("category", "world_news")
-    log.info(f"writer.py ашиглаж буй загвар: {GROQ_MODEL}")
-    system_prompt = SYSTEM_PROMPTS.get(category, SYSTEM_PROMPTS["world_news"])
-    system_prompt += """
-
-НАЙРУУЛГЫН ЧУХАЛ ДҮРЭМ:
-- Англи эх текстийг ҮГ ҮГЭЭР бүү орчуул. Утгыг нь бүрэн ойлгоод, эхнээс
-  бүтэн, зөв дүрмийн (нөхцөл, тийн ялгал зөв) МОНГОЛ өгүүлбэрээр дахин
-  найруул. Өгүүлбэр бүр өөрөө дангаараа ойлгомжтой байх ёстой.
-- Хэрэв эх мэдээлэлд ХОЛБООГҮЙ хэд хэдэн сэдэв (жишээ: өөр өөр хүний
-  тухай тусдаа мэдээ) зэрэгцүүлж орсон бол ТЭДГЭЭРИЙГ НЭГ ӨГҮҮЛБЭРТ
-  БҮҮ ХОЛЬЖ ХУТГА. Сэдэв бүрийг тусдаа, тодорхой өгүүлбэрт бич, эсвэл
-  хамгийн гол/анхны сэдвийг сонгож зөвхөн түүн дээр төвлөр.
-- Ижил үг/хэллэгийг ойрхон давтахгүй байх (жишээ: "өнөөдрийн өнөөдөр"
-  гэх мэт санамсаргүй давхардал гаргахгүй).
-- НЭГ ӨГҮҮЛБЭРТ ЗӨВХӨН НЭГ ТОДОРХОЙ БАРИМТ/ҮЙЛДЭЛ бич. Хэд хэдэн үйлдэл,
-  шалтгаан, нөхцлийг нэг урт, төвөгтэй өгүүлбэрт бүү шахаж хол. Хэрэв эх
-  текст дэх санаа нарийн төвөгтэй бол 2-3 БОГИНО, ТОДОРХОЙ өгүүлбэрт
-  задалж бич — урт бөгөөд ойлгомжгүй нэг өгүүлбэрээс богино, тодорхой
-  хэд хэдэн өгүүлбэр илүү дээр.
-- Өгүүлбэр бичихийн өмнө өөрөөсөө асуу: "Энэ өгүүлбэрийг Монгол хүн нэг
-  удаа уншаад шууд ойлгох уу?" Хэрэв эргэлзвэл богиносгож, энгийн бол."""
-
-    user_prompt = f"""МЭДЭЭЛЭЛ:
-Гарчиг: {news['title']}
-Агуулга: {news.get('summary', '')}
-
-Дээрх мэдээллээр Монгол нийтлэл бич. Зөвхөн нийтлэлийн текстийг бич,
-өөр юу ч бүү нэм."""
-
     if not api_key:
-        log.warning("GROQ_API_KEY байхгүй — Google Translate ашиглана")
-        return _fallback(news)
+        return ""
 
     for attempt in range(2):
         try:
@@ -226,32 +192,81 @@ def write_article(news: dict) -> dict:
             article_text = _clean_output(message.get("content", ""))
 
             if is_valid_mongolian(article_text):
-                news["article_mn"] = article_text
-                log.info(f"Groq нийтлэл OK [{GROQ_MODEL}] (оролдлого {attempt+1}): {article_text[:60]}...")
+                log.info(f"Qwen нийтлэл OK [{GROQ_MODEL}] (оролдлого {attempt+1}): {article_text[:60]}...")
+                return article_text
 
-                # ХАРЬЦУУЛАЛТ: Gemini идэвхтэй бол ижил prompt-оор бичүүлж
-                # лог дээр зэрэгцүүлж харуулна (постлохгүй, зөвхөн диагностик)
-                if gemini_compare.is_enabled():
-                    gemini_text = gemini_compare.compare(system_prompt, user_prompt)
-                    if gemini_text:
-                        log.info("=" * 60)
-                        log.info(f"🔵 QWEN гаралт:\n{article_text}")
-                        log.info("-" * 60)
-                        log.info(f"🟢 GEMINI гаралт:\n{gemini_text}")
-                        log.info("=" * 60)
-
-                return news
-
-            log.warning(f"Groq гаралт чанаргүй (оролдлого {attempt+1}) — дахин оролдоно")
-            log.warning(f"  Урт: {len(article_text)} тэмдэгт | Гаралт (эхний 300): {article_text[:300]!r}")
-            log.warning(f"  message-ийн бүх түлхүүр: {list(message.keys())}")
-            if "reasoning" in message:
-                log.warning(f"  reasoning талбар байна (эхний 200): {str(message.get('reasoning'))[:200]!r}")
+            log.warning(f"Qwen гаралт чанаргүй (оролдлого {attempt+1}) — дахин оролдоно")
 
         except Exception as e:
-            log.error(f"Groq API алдаа (оролдлого {attempt+1}): {e}")
+            log.error(f"Qwen (Groq) API алдаа (оролдлого {attempt+1}): {e}")
 
-    log.warning("Groq 2 оролдлого бүтэлгүйтлээ — Google Translate руу шилжлээ")
+    return ""
+
+
+def write_article(news: dict) -> dict:
+    """
+    Нийтлэл бичих дараалал (үнэ цэнэ буурах эрэмбээр):
+    1. Gemini — бодит харьцуулалтад Qwen-с илүү нарийвчлалтай гарсан тул ҮНДСЭН
+    2. Qwen (Groq) — Gemini амжилтгүй бол нөөц
+    3. Google Translate — хоёул амжилтгүй бол эцсийн нөөц
+    """
+    category = news.get("category", "world_news")
+    system_prompt = SYSTEM_PROMPTS.get(category, SYSTEM_PROMPTS["world_news"])
+    system_prompt += """
+
+НАЙРУУЛГЫН ЧУХАЛ ДҮРЭМ:
+- Англи эх текстийг ҮГ ҮГЭЭР бүү орчуул. Утгыг нь бүрэн ойлгоод, эхнээс
+  бүтэн, зөв дүрмийн (нөхцөл, тийн ялгал зөв) МОНГОЛ өгүүлбэрээр дахин
+  найруул. Өгүүлбэр бүр өөрөө дангаараа ойлгомжтой байх ёстой.
+- Хэрэв эх мэдээлэлд ХОЛБООГҮЙ хэд хэдэн сэдэв (жишээ: өөр өөр хүний
+  тухай тусдаа мэдээ) зэрэгцүүлж орсон бол ТЭДГЭЭРИЙГ НЭГ ӨГҮҮЛБЭРТ
+  БҮҮ ХОЛЬЖ ХУТГА. Сэдэв бүрийг тусдаа, тодорхой өгүүлбэрт бич, эсвэл
+  хамгийн гол/анхны сэдвийг сонгож зөвхөн түүн дээр төвлөр.
+- Ижил үг/хэллэгийг ойрхон давтахгүй байх (жишээ: "өнөөдрийн өнөөдөр"
+  гэх мэт санамсаргүй давхардал гаргахгүй).
+- НЭГ ӨГҮҮЛБЭРТ ЗӨВХӨН НЭГ ТОДОРХОЙ БАРИМТ/ҮЙЛДЭЛ бич. Хэд хэдэн үйлдэл,
+  шалтгаан, нөхцлийг нэг урт, төвөгтэй өгүүлбэрт бүү шахаж хол. Хэрэв эх
+  текст дэх санаа нарийн төвөгтэй бол 2-3 БОГИНО, ТОДОРХОЙ өгүүлбэрт
+  задалж бич — урт бөгөөд ойлгомжгүй нэг өгүүлбэрээс богино, тодорхой
+  хэд хэдэн өгүүлбэр илүү дээр.
+- Өгүүлбэр бичихийн өмнө өөрөөсөө асуу: "Энэ өгүүлбэрийг Монгол хүн нэг
+  удаа уншаад шууд ойлгох уу?" Хэрэв эргэлзвэл богиносгож, энгийн бол.
+- БАРИМТЫГ АЛДАЖ БОЛОХГҮЙ: цаг агаарын үзэгдэл (үер/тайфун/аянга гэх
+  мэт), тоо, нэр, газар зэргийг эх текстээс яг зөв, өөрчлөлтгүй авч
+  орчуул. Тодорхойгүй бол ойролцоо биш, хамгийн үнэн зөв нэр томьёог
+  ашигла."""
+
+    user_prompt = f"""МЭДЭЭЛЭЛ:
+Гарчиг: {news['title']}
+Агуулга: {news.get('summary', '')}
+
+Дээрх мэдээллээр Монгол нийтлэл бич. Зөвхөн нийтлэлийн текстийг бич,
+өөр юу ч бүү нэм."""
+
+    # 1. ҮНДСЭН: Gemini
+    if gemini_compare.is_enabled():
+        for attempt in range(2):
+            article_text = gemini_compare.generate(system_prompt, user_prompt)
+            article_text = _clean_output(article_text) if article_text else ""
+
+            if is_valid_mongolian(article_text):
+                news["article_mn"] = article_text
+                log.info(f"✅ Gemini нийтлэл OK (оролдлого {attempt+1}): {article_text[:60]}...")
+                return news
+
+            log.warning(f"Gemini гаралт чанаргүй/хоосон (оролдлого {attempt+1}) — дахин оролдоно")
+
+        log.warning("Gemini 2 оролдлого бүтэлгүйтлээ — Qwen (Groq) руу шилжлээ")
+
+    # 2. НӨӨЦ: Qwen (Groq)
+    log.info(f"writer.py нөөц загвар: {GROQ_MODEL}")
+    article_text = _try_qwen(system_prompt, user_prompt)
+    if article_text:
+        news["article_mn"] = article_text
+        return news
+
+    # 3. ЭЦСИЙН НӨӨЦ: Google Translate
+    log.warning("Gemini болон Qwen хоёул бүтэлгүйтлээ — Google Translate руу шилжлээ")
     return _fallback(news)
 
 
