@@ -10,9 +10,12 @@ import hashlib
 import feedparser
 import requests
 import logging
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 
 log = logging.getLogger(__name__)
+
+# Ийм цагаас хуучин мэдээг алгасна (шинэ мэдээ л постлохын тулд)
+MAX_ARTICLE_AGE_HOURS = 48
 
 # ============================================================
 # ЭХ СУРВАЛЖУУД - 3 чиглэл
@@ -158,6 +161,15 @@ def fetch_category(category: str, sources: list) -> list:
                 url = entry.get("link", "")
                 if not url:
                     continue
+
+                # Хуучин мэдээг алгасах — зөвхөн сүүлийн MAX_ARTICLE_AGE_HOURS
+                # цагийн дотор нийтлэгдсэн мэдээг л авна
+                if hasattr(entry, "published_parsed") and entry.published_parsed:
+                    published_dt = datetime(*entry.published_parsed[:6], tzinfo=timezone.utc)
+                    age = datetime.now(timezone.utc) - published_dt
+                    if age > timedelta(hours=MAX_ARTICLE_AGE_HOURS):
+                        log.info(f"[ХУУЧИН] Алгаслаа ({age.total_seconds()/3600:.0f} цагийн өмнөх): {entry.get('title', '')[:50]}")
+                        continue
 
                 summary_raw = entry.get("summary", "") or entry.get("description", "") or ""
                 summary = clean_summary(summary_raw, max_chars=900)
