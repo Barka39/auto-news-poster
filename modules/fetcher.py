@@ -117,11 +117,17 @@ def extract_og_image(article_url: str) -> str:
         resp = requests.get(
             article_url,
             timeout=8,
-            headers={"User-Agent": "Mozilla/5.0 (compatible; AutoNewsPoster/1.0)"}
+            headers={
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                              "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "Accept-Language": "en-US,en;q=0.9",
+            }
         )
+        log.info(f"[ДИАГНОСТИК og] {article_url[:60]} → HTTP {resp.status_code}, {len(resp.text)} тэмдэгт")
         resp.raise_for_status()
-        # Зөвхөн эхний ~50KB-г шалгах (og tag ихэвчлэн <head> дотор, эхэнд байдаг)
-        html = resp.text[:50000]
+        # Зөвхөн эхний ~80KB-г шалгах (og tag ихэвчлэн <head> дотор, эхэнд байдаг)
+        html = resp.text[:80000]
 
         match = re.search(
             r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
@@ -137,6 +143,12 @@ def extract_og_image(article_url: str) -> str:
             og_url = match.group(1)
             log.info(f"og:image олдлоо: {og_url[:80]}")
             return og_url
+
+        # Олдоогүй бол шалтгааныг тодруулах: og:image гэдэг үг наад захын
+        # HTML дотор огт байгаа эсэхийг шалгана (paywall/consent хуудас
+        # буцсан эсэхийг тодорхойлоход тусална)
+        has_og_string = "og:image" in html
+        log.warning(f"[ДИАГНОСТИК og] tag олдсонгүй. 'og:image' үг HTML-д байгаа эсэх: {has_og_string} | HTML эхлэл: {html[:200]!r}")
 
         return ""
     except Exception as e:
