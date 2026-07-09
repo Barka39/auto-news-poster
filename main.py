@@ -4,7 +4,7 @@ Auto News Poster - Монгол мэдээ автомат постлогч
 """
 
 import logging
-from modules.fetcher import fetch_all_news
+from modules.fetcher import fetch_all_news, extract_og_image
 from modules.writer import write_article, is_valid_mongolian, filter_relevant_news
 from modules.image_fallback import get_fallback_image
 from modules.poster import post_to_all_platforms
@@ -60,8 +60,17 @@ def run():
                 posted_ids.add(news["id"])  # дахин оролдохгүйн тулд тэмдэглэнэ
                 continue
 
-            # RSS-д зураг байхгүй бол Wikimedia/Unsplash/Gemini-с зураг хайж олно
-            if not written.get("image_url"):
+            # ХАМГИЙН НАЙДВАРТАЙ ЗУРАГ: тухайн өгүүллийн бодит хуудаснаас
+            # og:image унших (мэдээний сайтууд өөрсдөө Facebook/Twitter-д
+            # зориулж тохируулдаг стандарт tag). RSS-ийн media tag-аас
+            # хамаагүй зөв тул эхэлж үүгээр орлуулна.
+            og_image = extract_og_image(news.get("url", ""))
+            if og_image:
+                written["image_url"] = og_image
+                log.info(f"[ДИАГНОСТИК] og:image ашиглав: {og_image[:80]}")
+            elif not written.get("image_url"):
+                # og:image олдохгүй, RSS-д ч зураг байхгүй бол
+                # Wikimedia/Unsplash/Gemini-с зураг хайж олно
                 fallback = get_fallback_image(
                     written.get("category", "world_news"),
                     written.get("title", "")
@@ -74,11 +83,18 @@ def run():
             # Sports/Music: жинхэнэ фото байвал (RSS/Wikimedia/Unsplash-с)
             # Gemini-ээр illustration маягт хөрвүүлнэ. Эх мөч, поз хэвээр,
             # зөвхөн дүрслэлийн хэв маяг өөрчлөгдөнө (шинэ дүр зохиохгүй).
+            log.info(f"[ДИАГНОСТИК] category={category_now!r}, image_url={'байна' if written.get('image_url') else 'ХООСОН'}")
             if category_now in ("sports", "music") and written.get("image_url"):
+                log.info("[ДИАГНОСТИК] restyle_photo дуудаж байна...")
                 restyled = gemini_image.restyle_photo(image_url=written["image_url"])
                 if restyled:
                     written["image_bytes"] = restyled
                     written["image_url"] = ""
+                    log.info("[ДИАГНОСТИК] restyle АМЖИЛТТАЙ")
+                else:
+                    log.info("[ДИАГНОСТИК] restyle БҮТЭЛГҮЙТЭВ — эх зураг хэвээр ашиглана")
+            else:
+                log.info("[ДИАГНОСТИК] restyle нөхцөл хангагдаагүй тул алгаслаа")
 
             # Давхарлах текст тодорхойлох: бодит ишлэл байвал түүнийг,
             # эсвэл (sports/music категорид) гарчгийг ашиглана.
