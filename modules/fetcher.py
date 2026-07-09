@@ -15,7 +15,7 @@ from datetime import datetime, timezone, timedelta
 log = logging.getLogger(__name__)
 
 # Ийм цагаас хуучин мэдээг алгасна (шинэ мэдээ л постлохын тулд)
-MAX_ARTICLE_AGE_HOURS = 48
+MAX_ARTICLE_AGE_HOURS = 24
 
 # ============================================================
 # ЭХ СУРВАЛЖУУД - 3 чиглэл
@@ -25,16 +25,22 @@ RSS_SOURCES = {
         {"name": "ESPN NBA", "url": "https://www.espn.com/espn/rss/nba/news", "lang": "en"},
         {"name": "BBC Sport", "url": "https://feeds.bbci.co.uk/sport/rss.xml", "lang": "en"},
         {"name": "ESPN Top Headlines", "url": "https://www.espn.com/espn/rss/news", "lang": "en"},
+        {"name": "Guardian Football", "url": "https://www.theguardian.com/football/rss", "lang": "en"},
+        {"name": "Sky Sports", "url": "https://www.skysports.com/rss/12040", "lang": "en"},
     ],
     "music": [
         {"name": "Billboard", "url": "https://www.billboard.com/feed/", "lang": "en"},
         {"name": "Rolling Stone", "url": "https://www.rollingstone.com/feed/", "lang": "en"},
         {"name": "TMZ Entertainment", "url": "https://www.tmz.com/category/entertainment/feed/", "lang": "en"},
+        {"name": "Guardian Music", "url": "https://www.theguardian.com/music/rss", "lang": "en"},
+        {"name": "NME", "url": "https://www.nme.com/news/music/feed", "lang": "en"},
     ],
     "world_news": [
         {"name": "Reuters World", "url": "https://feeds.reuters.com/reuters/worldNews", "lang": "en"},
         {"name": "BBC World", "url": "https://feeds.bbci.co.uk/news/world/rss.xml", "lang": "en"},
         {"name": "AP News", "url": "https://rsshub.app/apnews/topics/ap-top-news", "lang": "en"},
+        {"name": "Guardian World", "url": "https://www.theguardian.com/world/rss", "lang": "en"},
+        {"name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml", "lang": "en"},
     ]
 }
 
