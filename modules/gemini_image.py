@@ -19,7 +19,9 @@ import time  # Хүлээлт үүсгэхэд ашиглана
 
 log = logging.getLogger(__name__)
 
-GEMINI_IMAGE_URL = GEMINI_IMAGE_URL = GEMINI_IMAGE_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent"
+# Албан ёсны зөв Image Endpoint
+GEMINI_IMAGE_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent"
+
 # Тогтмол brand style — бүх зураг ижил "гар зурсан" маягтай харагдана
 STYLE_SUFFIX = (
     "flat vector illustration style, modern editorial sports-news "
@@ -38,8 +40,7 @@ def is_enabled() -> bool:
 
 def generate_image_bytes(category: str) -> bytes:
     """
-    Ерөнхий (хүнгүй) сэдэвчилсэн зургийг Gemini-ээр үүсгэж, raw image bytes-г буцаана
-    (URL биш — Facebook-д multipart upload хийхэд ашиглана).
+    Ерөнхий (хүнгүй) сэдэвчилсэн зургийг Gemini-ээр үүсгэж, raw image bytes-г буцаана.
     Амжилтгүй бол хоосон bytes буцаана.
     """
     api_key = os.environ.get("GEMINI_API_KEY")
@@ -57,11 +58,18 @@ def generate_image_bytes(category: str) -> bytes:
                     {"role": "user", "parts": [{"text": prompt}]}
                 ]
             },
-            timeout=40
+            timeout=30
         )
         response.raise_for_status()
         data = response.json()
-        parts = data["candidates"][0]["content"]["parts"]
+        
+        candidates = data.get("candidates", [])
+        if not candidates:
+            return b""
+            
+        content = candidates[0].get("content", {})
+        parts = content.get("parts", [])
+        
         for part in parts:
             inline_data = part.get("inlineData") or part.get("inline_data")
             if inline_data and inline_data.get("data"):
@@ -69,7 +77,6 @@ def generate_image_bytes(category: str) -> bytes:
                 log.info(f"Gemini зураг үүсгэв ({category}, {len(image_bytes)} bytes)")
                 return image_bytes
 
-        log.warning("Gemini хариунд зураг олдсонгүй")
         return b""
     except Exception as e:
         log.warning(f"Gemini зураг үүсгэхэд алдаа: {e}")
@@ -79,6 +86,7 @@ def restyle_photo(image_url: str = "", image_bytes: bytes = b"") -> bytes:
     """
     ЖИНХЭНЭ фотог Gemini-ээр illustration/cartoon маягт хөрвүүлнэ.
     Үнэгүй таримын 429 алдаанаас сэргийлж хүсэлт бүрийн өмнө 12 секунд зориуд хүлээнэ.
+    Алдаа гарвал KeyError өгөхгүй, чимээгүй хоосон bytes буцааж үндсэн постыг гацаахгүй.
     """
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
@@ -86,24 +94,23 @@ def restyle_photo(image_url: str = "", image_bytes: bytes = b"") -> bytes:
         return b""
 
     # === РЕЙТ ХИЗГААРААС СЭРГИЙЛЭХ ХҮЛЭЭЛТ ===
-    # Олон мэдээ зэрэг боловсруулах үед Gemini блоклохоос сэргийлж 12 секунд амраана.
     log.info("[ДИАГНОСТИК restyle] Gemini Rate Limit-ээс хамгаалж 12 секунд хүлээж байна...")
     time.sleep(12)
 
     try:
         if image_bytes:
             source_bytes = image_bytes
-            log.info(f"[ДИАГНОСТИК restyle] эх эх нь bytes ({len(source_bytes)})")
+            log.info(f"[ДИАГНОСТИК restyle] эх зураг нь bytes ({len(source_bytes)})")
         elif image_url:
             resp = requests.get(image_url, timeout=15)
             resp.raise_for_status()
             source_bytes = resp.content
-            log.info(f"[ДИАГНОСТИК restyle] эх URL-с татлаа: {image_url[:80]} ({len(source_bytes)} bytes, content-type: {resp.headers.get('content-type')})")
+            log.info(f"[ДИАГНОСТИК restyle] эх URL-с татлаа: {image_url[:80]} ({len(source_bytes)} bytes)")
         else:
             log.info("[ДИАГНОСТИК restyle] image_url, image_bytes хоёул хоосон — алгасав")
             return b""
 
-        # Зургийн бодит форматыг тодорхойлох
+        # Зургийн форматыг PIL-оор шалгах
         mime_type = "image/jpeg"
         try:
             from PIL import Image
@@ -136,26 +143,39 @@ def restyle_photo(image_url: str = "", image_bytes: bytes = b"") -> bytes:
                     ]
                 }]
             },
-            timeout=25  # Овоорлоос сэргийлж timeout-ийг 40-өөс 25 болгож багасгав
+            timeout=25
         )
 
         log.info(f"[ДИАГНОСТИК restyle] HTTP статус: {response.status_code}")
         response.raise_for_status()
         
         data = response.json()
-        parts = data["candidates"][0]["content"]["parts"]
+        
+        # === АЮУЛГҮЙ БАЙДЛЫН ХАМГААЛАЛТ (KeyError-оос сэргийлнэ) ===
+        candidates = data.get("candidates", [])
+        if not candidates:
+            log.warning(f"Gemini хариунд 'candidates' олдсонгүй. Хариу: {str(data)[:300]}")
+            return b""
+            
+        content = candidates[0].get("content", {})
+        parts = content.get("parts", [])
+        if not parts:
+            finish_reason = candidates[0].get("finishReason") or candidates[0].get("finish_reason")
+            log.warning(f"Gemini хариунд 'parts' олдсонгүй. Шалтгаан: {finish_reason}")
+            return b""
+
         for part in parts:
             inline_data = part.get("inlineData") or part.get("inline_data")
             if inline_data and inline_data.get("data"):
                 result_bytes = base64.b64decode(inline_data["data"])
-                log.info(f"Gemini зургийг illustration болгож хөрвүүлэв ({len(result_bytes)} bytes)")
+                log.info(f"Gemini зургийг амжилттай хөрвүүлэв ({len(result_bytes)} bytes)")
                 return result_bytes
 
-        log.warning(f"Gemini restyle хариунд зураг олдсонгүй. Бүтэн хариу: {str(data)[:500]}")
+        log.warning("Gemini хариуны хэсгүүдэд зургийн inlineData өгөгдөл олдсонгүй.")
         return b""
 
     except requests.exceptions.HTTPError as e:
-        log.warning(f"Gemini restyle HTTP алдаа: {e} | хариу: {response.text[:500]}")
+        log.warning(f"Gemini restyle HTTP алдаа: {e} | хариу: {response.text[:300]}")
         return b""
     except Exception as e:
         log.warning(f"Gemini restyle алдаа: {type(e).__name__}: {e}")
