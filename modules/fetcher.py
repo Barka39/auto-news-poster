@@ -8,6 +8,7 @@
 import re
 import hashlib
 import feedparser
+import requests
 import logging
 from datetime import datetime
 
@@ -99,6 +100,47 @@ def _looks_like_image(url: str) -> bool:
     return bool(re.search(r"\.(jpg|jpeg|png|webp|gif)(\?.*)?$", url, re.IGNORECASE))
 
 
+def extract_og_image(article_url: str) -> str:
+    """
+    Өгүүллийн БОДИТ хуудаснаас og:image meta tag-ийг унших.
+
+    Энэ бол мэдээний сайтууд (BBC, ESPN, Reuters г.м.) өөрсдийн Facebook/
+    Twitter-д зориулж ТУХАЙН ӨГҮҮЛЭЛД тусгайлан тохируулсан зургаа
+    зааж өгдөг стандарт HTML tag. RSS-ийн media tag-аас хамаагүй
+    найдвартай — учир нь RSS дэх media tag ихэвчлэн ерөнхий/буруу байдаг,
+    харин og:image болбол яг тухайн өгүүллийн зургийг зөв заана.
+    """
+    try:
+        resp = requests.get(
+            article_url,
+            timeout=8,
+            headers={"User-Agent": "Mozilla/5.0 (compatible; AutoNewsPoster/1.0)"}
+        )
+        resp.raise_for_status()
+        # Зөвхөн эхний ~50KB-г шалгах (og tag ихэвчлэн <head> дотор, эхэнд байдаг)
+        html = resp.text[:50000]
+
+        match = re.search(
+            r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
+            html, re.IGNORECASE
+        )
+        if not match:
+            # property, content дараалал эсрэгээр байж болзошгүй
+            match = re.search(
+                r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
+                html, re.IGNORECASE
+            )
+        if match:
+            og_url = match.group(1)
+            log.info(f"og:image олдлоо: {og_url[:80]}")
+            return og_url
+
+        return ""
+    except Exception as e:
+        log.warning(f"og:image унших алдаа ({article_url[:60]}): {e}")
+        return ""
+
+
 def fetch_category(category: str, sources: list) -> list:
     """Нэг категорийн бүх эх сурвалжаас мэдээ татах"""
     results = []
@@ -120,6 +162,8 @@ def fetch_category(category: str, sources: list) -> list:
                 summary_raw = entry.get("summary", "") or entry.get("description", "") or ""
                 summary = clean_summary(summary_raw, max_chars=900)
                 image_url = extract_image(entry)
+                published = entry.get("published", "тодорхойгүй")
+                log.info(f"[ДИАГНОСТИК RSS] '{entry.get('title', '')[:50]}' → зураг: {image_url[:80] if image_url else 'БАЙХГҮЙ'} | нийтлэгдсэн: {published}")
 
                 news_item = {
                     "id": make_id(url),
