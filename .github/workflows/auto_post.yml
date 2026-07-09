@@ -17,6 +17,13 @@ on:
 
   workflow_dispatch:
 
+# Давхардсан пост гарахаас сэргийлж, зэрэгцээ ажиллагаа зогсооно —
+# ажиллагаа хараахан дуусаагүй үед дараагийн cron trigger ирвэл, тэрийг
+# хүлээлгэнэ (зэрэгцүүлж ажиллуулахгүй).
+concurrency:
+  group: auto-news-poster
+  cancel-in-progress: false
+
 jobs:
   post-news:
     runs-on: ubuntu-latest
