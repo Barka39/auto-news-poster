@@ -11,6 +11,7 @@ from modules.poster import post_to_all_platforms
 from modules.storage import load_posted, save_posted
 from modules import telegram_notify
 from modules import quote_card
+from modules import gemini_image
 from modules.translator import google_translate
 
 logging.basicConfig(
@@ -68,22 +69,39 @@ def run():
                 written["image_url"] = fallback.get("url", "")
                 written["image_bytes"] = fallback.get("bytes", b"")
 
-            # Quote card: эх сурвалжид БОДИТ ишлэл байвал (жинхэнэ зургийг
-            # хэвээр нь ашиглаад), Pulse Sports загварын quote card үүсгэнэ.
-            # Хөгжмийн категорид ХЭРЭГЛЭХГҮЙ — учир нь дууны/цомгийн нэр
-            # ихэвчлэн хашилтад байдаг тул "ишлэл" гэж андуурч болзошгүй
-            # (жишээ: "Rhinestone Cowboy" гэдэг дууны нэрийг хүний ишлэл
-            # гэж буруу таньсан алдаа гарч байсан).
             category_now = written.get("category", "")
+
+            # Sports/Music: жинхэнэ фото байвал (RSS/Wikimedia/Unsplash-с)
+            # Gemini-ээр illustration маягт хөрвүүлнэ. Эх мөч, поз хэвээр,
+            # зөвхөн дүрслэлийн хэв маяг өөрчлөгдөнө (шинэ дүр зохиохгүй).
+            if category_now in ("sports", "music") and written.get("image_url"):
+                restyled = gemini_image.restyle_photo(image_url=written["image_url"])
+                if restyled:
+                    written["image_bytes"] = restyled
+                    written["image_url"] = ""
+
+            # Давхарлах текст тодорхойлох: бодит ишлэл байвал түүнийг,
+            # эсвэл (sports/music категорид) гарчгийг ашиглана.
+            # Хөгжимд дууны нэрийг "ишлэл" гэж андуурахаас сэргийлж, тэнд
+            # quote-хайлт хийхгүй.
             source_text = f"{news.get('title', '')} {news.get('summary', '')}"
             quote_en = quote_card.extract_quote(source_text) if category_now != "music" else ""
             if quote_en:
                 log.info(f"  [ДИАГНОСТИК] Энэ мэдээ '{news['title'][:50]}' → ишлэл олдлоо: {quote_en[:80]!r} | эх сурвалж: {written.get('source_name', '?')}")
-            if quote_en and (written.get("image_url") or written.get("image_bytes")):
-                quote_mn = google_translate(quote_en)
-                if quote_mn:
+
+            overlay_text_en = quote_en
+            if not overlay_text_en and category_now in ("sports", "music"):
+                overlay_text_en = news.get("title", "")  # ишлэлгүй бол гарчгийг ашиглана
+
+            if overlay_text_en and (written.get("image_url") or written.get("image_bytes")):
+                if quote_en:
+                    overlay_text_mn = google_translate(quote_en)
+                else:
+                    overlay_text_mn = written.get("title_mn", "") or google_translate(overlay_text_en)
+
+                if overlay_text_mn:
                     card_bytes = quote_card.generate_quote_card(
-                        quote_mn=quote_mn,
+                        quote_mn=overlay_text_mn,
                         source_name=written.get("source_name", "Эх сурвалж"),
                         image_url=written.get("image_url", ""),
                         image_bytes=written.get("image_bytes", b"")
@@ -91,7 +109,7 @@ def run():
                     if card_bytes:
                         written["image_bytes"] = card_bytes
                         written["image_url"] = ""
-                        log.info(f"📇 Quote card ашиглав: {quote_mn[:50]}...")
+                        log.info(f"📇 Зурган давхарга ашиглав: {overlay_text_mn[:50]}...")
 
             result = post_to_all_platforms(written)
 
