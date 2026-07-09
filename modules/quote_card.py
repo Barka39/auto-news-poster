@@ -19,10 +19,10 @@ FONT_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 FONT_REGULAR = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 
 # Давхар хашилт (шулуун эсвэл муруй) — хамгийн найдвартай
-QUOTE_RE_DOUBLE = re.compile(r'["\u201c\u201d]([^"\u201c\u201d]{15,200})["\u201c\u201d]')
+QUOTE_RE_DOUBLE = re.compile(r'["\u201c\u201d]([^"\u201c\u201d]{30,200})["\u201c\u201d]')
 # Ганц хашилт (‘ ’ эсвэл ') — зөвхөн мөрний эхэнд/зайн дараа эхэлсэн бол
 # (contraction-той андуурахгүйн тулд, жишээ "England's" гэдэгтэй)
-QUOTE_RE_SINGLE = re.compile(r"(?:^|\s)['\u2018]([^'\u2019]{15,200})['\u2019](?:\s|$|[.,!?:])")
+QUOTE_RE_SINGLE = re.compile(r"(?:^|\s)['\u2018]([^'\u2019]{30,200})['\u2019](?:\s|$|[.,!?:])")
 
 
 def extract_quote(text: str) -> str:
@@ -97,7 +97,25 @@ def generate_quote_card(quote_mn: str, source_name: str,
             base_img = base_img.crop((0, top, CANVAS_W, top + 750))
             img_h = 750
 
-        QUOTE_BOX_H = 420
+        box_margin = 60
+        quote_font = ImageFont.truetype(FONT_BOLD, 42)
+        source_font = ImageFont.truetype(FONT_REGULAR, 30)
+
+        # Текстийг эхлээд урьдчилан тооцоод (жинхэнэ canvas үүсгэхийн
+        # өмнө), ингэснээр хайрцгийн өндрийг МӨРИЙН ТООНООС хамааруулж
+        # тохируулна — богино ишлэлд жижиг, урт ишлэлд том хайрцаг.
+        _tmp_img = Image.new("RGB", (10, 10))
+        _tmp_draw = ImageDraw.Draw(_tmp_img)
+        quote_text = f'\u201c{quote_mn}\u201d'
+        lines = _wrap_text(_tmp_draw, quote_text, quote_font, CANVAS_W - box_margin * 2 - 80)
+        lines = lines[:6]  # дээд тал нь 6 мөр
+
+        LINE_HEIGHT = 54
+        TOP_PADDING = 60
+        BOTTOM_PADDING = 80  # эх сурвалжийн мөрөнд зориулсан зай
+        text_block_h = len(lines) * LINE_HEIGHT
+        QUOTE_BOX_H = max(220, TOP_PADDING + text_block_h + BOTTOM_PADDING)
+
         canvas = Image.new("RGB", (CANVAS_W, img_h + QUOTE_BOX_H), "white")
         canvas.paste(base_img, (0, 0))
 
@@ -105,7 +123,6 @@ def generate_quote_card(quote_mn: str, source_name: str,
 
         # Улаан хүрээтэй цагаан quote хайрцаг (Pulse Sports загвар)
         box_top = img_h + 30
-        box_margin = 60
         draw.rectangle(
             [box_margin, box_top, CANVAS_W - box_margin, img_h + QUOTE_BOX_H - 30],
             fill="white",
@@ -113,18 +130,18 @@ def generate_quote_card(quote_mn: str, source_name: str,
             width=6
         )
 
-        # Ишлэлийн текст (хашилттай)
-        quote_font = ImageFont.truetype(FONT_BOLD, 42)
-        quote_text = f'\u201c{quote_mn}\u201d'
-        lines = _wrap_text(draw, quote_text, quote_font, CANVAS_W - box_margin * 2 - 80)
-
-        text_y = box_top + 50
-        for line in lines[:6]:  # дээд тал нь 6 мөр
-            draw.text((box_margin + 40, text_y), line, font=quote_font, fill=(20, 20, 20))
-            text_y += 54
+        # Ишлэлийн текстийг ХАЙРЦГИЙН ТӨВД (босоогоор) байрлуулах
+        box_inner_h = QUOTE_BOX_H - 60 - BOTTOM_PADDING  # хүрээний дотоод өндөр (эх сурвалжийн зайг хасаад)
+        text_y = box_top + max(30, (box_inner_h - text_block_h) // 2)
+        for line in lines:
+            # Мөр бүрийг хэвтээгээр төвлүүлэх
+            bbox = draw.textbbox((0, 0), line, font=quote_font)
+            line_w = bbox[2] - bbox[0]
+            text_x = box_margin + ((CANVAS_W - box_margin * 2) - line_w) // 2
+            draw.text((text_x, text_y), line, font=quote_font, fill=(20, 20, 20))
+            text_y += LINE_HEIGHT
 
         # Эх сурвалжийн тэмдэглэл
-        source_font = ImageFont.truetype(FONT_REGULAR, 30)
         draw.text(
             (box_margin + 40, img_h + QUOTE_BOX_H - 70),
             f"Эх сурвалж: {source_name}",
