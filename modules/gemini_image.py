@@ -19,7 +19,7 @@ import time  # Хүлээлт үүсгэхэд ашиглана
 
 log = logging.getLogger(__name__)
 
-GEMINI_IMAGE_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent"
+GEMINI_IMAGE_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent"
 
 # Тогтмол brand style — бүх зураг ижил "гар зурсан" маягтай харагдана
 STYLE_SUFFIX = (
