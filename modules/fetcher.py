@@ -118,7 +118,7 @@ def fetch_category(category: str, sources: list) -> list:
                     continue
 
                 summary_raw = entry.get("summary", "") or entry.get("description", "") or ""
-                summary = clean_summary(summary_raw, max_chars=500)
+                summary = clean_summary(summary_raw, max_chars=900)
                 image_url = extract_image(entry)
 
                 news_item = {
