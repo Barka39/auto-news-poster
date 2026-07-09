@@ -1,0 +1,63 @@
+name: Digest Post
+
+on:
+  # Монголын цагаар 12:00 болон 19:00 (UTC+8):
+  #   12:00 МН = 04:00 UTC
+  #   19:00 МН = 11:00 UTC
+  schedule:
+    - cron: "0 4 * * *"
+    - cron: "0 11 * * *"
+
+  workflow_dispatch:
+
+concurrency:
+  group: auto-news-poster
+  cancel-in-progress: false
+
+jobs:
+  post-digest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout кодыг татах
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Python тохируулах
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Font суулгах (Кирилл дэмждэг)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-dejavu-core
+
+      - name: Dependencies суулгах
+        run: pip install -r requirements.txt
+
+      - name: Тойм бичиж постлох
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
+          IG_ACCOUNT_ID: ${{ secrets.IG_ACCOUNT_ID }}
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python digest.py
+
+      - name: posted_ids.json commit хийх
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add posted_ids.json || true
+          git diff --staged --quiet || git commit -m "posted_ids шинэчлэгдлээ (digest) [skip ci]"
+          git push || true
