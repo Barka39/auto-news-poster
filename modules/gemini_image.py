@@ -1,25 +1,21 @@
 """
 Gemini-аар (Nano Banana, gemini-2.5-flash-image) зураг үүсгэх/хөрвүүлэх модуль.
+GEMINI_API_KEY тохируулсан үед л идэвхжинэ.
+Үнэгүй tier: өдөрт 500 зураг.
 
-GEMINI_API_KEY тохируулсан үед л идэвхжинэ. Үнэгүй tier: өдөрт 500 зураг.
-Бүх зураг автоматаар SynthID watermark агуулна (AI-аар үүсгэсэн гэдгийг
-илрүүлэх боломжтой болгодог далд тэмдэг).
+Бүх зураг автоматаар SynthID watermark агуулна (AI-аар үүсгэсэн гэдгийг илрүүлэх боломжтой болгодог далд тэмдэг).
 
 2 функц:
-1. generate_image_bytes() — ЕРӨНХИЙ, ХҮНГҮЙ дүрслэл (талбай, трофей г.м.)
-   ШИНЭЭР үүсгэнэ. Жинхэнэ хүн зохиомлоор зурахгүй.
-2. restyle_photo() — ЖИНХЭНЭ ФОТОГ illustration маягт хөрвүүлнэ. Эх
-   зураг дээрх хүний бодит поз, дүр төрх, мөч ХЭВЭЭР хадгалагдана —
-   зөвхөн дүрслэлийн хэв маяг (photorealistic → illustrated) өөрчлөгдөнө.
-   Энэ нь шинэ дүр зохиохгүй, зөвхөн БОДИТ зургийг өөр хэв маягаар
-   дахин зурах тул редакцийн зурган карикатур/иллюстрацитай адилтгах
-   боломжтой, аюулгүй арга.
+1. generate_image_bytes() — ЕРӨНХИЙ, ХҮНГҮЙ дүрслэл (талбай, трофей г.м.) ШИНЭЭР үүсгэнэ. Жинхэнэ хүн зохиомлоор зурахгүй.
+2. restyle_photo() — ЖИНХЭНЭ ФОТОГ illustration маягт хөрвүүлнэ. Эх зураг дээрх хүний бодит поз, дүр төрх, мөч ХЭВЭЭР хадгалагдана — зөвхөн дүрслэлийн хэв маяг (photorealistic → illustrated) өөрчлөгдөнө.
+Энэ нь шинэ дүр зохиохгүй, зөвхөн БОДИТ зургийг өөр хэв маягаар дахин зурах тул редакцийн зурган карикатур/иллюстрацитай адилтгах боломжтой, аюулгүй арга.
 """
 
 import os
 import base64
 import logging
 import requests
+import time  # Хүлээлт үүсгэхэд ашиглана
 
 log = logging.getLogger(__name__)
 
@@ -38,16 +34,14 @@ CATEGORY_PROMPTS = {
     "world_news": "an abstract global news concept, world map or city skyline silhouette, no people",
 }
 
-
 def is_enabled() -> bool:
     return bool(os.environ.get("GEMINI_API_KEY"))
 
-
 def generate_image_bytes(category: str) -> bytes:
     """
-    Ерөнхий (хүнгүй) сэдэвчилсэн зургийг Gemini-ээр үүсгэж, raw image
-    bytes-г буцаана (URL биш — Facebook-д multipart upload хийхэд
-    ашиглана). Амжилтгүй бол хоосон bytes буцаана.
+    Ерөнхий (хүнгүй) сэдэвчилсэн зургийг Gemini-ээр үүсгэж, raw image bytes-г буцаана
+    (URL биш — Facebook-д multipart upload хийхэд ашиглана).
+    Амжилтгүй бол хоосон bytes буцаана.
     """
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
@@ -68,7 +62,6 @@ def generate_image_bytes(category: str) -> bytes:
         )
         response.raise_for_status()
         data = response.json()
-
         parts = data["candidates"][0]["content"]["parts"]
         for part in parts:
             inline_data = part.get("inlineData") or part.get("inline_data")
@@ -79,25 +72,24 @@ def generate_image_bytes(category: str) -> bytes:
 
         log.warning("Gemini хариунд зураг олдсонгүй")
         return b""
-
     except Exception as e:
         log.warning(f"Gemini зураг үүсгэхэд алдаа: {e}")
         return b""
 
-
 def restyle_photo(image_url: str = "", image_bytes: bytes = b"") -> bytes:
     """
     ЖИНХЭНЭ фотог Gemini-ээр illustration/cartoon маягт хөрвүүлнэ.
-    Эх зураг дээрх хүний бодит поз, дүр төрх, мөч хэвээр хадгалагдана —
-    зөвхөн дүрслэлийн хэв маяг өөрчлөгдөнө (шинэ дүр зохиохгүй).
-
-    Амжилтгүй бол хоосон bytes буцаана (дуудагч тал эх зургаа хэвээр
-    ашиглана).
+    Үнэгүй таримын 429 алдаанаас сэргийлж хүсэлт бүрийн өмнө 12 секунд зориуд хүлээнэ.
     """
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         log.info("[ДИАГНОСТИК restyle] GEMINI_API_KEY байхгүй — restyle алгасав")
         return b""
+
+    # === РЕЙТ ХИЗГААРААС СЭРГИЙЛЭХ ХҮЛЭЭЛТ ===
+    # Олон мэдээ зэрэг боловсруулах үед Gemini блоклохоос сэргийлж 12 секунд амраана.
+    log.info("[ДИАГНОСТИК restyle] Gemini Rate Limit-ээс хамгаалж 12 секунд хүлээж байна...")
+    time.sleep(12)
 
     try:
         if image_bytes:
@@ -112,7 +104,7 @@ def restyle_photo(image_url: str = "", image_bytes: bytes = b"") -> bytes:
             log.info("[ДИАГНОСТИК restyle] image_url, image_bytes хоёул хоосон — алгасав")
             return b""
 
-        # Зургийн бодит форматыг тодорхойлох (хатуу "jpeg" гэж бичихээс зайлсхийх)
+        # Зургийн бодит форматыг тодорхойлох
         mime_type = "image/jpeg"
         try:
             from PIL import Image
@@ -124,7 +116,6 @@ def restyle_photo(image_url: str = "", image_bytes: bytes = b"") -> bytes:
             log.warning(f"[ДИАГНОСТИК restyle] форматыг тодорхойлж чадсангүй, jpeg гэж үзнэ: {fmt_err}")
 
         img_b64 = base64.b64encode(source_bytes).decode()
-
         prompt = (
             "Convert this photo into a flat vector illustration / modern "
             "editorial sports-news art style, vibrant colors, clean "
@@ -146,12 +137,13 @@ def restyle_photo(image_url: str = "", image_bytes: bytes = b"") -> bytes:
                     ]
                 }]
             },
-            timeout=40
+            timeout=25  # Овоорлоос сэргийлж timeout-ийг 40-өөс 25 болгож багасгав
         )
+
         log.info(f"[ДИАГНОСТИК restyle] HTTP статус: {response.status_code}")
         response.raise_for_status()
+        
         data = response.json()
-
         parts = data["candidates"][0]["content"]["parts"]
         for part in parts:
             inline_data = part.get("inlineData") or part.get("inline_data")
