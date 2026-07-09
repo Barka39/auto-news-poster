@@ -96,17 +96,32 @@ def restyle_photo(image_url: str = "", image_bytes: bytes = b"") -> bytes:
     """
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
+        log.info("[ДИАГНОСТИК restyle] GEMINI_API_KEY байхгүй — restyle алгасав")
         return b""
 
     try:
         if image_bytes:
             source_bytes = image_bytes
+            log.info(f"[ДИАГНОСТИК restyle] эх эх нь bytes ({len(source_bytes)})")
         elif image_url:
             resp = requests.get(image_url, timeout=15)
             resp.raise_for_status()
             source_bytes = resp.content
+            log.info(f"[ДИАГНОСТИК restyle] эх URL-с татлаа: {image_url[:80]} ({len(source_bytes)} bytes, content-type: {resp.headers.get('content-type')})")
         else:
+            log.info("[ДИАГНОСТИК restyle] image_url, image_bytes хоёул хоосон — алгасав")
             return b""
+
+        # Зургийн бодит форматыг тодорхойлох (хатуу "jpeg" гэж бичихээс зайлсхийх)
+        mime_type = "image/jpeg"
+        try:
+            from PIL import Image
+            import io as _io
+            detected = Image.open(_io.BytesIO(source_bytes)).format
+            if detected:
+                mime_type = f"image/{detected.lower()}"
+        except Exception as fmt_err:
+            log.warning(f"[ДИАГНОСТИК restyle] форматыг тодорхойлж чадсангүй, jpeg гэж үзнэ: {fmt_err}")
 
         img_b64 = base64.b64encode(source_bytes).decode()
 
@@ -127,12 +142,13 @@ def restyle_photo(image_url: str = "", image_bytes: bytes = b"") -> bytes:
                     "role": "user",
                     "parts": [
                         {"text": prompt},
-                        {"inlineData": {"mimeType": "image/jpeg", "data": img_b64}}
+                        {"inlineData": {"mimeType": mime_type, "data": img_b64}}
                     ]
                 }]
             },
             timeout=40
         )
+        log.info(f"[ДИАГНОСТИК restyle] HTTP статус: {response.status_code}")
         response.raise_for_status()
         data = response.json()
 
@@ -144,9 +160,12 @@ def restyle_photo(image_url: str = "", image_bytes: bytes = b"") -> bytes:
                 log.info(f"Gemini зургийг illustration болгож хөрвүүлэв ({len(result_bytes)} bytes)")
                 return result_bytes
 
-        log.warning("Gemini restyle хариунд зураг олдсонгүй")
+        log.warning(f"Gemini restyle хариунд зураг олдсонгүй. Бүтэн хариу: {str(data)[:500]}")
         return b""
 
+    except requests.exceptions.HTTPError as e:
+        log.warning(f"Gemini restyle HTTP алдаа: {e} | хариу: {response.text[:500]}")
+        return b""
     except Exception as e:
-        log.warning(f"Gemini restyle алдаа: {e}")
+        log.warning(f"Gemini restyle алдаа: {type(e).__name__}: {e}")
         return b""
