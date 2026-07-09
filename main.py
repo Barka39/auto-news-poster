@@ -48,6 +48,7 @@ def run():
     for news in to_post:
         try:
             log.info(f"Боловсруулж байна: {news['title'][:60]}...")
+            log.info(f"  [ДИАГНОСТИК] Эх агуулга (эхний 100): {news.get('summary', '')[:100]!r}")
 
             written = write_article(news)
 
@@ -69,8 +70,15 @@ def run():
 
             # Quote card: эх сурвалжид БОДИТ ишлэл байвал (жинхэнэ зургийг
             # хэвээр нь ашиглаад), Pulse Sports загварын quote card үүсгэнэ.
+            # Хөгжмийн категорид ХЭРЭГЛЭХГҮЙ — учир нь дууны/цомгийн нэр
+            # ихэвчлэн хашилтад байдаг тул "ишлэл" гэж андуурч болзошгүй
+            # (жишээ: "Rhinestone Cowboy" гэдэг дууны нэрийг хүний ишлэл
+            # гэж буруу таньсан алдаа гарч байсан).
+            category_now = written.get("category", "")
             source_text = f"{news.get('title', '')} {news.get('summary', '')}"
-            quote_en = quote_card.extract_quote(source_text)
+            quote_en = quote_card.extract_quote(source_text) if category_now != "music" else ""
+            if quote_en:
+                log.info(f"  [ДИАГНОСТИК] Энэ мэдээ '{news['title'][:50]}' → ишлэл олдлоо: {quote_en[:80]!r} | эх сурвалж: {written.get('source_name', '?')}")
             if quote_en and (written.get("image_url") or written.get("image_bytes")):
                 quote_mn = google_translate(quote_en)
                 if quote_mn:
