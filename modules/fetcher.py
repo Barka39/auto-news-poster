@@ -7,6 +7,7 @@
 
 import re
 import hashlib
+import html as html_module
 import feedparser
 import requests
 import logging
@@ -196,6 +197,98 @@ def pick_best_image(candidates: list) -> str:
     return ""
 
 
+def extract_article_context(article_url: str) -> dict:
+    """
+    Өгүүллийн БОДИТ хуудаснаас og:image-тэй ХАМТ og:description болон
+    үндсэн текстийн эхний хэсгийг НЭГ HTTP дуудлагаар цуглуулна.
+
+    АСУУДАЛ: writer.py урьд нь ЗӨВХӨН RSS-ийн summary (500-900 тэмдэгт,
+    заримдаа огт ХООСОН) дээр тулгуурлаж нийтлэл бичдэг байсан. "6 баг
+    LeBron James-ийг элсүүлэхээр өрсөлдөж байна" гэх мэт олон нарийн
+    баримт (баг нэрс, цалингийн тоо гэх мэт) агуулсан ШИНЖИЛГЭЭТ мэдээнд
+    RSS teaser ердөө 1 өгүүлбэр байдаг тул Gemini юу ч тодорхой зүйл
+    бичих материалгүй болж, "баримт зохиож болохгүй" дүрмээ мөрдөөд л
+    ерөнхий, хоосон агуулгатай нийтлэл бичдэг байв.
+
+    ШИЙДЭЛ: og:description (сайтууд өөрсдөө хамгийн чухал 1-3 өгүүлбэрийг
+    энд тавьдаг) + эхний хэдэн <p> параграфын БОДИТ текстийг нэмж,
+    Gemini-д илүү баялаг, БОДИТ материал өгнө. og:image-ийг ч мөн энд
+    хамт татна — ингэснээр дараа дахин тусад нь HTTP дуудахгүй.
+    """
+    result = {"og_image": "", "og_description": "", "body_excerpt": ""}
+    if not article_url:
+        return result
+    try:
+        resp = requests.get(
+            article_url,
+            timeout=8,
+            headers={
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                              "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "Accept-Language": "en-US,en;q=0.9",
+            }
+        )
+        resp.raise_for_status()
+        page_html = resp.text
+
+        # og:image
+        m = re.search(
+            r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
+            page_html, re.IGNORECASE
+        )
+        if not m:
+            m = re.search(
+                r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
+                page_html, re.IGNORECASE
+            )
+        if m:
+            result["og_image"] = m.group(1)
+
+        # og:description (эсвэл ердийн meta description)
+        m = re.search(
+            r'<meta[^>]+property=["\']og:description["\'][^>]+content=["\']([^"\']+)["\']',
+            page_html, re.IGNORECASE
+        )
+        if not m:
+            m = re.search(
+                r'<meta[^>]+name=["\']description["\'][^>]+content=["\']([^"\']+)["\']',
+                page_html, re.IGNORECASE
+            )
+        if m:
+            result["og_description"] = html_module.unescape(m.group(1)).strip()
+
+        # Body excerpt: <article> дотроос (байхгүй бол бүх хуудаснаас)
+        # эхний утга бүхий <p> параграфуудыг ~1800 тэмдэгт хүртэл цуглуулна
+        body_source = page_html
+        article_match = re.search(r'<article[^>]*>(.*?)</article>', page_html, re.IGNORECASE | re.DOTALL)
+        if article_match:
+            body_source = article_match.group(1)
+
+        paragraphs = re.findall(r'<p[^>]*>(.*?)</p>', body_source, re.IGNORECASE | re.DOTALL)
+        clean_parts, total_len = [], 0
+        for p in paragraphs:
+            text = re.sub(r'<[^>]+>', ' ', p)
+            text = html_module.unescape(text)
+            text = re.sub(r'\s+', ' ', text).strip()
+            if len(text) < 40:  # навигаци/товч мөр магадлалтай — алгасна
+                continue
+            clean_parts.append(text)
+            total_len += len(text)
+            if total_len > 1800:
+                break
+        result["body_excerpt"] = " ".join(clean_parts)[:1800]
+
+        log.info(
+            f"[ДИАГНОСТИК context] {article_url[:60]} → "
+            f"desc={len(result['og_description'])}ch, body={len(result['body_excerpt'])}ch"
+        )
+    except Exception as e:
+        log.warning(f"Өгүүллийн context унших алдаа ({article_url[:60]}): {e}")
+
+    return result
+
+
 def extract_og_image(article_url: str) -> str:
     """
     Өгүүллийн БОДИТ хуудаснаас og:image meta tag-ийг унших.
@@ -267,6 +360,48 @@ def extract_og_image(article_url: str) -> str:
     except Exception as e:
         log.warning(f"og:image унших алдаа ({article_url[:60]}): {e}")
         return ""
+def find_context_from_other_sources(title: str, min_content_len: int = 150) -> dict:
+    """
+    Тухайн эх сурвалж (жишээ: ESPN) bot-хамгаалалтаар хаагдаж, зөвхөн
+    хоосон/бяцхан stub хуудас буцаах үед (og:description, body_excerpt
+    хоосон гарна) ИЖИЛ СЭДВИЙГ бичсэн ӨӨР сайтуудаас (Google News RSS-ээр
+    хайж) агуулгыг нь оролддог.
+
+    БОДИТ КЕЙС: ESPN-ийн LeBron James мэдээнд энэ функц байхгүй үед
+    espn.com HTTP 202 (bot-хамгаалалтын түр хуудас, ердөө ~2000 тэмдэгт)
+    буцаасан тул og:description/body_excerpt огт хоосон гарч, Gemini
+    ерөнхий, тоо баримтгүй нийтлэл бичсэн. Google News-ээр ижил мэдээг
+    бичсэн өөр сайт (жишээ: NBC Sports, Yahoo Sports) олж, тэднээс
+    агуулга татаж энэ дутууг нөхнө.
+    """
+    result = {"og_image": "", "og_description": "", "body_excerpt": ""}
+    if not title:
+        return result
+    try:
+        import urllib.parse
+        query = urllib.parse.quote(title[:100])
+        rss_url = f"https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"
+        feed = feedparser.parse(rss_url)
+
+        for entry in feed.entries[:5]:
+            article_url = entry.get("link", "")
+            if not article_url:
+                continue
+            ctx = extract_article_context(article_url)
+            content_len = len(ctx.get("og_description", "")) + len(ctx.get("body_excerpt", ""))
+            if content_len >= min_content_len:
+                log.info(
+                    f"Өөр сайтаас ижил сэдвийн АГУУЛГА олдлоо ({content_len}ch): "
+                    f"{entry.get('title', '')[:50]}"
+                )
+                return ctx
+
+        log.info("Google News-с ижил сэдвийн хангалттай агуулга олдсонгүй")
+    except Exception as e:
+        log.warning(f"Google News context хайлтын алдаа: {e}")
+    return result
+
+
 def find_image_from_other_sources(title: str) -> str:
     """
     Тухайн өгүүлэлд og:image олдоогүй үед, ИЖИЛ СЭДВИЙГ бичсэн ӨӨР

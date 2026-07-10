@@ -306,10 +306,21 @@ def write_article(news: dict) -> dict:
   мэдээлэлд байхгүй тайлбарыг зохиож болохгүй — зөвхөн эх дэх
   мэдээллийг илүү ойлгомжтой байдлаар дахин найруулж бич."""
 
+    extra_parts = []
+    if news.get("og_description"):
+        extra_parts.append(f"Товч тайлбар (эх сайтын og:description): {news['og_description']}")
+    if news.get("body_excerpt"):
+        extra_parts.append(f"Өгүүллийн эхний хэсгийн бодит текст: {news['body_excerpt']}")
+    # ЯАГААД: RSS-ийн summary ганцаараа ихэвчлэн 1 өгүүлбэр (эсвэл хоосон)
+    # байдаг тул шинжилгээт мэдээнд (жишээ: "6 баг өрсөлдөж байна") Gemini
+    # ямар ч нарийн зүйл (баг нэрс, тоо баримт) бичих материалгүй болдог
+    # байсан. Эх хуудаснаас татсан нэмэлт текст үүнийг шийднэ.
+    extra_block = ("\n" + "\n".join(extra_parts) + "\n") if extra_parts else ""
+
     user_prompt = f"""МЭДЭЭЛЭЛ:
 Гарчиг: {news['title']}
 Агуулга: {news.get('summary', '')}
-
+{extra_block}
 Дээрх мэдээллээр Монгол нийтлэл бич. Зөвхөн нийтлэлийн текстийг бич,
 өөр юу ч бүү нэм."""
 
