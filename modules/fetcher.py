@@ -132,8 +132,12 @@ def extract_og_image(article_url: str) -> str:
         )
         log.info(f"[ДИАГНОСТИК og] {article_url[:60]} → HTTP {resp.status_code}, {len(resp.text)} тэмдэгт")
         resp.raise_for_status()
-        # Зөвхөн эхний ~80KB-г шалгах (og tag ихэвчлэн <head> дотор, эхэнд байдаг)
-        html = resp.text[:80000]
+        # Бүтэн HTML-г шалгана. Урьд нь зөвхөн эхний 80KB-г шалгадаг байсан
+        # бол зарим сайтад (жишээ нь Billboard) og:image таг head-ийн
+        # төгсгөл рүү шахагдаж 80KB-с хойш байрлах болсон тул тагийг
+        # огт олдохгүй болж, зурган чанар муудах гол шалтгаан болж байсан
+        # тул хязгаарлалтыг арилгав.
+        html = resp.text
 
         match = re.search(
             r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
@@ -150,18 +154,32 @@ def extract_og_image(article_url: str) -> str:
             log.info(f"og:image олдлоо: {og_url[:80]}")
             return og_url
 
-        # Олдоогүй бол шалтгааныг тодруулах: og:image гэдэг үг наад захын
-        # HTML дотор огт байгаа эсэхийг шалгана (paywall/consent хуудас
-        # буцсан эсэхийг тодорхойлоход тусална)
+        # og:image байхгүй бол twitter:image (эсвэл twitter:image:src) мета
+        # тагийг нөөц болгон шалгана — олон сайт хоёуланг нь зэрэг тавьдаг
+        match = re.search(
+            r'<meta[^>]+name=["\']twitter:image(?::src)?["\'][^>]+content=["\']([^"\']+)["\']',
+            html, re.IGNORECASE
+        )
+        if not match:
+            match = re.search(
+                r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']twitter:image(?::src)?["\']',
+                html, re.IGNORECASE
+            )
+        if match:
+            tw_url = match.group(1)
+            log.info(f"twitter:image олдлоо (og:image байхгүй үед нөөц): {tw_url[:80]}")
+            return tw_url
+
+        # Олдоогүй бол шалтгааныг тодруулах: og:image гэдэг үг HTML дотор
+        # огт байгаа эсэхийг шалгана (paywall/consent хуудас буцсан
+        # эсэхийг тодорхойлоход тусална)
         has_og_string = "og:image" in html
-        log.warning(f"[ДИАГНОСТИК og] tag олдсонгүй. 'og:image' үг HTML-д байгаа эсэх: {has_og_string} | HTML эхлэл: {html[:200]!r}")
+        log.warning(f"[ДИАГНОСТИК og] tag олдсонгүй. 'og:image' үг HTML-д байгаа эсэх: {has_og_string} | HTML урт: {len(html)}")
 
         return ""
     except Exception as e:
         log.warning(f"og:image унших алдаа ({article_url[:60]}): {e}")
         return ""
-
-
 def find_image_from_other_sources(title: str) -> str:
     """
     Тухайн өгүүлэлд og:image олдоогүй үед, ИЖИЛ СЭДВИЙГ бичсэн ӨӨР
