@@ -109,6 +109,64 @@ def _looks_like_image(url: str) -> bool:
     return bool(re.search(r"\.(jpg|jpeg|png|webp|gif)(\?.*)?$", url, re.IGNORECASE))
 
 
+# Постонд ашиглах зургийн доод өргөн (px). Үүнээс жижиг зургийг
+# 1200px болгож томруулахад бүдэг, чанаргүй харагддаг байсан
+# (RSS-ийн media_thumbnail ихэвчлэн 140-400px байдаг!)
+MIN_IMAGE_WIDTH = 700
+
+
+def get_image_width(url: str) -> int:
+    """
+    Зургийн БОДИТ өргөнийг шалгана (татаж үзэж). Алдаа гарвал 0.
+    Зорилго: RSS-ийн жижиг thumbnail-ийг өндөр чанартай og:image-с
+    ялгаж, чанаргүй зураг постлохоос сэргийлэх.
+    """
+    if not url:
+        return 0
+    try:
+        from PIL import Image
+        import io
+        resp = requests.get(
+            url, timeout=10,
+            headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+        )
+        resp.raise_for_status()
+        img = Image.open(io.BytesIO(resp.content))
+        log.info(f"[Зургийн хэмжээ] {img.width}x{img.height} — {url[:70]}")
+        return img.width
+    except Exception as e:
+        log.warning(f"Зургийн хэмжээ шалгаж чадсангүй ({url[:60]}): {e}")
+        return 0
+
+
+def pick_best_image(candidates: list) -> str:
+    """
+    Хэд хэдэн зургийн URL-с ХАМГИЙН ТОХИРОМЖТОЙГ сонгоно:
+    1. MIN_IMAGE_WIDTH-с том ЭХНИЙ зургийг шууд авна (дарааллын
+       эрэмбэ хадгалагдана: RSS → og:image → өөр сайтын og:image)
+    2. Аль нь ч босго давахгүй бол хамгийн томыг нь (хэрэв 400px+
+       бол) авна — жинхэнэ фото нь AI зургаас дээр хэвээр
+    3. Огт тохирохгүй бол хоосон буцаана (fallback pipeline руу)
+    """
+    best_url, best_w = "", 0
+    for url in candidates:
+        if not url:
+            continue
+        w = get_image_width(url)
+        if w >= MIN_IMAGE_WIDTH:
+            log.info(f"✅ Чанартай зураг сонгогдлоо ({w}px): {url[:70]}")
+            return url
+        if w > best_w:
+            best_url, best_w = url, w
+
+    if best_w >= 400:
+        log.info(f"⚠️ Босго давсан зураг олдсонгүй — хамгийн томыг ({best_w}px) ашиглана")
+        return best_url
+
+    log.info("❌ Тохирох хэмжээний жинхэнэ зураг олдсонгүй — fallback руу шилжинэ")
+    return ""
+
+
 def extract_og_image(article_url: str) -> str:
     """
     Өгүүллийн БОДИТ хуудаснаас og:image meta tag-ийг унших.

@@ -102,7 +102,9 @@ def generate_quote_card(quote_mn: str, source_name: str, category_mn: str = "",
         CANVAS_W = 1200
         ratio = CANVAS_W / base_img.width
         img_h = int(base_img.height * ratio)
-        base_img = base_img.resize((CANVAS_W, img_h))
+        # LANCZOS: хамгийн чанартай resampling — default resize жижиг
+        # зургийг томруулахад бүдэг/pixel-тэй болгодог байсан
+        base_img = base_img.resize((CANVAS_W, img_h), Image.LANCZOS)
 
         if img_h > 750:
             top = (img_h - 750) // 2
