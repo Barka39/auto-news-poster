@@ -7,11 +7,14 @@ Digest (тойм) пост — 12:00, 19:00 цагт ажиллана.
 """
 
 import logging
-from modules.fetcher import fetch_all_news
+from modules.fetcher import (
+    fetch_all_news, extract_og_image, pick_best_image, interleave_by_category
+)
 from modules.writer import write_digest, filter_relevant_news, is_valid_mongolian
 from modules.poster import post_to_all_platforms
 from modules.storage import load_posted, save_posted
 from modules import telegram_notify
+from modules import quote_card
 
 logging.basicConfig(
     level=logging.INFO,
@@ -39,6 +42,11 @@ def run():
         log.info("Тоймд оруулах шинэ мэдээ байхгүй. Дуусгалаа.")
         return
 
+    # КАТЕГОРИЙН ТЭНЦВЭР: fetch_all_news() Спорт→Хөгжим→Дэлхий дараалалтай
+    # буцаадаг тул шүүлтүүрийн эхний 20 кандидатад Дэлхийн мэдээ бараг
+    # ордоггүй байсан (жишээ: тойм 6/6-с Дэлхийн мэдээ 0 гарч байсан).
+    # Ээлжлэн холихоор 3 категори тэгш өрсөлдөнө.
+    new_news = interleave_by_category(new_news)
     new_news = filter_relevant_news(new_news)
     to_digest = new_news[:MAX_DIGEST_ITEMS]
     log.info(f"Тоймд орох мэдээ: {len(to_digest)} ширхэг")
@@ -51,14 +59,34 @@ def run():
         log.error("Тойм бичвэр бүтэлгүйтлээ — дуусгалаа")
         return
 
-    # Тоймын постыг хэвлэх (зураггүй, зөвхөн текст)
+    # Тоймын COVER зураг: сонгогдсон мэдээ бүрийн зургаас коллаж үүсгэнэ.
+    # УРЬД НЬ: digest пост огт зурагтгүй (image_url="", image_bytes=b"")
+    # байсан тул FB/IG дээр текст ганцаараа, дүрс мэдээлэлгүй харагдаж
+    # байсан. ОДОО: мэдээ бүрийн og:image-с хамгийн чанартайг сонгож,
+    # 2 багана grid-т байрлуулна.
+    cover_items = []
+    for n in to_digest:
+        candidates = [n.get("image_url", "")]
+        if n.get("url"):
+            candidates.append(extract_og_image(n["url"]))
+        best = pick_best_image(candidates)
+        if best:
+            cover_items.append({"image_url": best, "category_mn": n.get("category_mn", "")})
+
+    cover_bytes = quote_card.generate_digest_cover(cover_items) if cover_items else b""
+    if cover_bytes:
+        log.info(f"📇 Тоймын cover зураг ашиглав ({len(cover_items)} зурагтай коллаж)")
+    else:
+        log.warning("Тоймын cover зураг үүсгэж чадсангүй — зурагтгүй постлоно")
+
+    # Тоймын постыг хэвлэх
     digest_news = {
         "title_mn": "Өнөөдрийн мэдээний тойм",
         "article_mn": digest_text,
         "category_mn": "Тойм",
         "category_emoji": "📰",
         "image_url": "",
-        "image_bytes": b"",
+        "image_bytes": cover_bytes,
     }
 
     result = post_to_all_platforms(digest_news)

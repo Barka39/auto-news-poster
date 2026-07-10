@@ -127,21 +127,20 @@ def run():
                 written["image_url"] = fallback.get("url", "")
                 written["image_bytes"] = fallback.get("bytes", b"")
 
-            # Sports/Music: жинхэнэ фото байвал (RSS/Wikimedia/Unsplash-с)
-            # Gemini-ээр illustration маягт хөрвүүлнэ. Эх мөч, поз хэвээр,
-            # зөвхөн дүрслэлийн хэв маяг өөрчлөгдөнө (шинэ дүр зохиохгүй).
+            # restyle_photo: Gemini image квот=0 тул одоогоор идэвхгүй.
+            # Google AI Studio → Billing идэвхжүүлсний дараа доорх
+            # блокийг uncomment хийнэ:
+            #
+            # log.info(f"[ДИАГНОСТИК] category={category_now!r}, image_url={'байна' if written.get('image_url') else 'ХООСОН'}")
+            # if category_now in ("sports", "music") and written.get("image_url"):
+            #     restyled = gemini_image.restyle_photo(image_url=written["image_url"])
+            #     if restyled:
+            #         written["image_bytes"] = restyled
+            #         written["image_url"] = ""
+            #         log.info("[ДИАГНОСТИК] restyle АМЖИЛТТАЙ")
+            #     else:
+            #         log.info("[ДИАГНОСТИК] restyle БҮТЭЛГҮЙТЭВ — эх зураг хэвээр ашиглана")
             log.info(f"[ДИАГНОСТИК] category={category_now!r}, image_url={'байна' if written.get('image_url') else 'ХООСОН'}")
-            if category_now in ("sports", "music") and written.get("image_url"):
-                log.info("[ДИАГНОСТИК] restyle_photo дуудаж байна...")
-                restyled = gemini_image.restyle_photo(image_url=written["image_url"])
-                if restyled:
-                    written["image_bytes"] = restyled
-                    written["image_url"] = ""
-                    log.info("[ДИАГНОСТИК] restyle АМЖИЛТТАЙ")
-                else:
-                    log.info("[ДИАГНОСТИК] restyle БҮТЭЛГҮЙТЭВ — эх зураг хэвээр ашиглана")
-            else:
-                log.info("[ДИАГНОСТИК] restyle нөхцөл хангагдаагүй тул алгаслаа")
 
             # Давхарлах текст тодорхойлох: бодит ишлэл байвал түүнийг,
             # эсвэл (sports/music категорид) гарчгийг ашиглана.
