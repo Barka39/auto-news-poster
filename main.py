@@ -4,11 +4,12 @@ Auto News Poster - Монгол мэдээ автомат постлогч
 """
 
 import logging
-from modules.fetcher import fetch_all_news, extract_og_image, find_image_from_other_sources
+from modules.fetcher import fetch_all_news, extract_og_image, find_image_from_other_sources, pick_best_image
 from modules.writer import write_article, is_valid_mongolian, filter_relevant_news
 from modules.image_fallback import get_fallback_image
 from modules.poster import post_to_all_platforms
-from modules.storage import load_posted, save_posted
+from modules.storage import load_posted, save_posted, load_posted_topics
+from modules.dedup import is_duplicate_topic
 from modules import telegram_notify
 from modules import quote_card
 from modules import gemini_image
@@ -23,10 +24,37 @@ log = logging.getLogger(__name__)
 MAX_POSTS_PER_RUN = 2
 
 
+def _translate_overlay(text_en: str) -> str:
+    """
+    Quote card дээр давхарлах богино текстийг (ишлэл/гарчиг) Gemini-ээр
+    Монгол руу орчуулна. Богино текстэнд Google Translate утга эвддэг
+    ("Rice ill" → "Райс алдаатай өвчтэй") тул үндсэн бичигчтэй ижил
+    чанарын загвар ашиглана. Бүтэлгүйтвэл хоосон буцаана (дуудагч тал
+    Google Translate руу өөрөө шилжинэ).
+    """
+    from modules import gemini_compare
+    if not text_en or not gemini_compare.is_enabled():
+        return ""
+    system = (
+        "Чи Монголын спортын мэдээний гарчиг орчуулагч. Өгөгдсөн богино "
+        "Англи текстийг байгалийн, утга зөв Монгол хэл рүү орчуул. "
+        "Хүн, багийн нэрийг БҮХЭЛДЭЭ Латин үсгээр үлдээ. "
+        "Зөвхөн орчуулгыг бич — тайлбар, хашилт, өөр юу ч бүү нэм."
+    )
+    result = gemini_compare.generate(system, text_en)
+    result = (result or "").strip().strip('"\u201c\u201d')
+    # Богино гарчиг 200 тэмдэгтээс хэтрэхгүй байх ёстой — хэтэрвэл
+    # загвар тайлбар нэмсэн байх магадлалтай тул хэрэглэхгүй
+    if not result or len(result) > 220:
+        return ""
+    return result
+
+
 def run():
     log.info("=== Auto News Poster эхэллээ ===")
 
     posted_ids = load_posted()
+    posted_topics = load_posted_topics()
     log.info(f"Өмнө постолсон мэдээ: {len(posted_ids)} ширхэг")
 
     all_news = fetch_all_news()
@@ -42,7 +70,23 @@ def run():
     # Ач холбогдлын шүүлтүүр — Монгол уншигчдад сонирхолгүй жижиг мэдээг хасна
     new_news = filter_relevant_news(new_news)
 
-    to_post = new_news[:MAX_POSTS_PER_RUN]
+    # СЭДВИЙН ДАВХАРДЛЫН ШҮҮЛТҮҮР:
+    # 1) Сүүлийн 48ц-д постолсон сэдэвтэй давхцвал алгасна
+    #    (BBC + Sky Sports ижил мэдээ бичихэд URL өөр тул ID-дедуп
+    #    барьж чадахгүй — Guehi-гийн мэдээ 2 удаа гарсны шалтгаан)
+    # 2) Нэг run доторх batch-д ч мөн адил шалгана
+    recent_titles = [t["title"] for t in posted_topics]
+    to_post = []
+    for n in new_news:
+        if is_duplicate_topic(n.get("title", ""), recent_titles):
+            log.info(f"⏭️ Ижил сэдэв тул алгаслаа: {n['title'][:50]}")
+            posted_ids.add(n["id"])  # дахин оролдохгүй
+            continue
+        to_post.append(n)
+        recent_titles.append(n.get("title", ""))  # batch доторх давхардлыг ч барина
+        if len(to_post) >= MAX_POSTS_PER_RUN:
+            break
+
     log.info(f"Постолох мэдээ: {len(to_post)} ширхэг")
 
     success_count = 0
@@ -62,24 +106,26 @@ def run():
 
             category_now = written.get("category", "")
 
-            # ЗУРГИЙН ЭРЭМБЭ:
-            # 1) og:image (тухайн өгүүллийн бодит хуудаснаас)
-            # 2) Ижил сэдвийг бичсэн ӨӨР сайтын og:image (Google News-ээр хайна)
-            # 3) Pollinations AI / Gemini / Wikimedia / Unsplash (image_fallback.py дотор)
-            if not written.get("image_url"):
-                og_image = extract_og_image(news.get("url", ""))
-                if og_image:
-                    written["image_url"] = og_image
-                    log.info(f"[ДИАГНОСТИК] og:image ашиглав: {og_image[:80]}")
-                else:
-                    other_img = find_image_from_other_sources(written.get("title", ""))
-                    if other_img:
-                        written["image_url"] = other_img
-                        log.info(f"[ДИАГНОСТИК] өөр сайтын og:image ашиглав: {other_img[:80]}")
-                    else:
-                        fallback = get_fallback_image(category_now, written.get("title", ""))
-                        written["image_url"] = fallback.get("url", "")
-                        written["image_bytes"] = fallback.get("bytes", b"")
+            # ЗУРГИЙН ЭРЭМБЭ (хэмжээ-шалгалттай):
+            # УРЬД НЬ: RSS-ийн image_url (ихэвчлэн 140-400px жижиг
+            # thumbnail!) байвал og:image-руу огт очилгүй шууд ашиглаад,
+            # quote_card 1200px болгож томруулахад бүдэг гардаг байсан.
+            # ОДОО: бүх нэр дэвшигчийг цуглуулж, эхний ≥700px-ийг сонгоно:
+            # 1) RSS-ийн зураг  2) og:image  3) өөр сайтын og:image
+            # Аль нь ч том биш бол → Pollinations/Wikimedia/Unsplash fallback
+            candidates = [written.get("image_url", "")]
+            candidates.append(extract_og_image(news.get("url", "")))
+            best = pick_best_image(candidates)
+            if not best:
+                other_img = find_image_from_other_sources(written.get("title", ""))
+                best = pick_best_image([other_img]) if other_img else ""
+
+            if best:
+                written["image_url"] = best
+            else:
+                fallback = get_fallback_image(category_now, written.get("title", ""))
+                written["image_url"] = fallback.get("url", "")
+                written["image_bytes"] = fallback.get("bytes", b"")
 
             # Sports/Music: жинхэнэ фото байвал (RSS/Wikimedia/Unsplash-с)
             # Gemini-ээр illustration маягт хөрвүүлнэ. Эх мөч, поз хэвээр,
@@ -111,10 +157,15 @@ def run():
                 overlay_text_en = news.get("title", "")  # ишлэлгүй бол гарчгийг ашиглана
 
             if overlay_text_en and (written.get("image_url") or written.get("image_bytes")):
-                if quote_en:
-                    overlay_text_mn = google_translate(quote_en)
-                else:
-                    overlay_text_mn = written.get("title_mn", "") or google_translate(overlay_text_en)
+                # УРЬД НЬ: ишлэлийг Google Translate-аар орчуулдаг байсан нь
+                # "Райс алдаатай өвчтэй байна" маягийн утгагүй гарчиг үүсгэсэн.
+                # ОДОО: Gemini-ээр (үндсэн бичигчтэй ижил чанараар) орчуулж,
+                # бүтэлгүйтвэл л Google Translate-руу буцна.
+                overlay_text_mn = _translate_overlay(overlay_text_en)
+                if not overlay_text_mn and not quote_en:
+                    overlay_text_mn = written.get("title_mn", "")
+                if not overlay_text_mn:
+                    overlay_text_mn = google_translate(overlay_text_en)
 
                 if overlay_text_mn:
                     card_bytes = quote_card.generate_quote_card(
@@ -133,6 +184,8 @@ def run():
 
             if result["success"]:
                 posted_ids.add(news["id"])
+                import time as _t
+                posted_topics.append({"title": news.get("title", ""), "ts": _t.time()})
                 success_count += 1
                 log.info(f"✅ Амжилттай: {news['title'][:40]}")
             else:
@@ -148,7 +201,7 @@ def run():
             log.error(f"❌ Алдаа гарлаа [{news.get('title','?')[:40]}]: {e}")
             continue
 
-    save_posted(posted_ids)
+    save_posted(posted_ids, posted_topics)
     log.info(f"=== Дууслаа: {success_count}/{len(to_post)} амжилттай ===")
 
 
