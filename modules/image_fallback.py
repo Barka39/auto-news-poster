@@ -152,29 +152,56 @@ def _generate_pollinations(category: str) -> str:
     Pollinations AI-аар ерөнхий (хүнгүй) сэдэвчилсэн зураг үүсгэх.
     Энэ функц ЗӨВХӨН category-ийн ерөнхий prompt ашиглана — хүний нэр
     ОРУУЛАХГҮЙ (дээрх модулийн docstring-ийн зарчмыг үз).
+
+    URL-г зөвхөн БАРИХ биш, БОДИТООР ачаалж шалгана — эс бөгөөс
+    амжилтгүй тохиолдолд дараагийн шат (Gemini/Wikimedia) руу зөв
+    шилжиж чадахгүй (URL байгуулалт өөрөө бараг хэзээ ч алдаа гаргадаггүй,
+    зөвхөн бодит ачаалахад л алдаа гарч болдог).
     """
     prompt = CATEGORY_AI_PROMPTS.get(category, "news theme, photorealistic, no people")
     encoded = urllib.parse.quote(prompt)
     url = f"{POLLINATIONS_URL}{encoded}?width=1600&height=900&nologo=true"
-    log.info(f"Pollinations AI зураг үүсгэв (ерөнхий, хүнгүй): {category}")
-    return url
+    try:
+        resp = requests.get(url, timeout=25)
+        resp.raise_for_status()
+        if resp.headers.get("content-type", "").startswith("image/") and len(resp.content) > 5000:
+            log.info(f"Pollinations AI зураг амжилттай үүсгэв ({category})")
+            return url
+        log.warning(f"Pollinations хариу зураг шиг биш байна (content-type: {resp.headers.get('content-type')})")
+        return ""
+    except Exception as e:
+        log.warning(f"Pollinations алдаа: {e}")
+        return ""
 
 
 def get_fallback_image(category: str, title: str = "") -> dict:
     """
-    1) Wikimedia Commons-с нэрээр хайх (жинхэнэ хүн/багийн зураг)
-    2) Unsplash-с нэрээр хайх (жинхэнэ stock зураг)
-    3) Unsplash-с категорийн ерөнхий зураг
-    4) Gemini-ээр ерөнхий (хүнгүй) illustration зураг үүсгэх
-    5) Pollinations AI — Gemini боломжгүй/бүтэлгүйтвэл эцсийн нөөц
+    Энэ функц зөвхөн og:image БОЛОН өөр сайтын зураг (main.py-д тусад нь
+    оролдогддог) хоёул олдоогүй үед л дуудагдана. Дараалал:
+
+    1) Pollinations AI — сэдэвчилсэн (хүнгүй) зураг ШУУД үүсгэнэ (хамгийн
+       хурдан, найдвартай, үнэгүй хязгааргүй)
+    2) Gemini — Pollinations боломжгүй бол
+    3) Wikimedia Commons — нэрээр хайх (туршлагаас харахад тохироо султай)
+    4) Unsplash — эцсийн нөөц
 
     Буцаах утга: {"url": str, "bytes": bytes} — зөвхөн нэг нь дүүрэн байна.
-
-    Анхаар: нэр дангаараа (жишээ: "Bad Bunny") хайхад "bunny" гэдэг үг
-    амьтны зурагтай санамсаргүй таарч болдог тул ЭХНЭЭСЭЭ категорийн
-    тодруулагч үг (singer, athlete гэх мэт) хамт, бүхэл хэллэг (quoted
-    phrase) байдлаар хайна.
     """
+    # 1) Pollinations AI — сэдэвчилсэн, хүнгүй зураг шууд үүсгэнэ
+    img = _generate_pollinations(category)
+    if img:
+        log.info(f"Pollinations AI зураг ашиглав ({category})")
+        return {"url": img, "bytes": b""}
+
+    # 2) Gemini — Pollinations боломжгүй бол
+    from modules import gemini_image
+    if gemini_image.is_enabled():
+        img_bytes = gemini_image.generate_image_bytes(category)
+        if img_bytes:
+            log.info(f"Gemini зураг ашиглав ({category})")
+            return {"url": "", "bytes": img_bytes}
+
+    # 3) Wikimedia / 4) Unsplash — эцсийн нөөц (тохироо султай туршлагатай)
     keywords = _extract_keywords(title)
     qualifier = {
         "sports": "athlete",
@@ -186,28 +213,19 @@ def get_fallback_image(category: str, title: str = "") -> dict:
         wiki_query = f'"{keywords}" {qualifier}'.strip()
         img = _search_wikimedia(wiki_query)
         if img:
-            log.info(f"Wikimedia зураг олдлоо (хайлт: {wiki_query})")
+            log.info(f"Wikimedia зураг олдлоо (эцсийн нөөц, хайлт: {wiki_query})")
             return {"url": img, "bytes": b""}
 
         unsplash_query = f"{keywords} {qualifier}".strip()
         img = _search_unsplash(unsplash_query)
         if img:
-            log.info(f"Unsplash зураг олдлоо (хайлт: {unsplash_query})")
+            log.info(f"Unsplash зураг олдлоо (эцсийн нөөц, хайлт: {unsplash_query})")
             return {"url": img, "bytes": b""}
 
     fallback_term = CATEGORY_FALLBACK_TERMS.get(category, "news")
     img = _search_unsplash(fallback_term)
     if img:
-        log.info(f"Unsplash ерөнхий зураг ашиглав ({fallback_term})")
+        log.info(f"Unsplash ерөнхий зураг ашиглав (эцсийн нөөц, {fallback_term})")
         return {"url": img, "bytes": b""}
 
-    # Gemini — тогтмол illustration маягтай, хүнгүй зураг
-    from modules import gemini_image
-    if gemini_image.is_enabled():
-        img_bytes = gemini_image.generate_image_bytes(category)
-        if img_bytes:
-            return {"url": "", "bytes": img_bytes}
-
-    # Эцсийн нөөц: Pollinations
-    img = _generate_pollinations(category)
-    return {"url": img, "bytes": b""}
+    return {"url": "", "bytes": b""}

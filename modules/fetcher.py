@@ -162,6 +162,38 @@ def extract_og_image(article_url: str) -> str:
         return ""
 
 
+def find_image_from_other_sources(title: str) -> str:
+    """
+    Тухайн өгүүлэлд og:image олдоогүй үед, ИЖИЛ СЭДВИЙГ бичсэн ӨӨР
+    сайтуудыг Google News RSS-ээр хайж, тэдгээрийн og:image-г эрэлхийлнэ.
+
+    Энэ нь үнэгүй, API key шаардахгүй, олон сайтын мэдээг нэг дор хайдаг
+    Google News-ийн нээлттэй RSS хайлтын функцийг ашигладаг.
+    """
+    if not title:
+        return ""
+    try:
+        import urllib.parse
+        query = urllib.parse.quote(title[:100])
+        rss_url = f"https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"
+        feed = feedparser.parse(rss_url)
+
+        for entry in feed.entries[:5]:
+            article_url = entry.get("link", "")
+            if not article_url:
+                continue
+            img = extract_og_image(article_url)
+            if img:
+                log.info(f"Өөр сайтаас ижил сэдвийн зураг олдлоо: {entry.get('title', '')[:50]}")
+                return img
+
+        log.info("Google News-с ижил сэдвийн зураг олдсонгүй")
+        return ""
+    except Exception as e:
+        log.warning(f"Google News хайлтын алдаа: {e}")
+        return ""
+
+
 def fetch_category(category: str, sources: list) -> list:
     """Нэг категорийн бүх эх сурвалжаас мэдээ татах"""
     results = []
