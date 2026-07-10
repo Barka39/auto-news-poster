@@ -73,6 +73,11 @@ def run():
     # Ач холбогдлын шүүлтүүр — Монгол уншигчдад сонирхолгүй жижиг мэдээг хасна
     new_news = filter_relevant_news(new_news)
 
+    # ШИНЭЛЭГ БАЙДЛЫН ЭРЭМБЭ: хуудасны бодлого — "дөнгөж дууссан тоглолт,
+    # дөнгөж зарлагдсан мэдээ" эхэнд. Хамгийн сүүлд нийтлэгдсэн нь түрүүлж
+    # постлогдоно (published_ts=0 буюу огноогүй нь хамгийн сүүлд)
+    new_news.sort(key=lambda n: n.get("published_ts", 0), reverse=True)
+
     # СЭДВИЙН ДАВХАРДЛЫН ШҮҮЛТҮҮР:
     # 1) Сүүлийн 48ц-д постолсон сэдэвтэй давхцвал алгасна
     #    (BBC + Sky Sports ижил мэдээ бичихэд URL өөр тул ID-дедуп
@@ -182,7 +187,9 @@ def run():
                 log.info(f"  [ДИАГНОСТИК] Энэ мэдээ '{news['title'][:50]}' → ишлэл олдлоо: {quote_en[:80]!r} | эх сурвалж: {written.get('source_name', '?')}")
 
             overlay_text_en = quote_en
-            if not overlay_text_en and category_now in ("sports", "music"):
+            # Шинэ спорт категориуд (basketball/football/ufc) бүгд гарчгийн
+            # давхаргатай quote card авна
+            if not overlay_text_en and category_now in ("sports", "music", "basketball", "football", "ufc"):
                 overlay_text_en = news.get("title", "")  # ишлэлгүй бол гарчгийг ашиглана
 
             if overlay_text_en and (written.get("image_url") or written.get("image_bytes")):
