@@ -15,6 +15,16 @@ log = logging.getLogger(__name__)
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 GROQ_MODEL = "qwen/qwen3.6-27b"
 
+# Шинэ нарийвчилсан категориуд (basketball/football/ufc) БҮГД sports
+# найруулгын prompt ашиглана. Энэ alias байхгүй бол SYSTEM_PROMPTS.get()
+# world_news (неутраль, ишлэлгүй) style руу УНАЖ, спортын ярианы өнгө
+# алдагдана.
+CATEGORY_STYLE = {
+    "basketball": "sports",
+    "football": "sports",
+    "ufc": "sports",
+}
+
 SYSTEM_PROMPTS = {
     "sports": """Чи Монголын шилдэг спортын контент бичигч. Фэнүүдийн дунд хэллэгээр,
 товч гэхдээ утга дүүрэн бичдэг.
@@ -266,7 +276,8 @@ def write_article(news: dict) -> dict:
     3. Google Translate — хоёул амжилтгүй бол эцсийн нөөц
     """
     category = news.get("category", "world_news")
-    system_prompt = SYSTEM_PROMPTS.get(category, SYSTEM_PROMPTS["world_news"])
+    style_key = CATEGORY_STYLE.get(category, category)
+    system_prompt = SYSTEM_PROMPTS.get(style_key, SYSTEM_PROMPTS["world_news"])
     system_prompt += """
 
 НАЙРУУЛГЫН ЧУХАЛ ДҮРЭМ:
@@ -383,15 +394,34 @@ def filter_relevant_news(news_list: list, max_candidates: int = 20) -> list:
         return news_list
 
     candidates = news_list[:max_candidates]
+
+    import time as _time
+    now_ts = _time.time()
+
+    def _age_label(n):
+        ts = n.get("published_ts", 0)
+        if not ts:
+            return "цаг тодорхойгүй"
+        hours = (now_ts - ts) / 3600
+        return f"{hours:.1f} цагийн өмнө"
+
     listing = "\n".join(
-        f"{i+1}. [{n.get('category_mn', '')}] {n['title']}"
+        f"{i+1}. [{n.get('category_mn', '')}] ({_age_label(n)}) {n['title']}"
         for i, n in enumerate(candidates)
     )
 
-    prompt = f"""Доорх мэдээнүүдээс Монгол ерөнхий уншигчдад ҮНЭХЭЭР
-сонирхолтой, ач холбогдолтой зүйлийг сонго. Жижиг/өдөр тутмын, сонин
-бус мэдээг (жишээ: бэлтгэл, дасгалжуулалт, минорит зочилсон гэх мэт)
-хасаарай.
+    prompt = f"""Доорх мэдээнүүдээс Монголын САГСАН БӨМБӨГ, ХӨЛ БӨМБӨГ,
+UFC/MMA фэнүүдэд зориулсан хуудсанд постлох хамгийн тохиромжтойг сонго.
+
+РЕДАКЦИЙН БОДЛОГО (эрэмбийн дарааллаар):
+1. ДӨНГӨЖ ДУУССАН тоглолт/тулааны үр дүн — ХАМГИЙН ЭРХЭМ
+2. ДӨНГӨЖ ЗАРЛАГДСАН томоохон мэдээ (шилжилт, гэрээ, гэмтэл,
+   картын зарлал) — хоёрдугаарт
+3. Шинэ цагтай (цөөн цагийн өмнөх) бусад чухал мэдээ — гуравт
+
+ХАСАХ: урьдчилсан тойм/preview, бэлтгэл, дасгалжуулалт, хуучин
+тоглолтын дүн шинжилгээ, багын жижиг өдөр тутмын мэдээ, podcast/
+livestream зарлал, эдгээр 3 спортод хамааралгүй бүх зүйл.
 
 {listing}
 

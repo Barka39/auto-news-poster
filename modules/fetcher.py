@@ -15,38 +15,46 @@ from datetime import datetime, timezone, timedelta
 
 log = logging.getLogger(__name__)
 
-# Ийм цагаас хуучин мэдээг алгасна (шинэ мэдээ л постлохын тулд)
-MAX_ARTICLE_AGE_HOURS = 24
+# Ийм цагаас хуучин мэдээг алгасна. ХУУДАСНЫ БОДЛОГО: зөвхөн хамгийн
+# шинэ (дөнгөж дууссан тоглолт, дөнгөж зарлагдсан мэдээ) контент постлох
+# тул хязгаар 10 цаг (өмнө нь 24 байсан)
+MAX_ARTICLE_AGE_HOURS = 10
 
 # ============================================================
-# ЭХ СУРВАЛЖУУД - 3 чиглэл
+# ХУУДАСНЫ ЧИГЛЭЛ: зөвхөн Сагсан бөмбөг + Хөл бөмбөг + UFC/MMA.
+# Хөгжим, Дэлхийн мэдээ зэрэг бусад чиглэлийг ТУСДАА хуудсуудад
+# (өөр repo/config-оор) оруулна — энэ repo-с хасагдсан.
+# Ажиллахгүй feed гарвал bozo-шалгалт аюулгүйгээр алгасдаг тул
+# лог дээрх "RSS алдаа" анхааруулгаар шалгаж, URL-ийг нь солино.
 # ============================================================
 RSS_SOURCES = {
-    "sports": [
+    "basketball": [
         {"name": "ESPN NBA", "url": "https://www.espn.com/espn/rss/nba/news", "lang": "en"},
-        {"name": "BBC Sport", "url": "https://feeds.bbci.co.uk/sport/rss.xml", "lang": "en"},
-        {"name": "ESPN Top Headlines", "url": "https://www.espn.com/espn/rss/news", "lang": "en"},
+        {"name": "Yahoo NBA", "url": "https://sports.yahoo.com/nba/rss.xml", "lang": "en"},
+        {"name": "CBS Sports NBA", "url": "https://www.cbssports.com/rss/headlines/nba/", "lang": "en"},
+    ],
+    "football": [
+        {"name": "BBC Football", "url": "https://feeds.bbci.co.uk/sport/football/rss.xml", "lang": "en"},
         {"name": "Guardian Football", "url": "https://www.theguardian.com/football/rss", "lang": "en"},
-        {"name": "Sky Sports", "url": "https://www.skysports.com/rss/12040", "lang": "en"},
+        {"name": "Sky Sports Football", "url": "https://www.skysports.com/rss/11095", "lang": "en"},
+        {"name": "ESPN Soccer", "url": "https://www.espn.com/espn/rss/soccer/news", "lang": "en"},
     ],
-    "music": [
-        {"name": "Billboard", "url": "https://www.billboard.com/feed/", "lang": "en"},
-        {"name": "Rolling Stone", "url": "https://www.rollingstone.com/feed/", "lang": "en"},
-        {"name": "TMZ Entertainment", "url": "https://www.tmz.com/category/entertainment/feed/", "lang": "en"},
-        {"name": "Guardian Music", "url": "https://www.theguardian.com/music/rss", "lang": "en"},
-        {"name": "NME", "url": "https://www.nme.com/news/music/feed", "lang": "en"},
+    "ufc": [
+        {"name": "ESPN MMA", "url": "https://www.espn.com/espn/rss/mma/news", "lang": "en"},
+        {"name": "MMA Fighting", "url": "https://www.mmafighting.com/rss/current", "lang": "en"},
+        {"name": "MMA Junkie", "url": "https://mmajunkie.usatoday.com/feed", "lang": "en"},
     ],
-    "world_news": [
-        {"name": "Reuters World", "url": "https://feeds.reuters.com/reuters/worldNews", "lang": "en"},
-        {"name": "BBC World", "url": "https://feeds.bbci.co.uk/news/world/rss.xml", "lang": "en"},
-        {"name": "AP News", "url": "https://rsshub.app/apnews/topics/ap-top-news", "lang": "en"},
-        {"name": "Guardian World", "url": "https://www.theguardian.com/world/rss", "lang": "en"},
-        {"name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml", "lang": "en"},
-    ]
 }
 
-CATEGORY_EMOJI = {"sports": "⚽", "music": "🎵", "world_news": "🌍"}
-CATEGORY_MN = {"sports": "Спорт", "music": "Хөгжим & Холливүүд", "world_news": "Дэлхийн мэдээ"}
+CATEGORY_EMOJI = {
+    "basketball": "🏀", "football": "⚽", "ufc": "🥊",
+    # Хуучин түлхүүрүүд — өөр хуудасны config дахин ашиглах үед эвдрэхгүйн тулд
+    "sports": "⚽", "music": "🎵", "world_news": "🌍",
+}
+CATEGORY_MN = {
+    "basketball": "Сагсан бөмбөг", "football": "Хөл бөмбөг", "ufc": "UFC/MMA",
+    "sports": "Спорт", "music": "Хөгжим & Холливүүд", "world_news": "Дэлхийн мэдээ",
+}
 
 
 def make_id(url: str) -> str:
@@ -373,6 +381,13 @@ def find_context_from_other_sources(title: str, min_content_len: int = 150) -> d
     ерөнхий, тоо баримтгүй нийтлэл бичсэн. Google News-ээр ижил мэдээг
     бичсэн өөр сайт (жишээ: NBC Sports, Yahoo Sports) олж, тэднээс
     агуулга татаж энэ дутууг нөхнө.
+
+    АНХААР: news.google.com/rss/articles/... холбоосууд Google-ийн ӨӨРИЙН
+    JS-аар render хийдэг redirect хуудас руу ордог тул статик HTML
+    татахад ихэвчлэн зөвхөн Google-ийн ерөнхий stub (og:description~98
+    тэмдэгт, body 0) ирдэг — жинхэнэ нийтлэлийн текст биш. Тиймээс
+    дараалан 2 удаа хоосон body ирвэл (structural pattern), үлдсэн
+    кандидатуудыг дэмий оролдохгүй эрт зогсооно.
     """
     result = {"og_image": "", "og_description": "", "body_excerpt": ""}
     if not title:
@@ -383,6 +398,7 @@ def find_context_from_other_sources(title: str, min_content_len: int = 150) -> d
         rss_url = f"https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"
         feed = feedparser.parse(rss_url)
 
+        zero_body_streak = 0
         for entry in feed.entries[:5]:
             article_url = entry.get("link", "")
             if not article_url:
@@ -395,6 +411,17 @@ def find_context_from_other_sources(title: str, min_content_len: int = 150) -> d
                     f"{entry.get('title', '')[:50]}"
                 )
                 return ctx
+
+            if not ctx.get("body_excerpt"):
+                zero_body_streak += 1
+                if zero_body_streak >= 2:
+                    log.info(
+                        "Google News-ийн redirect хуудаснууд тогтмол хоосон "
+                        "(JS-render) тул хайлтыг эрт зогсоов"
+                    )
+                    break
+            else:
+                zero_body_streak = 0
 
         log.info("Google News-с ижил сэдвийн хангалттай агуулга олдсонгүй")
     except Exception as e:
@@ -454,8 +481,10 @@ def fetch_category(category: str, sources: list) -> list:
 
                 # Хуучин мэдээг алгасах — зөвхөн сүүлийн MAX_ARTICLE_AGE_HOURS
                 # цагийн дотор нийтлэгдсэн мэдээг л авна
+                published_ts = 0.0
                 if hasattr(entry, "published_parsed") and entry.published_parsed:
                     published_dt = datetime(*entry.published_parsed[:6], tzinfo=timezone.utc)
+                    published_ts = published_dt.timestamp()
                     age = datetime.now(timezone.utc) - published_dt
                     if age > timedelta(hours=MAX_ARTICLE_AGE_HOURS):
                         log.info(f"[ХУУЧИН] Алгаслаа ({age.total_seconds()/3600:.0f} цагийн өмнөх): {entry.get('title', '')[:50]}")
@@ -478,6 +507,8 @@ def fetch_category(category: str, sources: list) -> list:
                     "url": url,
                     "image_url": image_url,
                     "published": entry.get("published", str(datetime.now())),
+                    # Шинэлэг байдлаар эрэмбэлэхэд ашиглана (0 = тодорхойгүй)
+                    "published_ts": published_ts,
                 }
                 results.append(news_item)
 

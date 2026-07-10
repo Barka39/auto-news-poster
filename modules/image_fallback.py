@@ -30,6 +30,9 @@ UNSPLASH_API_URL = "https://api.unsplash.com/search/photos"
 POLLINATIONS_URL = "https://image.pollinations.ai/prompt/"
 
 CATEGORY_FALLBACK_TERMS = {
+    "basketball": "basketball game arena",
+    "football": "football stadium pitch",
+    "ufc": "mma octagon cage fight",
     "sports": "basketball game arena",
     "music": "concert stage lights",
     "world_news": "city skyline news",
@@ -37,6 +40,9 @@ CATEGORY_FALLBACK_TERMS = {
 
 # Pollinations-д зориулсан хүнгүй, ерөнхий сэдэвт зургийн prompt
 CATEGORY_AI_PROMPTS = {
+    "basketball": "empty basketball arena, dramatic stadium lighting, court close-up, photorealistic, no people, no faces",
+    "football": "empty football stadium at night, green pitch close-up, dramatic floodlights, photorealistic, no people, no faces",
+    "ufc": "empty mma octagon cage, dramatic arena spotlights, photorealistic, no people, no faces",
     "sports": "empty basketball arena, dramatic stadium lighting, court close-up, photorealistic, no people, no faces",
     "music": "concert stage with lights, empty venue, dramatic lighting, photorealistic, no people, no faces",
     "world_news": "city skyline at dusk, global news theme, photorealistic, no people, no faces",
@@ -204,6 +210,9 @@ def get_fallback_image(category: str, title: str = "") -> dict:
     # 3) Wikimedia / 4) Unsplash — эцсийн нөөц (тохироо султай туршлагатай)
     keywords = _extract_keywords(title)
     qualifier = {
+        "basketball": "basketball player",
+        "football": "footballer",
+        "ufc": "mma fighter",
         "sports": "athlete",
         "music": "singer musician",
         "world_news": "portrait",
