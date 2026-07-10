@@ -85,6 +85,106 @@ def _draw_text_with_shadow(draw, xy, text, font, fill, shadow_color=(0, 0, 0, 60
     draw.text((x, y), text, font=font, fill=fill)
 
 
+def _cover_crop(img: "Image.Image", target_w: int, target_h: int) -> "Image.Image":
+    """Зургийг center-crop хийж яг target хэмжээнд тааруулна (aspect-fill, өнгө алдагдахгүй)."""
+    src_w, src_h = img.size
+    scale = max(target_w / src_w, target_h / src_h)
+    new_w, new_h = int(src_w * scale) + 1, int(src_h * scale) + 1
+    img = img.resize((new_w, new_h), Image.LANCZOS)
+    left = (new_w - target_w) // 2
+    top = (new_h - target_h) // 2
+    return img.crop((left, top, left + target_w, top + target_h))
+
+
+def generate_digest_cover(items: list, header_text: str = "ӨНӨӨДРИЙН ТОЙМ") -> bytes:
+    """
+    Тоймын (digest) постонд зориулсан COLLAGE cover зураг үүсгэнэ.
+
+    ЯАГААД ганц гэрэл зураг биш вэ: тойм пост нь ХЭД ХЭДЭН тусдаа мэдээг
+    нэгтгэсэн байдаг тул, ганц квоткарт шиг ганц зураг ашиглавал "энэ
+    бүгд НЭГ мэдээний тухай" гэсэн буруу сэтгэгдэл төрүүлнэ. Оронд нь
+    сонгогдсон мэдээ бүрийн зургаас grid (мозайк) хийж, "энэ бол ӨНӨӨДРИЙН
+    ХЭД ХЭДЭН гол мэдээний хураангуй" гэдгийг харцаараа шууд ойлгуулна.
+
+    items: [{"image_url": str, "category_mn": str}, ...] — дээд тал нь 6.
+    Зурагтай зүйлсийг л ашиглана; огт зураг олдохгүй бол хоосон буцаана
+    (дуудагч тал зурагтай постлохгүй байхаар аюулгүй fallback хийнэ).
+    """
+    import datetime
+
+    photos = []
+    for it in items[:6]:
+        img = _fetch_image(image_url=it.get("image_url", ""))
+        if img:
+            photos.append((img, it.get("category_mn", "")))
+
+    if not photos:
+        log.warning("Тоймын cover: ямар ч зураг татаж чадсангүй — зурагтай коллаж алгасав")
+        return b""
+
+    CANVAS_W = 1200
+    HEADER_H = 170
+    GUTTER = 8
+    ROW_H = 420
+
+    n = len(photos)
+    cols = 1 if n == 1 else 2
+    rows = (n + cols - 1) // cols
+    canvas_h = HEADER_H + rows * ROW_H + max(0, rows - 1) * GUTTER
+
+    canvas = Image.new("RGB", (CANVAS_W, canvas_h), "white")
+    draw = ImageDraw.Draw(canvas)
+
+    # Дээд толгой хэсэг — брэндийн улаан хайрцаг + гарчиг + огноо
+    draw.rectangle([0, 0, CANVAS_W, HEADER_H], fill=(200, 30, 30))
+    title_font = ImageFont.truetype(FONT_BOLD, 50)
+    date_font = ImageFont.truetype(FONT_REGULAR, 28)
+    draw.text((50, 38), f"\U0001F4F0 {header_text}", font=title_font, fill="white")
+    today = datetime.datetime.now().strftime("%Y.%m.%d")
+    draw.text((50, 108), today, font=date_font, fill=(255, 225, 225))
+
+    tag_font = ImageFont.truetype(FONT_BOLD, 22)
+
+    idx = 0
+    y = HEADER_H
+    for r in range(rows):
+        remaining = n - idx
+        row_cols = cols if remaining >= cols else remaining
+        if row_cols == 1:
+            img, cat = photos[idx]
+            thumb = _cover_crop(img, CANVAS_W, ROW_H)
+            canvas.paste(thumb, (0, y))
+            if cat:
+                _draw_tag(draw, cat, 24, y + 20, tag_font)
+            idx += 1
+        else:
+            cell_w = (CANVAS_W - GUTTER) // 2
+            for c in range(row_cols):
+                img, cat = photos[idx]
+                thumb = _cover_crop(img, cell_w, ROW_H)
+                x = c * (cell_w + GUTTER)
+                canvas.paste(thumb, (x, y))
+                if cat:
+                    _draw_tag(draw, cat, x + 20, y + 20, tag_font)
+                idx += 1
+        y += ROW_H + GUTTER
+
+    output = io.BytesIO()
+    canvas.save(output, format="JPEG", quality=85, optimize=True)
+    log.info(f"Тоймын cover коллаж үүсгэв ({n} зурагтай, {len(output.getvalue())} bytes)")
+    return output.getvalue()
+
+
+def _draw_tag(draw, text, x, y, font):
+    """Тухайн зурган дээр ангиллын жижиг тэмдэг (жишээ: 'СПОРТ') зурна."""
+    tag_text = text.upper()
+    bbox = draw.textbbox((0, 0), tag_text, font=font)
+    w = bbox[2] - bbox[0] + 22
+    h = bbox[3] - bbox[1] + 14
+    draw.rectangle([x, y, x + w, y + h], fill=(200, 30, 30))
+    draw.text((x + 11, y + 7), tag_text, font=font, fill="white")
+
+
 def generate_quote_card(quote_mn: str, source_name: str, category_mn: str = "",
                          image_url=None, image_bytes: bytes = b"") -> bytes:
     """

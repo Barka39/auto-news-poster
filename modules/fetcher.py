@@ -115,6 +115,35 @@ def _looks_like_image(url: str) -> bool:
 MIN_IMAGE_WIDTH = 700
 
 
+def interleave_by_category(news_list: list) -> list:
+    """
+    Категориор бөөнөөрөө ирсэн жагсаалтыг ЭЭЛЖЛЭН (round-robin) холино.
+
+    АСУУДАЛ: fetch_all_news() Спорт→Хөгжим→Дэлхий дараалалтай жагсаалт
+    буцаадаг тул filter_relevant_news()-ийн эхний 20 кандидатад Дэлхийн
+    мэдээ бараг ордоггүй байсан (Спорт 14 + Хөгжимийн эхний 6-аар 20
+    дүүрчихдэг). Үр дүнд нь тойм постонд Дэлхийн мэдээ 0 гарч байсан.
+
+    Энэ функц ЭХЛЭЭД категори тус бүрээс 1-ийг ээлжлэн авснаар, ач
+    холбогдлын шүүлтүүрт ГУРВАН категори адил тэгш өрсөлдөх боломж олгоно.
+    """
+    from collections import defaultdict, deque
+    buckets = defaultdict(deque)
+    order = []
+    for n in news_list:
+        cat = n.get("category", "")
+        if cat not in buckets:
+            order.append(cat)
+        buckets[cat].append(n)
+
+    result = []
+    while any(buckets[c] for c in order):
+        for c in order:
+            if buckets[c]:
+                result.append(buckets[c].popleft())
+    return result
+
+
 def get_image_width(url: str) -> int:
     """
     Зургийн БОДИТ өргөнийг шалгана (татаж үзэж). Алдаа гарвал 0.
