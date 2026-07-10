@@ -4,7 +4,10 @@ Auto News Poster - Монгол мэдээ автомат постлогч
 """
 
 import logging
-from modules.fetcher import fetch_all_news, extract_og_image, find_image_from_other_sources, pick_best_image
+from modules.fetcher import (
+    fetch_all_news, find_image_from_other_sources,
+    pick_best_image, extract_article_context, find_context_from_other_sources
+)
 from modules.writer import write_article, is_valid_mongolian, filter_relevant_news
 from modules.image_fallback import get_fallback_image
 from modules.poster import post_to_all_platforms
@@ -95,6 +98,34 @@ def run():
             log.info(f"Боловсруулж байна: {news['title'][:60]}...")
             log.info(f"  [ДИАГНОСТИК] Эх агуулга (эхний 100): {news.get('summary', '')[:100]!r}")
 
+            # Эх хуудаснаас og:description + body excerpt-ийг НИЙТЛЭЛ
+            # БИЧИХЭЭС ӨМНӨ татна — Gemini-д RSS-ийн богино/хоосон
+            # summary-с илүү бодит материал өгнө (доорх image-ийн
+            # логикт ч энэ дуудлагаар аль хэдийн олдсон og:image-ийг
+            # дахин ашиглана, давхар HTTP татахгүй)
+            context = extract_article_context(news.get("url", ""))
+
+            # ЭХ СУРВАЛЖ BOT-ХАМГААЛАЛТААР ХААГДСАН эсэхийг шалгана
+            # (жишээ: ESPN HTTP 202 stub хуудас буцаадаг, og:description/
+            # body_excerpt хоосон гардаг). Ийм тохиолдолд Google News-ээр
+            # ижил сэдвийг бичсэн ӨӨР сайтаас (NBC Sports, Yahoo г.м.)
+            # агуулгыг нөхөж хайна.
+            content_len = len(context.get("og_description", "")) + len(context.get("body_excerpt", ""))
+            if content_len < 150:
+                log.info(f"[ДИАГНОСТИК context] Эх сурвалжийн агуулга хомс ({content_len}ch) — өөр сайтаас нөхөж үзье")
+                alt = find_context_from_other_sources(news.get("title", ""))
+                alt_len = len(alt.get("og_description", "")) + len(alt.get("body_excerpt", ""))
+                if alt_len > content_len:
+                    if alt.get("og_description"):
+                        context["og_description"] = alt["og_description"]
+                    if alt.get("body_excerpt"):
+                        context["body_excerpt"] = alt["body_excerpt"]
+                    if not context.get("og_image") and alt.get("og_image"):
+                        context["og_image"] = alt["og_image"]
+
+            news["og_description"] = context["og_description"]
+            news["body_excerpt"] = context["body_excerpt"]
+
             written = write_article(news)
 
             # ЧАНАРЫН ХАМГААЛАЛТ: орчуулга/бичвэр бүтэлгүйтсэн бол
@@ -113,8 +144,7 @@ def run():
             # ОДОО: бүх нэр дэвшигчийг цуглуулж, эхний ≥700px-ийг сонгоно:
             # 1) RSS-ийн зураг  2) og:image  3) өөр сайтын og:image
             # Аль нь ч том биш бол → Pollinations/Wikimedia/Unsplash fallback
-            candidates = [written.get("image_url", "")]
-            candidates.append(extract_og_image(news.get("url", "")))
+            candidates = [written.get("image_url", ""), context.get("og_image", "")]
             best = pick_best_image(candidates)
             if not best:
                 other_img = find_image_from_other_sources(written.get("title", ""))
