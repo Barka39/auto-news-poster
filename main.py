@@ -4,7 +4,7 @@ Auto News Poster - Монгол мэдээ автомат постлогч
 """
 
 import logging
-from modules.fetcher import fetch_all_news, extract_og_image
+from modules.fetcher import fetch_all_news, extract_og_image, find_image_from_other_sources
 from modules.writer import write_article, is_valid_mongolian, filter_relevant_news
 from modules.image_fallback import get_fallback_image
 from modules.poster import post_to_all_platforms
@@ -60,25 +60,26 @@ def run():
                 posted_ids.add(news["id"])  # дахин оролдохгүйн тулд тэмдэглэнэ
                 continue
 
-            # ХАМГИЙН НАЙДВАРТАЙ ЗУРАГ: тухайн өгүүллийн бодит хуудаснаас
-            # og:image унших (мэдээний сайтууд өөрсдөө Facebook/Twitter-д
-            # зориулж тохируулдаг стандарт tag). RSS-ийн media tag-аас
-            # хамаагүй зөв тул эхэлж үүгээр орлуулна.
-            og_image = extract_og_image(news.get("url", ""))
-            if og_image:
-                written["image_url"] = og_image
-                log.info(f"[ДИАГНОСТИК] og:image ашиглав: {og_image[:80]}")
-            elif not written.get("image_url"):
-                # og:image олдохгүй, RSS-д ч зураг байхгүй бол
-                # Wikimedia/Unsplash/Gemini-с зураг хайж олно
-                fallback = get_fallback_image(
-                    written.get("category", "world_news"),
-                    written.get("title", "")
-                )
-                written["image_url"] = fallback.get("url", "")
-                written["image_bytes"] = fallback.get("bytes", b"")
-
             category_now = written.get("category", "")
+
+            # ЗУРГИЙН ЭРЭМБЭ:
+            # 1) og:image (тухайн өгүүллийн бодит хуудаснаас)
+            # 2) Ижил сэдвийг бичсэн ӨӨР сайтын og:image (Google News-ээр хайна)
+            # 3) Pollinations AI / Gemini / Wikimedia / Unsplash (image_fallback.py дотор)
+            if not written.get("image_url"):
+                og_image = extract_og_image(news.get("url", ""))
+                if og_image:
+                    written["image_url"] = og_image
+                    log.info(f"[ДИАГНОСТИК] og:image ашиглав: {og_image[:80]}")
+                else:
+                    other_img = find_image_from_other_sources(written.get("title", ""))
+                    if other_img:
+                        written["image_url"] = other_img
+                        log.info(f"[ДИАГНОСТИК] өөр сайтын og:image ашиглав: {other_img[:80]}")
+                    else:
+                        fallback = get_fallback_image(category_now, written.get("title", ""))
+                        written["image_url"] = fallback.get("url", "")
+                        written["image_bytes"] = fallback.get("bytes", b"")
 
             # Sports/Music: жинхэнэ фото байвал (RSS/Wikimedia/Unsplash-с)
             # Gemini-ээр illustration маягт хөрвүүлнэ. Эх мөч, поз хэвээр,
@@ -119,6 +120,7 @@ def run():
                     card_bytes = quote_card.generate_quote_card(
                         quote_mn=overlay_text_mn,
                         source_name=written.get("source_name", "Эх сурвалж"),
+                        category_mn=written.get("category_mn", ""),
                         image_url=written.get("image_url", ""),
                         image_bytes=written.get("image_bytes", b"")
                     )
