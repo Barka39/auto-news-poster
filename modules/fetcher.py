@@ -62,6 +62,27 @@ def make_id(url: str) -> str:
     return hashlib.md5(url.encode()).hexdigest()
 
 
+# ТОЙМ/LIVE BLOG ТӨРЛИЙН НИЙТЛЭЛИЙГ ТАНИХ ЗАГВАРУУД.
+# Ийм эх сурвалж НЭГ мэдээ биш, олон холбоогүй сэдвийн цуглуулга байдаг
+# тул нийтлэл бичихэд "4 өөр сэдэв нэг постонд" гэсэн замбараагүй үр дүн
+# гаргадаг (бодит кейс: Summer League + Kawhi + WNBA нэг постонд орсон).
+# Хуудасны бодлого: зөвхөн ГАНЦ тодорхой үйл явдлын мэдээ постлоно.
+ROUNDUP_TITLE_RE = re.compile(
+    r"\blive\b|liveblog|live updates?|livestream|live stream"
+    r"|how to watch|what to watch|what we're hearing|what we are hearing"
+    r"|what's next for|\bintel on\b|\broundup\b|round-up|\btakeaways\b"
+    r"|\bmailbag\b|\bq&a\b|power rankings|winners and losers|\bstorylines\b"
+    r"|\b\d+ things\b|five things|key questions|talking points|\bnotebook\b"
+    r"|\bbuzz:|everything you need|biggest questions|\btop \d+\b|\bday \d+\b",
+    re.IGNORECASE,
+)
+
+
+def is_roundup_title(title: str) -> bool:
+    """Гарчиг тойм/live-blog/listicle төрлийн эсэхийг шалгана."""
+    return bool(ROUNDUP_TITLE_RE.search(title or ""))
+
+
 def clean_summary(text: str, max_chars: int = 500) -> str:
     """
     Хураангуйг цэвэрлэж, хэмжээг хязгаарлах
@@ -477,6 +498,12 @@ def fetch_category(category: str, sources: list) -> list:
             for entry in feed.entries[:5]:  # Эх сурвалж бүрээс 5 мэдээ
                 url = entry.get("link", "")
                 if not url:
+                    continue
+
+                # Тойм/live blog/listicle-ийг алгасна — нэг тодорхой
+                # үйл явдлын мэдээ биш тул постонд тохирохгүй
+                if is_roundup_title(entry.get("title", "")):
+                    log.info(f"[ТОЙМ] Алгаслаа (roundup/live төрөл): {entry.get('title', '')[:50]}")
                     continue
 
                 # Хуучин мэдээг алгасах — зөвхөн сүүлийн MAX_ARTICLE_AGE_HOURS
