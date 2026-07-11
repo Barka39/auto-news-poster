@@ -18,6 +18,7 @@ from modules import quote_card
 from modules import gemini_image
 from modules.translator import google_translate
 from modules import espn_api
+from modules import stat_card
 
 logging.basicConfig(
     level=logging.INFO,
@@ -189,6 +190,29 @@ def run():
             # эсвэл (sports/music категорид) гарчгийг ашиглана.
             # Хөгжимд дууны нэрийг "ишлэл" гэж андуурахаас сэргийлж, тэнд
             # quote-хайлт хийхгүй.
+            # ТОГЛОЛТЫН ҮР ДҮНГИЙН МЭДЭЭ → ESPN маягийн stat card оролдоно.
+            # Стат олдохгүй бол хэвийн quote card руугаа үргэлжилнэ.
+            stat_done = False
+            if category_now in ("basketball", "football", "ufc", "sports") and \
+                    (written.get("image_url") or written.get("image_bytes")):
+                stats = stat_card.extract_stats(
+                    news.get("title", ""),
+                    news.get("summary", ""),
+                    (context.get("og_description", "") + " " + context.get("body_excerpt", ""))
+                    if isinstance(context, dict) else "",
+                )
+                if stats:
+                    card = stat_card.generate_stat_card(
+                        stats,
+                        category_mn=written.get("category_mn", ""),
+                        image_url=written.get("image_url", ""),
+                        image_bytes=written.get("image_bytes", b""),
+                    )
+                    if card:
+                        written["image_bytes"] = card
+                        written["image_url"] = ""
+                        stat_done = True
+
             source_text = f"{news.get('title', '')} {news.get('summary', '')}"
             quote_en = quote_card.extract_quote(source_text) if category_now != "music" else ""
             if quote_en:
@@ -200,7 +224,7 @@ def run():
             if not overlay_text_en and category_now in ("sports", "music", "basketball", "football", "ufc"):
                 overlay_text_en = news.get("title", "")  # ишлэлгүй бол гарчгийг ашиглана
 
-            if overlay_text_en and (written.get("image_url") or written.get("image_bytes")):
+            if not stat_done and overlay_text_en and (written.get("image_url") or written.get("image_bytes")):
                 # УРЬД НЬ: ишлэлийг Google Translate-аар орчуулдаг байсан нь
                 # "Райс алдаатай өвчтэй байна" маягийн утгагүй гарчиг үүсгэсэн.
                 # ОДОО: Gemini-ээр (үндсэн бичигчтэй ижил чанараар) орчуулж,
