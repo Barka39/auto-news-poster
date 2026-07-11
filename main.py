@@ -17,6 +17,7 @@ from modules import telegram_notify
 from modules import quote_card
 from modules import gemini_image
 from modules.translator import google_translate
+from modules import espn_api
 
 logging.basicConfig(
     level=logging.INFO,
@@ -150,6 +151,13 @@ def run():
             # 1) RSS-ийн зураг  2) og:image  3) өөр сайтын og:image
             # Аль нь ч том биш бол → Pollinations/Wikimedia/Unsplash fallback
             candidates = [written.get("image_url", ""), context.get("og_image", "")]
+
+            # ESPN бол HTML scrape биш нээлттэй JSON API-аас нь зургийг авна —
+            # GitHub Actions-ийн IP-ээс espn.com-ийн HTML хуудас 403 өгдөг
+            # (Akamai bot protection) ч site.api.espn.com API нь өгдөггүй
+            if "espn.com" in news.get("url", ""):
+                candidates.append(espn_api.get_image(news.get("url", "")))
+
             best = pick_best_image(candidates)
             if not best:
                 other_img = find_image_from_other_sources(written.get("title", ""))
