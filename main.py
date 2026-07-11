@@ -120,7 +120,13 @@ def run():
             content_len = len(context.get("og_description", "")) + len(context.get("body_excerpt", ""))
             if content_len < 150:
                 log.info(f"[ДИАГНОСТИК context] Эх сурвалжийн агуулга хомс ({content_len}ch) — өөр сайтаас нөхөж үзье")
-                alt = find_context_from_other_sources(news.get("title", ""))
+                # ESPN бол эхлээд өөрийнх нь JSON API-аас текстийг авна —
+                # 403 өгдөг HTML-ийн оронд headline + description ирдэг
+                alt = {}
+                if "espn.com" in news.get("url", ""):
+                    alt = espn_api.get_context(news.get("url", ""))
+                if len(alt.get("og_description", "")) + len(alt.get("body_excerpt", "")) < 150:
+                    alt = find_context_from_other_sources(news.get("title", ""))
                 alt_len = len(alt.get("og_description", "")) + len(alt.get("body_excerpt", ""))
                 if alt_len > content_len:
                     if alt.get("og_description"):
