@@ -416,7 +416,10 @@ def find_context_from_other_sources(title: str, min_content_len: int = 150) -> d
     try:
         import urllib.parse
         query = urllib.parse.quote(title[:100])
-        rss_url = f"https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"
+        # Bing News RSS — Google News-ээс ялгаатай нь entry.link нь
+        # publisher-ийн ШУУД URL байдаг (Google-ийнх JS шаарддаг
+        # redirect тул og:image/текст хэзээ ч гардаггүй байсан)
+        rss_url = f"https://www.bing.com/news/search?q={query}&format=rss"
         feed = feedparser.parse(rss_url)
 
         zero_body_streak = 0
@@ -424,6 +427,11 @@ def find_context_from_other_sources(title: str, min_content_len: int = 150) -> d
             article_url = entry.get("link", "")
             if not article_url:
                 continue
+            # Bing-ийн дотоод redirect холбоос таарвал алгасна
+            if "bing.com" in article_url:
+                continue
+            # Tracking параметрүүдийг цэвэрлэнэ
+            article_url = article_url.split("?")[0] if "?ocid=" in article_url else article_url
             ctx = extract_article_context(article_url)
             content_len = len(ctx.get("og_description", "")) + len(ctx.get("body_excerpt", ""))
             if content_len >= min_content_len:
@@ -437,14 +445,13 @@ def find_context_from_other_sources(title: str, min_content_len: int = 150) -> d
                 zero_body_streak += 1
                 if zero_body_streak >= 2:
                     log.info(
-                        "Google News-ийн redirect хуудаснууд тогтмол хоосон "
-                        "(JS-render) тул хайлтыг эрт зогсоов"
+                        "Хайлтын үр дүнгийн хуудаснууд тогтмол хоосон тул эрт зогсоов"
                     )
                     break
             else:
                 zero_body_streak = 0
 
-        log.info("Google News-с ижил сэдвийн хангалттай агуулга олдсонгүй")
+        log.info("Bing News-с ижил сэдвийн хангалттай агуулга олдсонгүй")
     except Exception as e:
         log.warning(f"Google News context хайлтын алдаа: {e}")
     return result

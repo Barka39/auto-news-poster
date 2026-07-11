@@ -35,7 +35,14 @@ _STOPWORDS = {
     "will", "would", "could", "may", "might", "has", "have", "had",
     "says", "say", "said", "new", "latest", "report", "reports", "news",
     "live", "update", "updates", "vs", "v",
+    # Гарчгийн хэв маягийн үгс — сэдэв ялгадаггүй
+    "sources", "source", "exclusive", "official", "breaking", "confirmed",
 }
+
+# Тоон токен: гэрээний дүн ($252M), оноо (97-96) зэрэг нь сэдвийг
+# хамгийн хүчтэй таниулдаг. Он (19xx/20xx) хэт түгээмэл тул хасна.
+_NUM_RE = re.compile(r"\d{2,4}")
+_YEAR_RE = re.compile(r"^(19|20)\d{2}$")
 
 _WORD_RE = re.compile(r"[A-Za-z][A-Za-z'-]+")
 
@@ -44,9 +51,20 @@ def _signatures(title: str) -> tuple:
     """Гарчгаас (proper_nouns, all_words) хоёр олонлог гаргана."""
     words = _WORD_RE.findall(title or "")
     proper, full = set(), set()
+
+    # Тоон токенууд хоёр олонлогт хоёуланд нь орно.
+    # БОДИТ АЛДАА: Wemby-ийн $252M гэрээ 3 удаа давхар постлогдсон —
+    # "Wemby" vs "Wembanyama", "Spurs'" vs "Spurs" гэж нэрс таараагүй ч
+    # 252 гэсэн тоо бүх гарчигт байсан.
+    for num in _NUM_RE.findall(title or ""):
+        if not _YEAR_RE.match(num):
+            proper.add(num)
+            full.add(num)
+
     for i, w in enumerate(words):
-        lw = w.lower()
-        if lw in _STOPWORDS:
+        # Апострофыг ХОЁР талаас нь хайчилна: "Spurs'" → "spurs"
+        lw = w.lower().strip("'-")
+        if not lw or lw in _STOPWORDS:
             continue
         if len(lw) >= 4 or w[0].isupper():
             full.add(lw)

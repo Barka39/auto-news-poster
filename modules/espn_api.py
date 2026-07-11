@@ -51,22 +51,18 @@ _URL_RE = re.compile(
 )
 
 
-def get_image(article_url: str, min_width: int = 600) -> str:
-    """
-    ESPN нийтлэлийн URL-аас story ID-г салгаж, тухайн лигийн news
-    API-аас ИЖИЛ ID-тай нийтлэлийг олоод хамгийн том зургийг нь буцаана.
-    ESPN биш URL эсвэл олдоогүй бол хоосон буцаана (дараагийн давхарга
-    руу шилжинэ) — БУРУУ нийтлэлийн зураг хэзээ ч буцаахгүй.
-    """
+def _find_article(article_url: str) -> dict | None:
+    """URL-аас story ID-г салгаж, лигийн news API-аас ижил ID-тай
+    нийтлэлийн бүтэн JSON объектыг олно. Олдохгүй бол None."""
     m = _URL_RE.search(article_url or "")
     if not m:
-        return ""
+        return None
 
     section, story_id = m.group(1).lower(), m.group(2)
     api_path = _SECTION_TO_API.get(section)
     if not api_path:
         log.info(f"[ESPN API] '{section}' section-ий mapping алга — алгасав")
-        return ""
+        return None
 
     try:
         resp = requests.get(
@@ -79,13 +75,55 @@ def get_image(article_url: str, min_width: int = 600) -> str:
         articles = resp.json().get("articles", [])
     except Exception as e:
         log.warning(f"[ESPN API] news endpoint алдаа ({api_path}): {e}")
-        return ""
+        return None
 
     for art in articles:
         links = art.get("links", {}).get("web", {}).get("href", "")
         # links.web.href дотор мөн /id/49328757/ хэлбэрээр ID байдаг
-        if f"/id/{story_id}" not in links:
-            continue
+        if f"/id/{story_id}" in links:
+            return art
+
+    log.info(f"[ESPN API] ID {story_id} сүүлийн 50 мэдээнд олдсонгүй")
+    return None
+
+
+def get_context(article_url: str) -> dict:
+    """
+    ESPN API-аас нийтлэлийн ТЕКСТЭН агуулгыг авна — espn.com-ийн HTML
+    хуудас GitHub Actions-с 403 өгдөг тул og:description/body_excerpt
+    хоосон гардаг дутууг энэ нөхнө (headline + description).
+    """
+    result = {"og_image": "", "og_description": "", "body_excerpt": ""}
+    art = _find_article(article_url)
+    if not art:
+        return result
+
+    headline = (art.get("headline") or "").strip()
+    desc = (art.get("description") or "").strip()
+    result["og_description"] = desc or headline
+    if headline and desc and headline.lower() not in desc.lower():
+        result["body_excerpt"] = f"{headline}. {desc}"
+    else:
+        result["body_excerpt"] = desc
+
+    for img in art.get("images", []):
+        if img.get("url"):
+            result["og_image"] = img["url"]
+            break
+
+    if result["og_description"]:
+        log.info(f"[ESPN API] 📝 Текст агуулга олдлоо ({len(result['body_excerpt'])}ch)")
+    return result
+
+
+def get_image(article_url: str, min_width: int = 600) -> str:
+    """
+    ESPN нийтлэлийн зургийг API-аас авна. Олдохгүй бол хоосон буцаана
+    (дараагийн давхарга руу шилжинэ) — БУРУУ нийтлэлийн зураг хэзээ ч
+    буцаахгүй.
+    """
+    art = _find_article(article_url)
+    if art:
 
         # Хамгийн өргөн, min_width-с том зургийг сонгоно
         best_url, best_w = "", 0
@@ -104,5 +142,4 @@ def get_image(article_url: str, min_width: int = 600) -> str:
             log.info(f"[ESPN API] ⚠️ Жижиг/тодорхойгүй хэмжээтэй зураг ({best_w}px) ашиглав")
             return best_url
 
-    log.info(f"[ESPN API] ID {story_id} сүүлийн 50 мэдээнд олдсонгүй")
     return ""
