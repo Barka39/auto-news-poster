@@ -37,6 +37,26 @@ _STOPWORDS = {
     "live", "update", "updates", "vs", "v",
     # Гарчгийн хэв маягийн үгс — сэдэв ялгадаггүй
     "sources", "source", "exclusive", "official", "breaking", "confirmed",
+    # Headline-д томоор бичигддэг түгээмэл англи үгс. БОДИТ АЛДАА:
+    # "Gary Trent Gets Paid" гэдэг title-case гарчгийн "Gets", "Paid"
+    # хүний нэр мэт тоологдож олонлогийг хөөргөснөөс давхардал
+    # баригдаагүй. Эдгээр үг нэр БИШ тул хоёр олонлогоос хоёуланг нь
+    # хасна.
+    "gets", "get", "got", "goes", "going", "makes", "made", "takes",
+    "took", "gives", "given", "paid", "pays", "signs", "signing",
+    "signed", "agrees", "agreed", "reach", "reaches", "reached",
+    "inks", "lands", "joins", "joining", "leaves", "leaving", "deal",
+    "deals", "contract", "extension", "trade", "traded", "beats",
+    "beat", "wins", "win", "won", "loses", "loss", "lost", "leads",
+    "led", "scores", "scored", "star", "stars", "boss", "chief",
+    "says", "said", "claims", "reveals", "reportedly", "report",
+    "reports", "rumors", "rumours", "returns", "return", "ready",
+    "set", "eyes", "eyeing", "keen", "close", "closes", "moves",
+    "move", "here", "why", "how", "what", "when", "watch", "look",
+    "inside", "big", "huge", "major", "top", "best", "worst", "first",
+    "last", "next", "now", "just", "still", "back", "out", "off",
+    "million", "billion", "year", "years", "day", "days", "night",
+    "week", "hero", "heroes", "king", "dies", "dead", "aged", "amid",
 }
 
 # Тоон токен: гэрээний дүн ($252M), оноо (97-96) зэрэг нь сэдвийг
