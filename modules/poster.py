@@ -241,8 +241,46 @@ def post_to_twitter(news: dict) -> dict:
 # БҮГДИЙГ НЭГТГЭН ПОСТЛОХ
 # ============================================================
 
+def _draft_dir() -> str:
+    """LEGION S85: when AUTONEWS_DRAFT_DIR is set, nothing is posted here —
+    each item is written as a draft JSON for LEGION's social hand, which
+    posts it platform by platform with an intent before and a receipt
+    after, and can look for it after a crash. The pipeline (fetch, write,
+    image) is unchanged; only the last step moves behind a door that can
+    be recovered."""
+    return os.environ.get("AUTONEWS_DRAFT_DIR", "").strip()
+
+
+def write_draft(news: dict, draft_dir: str) -> dict:
+    import base64
+    import hashlib
+    import json
+    import time
+
+    os.makedirs(draft_dir, exist_ok=True)
+    image_bytes = news.get("image_bytes", b"")
+    draft = {
+        "id": str(news.get("id") or hashlib.sha256(str(news.get("title", "")).encode("utf-8")).hexdigest()[:16]),
+        "title": news.get("title", ""),
+        "url": news.get("url", ""),
+        "category": news.get("category", ""),
+        "text": {platform: format_post(news, platform) for platform in ("facebook", "instagram", "twitter")},
+        "image_url": news.get("image_url", ""),
+        "image_png_base64": base64.b64encode(image_bytes).decode("ascii") if image_bytes else "",
+        "drafted_at": time.time(),
+    }
+    path = os.path.join(draft_dir, f"news-{draft['id']}.json")
+    with open(path, "w", encoding="utf-8") as handle:
+        json.dump(draft, handle, ensure_ascii=False, indent=2)
+    log.info(f"📝 LEGION draft бичигдлээ (постлоогүй): {path}")
+    return {"success": True, "draft": path, "platforms": {}, "error": None}
+
+
 def post_to_all_platforms(news: dict) -> dict:
     """Facebook, Instagram, X-д нэг зэрэг постлох"""
+    draft_dir = _draft_dir()
+    if draft_dir:
+        return write_draft(news, draft_dir)
     results = {}
     any_success = False
 
