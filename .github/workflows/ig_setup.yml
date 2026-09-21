@@ -19,7 +19,7 @@ jobs:
           IG_ACCOUNT_ID: ${{ secrets.IG_ACCOUNT_ID }}
         run: |
           echo "IG_ACCOUNT_ID secret одоо: ${IG_ACCOUNT_ID:+(тохируулсан)}${IG_ACCOUNT_ID:-(хоосон)}"
-          curl -s "https://graph.facebook.com/v19.0/${FB_PAGE_ID}?fields=instagram_business_account{id,username,followers_count},connected_instagram_account{id,username}&access_token=${FB_ACCESS_TOKEN}" | sed "s/${FB_PAGE_ID}/***PAGE***/g"
+          curl -s "https://graph.facebook.com/v19.0/${FB_PAGE_ID}?fields=instagram_business_account%7Bid,username,followers_count%7D,connected_instagram_account%7Bid,username%7D&access_token=${FB_ACCESS_TOKEN}" | sed "s/${FB_PAGE_ID}/***PAGE***/g"
           echo
           echo "--- token permissions ---"
           curl -s "https://graph.facebook.com/v19.0/me/permissions?access_token=${FB_ACCESS_TOKEN}" | tr ',' '\n' | grep -E "instagram|pages_manage_posts" | tr -d '"{}[]' | sed 's/permission://; s/status//' | paste -sd ' '
