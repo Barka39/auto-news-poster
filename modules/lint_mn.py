@@ -38,12 +38,19 @@ _COMPILED = [(re.compile(rx, re.IGNORECASE), why, fix) for rx, why, fix in RULES
 _SUFFIX_OK = re.compile(r"[A-Za-z]+-[А-Яа-яӨөҮү]+")
 
 
+# Монгол хэлний жинхэнэ давталтууд — "давтагдсан үг" дүрэмд алдаа биш
+_REDUP_OK = {"тус тус", "олон олон", "дахин дахин", "нэг нэг", "хэсэг хэсэг", "аажим аажим", "удаа удаа",
+             "бага бага", "их их", "хурдан хурдан", "янз янзын", "зэрэг зэрэг", "цаг цагт"}
+
+
 def check(text: str) -> list:
     """[(олдсон хэсэг, тайлбар, засвар|None), ...]"""
     hits = []
     for rx, why, fix in _COMPILED:
         for m in rx.finditer(text or ""):
             frag = m.group(0)
+            if why == "ижил үг дараалан давтагдсан" and (frag.lower() in _REDUP_OK or len(frag.split()[0]) <= 2):
+                continue
             if "холилдсон" in why:
                 # "NBA-ийн" (зураастай дагавар) зөв; "Энцо Fernandez" маягийн зайтай бол энд баригдахгүй,
                 # харин "Enzo-гийн" зөв тул зөвхөн зураасгүй нийлсэн үг л алдаа

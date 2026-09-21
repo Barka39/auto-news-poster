@@ -19,6 +19,22 @@ Facebook, Instagram, X (Twitter)-д автоматаар постолдог си
 3. **Бүтэн материал**: нийтлэлийн og:description + body (ESPN бол API-ийн story).
 4. **Тоглолтын үр дүн өгөгдлөөс** (`modules/nba_scores.py`): хэн ч бичээгүй, баримтаар дүүрэн recap.
 
+### 2026-09-21-нд хэрэгжсэн спринтүүд (PLAN.md)
+- **S1 Товлолт** — `modules/scheduler.py`: recap/10 оноо шууд, бусад нь `POST_SLOTS` (08:00, 12:30, 19:00, 21:30 УБ)
+  слотод FB `scheduled_publish_time`-аар. `SCHEDULE_POSTS=0` = хуучин зан. Гадаад cron (cron-job.org →
+  `repository_dispatch`) эзний PAT хүлээж байна — тэр хүртэл GitHub cron (өдөрт ~8-10 run).
+- **S2 Давтагддаг формат** — `digest.py --nba` (13:00 УБ, шөнийн бүх үр дүн нэг карт), `--standings` (Даваа 14:00).
+  Ганцаарчилсан recap зөвхөн playoff/OT/≤3 оноо (`NBA_RECAP_ALL=1` = бүгд).
+- **S3 Хэмжилт** — `ledger.json` (пост бүр: төрөл, карт, оноо, слот, id) + `insights_report.py`
+  (өдөр бүр 06:00 УБ, Даваа Telegram тайлан). ⚠ Meta post reach metric-ийг хассан → engagement оноогоор.
+- **S4 Монголын сагс** — 24tsag, ikon, asia-basket (MBL); `MN_WATCHLIST` (шигшээ, тоглогч, лиг) = 10 оноо; нэр томьёоны толь.
+- **S5 IG/X** — үүсгэсэн картыг FB-д байршуулсан URL-аар IG-д; X `X_ENABLED=1` үед л.
+- **S6 Хэлний lint** — `modules/lint_mn.py`: калька/буруу үг → редакторт → 1:1 засвар.
+- **S8 Зураг** — `modules/cards.py`: HTML/CSS → Chromium; recap/deal/quote/news/digest/standings загвар, 4:5.
+- **S9 Бичлэг** — `modules/video.py`: recap → 1080×1920 mp4 (анимац кадр → ffmpeg), edge-tts Монгол хоолой;
+  ⚠ GitHub Actions-ийн IP-г Bing TTS 403-оор хаадаг тул CI дээр хоолойгүй (хадмалтай) видео гардаг,
+  хоолойтой нь энэ машин дээр ажилладаг. `VIDEO_RECAPS=0` = зурагтай пост.
+
 ### Чанарыг постлохгүйгээр шалгах
 Actions → **Draft Check (постлохгүй)** → Run workflow (max_posts, min_score, тестийн NBA огноо).
 Нооргууд log-д бүтнээрээ хэвлэгдэнэ, `drafts` artifact болж хадгалагдана.
