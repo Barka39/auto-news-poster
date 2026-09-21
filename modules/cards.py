@@ -294,7 +294,7 @@ th{font-weight:600;font-size:20px;opacity:.7;text-align:left;padding:8px 10px;le
 td{padding:6px 10px;border-top:1px solid rgba(255,255,255,.12);font-weight:700;font-size:26px;height:68px}
 td img{width:46px;height:46px;object-fit:contain;vertical-align:middle;margin-right:14px}
 tr.po td{background:rgba(255,255,255,.06)}
-td.r{opacity:.7;width:50px}td.n{width:420px}td.c{text-align:center}
+td.r{opacity:.7;width:50px}td.n{width:420px;white-space:nowrap;font-size:24px}td.c{text-align:center}
 .legend{position:absolute;bottom:110px;left:60px;font-size:20px;opacity:.7;font-weight:600}
 """
     trs = ""

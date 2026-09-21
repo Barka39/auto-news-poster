@@ -17,6 +17,12 @@ on:
       scores_dates:
         description: "Тест: NBA тоглолтын огноо YYYYMMDD (таслалаар), хоосон = өнөөдөр/өчигдөр"
         default: ""
+      mode:
+        description: "main | nba (өглөөний тойм) | standings | news (мэдээний тойм)"
+        default: "main"
+      standings_season:
+        description: "Тест: standings улирал (2026 = 2025-26), хоосон = одоогийн"
+        default: ""
 
 jobs:
   draft:
@@ -43,10 +49,18 @@ jobs:
           MAX_POSTS_PER_RUN: ${{ github.event.inputs.max_posts }}
           MIN_NEWS_SCORE: ${{ github.event.inputs.min_score }}
           NBA_SCORES_DATES: ${{ github.event.inputs.scores_dates }}
+          NBA_STANDINGS_SEASON: ${{ github.event.inputs.standings_season }}
+          TELEGRAM_BOT_TOKEN: ""
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
-        run: python main.py
+        run: |
+          case "${{ github.event.inputs.mode }}" in
+            nba) python digest.py --nba ;;
+            standings) python digest.py --standings ;;
+            news) python digest.py ;;
+            *) python main.py ;;
+          esac
       - name: Нооргуудыг хэвлэх
         if: always()
         run: |
