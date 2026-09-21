@@ -18,7 +18,7 @@ on:
         description: "Тест: NBA тоглолтын огноо YYYYMMDD (таслалаар), хоосон = өнөөдөр/өчигдөр"
         default: ""
       mode:
-        description: "main | nba (өглөөний тойм) | standings | news (мэдээний тойм)"
+        description: "main | nba | standings | news | pages (Сүнсний код + Үдшийн шивнээ бүх слот)"
         default: "main"
       standings_season:
         description: "Тест: standings улирал (2026 = 2025-26), хоосон = одоогийн"
@@ -59,6 +59,7 @@ jobs:
             nba) python digest.py --nba ;;
             standings) python digest.py --standings ;;
             news) python digest.py ;;
+            pages) PAGES_FORCE=all python pages_run.py ;;
             *) python main.py ;;
           esac
       - name: Нооргуудыг хэвлэх

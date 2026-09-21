@@ -412,3 +412,52 @@ def build_for_news(news: dict, written: dict, headline_mn: str, quote_mn: str = 
         if png:
             return png, "news"
     return b"", ""
+
+
+# ============================================================
+# КОНТЕНТ ХУУДСУУД (Сүнсний код / Үдшийн шивнээ)
+# ============================================================
+_MYSTIC_THEMES = {
+    "zurhai":     ("#1a0b3d", "#4a1c8c", "#c9a227"),
+    "spirit":     ("#0b1f3a", "#1f4e79", "#7fd1c7"),
+    "numerology": ("#2b0a0a", "#7a1f2b", "#ffb347"),
+    "story":      ("#12071f", "#3a1a5e", "#ff7aa2"),
+    "confession": ("#1c0d10", "#5a1f2d", "#ffc1cc"),
+}
+
+
+def mystic_card(card: dict, brand: str = "") -> bytes:
+    """card = {title, subtitle, symbol, note, theme}. Одтой гүн фон, том бэлгэдэл, гарчиг."""
+    c1, c2, accent = _MYSTIC_THEMES.get(card.get("theme", ""), _MYSTIC_THEMES["spirit"])
+    title = card.get("title", "")
+    size = 72 if len(title) < 22 else (58 if len(title) < 40 else 46)
+    css = f"""
+.card{{background:radial-gradient(1200px 800px at 30% 20%,{c2} 0%,{c1} 60%,#050308 100%)}}
+.stars{{position:absolute;inset:0;background-image:
+  radial-gradient(2px 2px at 12% 18%,rgba(255,255,255,.9),transparent 60%),
+  radial-gradient(1.5px 1.5px at 78% 12%,rgba(255,255,255,.8),transparent 60%),
+  radial-gradient(2px 2px at 64% 34%,rgba(255,255,255,.7),transparent 60%),
+  radial-gradient(1.5px 1.5px at 22% 62%,rgba(255,255,255,.8),transparent 60%),
+  radial-gradient(2px 2px at 88% 58%,rgba(255,255,255,.6),transparent 60%),
+  radial-gradient(1.5px 1.5px at 40% 84%,rgba(255,255,255,.8),transparent 60%),
+  radial-gradient(2px 2px at 70% 88%,rgba(255,255,255,.6),transparent 60%),
+  radial-gradient(1.5px 1.5px at 8% 90%,rgba(255,255,255,.7),transparent 60%);opacity:.9}}
+.ring{{position:absolute;left:50%;top:430px;width:520px;height:520px;margin-left:-260px;border-radius:50%;
+  border:2px solid {accent};opacity:.35;box-shadow:0 0 80px {accent}55, inset 0 0 80px {accent}33}}
+.ring2{{position:absolute;left:50%;top:470px;width:440px;height:440px;margin-left:-220px;border-radius:50%;border:1px dashed {accent};opacity:.4}}
+.symbol{{position:absolute;left:0;right:0;top:560px;text-align:center;font-size:200px;line-height:1;font-weight:900;color:#fff;text-shadow:0 0 60px {accent}}}
+.badge{{background:{accent};color:#111}}
+.top{{position:absolute;top:56px;left:60px;right:60px;display:flex;justify-content:space-between;align-items:center}}
+.note{{font-weight:600;font-size:24px;opacity:.85;color:{accent}}}
+.title{{position:absolute;left:60px;right:60px;top:880px;text-align:center;font-weight:900;font-size:{size}px;line-height:1.15;text-shadow:0 8px 30px rgba(0,0,0,.6)}}
+.sub{{position:absolute;left:60px;right:60px;top:1140px;text-align:center;font-weight:600;font-size:28px;opacity:.85}}
+"""
+    body = f"""<div class='card'>
+<div class='stars'></div><div class='ring'></div><div class='ring2'></div>
+<div class='top'><span class='badge'>{_e(brand or BRAND)}</span><span class='note'>{_e(card.get('note', ''))}</span></div>
+<div class='symbol'>{_e(card.get('symbol', '✨'))}</div>
+<div class='title'>{_e(title)}</div>
+<div class='sub'>{_e(card.get('subtitle', ''))}</div>
+<div class='foot'><span class='brand'>{_e(brand or BRAND)}</span><span></span></div>
+</div>"""
+    return render(_wrap(body, css))

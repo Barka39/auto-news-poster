@@ -72,11 +72,24 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python main.py
 
+      - name: Контент хуудсууд (Сүнсний код, Үдшийн шивнээ)
+        if: always()
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          FB_PAGE_ID_SUNS: ${{ secrets.FB_PAGE_ID_SUNS }}
+          FB_ACCESS_TOKEN_SUNS: ${{ secrets.FB_ACCESS_TOKEN_SUNS }}
+          FB_PAGE_ID_UDESH: ${{ secrets.FB_PAGE_ID_UDESH }}
+          FB_ACCESS_TOKEN_UDESH: ${{ secrets.FB_ACCESS_TOKEN_UDESH }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python pages_run.py
+
       - name: posted_ids.json commit хийх
         if: always()
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add posted_ids.json ledger.json || true
+          git add posted_ids.json ledger.json pages_state.json || true
           git diff --staged --quiet || git commit -m "posted_ids шинэчлэгдлээ [skip ci]"
           git push || true

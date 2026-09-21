@@ -32,12 +32,8 @@ def format_post(news: dict, platform: str) -> str:
         return text
 
     elif platform in ["facebook", "instagram"]:
-        lines = [
-            article,
-            "",
-            "#МонголМэдээ #Mongolia",
-        ]
-        return "\n".join(lines)
+        footer = news.get("hashtag_footer", "#МонголМэдээ #Mongolia")
+        return article + ("\n\n" + footer if footer else "")
 
     return article
 

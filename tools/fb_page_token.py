@@ -59,8 +59,26 @@ def main() -> int:
 
     for i, p in enumerate(pages, 1):
         print(f"  {i}. {p['name']}  (id {p['id']})")
-    choice = "1" if len(pages) == 1 else (input("Аль page? [1]: ").strip() or "1")
-    page = pages[int(choice) - 1]
+
+    # Контент хуудсууд: нэрээр таньж тусдаа secret-д (FB_PAGE_ID_SUNS г.м.)
+    SUFFIX_BY_NAME = {"сүнсний код": "SUNS", "үдшийн шивнээ": "UDESH"}
+    for p in pages:
+        suf = SUFFIX_BY_NAME.get(p["name"].strip().lower())
+        if not suf:
+            continue
+        d2 = requests.get(f"{GRAPH}/debug_token", params={"input_token": p["access_token"], "access_token": p["access_token"]},
+                          timeout=20).json().get("data", {})
+        if d2.get("expires_at") not in (0, None):
+            print(f"❌ {p['name']}: page token хугацаатай — сунгасан user token-оор дахин ажиллуул."); continue
+        subprocess.run(["gh", "secret", "set", f"FB_ACCESS_TOKEN_{suf}", "-R", REPO], input=p["access_token"], text=True, check=True)
+        subprocess.run(["gh", "secret", "set", f"FB_PAGE_ID_{suf}", "-R", REPO], input=p["id"], text=True, check=True)
+        print(f"✅ {p['name']} → FB_PAGE_ID_{suf}, FB_ACCESS_TOKEN_{suf}")
+
+    main_pages = [p for p in pages if p["name"].strip().lower() not in SUFFIX_BY_NAME]
+    if not main_pages:
+        print("NBA хуудас (үндсэн) олдсонгүй — зөвхөн контент хуудсуудыг тохируулав."); return 0
+    choice = "1" if len(main_pages) == 1 else (input("NBA хуудас аль нь? [1]: ").strip() or "1")
+    page = main_pages[int(choice) - 1]
     page_token = page["access_token"]
 
     # Хугацааг шалгах: expires_at == 0 гэдэг нь хугацаагүй
