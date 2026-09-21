@@ -31,7 +31,19 @@ REPO = "Barka39/auto-news-poster"
 
 
 def main() -> int:
-    user_token = getpass.getpass("Extend хийсэн user token (харагдахгүй): ").strip()
+    user_token = ""
+    if "--clipboard" in sys.argv:
+        # Debugger дээр Extend хийсэн token-ийг Copy дарсны дараа .bat давхар товшиход
+        # clipboard-оос уншина — гараар paste хийх шаардлагагүй.
+        cp = subprocess.run(["powershell", "-NoProfile", "-Command", "Get-Clipboard"],
+                            capture_output=True, text=True)
+        user_token = (cp.stdout or "").strip()
+        if not user_token.startswith("EAA") or len(user_token) < 80:
+            print("Clipboard-д Facebook token алга. Debugger дээр сунгасан token-ийг Copy дараад дахин ажиллуул.")
+            return 1
+        print(f"Clipboard-оос token авлаа ({user_token[:8]}..., {len(user_token)} тэмдэгт)")
+    if not user_token:
+        user_token = getpass.getpass("Extend хийсэн user token (харагдахгүй): ").strip()
     if not user_token:
         print("Token хоосон байна."); return 1
 
@@ -47,7 +59,7 @@ def main() -> int:
 
     for i, p in enumerate(pages, 1):
         print(f"  {i}. {p['name']}  (id {p['id']})")
-    choice = input("Аль page? [1]: ").strip() or "1"
+    choice = "1" if len(pages) == 1 else (input("Аль page? [1]: ").strip() or "1")
     page = pages[int(choice) - 1]
     page_token = page["access_token"]
 
