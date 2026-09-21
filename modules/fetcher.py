@@ -67,6 +67,8 @@ RSS_SOURCES = {
         {"name": "ESPN NBA", "url": "https://www.espn.com/espn/rss/nba/news", "lang": "en"},
         {"name": "Yahoo NBA", "url": "https://sports.yahoo.com/nba/rss.xml", "lang": "en"},
         {"name": "CBS Sports NBA", "url": "https://www.cbssports.com/rss/headlines/nba/", "lang": "en"},
+        # RealGM Wiretap: трейдийн яриа, гэрээ, цуурхал — улирал хоорондын үед ч бодит мэдээ
+        {"name": "RealGM Wiretap", "url": "https://basketball.realgm.com/rss/wiretap/0/0.xml", "lang": "en", "max_items": 15},
     ],
     # Монголын сагсан бөмбөг: Монгол хэлтэй эх сурвалж. Ерөнхий спортын
     # feed бол "keywords"-ээр зөвхөн сагсны мэдээг үлдээнэ.

@@ -76,8 +76,19 @@ def save_posted(posted_ids: set, posted_topics: list = None):
             if now - t.get("ts", 0) < TOPIC_TTL_HOURS * 3600
         ]
 
+        # Бусад талбарыг (slots — S1 товлолт, alerts — Telegram хаалт) ХАДГАЛНА.
+        # Урьд нь бүхэлд нь дарж бичдэг байсан тул слот бүр run бүрд мартагдаж,
+        # нэг слотод хоёр пост товлогдох эрсдэлтэй байв (2026-09-21).
+        extra = {}
+        try:
+            if os.path.exists(STORAGE_FILE):
+                with open(STORAGE_FILE, "r", encoding="utf-8") as f:
+                    old = json.load(f)
+                extra = {k: v for k, v in old.items() if k not in ("posted_ids", "posted_topics")}
+        except Exception:
+            extra = {}
         with open(STORAGE_FILE, "w", encoding="utf-8") as f:
-            json.dump({"posted_ids": ids_list, "posted_topics": topics},
+            json.dump({**extra, "posted_ids": ids_list, "posted_topics": topics},
                       f, ensure_ascii=False, indent=2)
 
         log.info(f"{len(ids_list)} ID хадгалагдлаа")
