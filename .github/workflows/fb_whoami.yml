@@ -35,6 +35,10 @@ jobs:
           for suf in ("SUNS", "UDESH"):
               v = os.environ.get("PID_" + suf, "")
               print(f"PAGE ID {suf}:", v[:6], v[6:])
+          posts = get(PID + "/posts", fields="created_time,message", limit=12)
+          for x in posts.get("data", []):
+              print("  POST:", x.get("created_time", "")[:16], "|", (x.get("message") or "").replace("
+", " ")[:70])
           acc = get("me/accounts", fields="name,username,id")
           if "data" in acc:
               for a in acc["data"]:
