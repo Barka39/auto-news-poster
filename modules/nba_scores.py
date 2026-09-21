@@ -212,6 +212,7 @@ def fetch_finished_games(posted_ids: set | None = None) -> list:
     жагсаалт — RSS урсгалыг хэзээ ч зогсоохгүй."""
     posted_ids = posted_ids or set()
     games = []
+    espn_failed = False
     for date in _dates_to_check():
         try:
             resp = requests.get(SCOREBOARD_URL, params={"dates": date}, timeout=15,
@@ -220,6 +221,7 @@ def fetch_finished_games(posted_ids: set | None = None) -> list:
             events = resp.json().get("events", [])
         except Exception as e:
             log.warning(f"[NBA SCORES] scoreboard {date} алдаа: {e}")
+            espn_failed = True
             continue
         for event in events:
             try:
@@ -229,8 +231,8 @@ def fetch_finished_games(posted_ids: set | None = None) -> list:
                 continue
             if news and news["id"] not in posted_ids and all(g["id"] != news["id"] for g in games):
                 games.append(news)
-    if not games:
-        # ESPN хаагдсан/хоосон бол NBA-ийн CDN
+    if not games and espn_failed:
+        # ESPN хаагдсан бол NBA-ийн CDN (ESPN хариулсан ч тоглолт байхгүй бол оролдохгүй)
         try:
             for news in _nba_cdn_games():
                 if news["id"] not in posted_ids and all(g["id"] != news["id"] for g in games):
