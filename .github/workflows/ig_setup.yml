@@ -24,7 +24,7 @@ jobs:
           for pair in "MAIN:${FB_ACCESS_TOKEN}" "SUNS:${T_SUNS}" "UDESH:${T_UDESH}"; do
             k="${pair%%:*}"; t="${pair#*:}"
             if [ -z "$t" ]; then echo "$k: (хоосон)"; continue; fi
-            curl -s "https://graph.facebook.com/v19.0/me?fields=name&access_token=${t}" | python3 -c "import json,sys; d=json.load(sys.stdin); print('$k:', d.get('name') or d.get('error',{}).get('message'))"
+            curl -s "https://graph.facebook.com/v19.0/me?fields=name,id&access_token=${t}" | python3 -c "import json,sys,os; d=json.load(sys.stdin); print('$k:', d.get('name') or d.get('error',{}).get('message'), '| id==FB_PAGE_ID:', d.get('id')==os.environ.get('FB_PAGE_ID'), '| type:', 'PAGE' if d.get('id')==os.environ.get('FB_PAGE_ID') or '$k'!='MAIN' else 'USER?')"
           done
           echo "IG_ACCOUNT_ID secret одоо: ${IG_ACCOUNT_ID:+(тохируулсан)}${IG_ACCOUNT_ID:-(хоосон)}"
           curl -s "https://graph.facebook.com/v19.0/${FB_PAGE_ID}?fields=instagram_business_account%7Bid,username,followers_count%7D,connected_instagram_account%7Bid,username%7D&access_token=${FB_ACCESS_TOKEN}" | sed "s/${FB_PAGE_ID}/***PAGE***/g"
