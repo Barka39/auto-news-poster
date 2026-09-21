@@ -1,0 +1,22 @@
+name: Delete post (алдаатай пост устгах)
+
+on:
+  workflow_dispatch:
+    inputs:
+      post_suffix:
+        description: "Постын id-ийн '_'-ийн дараах хэсэг (log дээр ***_XXXX гэж харагддаг)"
+        required: true
+
+jobs:
+  delete:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Graph API DELETE
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
+          SUFFIX: ${{ github.event.inputs.post_suffix }}
+        run: |
+          ID="${FB_PAGE_ID}_${SUFFIX}"
+          curl -s -X DELETE "https://graph.facebook.com/v19.0/${ID}?access_token=${FB_ACCESS_TOKEN}" | sed "s/${FB_PAGE_ID}/***/g"
+          echo

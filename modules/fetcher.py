@@ -48,16 +48,26 @@ MN_BASKETBALL_SOURCES = [
 
 # S4: Монгол тоглогч/багийн сэрэмжлүүлэг — дурдагдсан мэдээ шүүлтүүрийг давахгүй, 10 оноо.
 # Хуудасны №1 давуу тал = Монголын сагс. Шинэ нэр олдох бүрд нэмнэ.
-MN_WATCHLIST = re.compile(
-    r"Монголын? (эрэгтэй|эмэгтэй|үндэсний|залуучуудын)? ?шигшээ|Team Mongolia|Mongolian national team"
-    r"|\bMongolia\b.*\b(FIBA|3x3|Asia Cup|Asian Games|qualif)"
-    r"|Болор-Эрдэнэ|Тэмүүлэн|Биндэръяа|Балжинням|Анандын Дэлгэрнямбуу|Дэлгэрням|Хулан|Онолбаатар|Стив Сөр|Steve Sir"
-    r"|The League|MNBA|\bMBL\b|Хасын Хүлэгүүд|Xac Broncos|Darkhan|Erchim|Bishrelt Metal|Zaisan Broncos",
+# Монгол хэлтэй эх сурвалжид: нэрс, шигшээ, лиг. Англи эх сурвалжид ЗӨВХӨН "Mongolia" гэсэн
+# үгтэй хамт (2026-09-21: "The League" гэдэг нь англи podcast-ийн "the league"-тэй таарч
+# 10 оноо өгч байсан алдаа).
+MN_WATCHLIST_MN = re.compile(
+    r"Монголын? (эрэгтэй|эмэгтэй|үндэсний|залуучуудын)? ?шигшээ|Монгол улсын шигшээ"
+    r"|Болор-Эрдэнэ|Тэмүүлэн|Биндэръяа|Балжинням|Дэлгэрнямбуу|Дэлгэрням|Онолбаатар|Стив Сөр"
+    r"|The League|MNBA|\bMBL\b|Хасын Хүлэгүүд|Хүлэгүүд|МСБХ|Үндэсний дээд лиг|3x3|3х3",
+    re.IGNORECASE)
+MN_WATCHLIST_EN = re.compile(
+    r"\bMongolia(n)?\b.*\b(national team|3x3|FIBA|Asia Cup|Asian Games|qualif|MBL|The League|league)"
+    r"|\b(national team|3x3|FIBA|Asia Cup|Asian Games|MBL|The League)\b.*\bMongolia(n)?\b"
+    r"|Team Mongolia|Xac Broncos|Zaisan Broncos|Bishrelt Metal|Khuleguud",
     re.IGNORECASE)
 
 
-def is_mn_watch(title: str, summary: str = "") -> bool:
-    return bool(MN_WATCHLIST.search(f"{title} {summary}"))
+def is_mn_watch(title: str, summary: str = "", lang: str = "") -> bool:
+    text = f"{title} {summary}"
+    if lang == "mn" or re.search(r"[А-Яа-яӨөҮү]{3,}", title or ""):
+        return bool(MN_WATCHLIST_MN.search(text))
+    return bool(MN_WATCHLIST_EN.search(text))
 
 RSS_SOURCES = {
     "basketball": [  # NBA
@@ -102,7 +112,9 @@ ROUNDUP_TITLE_RE = re.compile(
     r"|what's next for|\bintel on\b|\broundup\b|round-up|\btakeaways\b"
     r"|\bmailbag\b|\bq&a\b|power rankings|winners and losers|\bstorylines\b"
     r"|\b\d+ things\b|five things|key questions|talking points|\bnotebook\b"
-    r"|\bbuzz:|everything you need|biggest questions|\btop \d+\b|\bday \d+\b",
+    r"|\bbuzz:|everything you need|biggest questions|\btop \d+\b|\bday \d+\b"
+    r"|\bpodcast\b|\bepisode\b|dunc'd on|\boutlook\b|season preview|player previews?|\bpreview:|\bprevie?wing\b"
+    r"|\bforecast\b|\brankings?\b|\bpredictions?\b|\bmock draft\b|\bnewsletter\b|\bgrades\b",
     re.IGNORECASE,
 )
 

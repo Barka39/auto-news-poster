@@ -552,7 +552,7 @@ def filter_relevant_news(news_list: list, max_candidates: int = 25) -> list:
     # S4: Монголын шигшээ/тоглогч/лиг дурдагдсан мэдээ = 10 (LLM-ээс үл хамааран)
     from modules.fetcher import is_mn_watch
     for i, n in enumerate(candidates):
-        if is_mn_watch(n.get("title", ""), n.get("summary", "")):
+        if is_mn_watch(n.get("title", ""), n.get("summary", ""), n.get("lang", "")):
             scores[i] = 10
             log.info(f"[МОНГОЛ WATCH] 10 оноо: {n['title'][:60]}")
     if not scores:
