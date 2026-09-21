@@ -479,6 +479,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 613
+  },
+  {
+   "ts": 1789996325.8934486,
+   "fb_id": "122185462772935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Knicks Expected To Only Sign One Veteran To Keep Roster At 14 Players",
+   "url": "https://basketball.realgm.com/wiretap/287333/Knicks-Expected-To-Only-Sign-One-Veteran-To-Keep-Roster-At-14-Players",
+   "scheduled_for": 1789997400,
+   "slot": "2026-09-21 21:30",
+   "chars": 536
   }
  ]
 }
