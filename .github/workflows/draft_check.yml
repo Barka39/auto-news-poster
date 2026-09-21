@@ -67,7 +67,11 @@ jobs:
           python - <<'EOF'
           import glob, json
           files = sorted(glob.glob("drafts/*.json"))
-          print(f"===== {len(files)} НООРОГ =====")
+          import os
+          vids = sorted(glob.glob("drafts/*.mp4"))
+          print(f"===== {len(files)} НООРОГ, {len(vids)} ВИДЕО =====")
+          for v in vids:
+              print("🎬", v, os.path.getsize(v) // 1024, "KB")
           for f in files:
               d = json.load(open(f, encoding="utf-8"))
               print("\n" + "=" * 70)

@@ -12,7 +12,7 @@ from modules.fetcher import (
 )
 from modules.writer import write_article, is_valid_mongolian, filter_relevant_news, polish_article
 from modules.image_fallback import get_fallback_image
-from modules.poster import post_to_all_platforms, check_facebook_token
+from modules.poster import post_to_all_platforms, check_facebook_token, format_post
 from modules.storage import load_posted, save_posted, load_posted_topics, alert_due
 from modules.dedup import is_duplicate_topic
 from modules import telegram_notify
@@ -26,6 +26,7 @@ from modules import cards
 from modules import scheduler
 from modules import ledger
 from modules import lint_mn
+from modules import video
 from modules import stat_card
 
 logging.basicConfig(
@@ -317,7 +318,30 @@ def run():
             written["score"] = news.get("score", 0)
             written["kind"] = news.get("kind", "")
             written = scheduler.assign(written)   # S1: слот эсвэл шууд
-            result = post_to_all_platforms(written)
+
+            # S9 ВИДЕО: тоглолтын үр дүн → босоо recap видео (өөрийн график + Монгол
+            # хоолой). Амжилттай бол FB-д видео постлоно (зургийн оронд); унавал зураг.
+            result = None
+            if news.get("kind") == "game_recap" and news.get("card") and video.enabled():
+                draft_dir = os.environ.get("AUTONEWS_DRAFT_DIR", "")
+                mp4_dir = draft_dir or "/tmp"
+                os.makedirs(mp4_dir, exist_ok=True)
+                mp4 = video.recap_video(news["card"], written["article_mn"], os.path.join(mp4_dir, f"video-{news['id']}.mp4"))
+                if mp4:
+                    written["video_path"] = mp4
+                    if draft_dir:
+                        log.info(f"🎬 draft видео бичигдлээ (постлоогүй): {mp4}")
+                    else:
+                        vr = video.post_video_facebook(mp4, format_post(written, "facebook"))
+                        if vr.get("success"):
+                            written["video_posted"] = True
+                            result = {"success": True, "platforms": {"facebook": vr}, "error": None}
+                        try:
+                            os.remove(mp4)
+                        except OSError:
+                            pass
+            if result is None:
+                result = post_to_all_platforms(written)
 
             if result["success"]:
                 ledger.record(written, result)    # S3: дэвтэрт бүртгэнэ
