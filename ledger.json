@@ -463,6 +463,22 @@
    "scheduled_for": 1789997400,
    "slot": "2026-09-21 21:30",
    "chars": 227
+  },
+  {
+   "ts": 1789993212.7662683,
+   "fb_id": "736504959542737_122185457000935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 10,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Dunc'd On: LAL Season Outlook 2026-27 with Jovan Buha",
+   "url": "https://basketball.realgm.com/wiretap/287332/Duncd-On-LAL-Season-Outlook-2026-27-with-Jovan-Buha",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 613
   }
  ]
 }
