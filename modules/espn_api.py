@@ -106,6 +106,19 @@ def get_context(article_url: str) -> dict:
     else:
         result["body_excerpt"] = desc
 
+    # БҮТЭН НИЙТЛЭЛ: API-ийн зарим нийтлэлд "story" (HTML) талбар бүтэн
+    # текстээр ирдэг. Энэ бол нийтлэлийн чанарын хамгийн том хөшүүрэг —
+    # 1 өгүүлбэр description-оос биш, бодит баримт, ишлэл, тоо бүхий
+    # текстээс бичнэ. Зохиогчийн эрх: бид хуулахгүй, өөрийн үгээр товч
+    # бичихэд л материал болгон ашиглана (эхний 2500 тэмдэгт).
+    story = art.get("story") or ""
+    if story:
+        text = re.sub(r"<[^>]+>", " ", story)
+        text = re.sub(r"\s+", " ", text).strip()
+        if len(text) > len(result["body_excerpt"]) + 100:
+            result["body_excerpt"] = text[:2500]
+            log.info(f"[ESPN API] 📄 Бүтэн story текст авлаа ({len(text)}ch)")
+
     for img in art.get("images", []):
         if img.get("url"):
             result["og_image"] = img["url"]

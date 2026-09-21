@@ -1,0 +1,59 @@
+name: Draft Check (постлохгүй)
+
+# Чанарын шалгалт: бүх дамжлагыг (татах → оноо → бичих → редактор → зураг)
+# ЖИНХЭНЭ API-тай ажиллуулаад постлохын оронд drafts/ хавтаст бичнэ, текстийг
+# log-д хэвлэнэ. FB/IG/X secret ӨГӨХГҮЙ тул юу ч постлогдох боломжгүй;
+# posted_ids.json commit хийхгүй тул жинхэнэ урсгалд нөлөөлөхгүй.
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_posts:
+        description: "Хэдэн нийтлэл ноорогло (MAX_POSTS_PER_RUN)"
+        default: "4"
+      min_score:
+        description: "Ач холбогдлын босго 0-10 (MIN_NEWS_SCORE)"
+        default: "7"
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-dejavu-core
+      - run: pip install -r requirements.txt
+      - name: Ноорог бичих
+        env:
+          AUTONEWS_DRAFT_DIR: drafts
+          MAX_POSTS_PER_RUN: ${{ github.event.inputs.max_posts }}
+          MIN_NEWS_SCORE: ${{ github.event.inputs.min_score }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+        run: python main.py
+      - name: Нооргуудыг хэвлэх
+        if: always()
+        run: |
+          python - <<'EOF'
+          import glob, json
+          files = sorted(glob.glob("drafts/*.json"))
+          print(f"===== {len(files)} НООРОГ =====")
+          for f in files:
+              d = json.load(open(f, encoding="utf-8"))
+              print("\n" + "=" * 70)
+              print(f"[{d.get('category')}] {d.get('title')}")
+              print(d.get("url"))
+              print("-" * 70)
+              print(d["text"]["facebook"])
+              print(f"(зураг: {'PNG bytes' if d.get('image_png_base64') else d.get('image_url') or 'байхгүй'})")
+          EOF
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: drafts
+          path: drafts/
+          if-no-files-found: ignore

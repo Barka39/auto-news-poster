@@ -27,32 +27,38 @@ MAX_ARTICLE_AGE_HOURS = 10
 # Ажиллахгүй feed гарвал bozo-шалгалт аюулгүйгээр алгасдаг тул
 # лог дээрх "RSS алдаа" анхааруулгаар шалгаж, URL-ийг нь солино.
 # ============================================================
+# МОНГОЛЫН САГСАН БӨМБӨГ. 2026-09-21-ний судалгаа: Монголын сайтуудаас жинхэнэ
+# RSS зөвхөн ikon.mn-д (ерөнхий мэдээ → keywords), сагсны гол эх сурвалж
+# 24tsag.mn RSS-гүй тул спортын ангиллын HTML жагсаалтаас (type="html")
+# уншина. news.mn/gogo/eagle/montsame/mnb — feed байхгүй эсвэл 502.
+# Google News-ийн хайлтын feed нь redirect линктэй, агуулгагүй тул авдаггүй.
+MN_BASKETBALL_KEYWORDS = r"сагс|3х3|3x3|\bNBA\b|MNBA|\bMBA\b|The League"
+MN_BASKETBALL_SOURCES = [
+    {"name": "24tsag Спорт", "url": "https://24tsag.mn/as/sport", "lang": "mn",
+     "type": "html", "base": "https://24tsag.mn", "link_re": r'href="(/a/\d+)"',
+     "keywords": MN_BASKETBALL_KEYWORDS, "max_items": 8},
+    {"name": "ikon.mn", "url": "https://ikon.mn/rss", "lang": "mn",
+     "keywords": MN_BASKETBALL_KEYWORDS, "max_items": 30},
+]
+
 RSS_SOURCES = {
-    "basketball": [
+    "basketball": [  # NBA
         {"name": "ESPN NBA", "url": "https://www.espn.com/espn/rss/nba/news", "lang": "en"},
         {"name": "Yahoo NBA", "url": "https://sports.yahoo.com/nba/rss.xml", "lang": "en"},
         {"name": "CBS Sports NBA", "url": "https://www.cbssports.com/rss/headlines/nba/", "lang": "en"},
     ],
-    "football": [
-        {"name": "BBC Football", "url": "https://feeds.bbci.co.uk/sport/football/rss.xml", "lang": "en"},
-        {"name": "Guardian Football", "url": "https://www.theguardian.com/football/rss", "lang": "en"},
-        {"name": "Sky Sports Football", "url": "https://www.skysports.com/rss/11095", "lang": "en"},
-        {"name": "ESPN Soccer", "url": "https://www.espn.com/espn/rss/soccer/news", "lang": "en"},
-    ],
-    "ufc": [
-        {"name": "ESPN MMA", "url": "https://www.espn.com/espn/rss/mma/news", "lang": "en"},
-        {"name": "MMA Fighting", "url": "https://www.mmafighting.com/rss/current", "lang": "en"},
-        {"name": "MMA Junkie", "url": "https://mmajunkie.usatoday.com/feed", "lang": "en"},
-    ],
+    # Монголын сагсан бөмбөг: Монгол хэлтэй эх сурвалж. Ерөнхий спортын
+    # feed бол "keywords"-ээр зөвхөн сагсны мэдээг үлдээнэ.
+    "mn_basketball": MN_BASKETBALL_SOURCES,
 }
 
 CATEGORY_EMOJI = {
-    "basketball": "🏀", "football": "⚽", "ufc": "🥊",
+    "basketball": "🏀", "mn_basketball": "🇲🇳🏀", "football": "⚽", "ufc": "🥊",
     # Хуучин түлхүүрүүд — өөр хуудасны config дахин ашиглах үед эвдрэхгүйн тулд
     "sports": "⚽", "music": "🎵", "world_news": "🌍",
 }
 CATEGORY_MN = {
-    "basketball": "Сагсан бөмбөг", "football": "Хөл бөмбөг", "ufc": "UFC/MMA",
+    "basketball": "NBA", "mn_basketball": "Монголын сагс", "football": "Хөл бөмбөг", "ufc": "UFC/MMA",
     "sports": "Спорт", "music": "Хөгжим & Холливүүд", "world_news": "Дэлхийн мэдээ",
 }
 
@@ -489,6 +495,52 @@ def find_image_from_other_sources(title: str) -> str:
         return ""
 
 
+def fetch_html_list(category: str, source: dict) -> list:
+    """RSS-гүй сайтын ангиллын хуудаснаас (гарчиг, линк) хосыг уншина.
+    Агуулга, зураг нь дараа нь extract_article_context()-оор нийтлэлийн
+    хуудаснаас ирнэ (og:description + body). Огноо мэдэгдэхгүй тул
+    published_ts=0; шинэ линк л posted_ids-д байхгүй тул нэг л удаа орно."""
+    results = []
+    try:
+        resp = requests.get(source["url"], timeout=15,
+                            headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/128"})
+        resp.raise_for_status()
+    except Exception as e:
+        log.warning(f"HTML жагсаалт татахад алдаа [{source['name']}]: {e}")
+        return results
+    link_re = re.compile(source["link_re"])
+    kw = source.get("keywords")
+    seen = set()
+    for href, inner in re.findall(r'<a[^>]+href="([^"]+)"[^>]*>(.*?)</a>', resp.text, re.S):
+        if not link_re.search(f'href="{href}"'):
+            continue
+        title = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", inner)).strip()
+        if len(title) < 25 or href in seen:
+            continue
+        seen.add(href)
+        if kw and not re.search(kw, title, re.IGNORECASE):
+            continue
+        url = href if href.startswith("http") else source.get("base", "") + href
+        results.append({
+            "id": make_id(url),
+            "category": category,
+            "category_mn": CATEGORY_MN[category],
+            "category_emoji": CATEGORY_EMOJI[category],
+            "source_name": source["name"],
+            "title": title,
+            "summary": "",
+            "url": url,
+            "image_url": "",
+            "published": "тодорхойгүй",
+            "published_ts": 0.0,
+            "lang": source.get("lang", "mn"),
+        })
+        if len(results) >= source.get("max_items", 8):
+            break
+    log.info(f"{source['name']}: HTML жагсаалтаас {len(results)} сагсны мэдээ")
+    return results
+
+
 def fetch_category(category: str, sources: list) -> list:
     """Нэг категорийн бүх эх сурвалжаас мэдээ татах"""
     results = []
@@ -496,13 +548,16 @@ def fetch_category(category: str, sources: list) -> list:
     for source in sources:
         try:
             log.info(f"Татаж байна: {source['name']}")
+            if source.get("type") == "html":
+                results.extend(fetch_html_list(category, source))
+                continue
             feed = feedparser.parse(source["url"])
 
             if feed.bozo:
                 log.warning(f"RSS алдаа: {source['name']}")
                 continue
 
-            for entry in feed.entries[:5]:  # Эх сурвалж бүрээс 5 мэдээ
+            for entry in feed.entries[:source.get("max_items", 5)]:  # Эх сурвалж бүрээс 5 (keywords-тэй feed илүү)
                 url = entry.get("link", "")
                 if not url:
                     continue
@@ -512,6 +567,13 @@ def fetch_category(category: str, sources: list) -> list:
                 if is_roundup_title(entry.get("title", "")):
                     log.info(f"[ТОЙМ] Алгаслаа (roundup/live төрөл): {entry.get('title', '')[:50]}")
                     continue
+
+                # Ерөнхий спортын feed-ээс зөвхөн сагсны мэдээг үлдээх
+                kw = source.get("keywords")
+                if kw:
+                    haystack = f"{entry.get('title', '')} {entry.get('summary', '')}"
+                    if not re.search(kw, haystack, re.IGNORECASE):
+                        continue
 
                 # Хуучин мэдээг алгасах — зөвхөн сүүлийн MAX_ARTICLE_AGE_HOURS
                 # цагийн дотор нийтлэгдсэн мэдээг л авна
@@ -543,6 +605,7 @@ def fetch_category(category: str, sources: list) -> list:
                     "published": entry.get("published", str(datetime.now())),
                     # Шинэлэг байдлаар эрэмбэлэхэд ашиглана (0 = тодорхойгүй)
                     "published_ts": published_ts,
+                    "lang": source.get("lang", "en"),
                 }
                 results.append(news_item)
 

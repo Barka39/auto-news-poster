@@ -22,10 +22,15 @@ GROQ_MODEL = os.environ.get("GROQ_MODEL", "qwen/qwen3.8-27b")
 # world_news (неутраль, ишлэлгүй) style руу УНАЖ, спортын ярианы өнгө
 # алдагдана.
 CATEGORY_STYLE = {
-    "basketball": "sports",
+    "basketball": "sports",       # NBA
+    "mn_basketball": "sports",    # Монголын сагсан бөмбөг
     "football": "sports",
     "ufc": "sports",
 }
+
+# Ач холбогдлын онооны босго (0-10). Үүнээс доош мэдээ ПОСТЛОГДОХГҮЙ —
+# "юу ч болоогүй" гэдэг нь сул пост гаргаснаас дээр (хуудасны чанар).
+MIN_NEWS_SCORE = int(os.environ.get("MIN_NEWS_SCORE", "7"))
 
 SYSTEM_PROMPTS = {
     "sports": """Чи Монголын шилдэг спортын контент бичигч. Фэнүүдийн дунд хэллэгээр,
@@ -382,10 +387,27 @@ def write_article(news: dict) -> dict:
     # байсан. Эх хуудаснаас татсан нэмэлт текст үүнийг шийднэ.
     extra_block = ("\n" + "\n".join(extra_parts) + "\n") if extra_parts else ""
 
+    kind_note = ""
+    if news.get("kind") == "game_recap":
+        kind_note = """
+ЭНЭ БОЛ ДӨНГӨЖ ДУУССАН ТОГЛОЛТЫН ҮР ДҮН (ESPN scoreboard өгөгдөл).
+ЗААВАЛ: эхний өгүүлбэрт хэн хэнийг ямар оноогоор хожсоныг; дараа нь
+шилдэг тоглогчдын stat line-ийг ТООГООР НЬ (оноо/самбар/дамжуулалт);
+багуудын улирлын амжилтыг (W-L). Хэрэв OT байвал заавал дурд. Өгөгдөлд
+байхгүй тоглолтын явцыг (хэн хэзээ ямар шидэлт хийсэн) ЗОХИОЖ БҮҮ БИЧ.
+"""
+    if news.get("lang") == "mn":
+        kind_note += """
+ЭХ МЭДЭЭЛЭЛ МОНГОЛ ХЭЛЭЭР БАЙНА (Монголын сагсан бөмбөгийн мэдээ).
+Орчуулах биш, ӨӨРИЙН ҮГЭЭР, ӨӨР БҮТЭЦТЭЙ дахин найруулж бич — эх текстийн
+өгүүлбэрийг үг үгээр хуулахыг ХОРИГЛОНО (зохиогчийн эрх). Баг, тоглогч,
+тэмцээний Монгол нэрийг Монголоор нь хэвээр үлдээ (Латин болгохгүй).
+"""
+
     user_prompt = f"""МЭДЭЭЛЭЛ:
 Гарчиг: {news['title']}
 Агуулга: {news.get('summary', '')}
-{extra_block}
+{extra_block}{kind_note}
 Дээрх мэдээллээр Монгол нийтлэл бич. Зөвхөн нийтлэлийн текстийг бич,
 өөр юу ч бүү нэм."""
 
@@ -433,96 +455,177 @@ def _fallback(news: dict) -> dict:
     return news
 
 
-def filter_relevant_news(news_list: list, max_candidates: int = 20) -> list:
-    """
-    Groq-д БАГЦААР (нэг л дуудлага) мэдээнүүдийг харуулж, Монгол ерөнхий
-    уншигчдад үнэхээр сонирхолтой/ач холбогдолтой зүйлийг сонгуулна.
-    Жижиг, сонин бус мэдээг (жишээ: "тоглогч дасгалжуулалтад ирсэн" гэх мэт)
-    шүүж хаяна.
-
-    API key байхгүй, алдаа гарах, эсвэл хоосон буцах үед АЮУЛГҮЙ fallback:
-    бүх мэдээг хэвээр нь буцаана (систем зогсохгүй, зөвхөн шүүлтүүр алгасна).
-    """
-    api_key = os.environ.get("GROQ_API_KEY")
-    if not api_key or not news_list:
-        return news_list
-
-    candidates = news_list[:max_candidates]
-
-    import time as _time
-    now_ts = _time.time()
-
+def _score_prompt(candidates: list, now_ts: float) -> str:
     def _age_label(n):
         ts = n.get("published_ts", 0)
         if not ts:
             return "цаг тодорхойгүй"
-        hours = (now_ts - ts) / 3600
-        return f"{hours:.1f} цагийн өмнө"
+        return f"{(now_ts - ts) / 3600:.1f} цагийн өмнө"
 
     listing = "\n".join(
         f"{i+1}. [{n.get('category_mn', '')}] ({_age_label(n)}) {n['title']}"
+        + (f" — {n.get('summary', '')[:160]}" if n.get("summary") else "")
         for i, n in enumerate(candidates)
     )
+    return f"""Чи NBA болон МОНГОЛЫН САГСАН БӨМБӨГИЙН фэнүүдэд зориулсан Монгол
+Facebook хуудасны ахлах редактор. Доорх мэдээ бүрд 0-10 оноо өг.
 
-    prompt = f"""Доорх мэдээнүүдээс Монголын САГСАН БӨМБӨГ, ХӨЛ БӨМБӨГ,
-UFC/MMA фэнүүдэд зориулсан хуудсанд постлох хамгийн тохиромжтойг сонго.
+ОНООНЫ ШАЛГУУР:
+10 = Монголын сагсны ТОМ мэдээ (үндэсний шигшээ, 3x3 шигшээ, MNBA/The League
+     финал, Монгол тоглогч гадаадад) ЭСВЭЛ NBA-ийн дөнгөж болсон ТОМ үйл явдал
+     (playoff/финалын үр дүн, супер одны трейд/гэрээ, ноцтой гэмтэл, рекорд).
+8-9 = NBA-ийн шинэ, тодорхой, баримттай нэг мэдээ (тоглолтын үр дүн, гэрээ,
+     трейд, гэмтэл, шийтгэл, одны мэдэгдэл), эсвэл Монголын сагсны ердийн мэдээ.
+5-7 = Жижиг боловч бодит мэдээ (роль тоглогчийн гэрээ, two-way, waive) — 7-оос
+     доош бол постлогдохгүй гэдгийг сана.
+0-4 = Preview/урьдчилсан тойм, power rankings, podcast, live blog, олон сэдэвт
+     тойм, fantasy зөвлөгөө, худалдааны зар, хуучин дүн шинжилгээ, NCAA/WNBA/
+     G-League/Summer League (үнэхээр том биш бол), сагсан бөмбөгтэй огт
+     ХОЛБООГҮЙ бүх зүйл (хөл бөмбөг, MMA г.м. = 0).
 
-РЕДАКЦИЙН БОДЛОГО (эрэмбийн дарааллаар):
-1. ДӨНГӨЖ ДУУССАН тоглолт/тулааны үр дүн — ХАМГИЙН ЭРХЭМ
-2. ДӨНГӨЖ ЗАРЛАГДСАН томоохон мэдээ (шилжилт, гэрээ, гэмтэл,
-   картын зарлал) — хоёрдугаарт
-3. Шинэ цагтай (цөөн цагийн өмнөх) бусад чухал мэдээ — гуравт
-
-ХАСАХ: урьдчилсан тойм/preview, бэлтгэл, дасгалжуулалт, хуучин
-тоглолтын дүн шинжилгээ, багын жижиг өдөр тутмын мэдээ, podcast/
-livestream зарлал, ОЛОН СЭДЭВТ тойм/live blog/хэлэлцүүлэг (нэг
-тодорхой үйл явдлын мэдээ биш бол хас), эдгээр 3 спортод хамааралгүй
-бүх зүйл. NCAA/коллеж, WNBA, G-League, Summer League, доод лигийн
-мэдээг зөвхөн ҮНЭХЭЭР томоохон
-(жишээ: №1 сонгогдох одны мэдээ) үед л сонго — NBA, топ лигүүд,
-UFC-гийн мэдээ давуу эрхтэй.
+Шинэ цагтай (цөөн цагийн өмнөх) мэдээ хуучнаас дээгүүр. Гарчиг
+"хэн юу хийсэн" гэсэн НЭГ тодорхой үйл явдлыг хэлж байвал дээгүүр.
 
 {listing}
 
-ЗӨВХӨН сонгосон дугааруудыг таслалаар (,) тусгаарлан бич.
-Тайлбар, өөр текст бүү нэм. Жишээ хариу: 1,3,5"""
+ЗӨВХӨН мөр бүрд "дугаар: оноо" гэж бич (жишээ: 1: 9). Өөр текст бүү нэм."""
 
+
+def _parse_scores(raw: str, n: int) -> dict:
+    scores = {}
+    for m in re.finditer(r"(\d+)\s*[:=\-]\s*(\d+(?:\.\d+)?)", raw or ""):
+        idx, val = int(m.group(1)) - 1, float(m.group(2))
+        if 0 <= idx < n and 0 <= val <= 10:
+            scores[idx] = val
+    return scores
+
+
+def score_news(candidates: list) -> dict:
+    """Кандидат бүрд 0-10 оноо. Groq → бүтэлгүй бол Gemini. Хоёулаа
+    бүтэлгүй бол {} (дуудагч нь юу ч постлохгүй)."""
+    import time as _time
+    prompt = _score_prompt(candidates, _time.time())
+    system = "You are a strict sports news editor. Score each item 0-10 per the rubric. Output only 'number: score' lines."
+
+    api_key = os.environ.get("GROQ_API_KEY")
+    if api_key:
+        try:
+            response = requests.post(
+                GROQ_API_URL,
+                headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+                json={"model": GROQ_MODEL,
+                      "messages": [{"role": "system", "content": system},
+                                   {"role": "user", "content": prompt}],
+                      "temperature": 0.1, "max_tokens": 300, "reasoning_effort": "none"},
+                timeout=25)
+            response.raise_for_status()
+            scores = _parse_scores(response.json()["choices"][0]["message"]["content"], len(candidates))
+            if scores:
+                return scores
+            log.warning("Онооны шүүлтүүр (Groq) хоосон буцлаа — Gemini-д шилжье")
+        except Exception as e:
+            log.warning(f"Онооны шүүлтүүр (Groq) алдаа: {e} — Gemini-д шилжье")
+
+    if gemini_compare.is_enabled():
+        try:
+            scores = _parse_scores(gemini_compare.generate(system, prompt), len(candidates))
+            if scores:
+                return scores
+        except Exception as e:
+            log.warning(f"Онооны шүүлтүүр (Gemini) алдаа: {e}")
+    return {}
+
+
+def filter_relevant_news(news_list: list, max_candidates: int = 25) -> list:
+    """
+    Мэдээ бүрд ач холбогдлын оноо өгч, MIN_NEWS_SCORE-оос ДООШ бүгдийг
+    хаяна; үлдсэнийг оноогоор эрэмбэлнэ (n["score"] талбар нэмэгдэнэ).
+    Хуучин хувилбар "сонгосон дугаар" буцаадаг байсан бөгөөд шүүлтүүр
+    унахад бүх мэдээг өнгөрүүлдэг байсан (2026-09: Groq 404 → 2 долоо хоног
+    шүүлтүүргүй постолсон). Одоо: оноо авч чадахгүй бол ЮУ Ч постлохгүй —
+    дараагийн run 5-15 минутын дараа дахин оролдоно.
+    """
+    if not news_list:
+        return news_list
+    candidates = news_list[:max_candidates]
+    scores = score_news(candidates)
+    if not scores:
+        log.warning("Онооны шүүлтүүр ажилласангүй — энэ run-д юу ч постлохгүй")
+        return []
+    kept = []
+    for i, n in enumerate(candidates):
+        sc = scores.get(i, 0)
+        n["score"] = sc
+        if sc >= MIN_NEWS_SCORE:
+            kept.append(n)
+        else:
+            log.info(f"[ОНОО {sc:.0f}] хасав: {n['title'][:60]}")
+    kept.sort(key=lambda n: (n.get("score", 0), n.get("published_ts", 0)), reverse=True)
+    for n in kept:
+        log.info(f"[ОНОО {n['score']:.0f}] үлдээв: {n['title'][:60]}")
+    log.info(f"Ач холбогдлын шүүлтүүр: {len(candidates)} -> {len(kept)} мэдээ (босго {MIN_NEWS_SCORE})")
+    return kept
+
+
+def polish_article(news: dict, draft: str) -> str:
+    """
+    РЕДАКТОРЫН ХОЁР ДАХЬ ДАМЖЛАГА. Нэг дуудлагаар бичсэн нийтлэлд байнга
+    гардаг гурван алдааг засна: (1) эх материалд байхгүй баримт нэмэгдсэн,
+    (2) орчуулгын калька/хатуу хэллэг, (3) тоо баримт алдагдсан эсвэл
+    hook-гүй эхлэл. Эх баримт + ноорог хоёуланг өгч, редактор ЗӨВХӨН
+    эцсийн текст буцаана. Чанарын шалгалт давахгүй бол ноорог хэвээр.
+    """
+    if not draft or not gemini_compare.is_enabled():
+        return draft
+    facts = [f"Гарчиг: {news.get('title', '')}", f"Агуулга: {news.get('summary', '')}"]
+    if news.get("og_description"):
+        facts.append(f"Тайлбар: {news['og_description']}")
+    if news.get("body_excerpt"):
+        facts.append(f"Өгүүллийн текст: {news['body_excerpt'][:2500]}")
+    system = """Чи Монголын спортын хэвлэлийн АХЛАХ РЕДАКТОР. Залуу сэтгүүлчийн
+бичсэн Facebook постыг эх баримттай тулгаж, хэвлэлд гарахад бэлэн болго.
+Чи ШИНЭ пост бичихгүй — ноорогийн сайн талыг хадгалж, доорх шалгуураар
+ЗАСНА. Зөвхөн эцсийн текстийг буцаа: гарчиг, тайлбар, "Засвар:" гэх мэт
+юу ч бүү нэм."""
+    user = f"""ЭХ БАРИМТ (үнэний цорын ганц эх сурвалж):
+{chr(10).join(facts)}
+
+НООРОГ:
+{draft}
+
+ШАЛГУУР (дарааллаар нь шалга):
+1. БАРИМТ: ноорогт эх баримтад БАЙХГҮЙ тоо, нэр, шалтгаан, ишлэл, дүгнэлт
+   орсон бол ХАС эсвэл эх баримтаар соль. Эх баримтад байгаа чухал тоо
+   (оноо, stat line, мөнгөн дүн, хугацаа, W-L) ноорогт орхигдсон бол НЭМ.
+2. НЭР: тоглогч, баг, лигийн нэр бүхэлдээ Латин үсгээр (Монголын баг,
+   тоглогч бол Монголоор). Хагас Кирилл/хагас Латин нэрийг засна.
+3. ЭХЛЭЛ: эхний өгүүлбэр 15 үгээс богино, мэдээний ГОЛ баримтыг хэлдэг
+   байг (юу болсон / хэн хожсон / ямар гэрээ). "Сонирхолтой мэдээ",
+   "Мэдээ ирлээ" маягийн хоосон эхлэлийг хас.
+4. ХЭЛ: Англи бүтцээр орчуулсан хатуу өгүүлбэрийг Монгол хүн ярьдаг
+   байгалийн хэллэг болго. Нэг өгүүлбэрт нэг санаа. Давтагдсан үг/санааг хас.
+   "шүүгдсэн", "агуулаг", "шагналт" гэх мэт буруу үг хэрэглэсэн бол засна.
+5. ХЭМЖЭЭ: 2-4 догол мөр, 400-700 тэмдэгт. Нэг сэдэв. Эцэст нь 1-2 hashtag
+   (байхгүй бол нэм, гурваас олон бол цөөл; тэмцээний нэрийг эх баримтад
+   байгаа үед л hashtag болго).
+6. Бүх зүйл зөв бол ноорогийг ЯГ ХЭВЭЭР буцаа.
+
+ЭЦСИЙН ТЕКСТ:"""
     try:
-        response = requests.post(
-            GROQ_API_URL,
-            headers={
-                "Authorization": f"Bearer {api_key}",
-                "Content-Type": "application/json"
-            },
-            json={
-                "model": GROQ_MODEL,
-                "messages": [
-                    {"role": "system", "content": "You are a news editor selecting the most newsworthy items for a general audience."},
-                    {"role": "user", "content": prompt}
-                ],
-                "temperature": 0.3,
-                "max_tokens": 100,
-                "reasoning_effort": "none"
-            },
-            timeout=20
-        )
-        response.raise_for_status()
-        raw = response.json()["choices"][0]["message"]["content"].strip()
-        indices = [int(x) - 1 for x in re.findall(r"\d+", raw)]
-        filtered = [candidates[i] for i in indices if 0 <= i < len(candidates)]
-
-        if filtered:
-            log.info(f"Ач холбогдлын шүүлтүүр: {len(candidates)} -> {len(filtered)} мэдээ")
-            # Шүүгдээгүй үлдсэн (max_candidates-с гадуурх) мэдээг ард нь хавсаргана
-            rest = news_list[max_candidates:]
-            return filtered + rest
-
-        log.warning("Шүүлтүүр хоосон буцсан — бүх мэдээг хэвээр үлдээе")
-        return news_list
-
+        polished = _clean_output(gemini_compare.generate(system, user) or "")
     except Exception as e:
-        log.warning(f"Ач холбогдлын шүүлтүүр алдаа: {e} — бүх мэдээг хэвээр үлдээе")
-        return news_list
+        log.warning(f"Редакторын дамжлага алдаа: {e} — ноорог хэвээр")
+        return draft
+    if not polished or not is_valid_mongolian(polished, min_len=120):
+        log.warning("Редакторын гаралт чанаргүй — ноорог хэвээр")
+        return draft
+    if not (200 <= len(polished) <= 1100):
+        log.warning(f"Редакторын гаралт хэмжээ хэтэрсэн ({len(polished)}ch) — ноорог хэвээр")
+        return draft
+    if polished.lower().startswith(("эцсийн текст", "засвар", "ноорог")):
+        return draft
+    log.info(f"✍️ Редакторын дамжлага: {len(draft)}ch → {len(polished)}ch")
+    return polished
 
 
 def write_digest(news_list: list) -> str:

@@ -4,12 +4,13 @@ Auto News Poster - Монгол мэдээ автомат постлогч
 """
 
 import logging
+import os
 import sys
 from modules.fetcher import (
     fetch_all_news, find_image_from_other_sources,
     pick_best_image, extract_article_context, find_context_from_other_sources
 )
-from modules.writer import write_article, is_valid_mongolian, filter_relevant_news
+from modules.writer import write_article, is_valid_mongolian, filter_relevant_news, polish_article
 from modules.image_fallback import get_fallback_image
 from modules.poster import post_to_all_platforms, check_facebook_token
 from modules.storage import load_posted, save_posted, load_posted_topics, alert_due
@@ -19,6 +20,7 @@ from modules import quote_card
 from modules import gemini_image
 from modules.translator import google_translate
 from modules import espn_api
+from modules import nba_scores
 from modules import stat_card
 
 logging.basicConfig(
@@ -27,7 +29,7 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-MAX_POSTS_PER_RUN = 2
+MAX_POSTS_PER_RUN = int(os.environ.get("MAX_POSTS_PER_RUN", "2"))
 
 
 def _translate_overlay(text_en: str) -> str:
@@ -74,20 +76,21 @@ def run():
     all_news = fetch_all_news()
     log.info(f"Нийт татсан мэдээ: {len(all_news)} ширхэг")
 
-    new_news = [n for n in all_news if n["id"] not in posted_ids]
-    log.info(f"Шинэ мэдээ: {len(new_news)} ширхэг")
+    # ДӨНГӨЖ ДУУССАН NBA ТОГЛОЛТ (ESPN scoreboard) — редакцийн бодлогын №1,
+    # шүүлтүүр давахгүй, үргэлж эхэнд
+    recaps = nba_scores.fetch_finished_games(posted_ids)
 
-    if not new_news:
+    new_news = [n for n in all_news if n["id"] not in posted_ids]
+    log.info(f"Шинэ мэдээ: {len(new_news)} ширхэг (+{len(recaps)} тоглолтын үр дүн)")
+
+    if not new_news and not recaps:
         log.info("Шинэ мэдээ байхгүй. Дуусгалаа.")
         return
 
-    # Ач холбогдлын шүүлтүүр — Монгол уншигчдад сонирхолгүй жижиг мэдээг хасна
-    new_news = filter_relevant_news(new_news)
-
-    # ШИНЭЛЭГ БАЙДЛЫН ЭРЭМБЭ: хуудасны бодлого — "дөнгөж дууссан тоглолт,
-    # дөнгөж зарлагдсан мэдээ" эхэнд. Хамгийн сүүлд нийтлэгдсэн нь түрүүлж
-    # постлогдоно (published_ts=0 буюу огноогүй нь хамгийн сүүлд)
-    new_news.sort(key=lambda n: n.get("published_ts", 0), reverse=True)
+    # Ач холбогдлын ОНОО — босгоос доош бүгд хасагдана, үлдсэн нь
+    # оноо → шинэлэг байдлаар эрэмбэлэгдсэн ирнэ
+    new_news = filter_relevant_news(new_news) if new_news else []
+    new_news = recaps + new_news
 
     # СЭДВИЙН ДАВХАРДЛЫН ШҮҮЛТҮҮР:
     # 1) Сүүлийн 48ц-д постолсон сэдэвтэй давхцвал алгасна
@@ -157,6 +160,9 @@ def run():
                 posted_ids.add(news["id"])  # дахин оролдохгүйн тулд тэмдэглэнэ
                 continue
 
+            # РЕДАКТОРЫН ДАМЖЛАГА: эх баримттай тулгаж, хэл найруулгыг засна
+            written["article_mn"] = polish_article(written, written["article_mn"])
+
             category_now = written.get("category", "")
 
             # ЗУРГИЙН ЭРЭМБЭ (хэмжээ-шалгалттай):
@@ -208,7 +214,7 @@ def run():
             # ТОГЛОЛТЫН ҮР ДҮНГИЙН МЭДЭЭ → ESPN маягийн stat card оролдоно.
             # Стат олдохгүй бол хэвийн quote card руугаа үргэлжилнэ.
             stat_done = False
-            if category_now in ("basketball", "football", "ufc", "sports") and \
+            if category_now in ("basketball", "mn_basketball", "football", "ufc", "sports") and \
                     (written.get("image_url") or written.get("image_bytes")):
                 stats = stat_card.extract_stats(
                     news.get("title", ""),
@@ -236,7 +242,7 @@ def run():
             overlay_text_en = quote_en
             # Шинэ спорт категориуд (basketball/football/ufc) бүгд гарчгийн
             # давхаргатай quote card авна
-            if not overlay_text_en and category_now in ("sports", "music", "basketball", "football", "ufc"):
+            if not overlay_text_en and category_now in ("sports", "music", "basketball", "mn_basketball", "football", "ufc"):
                 overlay_text_en = news.get("title", "")  # ишлэлгүй бол гарчгийг ашиглана
 
             if not stat_done and overlay_text_en and (written.get("image_url") or written.get("image_bytes")):
@@ -274,8 +280,9 @@ def run():
             else:
                 log.warning(f"⚠️ Алдаа: {result['error']}")
 
-            # Telegram мэдэгдэл (хүлээхгүй, зөвхөн FYI)
-            telegram_notify.notify_posted(written, result["success"], result.get("error") or "")
+            # Telegram мэдэгдэл (хүлээхгүй, зөвхөн FYI; draft горимд илгээхгүй)
+            if not os.environ.get("AUTONEWS_DRAFT_DIR"):
+                telegram_notify.notify_posted(written, result["success"], result.get("error") or "")
 
             import time
             time.sleep(3)
