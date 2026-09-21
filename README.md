@@ -35,6 +35,24 @@ Facebook, Instagram, X (Twitter)-д автоматаар постолдог си
   ⚠ GitHub Actions-ийн IP-г Bing TTS 403-оор хаадаг тул CI дээр хоолойгүй (хадмалтай) видео гардаг,
   хоолойтой нь энэ машин дээр ажилладаг. `VIDEO_RECAPS=0` = зурагтай пост.
 
+### Гадаад cron (cron-job.org) — 10 минут тутам ажиллуулах
+GitHub-ийн cron шахагддаг (өдөрт 8–10 run). cron-job.org GitHub-ийн API-г 10 минут тутам дуудаж
+workflow-г эхлүүлнэ.
+1. **PAT:** github.com → Settings → Developer settings → Personal access tokens → **Fine-grained** →
+   Generate. Repository access: *Only select repositories* → `auto-news-poster`. Permissions →
+   Repository permissions → **Actions: Read and write** (өөр юу ч биш). Expiration: 1 жил. Token-ийг хуулна.
+2. **cron-job.org → Create cronjob:**
+   - URL: `https://api.github.com/repos/Barka39/auto-news-poster/actions/workflows/auto_post.yml/dispatches`
+   - Schedule: Every 10 minutes
+   - Advanced → Request method: **POST**
+   - Advanced → Headers (3 мөр):
+     `Authorization: Bearer <PAT>` · `Accept: application/vnd.github+json` · `X-GitHub-Api-Version: 2022-11-28`
+   - Advanced → Request body: `{"ref":"main"}`
+   - Save. "Test run" дарахад status **204** гарвал зөв.
+3. Шалгах: Actions хуудсанд 10 минут тутам `workflow_dispatch` run гарна. Давхардал: `concurrency`
+   бүлэг нэг л run зэрэг ажиллуулна.
+PAT дуусахад (1 жил) cron 401 өгнө — cron-job.org failure email илгээнэ, шинэ PAT-аар header-ийг солино.
+
 ### Чанарыг постлохгүйгээр шалгах
 Actions → **Draft Check (постлохгүй)** → Run workflow (max_posts, min_score, тестийн NBA огноо).
 Нооргууд log-д бүтнээрээ хэвлэгдэнэ, `drafts` artifact болж хадгалагдана.
