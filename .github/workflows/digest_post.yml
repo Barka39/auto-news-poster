@@ -60,6 +60,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          NBA_PAGE_ID_EXPECTED: ${{ vars.NBA_PAGE_ID_EXPECTED }}
           FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
           IG_ACCOUNT_ID: ${{ secrets.IG_ACCOUNT_ID }}
           X_API_KEY: ${{ secrets.X_API_KEY }}

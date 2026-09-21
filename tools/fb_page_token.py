@@ -31,16 +31,29 @@ REPO = "Barka39/auto-news-poster"
 
 
 SUFFIX_BY_NAME = {"сүнсний код": "SUNS", "үдшийн шивнээ": "UDESH"}
+import re as _re
+NBA_PAGE_RE = _re.compile(r"unuudur|unuurdur|өнөөдөр|onoodor", _re.IGNORECASE)
+
+
+def _confirm_nba(name: str) -> bool:
+    if NBA_PAGE_RE.search(name or ""):
+        return True
+    ans = input(f"«{name}» — энэ бол САГСНЫ МЭДЭЭНИЙ хуудас (unuudur.mgl) мөн үү? (y/n): ").strip().lower()
+    return ans in ("y", "yes", "т", "тийм")
 
 
 def set_page_secrets(name: str, page_id: str, token: str) -> int:
     """Хуудасны нэрээр secret-ийн нэрийг сонгож gh-ээр тавина; NBA хуудас = үндсэн нэрс."""
     suf = SUFFIX_BY_NAME.get(name.strip().lower())
+    if not suf and not _confirm_nba(name):
+        print(f"⏭️ «{name}» хуудсыг NBA-д тавьсангүй.")
+        return 1
     tok_key, id_key = (f"FB_ACCESS_TOKEN_{suf}", f"FB_PAGE_ID_{suf}") if suf else ("FB_ACCESS_TOKEN", "FB_PAGE_ID")
     subprocess.run(["gh", "secret", "set", tok_key, "-R", REPO], input=token, text=True, check=True)
     subprocess.run(["gh", "secret", "set", id_key, "-R", REPO], input=page_id, text=True, check=True)
     print(f"✅ {name} → {id_key}, {tok_key} тавигдлаа")
     if not suf:
+        subprocess.run(["gh", "variable", "set", "NBA_PAGE_ID_EXPECTED", "-R", REPO, "--body", page_id], check=True)
         subprocess.run(["gh", "workflow", "run", "auto_post.yml", "-R", REPO], check=True)
         print("▶ Auto News Poster workflow-г эхлүүллээ")
     return 0
@@ -102,11 +115,12 @@ def main() -> int:
         subprocess.run(["gh", "secret", "set", f"FB_PAGE_ID_{suf}", "-R", REPO], input=p["id"], text=True, check=True)
         print(f"✅ {p['name']} → FB_PAGE_ID_{suf}, FB_ACCESS_TOKEN_{suf}")
 
-    main_pages = [p for p in pages if p["name"].strip().lower() not in SUFFIX_BY_NAME]
+    main_pages = [p for p in pages if NBA_PAGE_RE.search(p["name"] or "")]
     if not main_pages:
-        print("NBA хуудас (үндсэн) олдсонгүй — зөвхөн контент хуудсуудыг тохируулав."); return 0
-    choice = "1" if len(main_pages) == 1 else (input("NBA хуудас аль нь? [1]: ").strip() or "1")
-    page = main_pages[int(choice) - 1]
+        print("⚠️ unuudur.mgl (сагсны) хуудас энэ token-д алга. Graph Explorer-т Generate Access Token дарахад гарах")
+        print("   Facebook-ийн цонхонд «Edit settings / Бүх хуудас» сонгож unuudur.mgl-ийг ЧАГТАЛНА уу.")
+        print("   Контент хуудсуудыг тохируулсан; NBA-ийн тохиргоонд хүрсэнгүй."); return 0
+    page = main_pages[0]
     page_token = page["access_token"]
 
     # Хугацааг шалгах: expires_at == 0 гэдэг нь хугацаагүй
@@ -128,7 +142,8 @@ def main() -> int:
                    input=page_token, text=True, check=True)
     subprocess.run(["gh", "secret", "set", "FB_PAGE_ID", "-R", REPO],
                    input=page["id"], text=True, check=True)
-    print(f"✅ GitHub secret шинэчлэгдлээ: FB_ACCESS_TOKEN, FB_PAGE_ID={page['id']}")
+    subprocess.run(["gh", "variable", "set", "NBA_PAGE_ID_EXPECTED", "-R", REPO, "--body", page["id"]], check=True)
+    print(f"✅ GitHub secret шинэчлэгдлээ: FB_ACCESS_TOKEN, FB_PAGE_ID={page['id']} ({page['name']})")
 
     subprocess.run(["gh", "workflow", "run", "auto_post.yml", "-R", REPO], check=True)
     print("▶ Auto News Poster workflow-г гараар эхлүүллээ. 2-3 минутын дараа:")

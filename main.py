@@ -64,8 +64,29 @@ def _translate_overlay(text_en: str) -> str:
     return result
 
 
+
+def wrong_page_guard() -> bool:
+    """NBA мэдээ ЗӨВХӨН сагсны хуудас руу (repo variable NBA_PAGE_ID_EXPECTED).
+    2026-09-21: token солиход FB_PAGE_ID хувийн "Бат Эрдэнэ" хуудас руу шилжсэн тул
+    тохирохгүй бол постлохгүй, Telegram-д 12 цагт нэг мэдэгдэнэ."""
+    expected = (os.environ.get("NBA_PAGE_ID_EXPECTED") or "").strip()
+    if not expected:
+        return False
+    if expected != (os.environ.get("FB_PAGE_ID") or "").strip():
+        msg = ("NBA постлолт зогсов: FB_PAGE_ID сагсны хуудас (unuudur.mgl) биш байна. "
+               "FB-TOKEN-SUULGAH.bat-аар unuudur.mgl хуудасны token-ийг тавина уу.")
+        log.error("🛑 " + msg)
+        from modules.storage import alert_due
+        if alert_due("wrong_page"):
+            telegram_notify.notify_alert(msg)
+        return True
+    return False
+
+
 def run():
     log.info("=== Auto News Poster эхэллээ ===")
+    if wrong_page_guard():
+        return
 
     # Token дууссан бол Gemini/Groq-ийн эрх үрэлгүй ЭХЭНД нь зогсоод эзэнд хэлнэ
     token_error = check_facebook_token()
