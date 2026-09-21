@@ -549,6 +549,12 @@ def filter_relevant_news(news_list: list, max_candidates: int = 25) -> list:
         return news_list
     candidates = news_list[:max_candidates]
     scores = score_news(candidates)
+    # S4: Монголын шигшээ/тоглогч/лиг дурдагдсан мэдээ = 10 (LLM-ээс үл хамааран)
+    from modules.fetcher import is_mn_watch
+    for i, n in enumerate(candidates):
+        if is_mn_watch(n.get("title", ""), n.get("summary", "")):
+            scores[i] = 10
+            log.info(f"[МОНГОЛ WATCH] 10 оноо: {n['title'][:60]}")
     if not scores:
         log.warning("Онооны шүүлтүүр ажилласангүй — энэ run-д юу ч постлохгүй")
         return []
@@ -567,7 +573,7 @@ def filter_relevant_news(news_list: list, max_candidates: int = 25) -> list:
     return kept
 
 
-def polish_article(news: dict, draft: str) -> str:
+def polish_article(news: dict, draft: str, lint_note: str = "") -> str:
     """
     РЕДАКТОРЫН ХОЁР ДАХЬ ДАМЖЛАГА. Нэг дуудлагаар бичсэн нийтлэлд байнга
     гардаг гурван алдааг засна: (1) эх материалд байхгүй баримт нэмэгдсэн,
@@ -593,7 +599,7 @@ def polish_article(news: dict, draft: str) -> str:
 НООРОГ:
 {draft}
 
-ШАЛГУУР (дарааллаар нь шалга):
+{("ЗААВАЛ ЗАС (автомат шалгалт олсон): " + lint_note + chr(10) + chr(10)) if lint_note else ""}ШАЛГУУР (дарааллаар нь шалга):
 1. БАРИМТ: ноорогт эх баримтад БАЙХГҮЙ тоо, нэр, шалтгаан, ишлэл, дүгнэлт
    орсон бол ХАС эсвэл эх баримтаар соль. Эх баримтад байгаа чухал тоо
    (оноо, stat line, мөнгөн дүн, хугацаа, W-L) ноорогт орхигдсон бол НЭМ.
@@ -605,10 +611,16 @@ def polish_article(news: dict, draft: str) -> str:
 4. ХЭЛ: Англи бүтцээр орчуулсан хатуу өгүүлбэрийг Монгол хүн ярьдаг
    байгалийн хэллэг болго. Нэг өгүүлбэрт нэг санаа. Давтагдсан үг/санааг хас.
    "шүүгдсэн", "агуулаг", "шагналт" гэх мэт буруу үг хэрэглэсэн бол засна.
-5. ХЭМЖЭЭ: 2-4 догол мөр, 400-700 тэмдэгт. Нэг сэдэв. Эцэст нь 1-2 hashtag
+5. НЭР ТОМЬЁОНЫ ТОЛЬ (нэг стандарт): rebound = самбар; assist = дамжуулалт;
+   steal = таслалт; block = хаалт; turnover = алдаа; free throw = чөлөөт шидэлт;
+   three-pointer = 3 оноо; field goal = талбайн шидэлт; overtime = нэмэлт цаг (OT);
+   playoff/play-in/double-double/triple-double/clutch = Латинаар; coach = дасгалжуулагч;
+   roster = бүрэлдэхүүн; trade = трейд/солилцоо; extension = гэрээний сунгалт;
+   waive = гэрээ цуцлах; two-way = two-way гэрээ; rookie = шинэ тоглогч (rookie).
+6. ХЭМЖЭЭ: 2-4 догол мөр, 400-700 тэмдэгт. Нэг сэдэв. Эцэст нь 1-2 hashtag
    (байхгүй бол нэм, гурваас олон бол цөөл; тэмцээний нэрийг эх баримтад
    байгаа үед л hashtag болго).
-6. Бүх зүйл зөв бол ноорогийг ЯГ ХЭВЭЭР буцаа.
+7. Бүх зүйл зөв бол ноорогийг ЯГ ХЭВЭЭР буцаа.
 
 ЭЦСИЙН ТЕКСТ:"""
     try:

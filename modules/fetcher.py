@@ -9,6 +9,7 @@ import re
 import hashlib
 import html as html_module
 import feedparser
+import html
 import requests
 import logging
 from datetime import datetime, timezone, timedelta
@@ -39,7 +40,23 @@ MN_BASKETBALL_SOURCES = [
      "keywords": MN_BASKETBALL_KEYWORDS, "max_items": 8},
     {"name": "ikon.mn", "url": "https://ikon.mn/rss", "lang": "mn",
      "keywords": MN_BASKETBALL_KEYWORDS, "max_items": 30},
+    # S4: Монголын лиг (MBL/The League) легионер, шигшээ — англи, зөвхөн Монголын хуудас
+    {"name": "Asia-Basket Mongolia", "url": "https://www.asia-basket.com/Mongolia/basketball.aspx", "lang": "en",
+     "type": "html", "base": "", "link_re": r'href="([^"]*?/Mongolia/news/\d+[^"]*)"', "max_items": 6},
 ]
+
+# S4: Монгол тоглогч/багийн сэрэмжлүүлэг — дурдагдсан мэдээ шүүлтүүрийг давахгүй, 10 оноо.
+# Хуудасны №1 давуу тал = Монголын сагс. Шинэ нэр олдох бүрд нэмнэ.
+MN_WATCHLIST = re.compile(
+    r"Монголын? (эрэгтэй|эмэгтэй|үндэсний|залуучуудын)? ?шигшээ|Team Mongolia|Mongolian national team"
+    r"|\bMongolia\b.*\b(FIBA|3x3|Asia Cup|Asian Games|qualif)"
+    r"|Болор-Эрдэнэ|Тэмүүлэн|Биндэръяа|Балжинням|Анандын Дэлгэрнямбуу|Дэлгэрням|Хулан|Онолбаатар|Стив Сөр|Steve Sir"
+    r"|The League|MNBA|\bMBL\b|Хасын Хүлэгүүд|Xac Broncos|Darkhan|Erchim|Bishrelt Metal|Zaisan Broncos",
+    re.IGNORECASE)
+
+
+def is_mn_watch(title: str, summary: str = "") -> bool:
+    return bool(MN_WATCHLIST.search(f"{title} {summary}"))
 
 RSS_SOURCES = {
     "basketball": [  # NBA
@@ -497,7 +514,13 @@ def find_image_from_other_sources(title: str) -> str:
 
 _PUBLISHED_META_RE = re.compile(
     r'<meta[^>]+(?:published_time|datePublished|pubdate)[^>]+content="([^"]+)"|'
-    r'"datePublished"\s*:\s*"([^"]+)"', re.IGNORECASE)
+    r'"datePublished"\s*:\s*"([^"]+)"|'
+    r'<time[^>]+datetime="([^"]+)"', re.IGNORECASE)
+# Текстэн огноо: "2026-09-21 14:05", "2026.09.21", "Sep 19, 2026" (asia-basket)
+_PUBLISHED_TEXT_RE = re.compile(
+    r"\b(20\d{2})[-./](\d{1,2})[-./](\d{1,2})(?:[ T](\d{1,2}):(\d{2}))?"
+    r"|\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.? (\d{1,2}), (20\d{2})")
+_MONTHS = {m: i + 1 for i, m in enumerate(["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"])}
 
 
 def fetch_published_ts(article_url: str) -> float:
@@ -510,8 +533,18 @@ def fetch_published_ts(article_url: str) -> float:
                             headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/128"})
         m = _PUBLISHED_META_RE.search(resp.text[:60000])
         if not m:
-            return 0.0
-        raw = (m.group(1) or m.group(2) or "").strip()
+            # Meta байхгүй бол хуудасны текстэн дэх эхний огноо (title-ийн ойролцоо)
+            body = re.sub(r"<[^>]+>", " ", resp.text[:80000])
+            t = _PUBLISHED_TEXT_RE.search(body)
+            if not t:
+                return 0.0
+            if t.group(1):
+                dt = datetime(int(t.group(1)), int(t.group(2)), int(t.group(3)),
+                              int(t.group(4) or 0), int(t.group(5) or 0), tzinfo=timezone(timedelta(hours=8)))
+            else:
+                dt = datetime(int(t.group(8)), _MONTHS[t.group(6)], int(t.group(7)), tzinfo=timezone.utc)
+            return dt.timestamp()
+        raw = (m.group(1) or m.group(2) or m.group(3) or "").strip()
         raw = re.sub(r"([+-]\d{2})(\d{2})$", r"\1:\2", raw)  # +0800 → +08:00
         dt = datetime.fromisoformat(raw.replace("Z", "+00:00"))
         if dt.tzinfo is None:
@@ -538,16 +571,21 @@ def fetch_html_list(category: str, source: dict) -> list:
     link_re = re.compile(source["link_re"])
     kw = source.get("keywords")
     seen = set()
+    scanned = 0
+    scan_limit = source.get("scan_limit", 12)   # хуудасны дээд хэсэг = шинэ; илүүг огноогоор шалгахгүй (HTTP хэмнэнэ)
     for href, inner in re.findall(r'<a[^>]+href="([^"]+)"[^>]*>(.*?)</a>', resp.text, re.S):
+        if scanned >= scan_limit:
+            break
         if not link_re.search(f'href="{href}"'):
             continue
-        title = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", inner)).strip()
+        title = html.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", inner)).strip())
         if len(title) < 25 or href in seen:
             continue
         seen.add(href)
         if kw and not re.search(kw, title, re.IGNORECASE):
             continue
         url = href if href.startswith("http") else source.get("base", "") + href
+        scanned += 1
         published_ts = fetch_published_ts(url)
         if published_ts:
             age_h = (datetime.now(timezone.utc).timestamp() - published_ts) / 3600

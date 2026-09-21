@@ -25,6 +25,7 @@ from modules import nba_digest
 from modules import cards
 from modules import scheduler
 from modules import ledger
+from modules import lint_mn
 from modules import stat_card
 
 logging.basicConfig(
@@ -172,6 +173,16 @@ def run():
 
             # РЕДАКТОРЫН ДАМЖЛАГА: эх баримттай тулгаж, хэл найруулгыг засна
             written["article_mn"] = polish_article(written, written["article_mn"])
+
+            # S6 ХЭЛНИЙ LINT: калька/буруу үг → редакторт нэг удаа буцаана → үлдсэнийг 1:1 солино
+            hits = lint_mn.check(written["article_mn"])
+            if hits:
+                log.warning(f"[LINT] {len(hits)} олдвор: {lint_mn.report(hits)}")
+                written["article_mn"] = polish_article(written, written["article_mn"], lint_note=lint_mn.report(hits))
+                hits = lint_mn.check(written["article_mn"])
+                if hits:
+                    written["article_mn"], n_fixed = lint_mn.autofix(written["article_mn"])
+                    log.warning(f"[LINT] редакторын дараа ч {len(hits)} үлдсэн, {n_fixed}-ийг кодоор солив")
 
             category_now = written.get("category", "")
 
