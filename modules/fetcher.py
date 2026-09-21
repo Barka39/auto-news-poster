@@ -5,6 +5,7 @@
 Зураг: RSS-ийн featured image байвал шууд ашиглана (media/enclosure)
 """
 
+import os
 import re
 import hashlib
 import html as html_module
@@ -19,7 +20,7 @@ log = logging.getLogger(__name__)
 # Ийм цагаас хуучин мэдээг алгасна. ХУУДАСНЫ БОДЛОГО: зөвхөн хамгийн
 # шинэ (дөнгөж дууссан тоглолт, дөнгөж зарлагдсан мэдээ) контент постлох
 # тул хязгаар 10 цаг (өмнө нь 24 байсан)
-MAX_ARTICLE_AGE_HOURS = 10
+MAX_ARTICLE_AGE_HOURS = int(os.environ.get("MAX_ARTICLE_AGE_HOURS", "24"))  # GitHub cron 1.5-5ц зайтай тул 10ц хэт богино байсан (2026-09-21)
 
 # ============================================================
 # ХУУДАСНЫ ЧИГЛЭЛ: зөвхөн Сагсан бөмбөг + Хөл бөмбөг + UFC/MMA.
