@@ -28,12 +28,36 @@ log = logging.getLogger(__name__)
 W, H = 1080, 1920
 FPS = int(os.environ.get("VIDEO_FPS", "24"))
 VOICE = os.environ.get("TTS_VOICE", "mn-MN-BataaNeural")
-FFMPEG = os.environ.get("FFMPEG_BIN", "ffmpeg")
-FFPROBE = os.environ.get("FFPROBE_BIN", "ffprobe")
+def _find_ffmpeg() -> str:
+    """FFMPEG_BIN → PATH → Playwright-ийн өөрийн ffmpeg build (~/.cache/ms-playwright/ffmpeg-*/ffmpeg-linux)."""
+    cand = os.environ.get("FFMPEG_BIN") or shutil.which("ffmpeg")
+    if cand and (os.path.exists(cand) or shutil.which(cand)):
+        return cand
+    import glob
+    for pat in ("~/.cache/ms-playwright/ffmpeg-*/ffmpeg-linux", "~/.cache/ms-playwright/ffmpeg-*/ffmpeg-win64.exe"):
+        hits = sorted(glob.glob(os.path.expanduser(pat)))
+        if hits:
+            return hits[-1]
+    return ""
+
+
+FFMPEG = _find_ffmpeg()
 
 
 def enabled() -> bool:
-    return os.environ.get("VIDEO_RECAPS", "1") != "0" and shutil.which(FFMPEG) is not None
+    if os.environ.get("VIDEO_RECAPS", "1") == "0":
+        return False
+    if not FFMPEG:
+        log.info("[VIDEO] ffmpeg олдсонгүй — видео алгасна")
+        return False
+    return True
+
+
+def _duration(path: str) -> float:
+    """ffmpeg -i-ийн stderr дэх 'Duration: 00:00:21.94' (ffprobe шаардахгүй)."""
+    r = subprocess.run([FFMPEG, "-i", path], capture_output=True, text=True, timeout=30)
+    m = re.search(r"Duration:\s*(\d+):(\d+):(\d+(?:\.\d+)?)", r.stderr or "")
+    return (int(m.group(1)) * 3600 + int(m.group(2)) * 60 + float(m.group(3))) if m else 0.0
 
 
 # ============================================================
@@ -56,10 +80,7 @@ def synthesize(text: str, out_mp3: str) -> float:
         async def _run():
             await edge_tts.Communicate(text, VOICE).save(out_mp3)
         asyncio.run(_run())
-        probe = subprocess.run([FFPROBE, "-v", "error", "-show_entries", "format=duration",
-                                "-of", "default=noprint_wrappers=1:nokey=1", out_mp3],
-                               capture_output=True, text=True, timeout=30)
-        return float(probe.stdout.strip() or 0)
+        return _duration(out_mp3)
     except Exception as e:
         log.warning(f"[VIDEO] TTS алдаа: {e}")
         return 0.0

@@ -36,13 +36,20 @@ def _get(path: str, **params) -> dict:
 
 def fetch_post_metrics(post_id: str) -> dict | None:
     out = {}
-    d = _get(f"{post_id}/insights", metric="post_impressions_unique,post_clicks,post_engaged_users")
-    if "error" in d:
-        log.warning(f"insights алдаа {post_id}: {d['error'].get('message')}")
+    # Meta 2024-2025-д олон post metric-ийг хассан → боломжит багцуудыг дарааллаар оролдоно
+    d = None
+    for metrics in ("post_impressions_unique,post_clicks", "post_impressions_unique", "post_impressions"):
+        d = _get(f"{post_id}/insights", metric=metrics)
+        if "error" not in d:
+            break
+    if not d or "error" in d:
+        log.warning(f"insights алдаа {post_id}: {(d or {}).get('error', {}).get('message')}")
         return None
     for m in d.get("data", []):
         vals = m.get("values") or [{}]
         out[m["name"].replace("post_", "")] = vals[0].get("value", 0)
+    if "impressions_unique" not in out and "impressions" in out:
+        out["impressions_unique"] = out["impressions"]
     f = _get(post_id, fields="reactions.summary(true).limit(0),comments.summary(true).limit(0),shares")
     if "error" not in f:
         out["reactions"] = (f.get("reactions") or {}).get("summary", {}).get("total_count", 0)
