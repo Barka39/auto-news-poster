@@ -1,0 +1,26 @@
+name: IG setup (Instagram холболт шалгах)
+
+# Page-д холбогдсон Instagram Business/Creator хаягийн ID-г Graph API-аас авна.
+# ID нууц биш (нийтийн хаягийн дугаар); олдвол `gh secret set IG_ACCOUNT_ID`-д тавина.
+# Олдохгүй бол: Facebook Page → Settings → Linked accounts → Instagram → Connect,
+# IG хаяг Professional (Business/Creator) байх ёстой.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  ig:
+    runs-on: ubuntu-latest
+    steps:
+      - name: instagram_business_account
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
+          IG_ACCOUNT_ID: ${{ secrets.IG_ACCOUNT_ID }}
+        run: |
+          echo "IG_ACCOUNT_ID secret одоо: ${IG_ACCOUNT_ID:+(тохируулсан)}${IG_ACCOUNT_ID:-(хоосон)}"
+          curl -s "https://graph.facebook.com/v19.0/${FB_PAGE_ID}?fields=instagram_business_account{id,username,followers_count},connected_instagram_account{id,username}&access_token=${FB_ACCESS_TOKEN}" | sed "s/${FB_PAGE_ID}/***PAGE***/g"
+          echo
+          echo "--- token permissions ---"
+          curl -s "https://graph.facebook.com/v19.0/me/permissions?access_token=${FB_ACCESS_TOKEN}" | tr ',' '\n' | grep -E "instagram|pages_manage_posts" | tr -d '"{}[]' | sed 's/permission://; s/status//' | paste -sd ' '
+          echo
