@@ -1,0 +1,84 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800;900&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#222;font-family:Montserrat,Arial,sans-serif;color:#fff}
+  .card{width:1080px;height:1350px;position:relative;overflow:hidden;margin:0 0 40px 0}
+  .badge{display:inline-block;background:#e63946;color:#fff;font-weight:900;font-size:26px;padding:8px 18px;border-radius:8px;letter-spacing:1px}
+  .brand{font-weight:900;font-size:28px;letter-spacing:2px}
+  .foot{position:absolute;bottom:44px;left:60px;right:60px;display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:24px;opacity:.95}
+
+  /* 1. МЭДЭЭ — эх зураг бүтнээрээ, blur фон, гарчиг доор */
+  #news{background:#0b1a33}
+  #news .bg{position:absolute;inset:0;background:url(https://a.espncdn.com/photo/2026/0918/r1718795_600x400_3-2.jpg) center/cover;filter:blur(40px) brightness(.45);transform:scale(1.15)}
+  #news .photo{position:absolute;top:60px;left:60px;width:960px;height:640px;border-radius:24px;object-fit:cover;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+  #news .body{position:absolute;top:740px;left:60px;right:60px}
+  #news h1{font-weight:900;font-size:56px;line-height:1.15;margin:22px 0 18px}
+  #news p{font-weight:500;font-size:30px;line-height:1.4;opacity:.9;margin:0}
+  #news .facts{display:flex;gap:16px;margin-top:26px}
+  #news .fact{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:12px 22px;font-weight:800;font-size:30px}
+
+  /* 2. ГЭРЭЭ / ТРЕЙД — тоглогч + баг + том тоо */
+  #deal{background:linear-gradient(160deg,#1d428a 0%,#0b1a33 60%,#c8102e 140%)}
+  #deal .logo{position:absolute;right:-120px;top:-80px;width:700px;opacity:.14}
+  #deal .head{position:absolute;top:60px;left:60px}
+  #deal .player{position:absolute;top:170px;left:60px;width:520px;height:520px;border-radius:32px;background:#fff;object-fit:cover;object-position:top;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+  #deal .teamlogo{position:absolute;top:170px;right:60px;width:380px}
+  #deal .name{position:absolute;top:720px;left:60px;font-weight:900;font-size:72px;line-height:1}
+  #deal .role{position:absolute;top:800px;left:60px;font-weight:600;font-size:30px;opacity:.85}
+  #deal .nums{position:absolute;top:880px;left:60px;right:60px;display:flex;gap:24px}
+  #deal .num{flex:1;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:24px;padding:28px 30px}
+  #deal .num b{display:block;font-weight:900;font-size:86px;line-height:1}
+  #deal .num span{font-weight:600;font-size:26px;opacity:.85;letter-spacing:1px}
+  #deal .line{position:absolute;top:1150px;left:60px;right:60px;font-weight:600;font-size:32px;line-height:1.35}
+
+  /* 3. ИШЛЭЛ */
+  #quote{background:#111}
+  #quote .bg{position:absolute;inset:0;background:url(https://a.espncdn.com/photo/2026/0920/r1719195_608x342_16-9.jpg) center/cover;filter:brightness(.35) saturate(.8)}
+  #quote .fade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1) 0%,rgba(0,0,0,.85) 70%)}
+  #quote .mark{position:absolute;top:120px;left:60px;font-size:300px;font-weight:900;line-height:.6;color:#e63946;opacity:.9}
+  #quote .text{position:absolute;top:400px;left:60px;right:60px;font-weight:800;font-size:58px;line-height:1.25}
+  #quote .who{position:absolute;top:1010px;left:60px;display:flex;align-items:center;gap:26px}
+  #quote .who img{width:150px;height:150px;border-radius:50%;object-fit:cover;object-position:top;background:#fff;border:4px solid #e63946}
+  #quote .who b{display:block;font-weight:900;font-size:40px}
+  #quote .who span{font-weight:600;font-size:26px;opacity:.85}
+</style></head>
+<body>
+
+<div class="card" id="news">
+  <div class="bg"></div>
+  <img class="photo" src="https://a.espncdn.com/photo/2026/0918/r1718795_600x400_3-2.jpg">
+  <div class="body">
+    <span class="badge">ГЭРЭЭ</span>
+    <h1>Pistons Ausar Thompson-той 5 жилийн $155M гэрээ байгуулав</h1>
+    <p>All-Defensive багийн форвард rookie-scale гэрээгээ сунгалаа. Detroit залуу цөмөө урт хугацаанд барих шийдвэрээ ингэж баталлаа.</p>
+    <div class="facts"><div class="fact">5 жил</div><div class="fact">$155M</div><div class="fact">23 нас</div></div>
+  </div>
+  <div class="foot"><span class="brand">МОНГОЛ МЭДЭЭ 🏀</span><span>Эх сурвалж: ESPN · 2026.09.21</span></div>
+</div>
+
+<div class="card" id="deal">
+  <img class="logo" src="https://a.espncdn.com/i/teamlogos/nba/500/8.png">
+  <div class="head"><span class="badge">ГЭРЭЭНИЙ СУНГАЛТ</span></div>
+  <img class="player" src="https://a.espncdn.com/i/headshots/nba/players/full/4684742.png">
+  <img class="teamlogo" src="https://a.espncdn.com/i/teamlogos/nba/500/8.png">
+  <div class="name">Ausar Thompson</div>
+  <div class="role">Форвард · Detroit Pistons</div>
+  <div class="nums">
+    <div class="num"><b>$155M</b><span>НИЙТ ДҮН</span></div>
+    <div class="num"><b>5</b><span>ЖИЛ</span></div>
+    <div class="num"><b>$31M</b><span>ЖИЛД ДУНДЖААР</span></div>
+  </div>
+  <div class="line">Pistons All-Defensive форвардаа 2031 он хүртэл багтаа үлдээлээ.</div>
+  <div class="foot"><span class="brand">МОНГОЛ МЭДЭЭ 🏀</span><span>Эх сурвалж: ESPN</span></div>
+</div>
+
+<div class="card" id="quote">
+  <div class="bg"></div><div class="fade"></div>
+  <div class="mark">“</div>
+  <div class="text">Энэ хот надад бүхнийг өгсөн. Хөшөө биш, энд өнгөрүүлсэн жилүүд минь л хамгийн үнэ цэнтэй.</div>
+  <div class="who"><img src="https://a.espncdn.com/i/headshots/nba/players/full/3012.png"><div><b>Kyle Lowry</b><span>Toronto Raptors-ийн домог · хөшөөний нээлт дээр</span></div></div>
+  <div class="foot"><span class="brand">МОНГОЛ МЭДЭЭ 🏀</span><span>Эх сурвалж: ESPN</span></div>
+</div>
+
+</body></html>
