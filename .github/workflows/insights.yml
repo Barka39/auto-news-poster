@@ -1,0 +1,53 @@
+name: Insights (хэмжилт)
+
+# S3: пост бүрийн reach/engagement-ийг ledger.json-д татна (өдөр бүр 06:00 МН = 22:00 UTC),
+# Даваа гараг бүр долоо хоногийн тайланг Telegram-д илгээнэ.
+on:
+  schedule:
+    - cron: "0 22 * * *"
+    - cron: "30 22 * * 0"
+  workflow_dispatch:
+    inputs:
+      backfill:
+        description: "Page-ийн сүүлийн 25 постыг ledger-т нэмэх (true/false)"
+        default: "false"
+      report:
+        description: "Тайланг одоо илгээх (true/false)"
+        default: "true"
+
+concurrency:
+  group: auto-news-poster
+  cancel-in-progress: false
+
+jobs:
+  insights:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests
+      - name: Insights татах / тайлан
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          ARGS=""
+          if [ "${{ github.event.inputs.backfill }}" = "true" ]; then ARGS="$ARGS --backfill"; fi
+          if [ "${{ github.event.inputs.report }}" = "true" ] || [ "${{ github.event.schedule }}" = "30 22 * * 0" ]; then ARGS="$ARGS --report"; fi
+          python insights_report.py $ARGS
+      - name: ledger.json commit хийх
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add ledger.json || true
+          git diff --staged --quiet || git commit -m "ledger insights шинэчлэгдлээ [skip ci]"
+          git push || true
