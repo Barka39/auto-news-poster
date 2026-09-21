@@ -14,6 +14,7 @@ from modules.writer import write_digest, filter_relevant_news, is_valid_mongolia
 from modules.poster import post_to_all_platforms
 from modules.storage import load_posted, save_posted
 from modules import telegram_notify
+from modules import ledger
 from modules import quote_card
 
 logging.basicConfig(
@@ -89,9 +90,11 @@ def run():
         "image_bytes": cover_bytes,
     }
 
+    digest_news["kind"] = "digest"
     result = post_to_all_platforms(digest_news)
 
     if result["success"]:
+        ledger.record(digest_news, result)
         # Тоймд орсон бүх мэдээг postolson гэж тэмдэглэнэ — ингэснээр
         # ганцаарчилсан постонд дахин давхардаж орохгүй
         for n in to_digest:

@@ -66,13 +66,18 @@ def post_to_facebook(news: dict) -> dict:
     image_bytes = news.get("image_bytes", b"")
     log.info(f"FB зураг: {'URL байна' if image_url else ('bytes байна (' + str(len(image_bytes)) + ')' if image_bytes else 'ХООСОН')}")
 
+    # S1: товлосон пост — FB 10 минутаас 75 хоногийн хооронд зөвшөөрнө
+    sched = {}
+    if news.get("scheduled_publish_time"):
+        sched = {"published": "false", "scheduled_publish_time": int(news["scheduled_publish_time"])}
+
     try:
         if image_bytes:
-            # Gemini-ийн үүсгэсэн raw зураг — multipart file upload
+            # Үүсгэсэн карт (HTML/PIL) — multipart file upload
             url = f"https://graph.facebook.com/v19.0/{page_id}/photos"
             response = requests.post(
                 url,
-                data={"caption": text, "access_token": access_token},
+                data={"caption": text, "access_token": access_token, **sched},
                 files={"source": ("image.png", image_bytes, "image/png")},
                 timeout=30
             )
@@ -82,25 +87,29 @@ def post_to_facebook(news: dict) -> dict:
             response = requests.post(url, data={
                 "caption": text,
                 "url": image_url,
-                "access_token": access_token
+                "access_token": access_token, **sched
             }, timeout=20)
         else:
             # Зураггүй текст пост — /feed endpoint
             url = f"https://graph.facebook.com/v19.0/{page_id}/feed"
             response = requests.post(url, data={
                 "message": text,
-                "access_token": access_token
+                "access_token": access_token, **sched
             }, timeout=15)
 
         data = response.json()
 
         if "id" in data or "post_id" in data:
             post_id = data.get("post_id", data.get("id"))
-            log.info(f"✅ Facebook: {post_id}")
-            return {"success": True, "id": post_id}
+            log.info(f"✅ Facebook: {post_id}" + (f" (товлогдсон: {news.get('slot')})" if sched else ""))
+            return {"success": True, "id": post_id, "photo_id": data.get("id") if (image_bytes or image_url) else "",
+                    "scheduled": bool(sched)}
         else:
             error = data.get("error", {}).get("message", str(data))
             log.error(f"❌ Facebook алдаа (зураг {'байсан' if (image_url or image_bytes) else 'байхгүй'}): {error}")
+            if sched:
+                log.warning("Товлосон постлоход алдаа — шууд постлохоор дахин оролдоно")
+                return post_to_facebook({**news, "scheduled_publish_time": 0, "slot": ""})
             if image_url or image_bytes:
                 log.warning(f"Зурагтай постлоход дээрх алдаа гарлаа — зураггүйгээр дахин оролдож байна")
                 return post_to_facebook({**news, "image_url": "", "image_bytes": b""})
@@ -126,6 +135,19 @@ def post_to_instagram(news: dict) -> dict:
 
     if not ig_account_id or not access_token:
         return {"success": False, "error": "IG credentials байхгүй"}
+
+    if not image_url and news.get("fb_photo_id"):
+        # S5: үүсгэсэн карт (bytes) — FB-д аль хэдийн байршсан зургийн нийтийн
+        # URL-ийг авч IG-д өгнө (IG зөвхөн public URL хүлээн авдаг)
+        try:
+            r = requests.get(f"https://graph.facebook.com/v19.0/{news['fb_photo_id']}",
+                             params={"fields": "images", "access_token": access_token}, timeout=15).json()
+            imgs = sorted(r.get("images", []), key=lambda i: i.get("width", 0), reverse=True)
+            if imgs:
+                image_url = imgs[0]["source"]
+                log.info("IG: FB-д байршсан картын URL-ийг ашиглана")
+        except Exception as e:
+            log.warning(f"IG: FB зургийн URL авахад алдаа: {e}")
 
     if not image_url:
         log.info("IG: зураггүй тул алгаслаа (Instagram зураг шаарддаг)")
@@ -288,16 +310,20 @@ def post_to_all_platforms(news: dict) -> dict:
     results["facebook"] = fb_result
     if fb_result["success"]:
         any_success = True
+        if fb_result.get("photo_id") and not fb_result.get("scheduled"):
+            news["fb_photo_id"] = fb_result["photo_id"]
 
     ig_result = post_to_instagram(news)
     results["instagram"] = ig_result
     if ig_result["success"]:
         any_success = True
 
-    x_result = post_to_twitter(news)
-    results["twitter"] = x_result
-    if x_result["success"]:
-        any_success = True
+    # S5: X-ийн secret хоосон, Монгол уншигч X дээр цөөн → анхдагчаар унтраалттай
+    if os.environ.get("X_ENABLED", "0") == "1":
+        x_result = post_to_twitter(news)
+        results["twitter"] = x_result
+        if x_result["success"]:
+            any_success = True
 
     return {
         "success": any_success,

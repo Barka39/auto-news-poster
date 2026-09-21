@@ -168,7 +168,7 @@ def _event_to_news(event: dict) -> dict | None:
     except Exception:
         date_label = ""
     stage_label = {2: "УЛИРЛЫН ТОГЛОЛТ", 3: "PLAYOFF"}.get(season_type, "ТОГЛОЛТ")
-    leaders = (_leader_cards(winner) + _leader_cards(loser))[:2]
+    leaders = (_leader_cards(winner)[:1] + _leader_cards(loser)[:1])  # хожсон + хожигдсон багийн онооны тэргүүлэгч
     card = {"date": date_label, "stage": stage_label, "ot": ot.strip(" ()"),
             "home": _team_card(home, home_score), "away": _team_card(away, away_score),
             "leaders": leaders,

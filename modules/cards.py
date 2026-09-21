@@ -142,9 +142,9 @@ def recap_card(card: dict) -> bytes:
 .teams{{position:absolute;top:170px;left:0;right:0;display:flex;justify-content:space-around;align-items:flex-start}}
 .team{{display:flex;flex-direction:column;align-items:center;width:440px}}
 .team img{{width:300px;height:300px;object-fit:contain;filter:drop-shadow(0 20px 30px rgba(0,0,0,.45))}}
-.team .name{{font-weight:800;font-size:36px;margin-top:10px;text-align:center;line-height:1.1}}
+.team .name{{font-weight:800;font-size:{36 if max(len(h['name']), len(a['name'])) <= 18 else 30}px;margin-top:10px;text-align:center;line-height:1.1;min-height:70px;display:flex;align-items:flex-end}}
 .team .rec{{font-weight:600;font-size:26px;opacity:.85}}
-.score{{position:absolute;top:560px;left:0;right:0;text-align:center;font-weight:900;font-size:170px;line-height:1;letter-spacing:-4px;text-shadow:0 12px 40px rgba(0,0,0,.4)}}
+.score{{position:absolute;top:580px;left:0;right:0;text-align:center;font-weight:900;font-size:170px;line-height:1;letter-spacing:-4px;text-shadow:0 12px 40px rgba(0,0,0,.4)}}
 .final{{position:absolute;top:750px;left:0;right:0;text-align:center;font-weight:800;font-size:32px;letter-spacing:6px;opacity:.9}}
 .stars{{position:absolute;top:840px;left:60px;right:60px;display:flex;gap:30px}}
 .star{{flex:1;padding:22px;display:flex;align-items:center;gap:20px;min-height:280px;overflow:hidden}}

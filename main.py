@@ -22,6 +22,8 @@ from modules.translator import google_translate
 from modules import espn_api
 from modules import nba_scores
 from modules import cards
+from modules import scheduler
+from modules import ledger
 from modules import stat_card
 
 logging.basicConfig(
@@ -294,9 +296,13 @@ def run():
                         written["image_url"] = ""
                         log.info(f"📇 Зурган давхарга ашиглав: {overlay_text_mn[:50]}...")
 
+            written["score"] = news.get("score", 0)
+            written["kind"] = news.get("kind", "")
+            written = scheduler.assign(written)   # S1: слот эсвэл шууд
             result = post_to_all_platforms(written)
 
             if result["success"]:
+                ledger.record(written, result)    # S3: дэвтэрт бүртгэнэ
                 posted_ids.add(news["id"])
                 import time as _t
                 posted_topics.append({"title": news.get("title", ""), "ts": _t.time()})
