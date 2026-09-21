@@ -1,0 +1,38 @@
+name: FB whoami (token аль хуудасных)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  whoami:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Token type, page, accounts
+        env:
+          T: ${{ secrets.FB_ACCESS_TOKEN }}
+          PID: ${{ secrets.FB_PAGE_ID }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request, urllib.parse
+          T, PID = os.environ["T"], os.environ["PID"]
+          G = "https://graph.facebook.com/v19.0/"
+          def get(path, **q):
+              q["access_token"] = T
+              try:
+                  with urllib.request.urlopen(G + path + "?" + urllib.parse.urlencode(q), timeout=20) as r:
+                      return json.load(r)
+              except urllib.error.HTTPError as e:
+                  return json.load(e)
+          d = get("debug_token", input_token=T).get("data", {})
+          print("TOKEN type:", d.get("type"), "| expires_at:", d.get("expires_at"), "| profile_id==PAGE_ID:", d.get("profile_id") == PID)
+          me = get("me", fields="id,name")
+          print("ME:", me.get("name"), "| me.id==PAGE_ID:", me.get("id") == PID)
+          pg = get(PID, fields="name,username,category,link,instagram_business_account")
+          print("FB_PAGE_ID ->", {k: pg.get(k) for k in ("name", "username", "category", "link")}, "| IG linked:", bool(pg.get("instagram_business_account")), "| err:", pg.get("error", {}).get("message"))
+          acc = get("me/accounts", fields="name,username,id")
+          if "data" in acc:
+              for a in acc["data"]:
+                  print("  ACCOUNT:", a.get("name"), "| username:", a.get("username"), "| is FB_PAGE_ID:", a.get("id") == PID)
+          else:
+              print("me/accounts:", acc.get("error", {}).get("message"))
+          PY
