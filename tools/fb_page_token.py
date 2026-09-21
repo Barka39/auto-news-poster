@@ -30,6 +30,22 @@ GRAPH = "https://graph.facebook.com/v19.0"
 REPO = "Barka39/auto-news-poster"
 
 
+SUFFIX_BY_NAME = {"сүнсний код": "SUNS", "үдшийн шивнээ": "UDESH"}
+
+
+def set_page_secrets(name: str, page_id: str, token: str) -> int:
+    """Хуудасны нэрээр secret-ийн нэрийг сонгож gh-ээр тавина; NBA хуудас = үндсэн нэрс."""
+    suf = SUFFIX_BY_NAME.get(name.strip().lower())
+    tok_key, id_key = (f"FB_ACCESS_TOKEN_{suf}", f"FB_PAGE_ID_{suf}") if suf else ("FB_ACCESS_TOKEN", "FB_PAGE_ID")
+    subprocess.run(["gh", "secret", "set", tok_key, "-R", REPO], input=token, text=True, check=True)
+    subprocess.run(["gh", "secret", "set", id_key, "-R", REPO], input=page_id, text=True, check=True)
+    print(f"✅ {name} → {id_key}, {tok_key} тавигдлаа")
+    if not suf:
+        subprocess.run(["gh", "workflow", "run", "auto_post.yml", "-R", REPO], check=True)
+        print("▶ Auto News Poster workflow-г эхлүүллээ")
+    return 0
+
+
 def main() -> int:
     user_token = ""
     if "--clipboard" in sys.argv:
@@ -39,11 +55,12 @@ def main() -> int:
                             capture_output=True, text=True)
         user_token = (cp.stdout or "").strip()
         if not user_token.startswith("EAA") or len(user_token) < 80:
-            print("Clipboard-д Facebook token алга. Debugger дээр сунгасан token-ийг Copy дараад дахин ажиллуул.")
-            return 1
-        print(f"Clipboard-оос token авлаа ({user_token[:8]}..., {len(user_token)} тэмдэгт)")
+            print("Clipboard-д Facebook token алга (EAA... гэж эхлэх ёстой).")
+            user_token = ""
+        else:
+            print(f"Clipboard-оос token авлаа ({user_token[:8]}..., {len(user_token)} тэмдэгт)")
     if not user_token:
-        user_token = getpass.getpass("Extend хийсэн user token (харагдахгүй): ").strip()
+        user_token = getpass.getpass("Token-оо энд paste хийгээд Enter дар (дэлгэцэнд харагдахгүй): ").strip()
     if not user_token:
         print("Token хоосон байна."); return 1
 
@@ -51,11 +68,22 @@ def main() -> int:
                      params={"access_token": user_token, "fields": "id,name,access_token"},
                      timeout=20)
     data = r.json()
-    if "error" in data:
-        print("Graph алдаа:", data["error"].get("message")); return 1
-    pages = data.get("data", [])
+    pages = data.get("data", []) if "error" not in data else []
+
     if not pages:
-        print("Энэ token-д ямар ч Page харагдахгүй — pages_manage_posts эрх өгсөн эсэхээ шалга."); return 1
+        # PAGE TOKEN шууд өгсөн тохиолдол (Graph Explorer-ийн "Page" сонголтоор авсан, Extend хийсэн):
+        # /me нь тухайн хуудсыг өөрийг нь буцаана → нэрээр нь таньж secret-д тавина.
+        me = requests.get(f"{GRAPH}/me", params={"access_token": user_token, "fields": "id,name"}, timeout=20).json()
+        if "error" in me:
+            print("Graph алдаа:", me["error"].get("message")); return 1
+        d2 = requests.get(f"{GRAPH}/debug_token", params={"input_token": user_token, "access_token": user_token},
+                          timeout=20).json().get("data", {})
+        exp = d2.get("expires_at")
+        print(f"Page token: {me.get('name')} (id {me.get('id')}), хугацаа: {'хугацаагүй ✅' if exp == 0 else exp}")
+        if exp not in (0, None):
+            print("❌ Энэ token хугацаатай байна — Debugger дээр \"Extend Access Token\" дараад сунгасныг нь хуул.")
+            return 1
+        return set_page_secrets(me.get("name", ""), me.get("id", ""), user_token)
 
     for i, p in enumerate(pages, 1):
         print(f"  {i}. {p['name']}  (id {p['id']})")
