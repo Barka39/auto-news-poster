@@ -495,6 +495,23 @@
    "scheduled_for": 1789997400,
    "slot": "2026-09-21 21:30",
    "chars": 536
+  },
+  {
+   "ts": 1789996681.8346655,
+   "fb_id": "846498595210295_122145715719086375",
+   "ig_id": "",
+   "kind": "page_numerology",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өдрийн тоо 22 · 2026.09.21",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1431,
+   "page": "suns"
   }
  ]
 }
