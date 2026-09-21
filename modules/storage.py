@@ -84,3 +84,34 @@ def save_posted(posted_ids: set, posted_topics: list = None):
 
     except Exception as e:
         log.error(f"ID хадгалахад алдаа: {e}")
+
+
+ALERT_INTERVAL_HOURS = 12  # Нэг шалтгааны 🛑 мэдэгдлийг хамгийн олондоо 12 цаг тутам
+
+
+def alert_due(key: str) -> bool:
+    """Зогсолтын мэдэгдлийг (жишээ нь token дууссан) 5-15 минут тутмын run
+    бүр дээр давтахгүй — сүүлд илгээснээс ALERT_INTERVAL_HOURS өнгөрсөн
+    бол True буцааж, цагийг posted_ids.json-ийн "alerts" талбарт бичнэ
+    (ижил файл тул workflow-ийн git add алхам өөрчлөгдөхгүй)."""
+    import time
+    data = {}
+    try:
+        if os.path.exists(STORAGE_FILE):
+            with open(STORAGE_FILE, "r", encoding="utf-8") as f:
+                data = json.load(f)
+    except Exception as e:
+        log.error(f"alert_due ачааллахад алдаа: {e}")
+        return True
+    alerts = data.get("alerts", {})
+    now = time.time()
+    if now - alerts.get(key, 0) < ALERT_INTERVAL_HOURS * 3600:
+        return False
+    alerts[key] = now
+    data["alerts"] = alerts
+    try:
+        with open(STORAGE_FILE, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        log.error(f"alert_due хадгалахад алдаа: {e}")
+    return True

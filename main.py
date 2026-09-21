@@ -4,14 +4,15 @@ Auto News Poster - Монгол мэдээ автомат постлогч
 """
 
 import logging
+import sys
 from modules.fetcher import (
     fetch_all_news, find_image_from_other_sources,
     pick_best_image, extract_article_context, find_context_from_other_sources
 )
 from modules.writer import write_article, is_valid_mongolian, filter_relevant_news
 from modules.image_fallback import get_fallback_image
-from modules.poster import post_to_all_platforms
-from modules.storage import load_posted, save_posted, load_posted_topics
+from modules.poster import post_to_all_platforms, check_facebook_token
+from modules.storage import load_posted, save_posted, load_posted_topics, alert_due
 from modules.dedup import is_duplicate_topic
 from modules import telegram_notify
 from modules import quote_card
@@ -57,6 +58,14 @@ def _translate_overlay(text_en: str) -> str:
 
 def run():
     log.info("=== Auto News Poster эхэллээ ===")
+
+    # Token дууссан бол Gemini/Groq-ийн эрх үрэлгүй ЭХЭНД нь зогсоод эзэнд хэлнэ
+    token_error = check_facebook_token()
+    if token_error:
+        log.error(f"🛑 {token_error}")
+        if alert_due("fb_token"):
+            telegram_notify.notify_alert(token_error + "\nGitHub Secrets → FB_ACCESS_TOKEN-ийг шинэчилнэ үү.")
+        sys.exit(1)
 
     posted_ids = load_posted()
     posted_topics = load_posted_topics()
@@ -266,7 +275,7 @@ def run():
                 log.warning(f"⚠️ Алдаа: {result['error']}")
 
             # Telegram мэдэгдэл (хүлээхгүй, зөвхөн FYI)
-            telegram_notify.notify_posted(written, result["success"])
+            telegram_notify.notify_posted(written, result["success"], result.get("error") or "")
 
             import time
             time.sleep(3)
@@ -277,6 +286,9 @@ def run():
 
     save_posted(posted_ids, posted_topics)
     log.info(f"=== Дууслаа: {success_count}/{len(to_post)} амжилттай ===")
+    if to_post and success_count == 0:
+        # Постлох мэдээ байсан ч нэг нь ч гараагүй — ажиллагааг улаанаар дуусгана
+        sys.exit(1)
 
 
 if __name__ == "__main__":

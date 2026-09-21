@@ -264,5 +264,27 @@ def post_to_all_platforms(news: dict) -> dict:
     return {
         "success": any_success,
         "platforms": results,
-        "error": None if any_success else "Бүх платформд алдаа гарлаа"
+        "error": None if any_success else "Бүх платформд алдаа гарлаа: " + "; ".join(
+            f"{name}={r.get('error', '?')}" for name, r in results.items()
+        )
     }
+
+
+def check_facebook_token() -> str:
+    """FB token-ийг ажил эхлэхээс ӨМНӨ нэг удаа шалгана. Хүчинтэй эсвэл
+    тохируулаагүй бол "" буцаана; дууссан/буруу бол Graph-ийн алдааны
+    текстийг буцаана (2026-09-08-аас 2 долоо хоног чимээгүй унасан тохиолдол).
+    Сүлжээний түр алдаанд ажиллагааг зогсоохгүй."""
+    token = os.environ.get("FB_ACCESS_TOKEN")
+    page_id = os.environ.get("FB_PAGE_ID")
+    if not token or not page_id:
+        return ""
+    try:
+        r = requests.get(f"https://graph.facebook.com/v19.0/{page_id}",
+                         params={"access_token": token, "fields": "id"}, timeout=15)
+        if r.status_code == 200:
+            return ""
+        err = r.json().get("error", {}).get("message", r.text[:200])
+        return f"Facebook token хүчингүй: {err}"
+    except Exception:
+        return ""

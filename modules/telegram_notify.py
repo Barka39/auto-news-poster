@@ -20,7 +20,7 @@ def is_enabled() -> bool:
     return bool(os.environ.get("TELEGRAM_BOT_TOKEN") and os.environ.get("TELEGRAM_CHAT_ID"))
 
 
-def notify_posted(news: dict, success: bool):
+def notify_posted(news: dict, success: bool, error: str = ""):
     """
     Постолсны дараа Telegram-руу товч мэдэгдэл илгээнэ.
     Алдаа гарвал зөвхөн лог хийгээд өнгөрнө — үндсэн ажиллагааг
@@ -38,9 +38,24 @@ def notify_posted(news: dict, success: bool):
     status_text = "Постлогдлоо" if success else "Постлоход алдаа гарлаа"
 
     text = f"{status_emoji} {status_text} [{category}]\n{title[:150]}"
+    if not success and error:
+        text += f"\nШалтгаан: {error[:400]}"
 
     try:
         url = TELEGRAM_API.format(token=token, method="sendMessage")
         requests.post(url, json={"chat_id": chat_id, "text": text}, timeout=10)
     except Exception as e:
         log.warning(f"Telegram мэдэгдэл илгээхэд алдаа (үл тоомсорлов): {e}")
+
+
+def notify_alert(text: str):
+    """Ажиллагааг бүхэлд нь зогсоосон шалтгааныг (жишээ нь token дууссан)
+    эзэнд нэг удаа мэдэгдэнэ. Алдаа гарвал лог хийгээд өнгөрнө."""
+    if not is_enabled():
+        return
+    try:
+        url = TELEGRAM_API.format(token=os.environ.get("TELEGRAM_BOT_TOKEN"), method="sendMessage")
+        requests.post(url, json={"chat_id": os.environ.get("TELEGRAM_CHAT_ID"),
+                                 "text": f"🛑 Auto News Poster зогслоо\n{text[:800]}"}, timeout=10)
+    except Exception as e:
+        log.warning(f"Telegram alert илгээхэд алдаа (үл тоомсорлов): {e}")

@@ -101,7 +101,7 @@ def run():
     else:
         log.warning(f"⚠️ Тойм постлоход алдаа: {result['error']}")
 
-    telegram_notify.notify_posted(digest_news, result["success"])
+    telegram_notify.notify_posted(digest_news, result["success"], result.get("error") or "")
     log.info("=== Дууслаа ===")
 
 

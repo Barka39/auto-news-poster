@@ -44,6 +44,23 @@ Repository → Settings → Secrets and variables → Actions → New repository
 2. Graph API Explorer → Page token авах
 3. Permissions: `pages_manage_posts`, `instagram_content_publish`
 
+### 4a. ⚠ Facebook token ХУГАЦААГҮЙ болгох (2026-09 сургамж)
+Graph Explorer-ийн user token 1-2 цаг, "Extend" дарсан ч **60 хоног** л ажиллана —
+2026-09-07-нд яг ийм token дуусаж 2 долоо хоног пост зогссон. Хугацаагүй нь
+зөвхөн **урт user token-оор /me/accounts-оос авсан PAGE token**. Үүнийг нэг
+командаар хийдэг туслах бий (token дэлгэцэнд харагдахгүй, файлд үлдэхгүй):
+
+```
+python tools/fb_page_token.py
+```
+
+Token дуусвал одоо: run улаан болно, Telegram-д 🛑 шалтгаантай нь ирнэ (12 цаг
+тутам нэг), Gemini/Groq-ийн эрх үрэгдэхгүй.
+
+**Groq загвар** дуусвал (`404 Not Found`): repo Settings → Secrets → `GROQ_MODEL`
+secret нэмээд шинэ загварын нэрийг тавьж болно (код өөрчлөх шаардлагагүй;
+анхдагч `qwen/qwen3.8-27b`).
+
 ### 5. X Developer тохируулах
 1. developer.twitter.com → Apply for access
 2. Free tier сонгох

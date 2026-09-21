@@ -55,6 +55,7 @@ jobs:
         run: python digest.py
 
       - name: posted_ids.json commit хийх
+        if: always()
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"

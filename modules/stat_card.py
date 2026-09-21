@@ -24,7 +24,9 @@ from modules.quote_card import _fetch_image, _draw_text_with_shadow, FONT_BOLD, 
 log = logging.getLogger(__name__)
 
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
-GROQ_MODEL = "qwen/qwen3.6-27b"
+# qwen/qwen3.6-27b 2026-09-д Groq-оос хасагдаж 404 өгсөн. Дараагийн удаа
+# secret/variable-ээр л солихын тулд орчны хувьсагчаас уншина.
+GROQ_MODEL = os.environ.get("GROQ_MODEL", "qwen/qwen3.8-27b")
 
 # Хоёр тоглогчийн өнгө: улаан / гүн хөх (ESPN comparison загвар)
 P1_COLOR = (200, 16, 46)
