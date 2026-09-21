@@ -70,6 +70,40 @@ def _record(competitor: dict) -> str:
     return recs[0].get("summary", "") if recs else ""
 
 
+def _leader_cards(competitor: dict) -> list:
+    """Картанд: онооны тэргүүлэгч + түүний бусад стат (ижил хүн бол)."""
+    by_cat = {}
+    for cat in competitor.get("leaders", []):
+        top = (cat.get("leaders") or [{}])[0]
+        ath = top.get("athlete") or {}
+        if ath.get("displayName") and top.get("displayValue"):
+            by_cat[cat.get("name", "")] = (ath, top["displayValue"])
+    if "points" not in by_cat:
+        return []
+    ath, pts = by_cat["points"]
+    stats = [("ОНОО", pts)]
+    for cat, label in (("rebounds", "САМБАР"), ("assists", "ДАМЖ")):
+        if cat in by_cat and by_cat[cat][0].get("id") == ath.get("id"):
+            stats.append((label, by_cat[cat][1]))
+    if len(stats) == 1:
+        for cat, label in (("rebounds", "САМБАР"), ("assists", "ДАМЖ")):
+            if cat in by_cat:
+                a2, v2 = by_cat[cat]
+                return [{"name": ath["displayName"], "headshot": ath.get("headshot", ""),
+                         "team": competitor["team"]["displayName"], "stats": stats},
+                        {"name": a2["displayName"], "headshot": a2.get("headshot", ""),
+                         "team": competitor["team"]["displayName"], "stats": [(label, v2)]}]
+    return [{"name": ath["displayName"], "headshot": ath.get("headshot", ""),
+             "team": competitor["team"]["displayName"], "stats": stats}]
+
+
+def _team_card(competitor: dict, score: int) -> dict:
+    tm = competitor.get("team", {})
+    return {"name": tm.get("displayName", ""), "abbr": tm.get("abbreviation", ""),
+            "logo": tm.get("logo", ""), "color": tm.get("color") or "1d428a",
+            "record": _record(competitor), "score": score, "winner": bool(competitor.get("winner"))}
+
+
 def _event_to_news(event: dict) -> dict | None:
     status = (event.get("status") or {}).get("type") or {}
     if not status.get("completed"):
@@ -128,12 +162,26 @@ def _event_to_news(event: dict) -> dict | None:
     if not url:
         url = f"https://www.espn.com/nba/game/_/gameId/{event.get('id', '')}"
 
+    try:
+        date_label = datetime.fromisoformat(event.get("date", "").replace("Z", "+00:00")).astimezone(
+            timezone(timedelta(hours=8))).strftime("%Y.%m.%d")
+    except Exception:
+        date_label = ""
+    stage_label = {2: "УЛИРЛЫН ТОГЛОЛТ", 3: "PLAYOFF"}.get(season_type, "ТОГЛОЛТ")
+    leaders = (_leader_cards(winner) + _leader_cards(loser))[:2]
+    card = {"date": date_label, "stage": stage_label, "ot": ot.strip(" ()"),
+            "home": _team_card(home, home_score), "away": _team_card(away, away_score),
+            "leaders": leaders,
+            "top": (f"{leaders[0]['name']} {leaders[0]['stats'][0][1]} оноо" if leaders else ""),
+            "margin": w_score - l_score, "season_type": season_type}
+
     return {
         "id": game_id(str(event.get("id", ""))),
         "category": "basketball",
         "category_mn": "NBA",
         "category_emoji": "🏀",
         "source_name": SOURCE_NAME,
+        "card": card,
         "title": title,
         "summary": ". ".join(facts) + ".",
         "url": url,

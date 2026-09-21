@@ -21,6 +21,7 @@ from modules import gemini_image
 from modules.translator import google_translate
 from modules import espn_api
 from modules import nba_scores
+from modules import cards
 from modules import stat_card
 
 logging.basicConfig(
@@ -214,7 +215,31 @@ def run():
             # ТОГЛОЛТЫН ҮР ДҮНГИЙН МЭДЭЭ → ESPN маягийн stat card оролдоно.
             # Стат олдохгүй бол хэвийн quote card руугаа үргэлжилнэ.
             stat_done = False
-            if category_now in ("basketball", "mn_basketball", "football", "ufc", "sports") and \
+
+            # S8 ЗУРГИЙН СИСТЕМ: HTML→Chromium карт. Recap → recap карт (scoreboard
+            # өгөгдлөөс); бусад → төрлөөр deal/quote/news. Рендер унавал доорх
+            # хуучин PIL зам хэвээр ажиллана.
+            if news.get("kind") == "game_recap" and news.get("card"):
+                png = cards.recap_card(news["card"])
+                if png:
+                    written["image_bytes"], written["image_url"], stat_done = png, "", True
+                    written["card_kind"] = "recap"
+                    log.info("🎨 Recap карт (HTML) үүслээ")
+            elif category_now in ("basketball", "mn_basketball"):
+                quote_en_early = quote_card.extract_quote(f"{news.get('title', '')} {news.get('summary', '')} {news.get('og_description', '')}")
+                headline_mn = _translate_overlay(news.get("title", "")) or written.get("title_mn", "")
+                quote_mn_early = _translate_overlay(quote_en_early) if quote_en_early and len(quote_en_early) > 30 else ""
+                entities = espn_api.get_entities(news.get("url", "")) if "espn.com" in news.get("url", "") else {}
+                photo = written.get("image_url", "")  # ≥700px сонгогдсон эх зураг (fallback биш бол)
+                if written.get("image_bytes") and not photo:
+                    photo = ""  # fallback/AI зураг — news картанд хэрэглэхгүй
+                png, ck = cards.build_for_news(news, written, headline_mn, quote_mn_early, entities, photo)
+                if png:
+                    written["image_bytes"], written["image_url"], stat_done = png, "", True
+                    written["card_kind"] = ck
+                    log.info(f"🎨 {ck} карт (HTML) үүслээ")
+
+            if not stat_done and category_now in ("basketball", "mn_basketball", "football", "ufc", "sports") and \
                     (written.get("image_url") or written.get("image_bytes")):
                 stats = stat_card.extract_stats(
                     news.get("title", ""),

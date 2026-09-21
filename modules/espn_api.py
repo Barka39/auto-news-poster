@@ -161,3 +161,19 @@ def get_image(article_url: str, min_width: int = 600) -> str:
             return best_url
 
     return ""
+
+
+def get_entities(article_url: str) -> dict:
+    """Нийтлэлийн categories-оос тоглогч/багийн ID (карт: headshot, лого)."""
+    art = _find_article(article_url)
+    out = {}
+    if not art:
+        return out
+    for c in art.get("categories", []) or []:
+        if c.get("type") == "athlete" and c.get("athleteId") and "athlete_id" not in out:
+            out["athlete_id"] = c["athleteId"]
+            out["athlete_name"] = c.get("description", "")
+        elif c.get("type") == "team" and c.get("teamId") and "team_id" not in out:
+            out["team_id"] = c["teamId"]
+            out["team_name"] = c.get("description", "")
+    return out
