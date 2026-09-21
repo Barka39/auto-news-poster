@@ -70,10 +70,12 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           MODE="${{ github.event.inputs.mode }}"
+          # GitHub cron-ийг хэдэн цагаар хойшлуулдаг тул бодит цаг биш, ямар cron
+          # мөр өдөөснөөр горимоо сонгоно
           if [ -z "$MODE" ]; then
-            case "$(date -u +%H)" in
-              05) MODE=nba ;;
-              06) MODE=standings ;;
+            case "${{ github.event.schedule }}" in
+              "0 5 * * *") MODE=nba ;;
+              "0 6 * * 1") MODE=standings ;;
               *) MODE=news ;;
             esac
           fi

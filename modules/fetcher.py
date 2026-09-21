@@ -60,6 +60,9 @@ def is_mn_watch(title: str, summary: str = "") -> bool:
 
 RSS_SOURCES = {
     "basketball": [  # NBA
+        # ESPN-ийн news API: RSS-д ордоггүй "HeadlineNews" (гэрээ, сунгалт, трейд, томилгоо) энд ирдэг
+        {"name": "ESPN NBA API", "type": "espn_api", "lang": "en",
+         "url": "https://site.web.api.espn.com/apis/site/v2/sports/basketball/nba/news?limit=30"},
         {"name": "ESPN NBA", "url": "https://www.espn.com/espn/rss/nba/news", "lang": "en"},
         {"name": "Yahoo NBA", "url": "https://sports.yahoo.com/nba/rss.xml", "lang": "en"},
         {"name": "CBS Sports NBA", "url": "https://www.cbssports.com/rss/headlines/nba/", "lang": "en"},
@@ -615,6 +618,52 @@ def fetch_html_list(category: str, source: dict) -> list:
     return results
 
 
+def fetch_espn_api(category: str, source: dict) -> list:
+    """ESPN news JSON API (site.web.api.espn.com). Story + HeadlineNews төрлийг авна,
+    Media (видео клип), podcast, тойм зэргийг алгасна. Огноо, зураг, тайлбар бэлэн."""
+    results = []
+    try:
+        resp = requests.get(source["url"], timeout=15, headers={"User-Agent": "Mozilla/5.0"})
+        resp.raise_for_status()
+        articles = resp.json().get("articles", [])
+    except Exception as e:
+        log.warning(f"ESPN API татахад алдаа [{source['name']}]: {e}")
+        return results
+    now = datetime.now(timezone.utc)
+    for art in articles:
+        if art.get("type") not in ("Story", "HeadlineNews"):
+            continue
+        title = (art.get("headline") or "").strip()
+        url = ((art.get("links") or {}).get("web") or {}).get("href", "")
+        if not title or not url or is_roundup_title(title):
+            continue
+        published_ts = 0.0
+        try:
+            dt = datetime.fromisoformat((art.get("published") or "").replace("Z", "+00:00"))
+            published_ts = dt.timestamp()
+            if now - dt > timedelta(hours=MAX_ARTICLE_AGE_HOURS):
+                continue
+        except Exception:
+            pass
+        imgs = art.get("images") or []
+        results.append({
+            "id": make_id(url),
+            "category": category,
+            "category_mn": CATEGORY_MN[category],
+            "category_emoji": CATEGORY_EMOJI[category],
+            "source_name": "ESPN",
+            "title": title,
+            "summary": clean_summary(art.get("description") or "", max_chars=900),
+            "url": url,
+            "image_url": (imgs[0].get("url") if imgs else "") or "",
+            "published": art.get("published", ""),
+            "published_ts": published_ts,
+            "lang": "en",
+        })
+    log.info(f"{source['name']}: API-аас {len(results)} мэдээ (48ц дотор, Story/HeadlineNews)")
+    return results
+
+
 def fetch_category(category: str, sources: list) -> list:
     """Нэг категорийн бүх эх сурвалжаас мэдээ татах"""
     results = []
@@ -625,13 +674,16 @@ def fetch_category(category: str, sources: list) -> list:
             if source.get("type") == "html":
                 results.extend(fetch_html_list(category, source))
                 continue
+            if source.get("type") == "espn_api":
+                results.extend(fetch_espn_api(category, source))
+                continue
             feed = feedparser.parse(source["url"])
 
             if feed.bozo:
                 log.warning(f"RSS алдаа: {source['name']}")
                 continue
 
-            for entry in feed.entries[:source.get("max_items", 5)]:  # Эх сурвалж бүрээс 5 (keywords-тэй feed илүү)
+            for entry in feed.entries[:source.get("max_items", 12)]:  # 48ц-ийн шүүлтүүр байгаа тул 12 хүртэл
                 url = entry.get("link", "")
                 if not url:
                     continue
