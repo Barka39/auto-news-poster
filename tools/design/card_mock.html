@@ -1,0 +1,46 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#111}
+  .card{width:1080px;height:1350px;position:relative;overflow:hidden;font-family:Montserrat,Arial,sans-serif;color:#fff;
+    background:linear-gradient(115deg,#0064b1 0 50%,#860038 50% 100%)}
+  .card:before{content:"";position:absolute;inset:0;background:
+    radial-gradient(900px 500px at 20% 15%,rgba(255,255,255,.18),transparent 60%),
+    radial-gradient(900px 500px at 80% 90%,rgba(255,255,255,.14),transparent 60%),
+    linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)}
+  .top{position:absolute;top:48px;left:60px;right:60px;display:flex;justify-content:space-between;align-items:center}
+  .badge{background:#fff;color:#111;font-weight:900;font-size:26px;padding:8px 18px;border-radius:8px;letter-spacing:1px}
+  .date{font-weight:600;font-size:24px;opacity:.9}
+  .teams{position:absolute;top:150px;left:0;right:0;display:flex;justify-content:space-around;align-items:center}
+  .team{display:flex;flex-direction:column;align-items:center;width:400px}
+  .team img{width:300px;height:300px;object-fit:contain;filter:drop-shadow(0 20px 30px rgba(0,0,0,.45))}
+  .team .name{font-weight:800;font-size:38px;margin-top:10px;text-align:center}
+  .team .rec{font-weight:600;font-size:26px;opacity:.85}
+  .score{position:absolute;top:520px;left:0;right:0;text-align:center;font-weight:900;font-size:180px;line-height:1;letter-spacing:-4px;text-shadow:0 12px 40px rgba(0,0,0,.4)}
+  .final{position:absolute;top:720px;left:0;right:0;text-align:center;font-weight:800;font-size:34px;letter-spacing:6px;opacity:.9}
+  .stars{position:absolute;top:800px;left:60px;right:60px;display:flex;gap:30px}
+  .star{flex:1;background:rgba(255,255,255,.12);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.25);border-radius:24px;padding:24px;display:flex;align-items:center;gap:22px}
+  .star img{width:170px;height:170px;border-radius:50%;object-fit:cover;background:#fff;object-position:top}
+  .star .n{font-weight:800;font-size:34px;line-height:1.05}
+  .star .s{font-weight:900;font-size:58px;margin-top:6px}
+  .star .s small{font-size:22px;font-weight:600;opacity:.85;margin-right:14px}
+  .foot{position:absolute;bottom:48px;left:60px;right:60px;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:26px}
+  .foot .brand{font-weight:900;font-size:30px;letter-spacing:2px}
+</style></head>
+<body>
+<div class="card">
+  <div class="top"><div class="badge">NBA · УЛИРЛЫН ТОГЛОЛТ</div><div class="date">2026.03.15</div></div>
+  <div class="teams">
+    <div class="team"><img src="https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/dal.png"><div class="name">Dallas Mavericks</div><div class="rec">23-45</div></div>
+    <div class="team"><img src="https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png"><div class="name">Cleveland Cavaliers</div><div class="rec">41-27</div></div>
+  </div>
+  <div class="score">130 : 120</div>
+  <div class="final">ТОГЛОЛТ ДУУСЛАА</div>
+  <div class="stars">
+    <div class="star"><img src="https://a.espncdn.com/i/headshots/nba/players/full/5041939.png"><div><div class="n">Cooper Flagg</div><div class="s"><small>ОНОО</small>27 <small>ДАМЖ</small>10</div></div></div>
+    <div class="star"><img src="https://a.espncdn.com/i/headshots/nba/players/full/3908809.png"><div><div class="n">Donovan Mitchell</div><div class="s"><small>ОНОО</small>26 <small>ДАМЖ</small>11</div></div></div>
+  </div>
+  <div class="foot"><div class="brand">МОНГОЛ МЭДЭЭ 🏀</div><div>Эх сурвалж: ESPN</div></div>
+</div>
+</body></html>
