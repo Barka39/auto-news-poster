@@ -495,6 +495,33 @@ def find_image_from_other_sources(title: str) -> str:
         return ""
 
 
+_PUBLISHED_META_RE = re.compile(
+    r'<meta[^>]+(?:published_time|datePublished|pubdate)[^>]+content="([^"]+)"|'
+    r'"datePublished"\s*:\s*"([^"]+)"', re.IGNORECASE)
+
+
+def fetch_published_ts(article_url: str) -> float:
+    """Нийтлэлийн хуудасны meta-аас (og:article:published_time г.м.)
+    нийтлэгдсэн цагийг уншина. Олдохгүй бол 0. HTML жагсаалтын эх
+    сурвалжид огноо байдаггүй тул хуучин мэдээ "өнөөдөр" гэж орохоос
+    сэргийлнэ (2026-09-21 ноорог: 9-р сарын 10-ны мэдээ 21-нд орох гэж байсан)."""
+    try:
+        resp = requests.get(article_url, timeout=12,
+                            headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/128"})
+        m = _PUBLISHED_META_RE.search(resp.text[:60000])
+        if not m:
+            return 0.0
+        raw = (m.group(1) or m.group(2) or "").strip()
+        raw = re.sub(r"([+-]\d{2})(\d{2})$", r"\1:\2", raw)  # +0800 → +08:00
+        dt = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.timestamp()
+    except Exception as e:
+        log.info(f"Нийтлэлийн огноо уншиж чадсангүй ({article_url[:50]}): {e}")
+        return 0.0
+
+
 def fetch_html_list(category: str, source: dict) -> list:
     """RSS-гүй сайтын ангиллын хуудаснаас (гарчиг, линк) хосыг уншина.
     Агуулга, зураг нь дараа нь extract_article_context()-оор нийтлэлийн
@@ -521,6 +548,15 @@ def fetch_html_list(category: str, source: dict) -> list:
         if kw and not re.search(kw, title, re.IGNORECASE):
             continue
         url = href if href.startswith("http") else source.get("base", "") + href
+        published_ts = fetch_published_ts(url)
+        if published_ts:
+            age_h = (datetime.now(timezone.utc).timestamp() - published_ts) / 3600
+            if age_h > MAX_ARTICLE_AGE_HOURS:
+                log.info(f"[ХУУЧИН] Алгаслаа ({age_h:.0f} цагийн өмнөх): {title[:50]}")
+                continue
+        else:
+            log.info(f"[ОГНООГҮЙ] Алгаслаа (огноо олдсонгүй, эрсдэлтэй): {title[:50]}")
+            continue
         results.append({
             "id": make_id(url),
             "category": category,
@@ -531,8 +567,8 @@ def fetch_html_list(category: str, source: dict) -> list:
             "summary": "",
             "url": url,
             "image_url": "",
-            "published": "тодорхойгүй",
-            "published_ts": 0.0,
+            "published": datetime.fromtimestamp(published_ts, tz=timezone.utc).isoformat(),
+            "published_ts": published_ts,
             "lang": source.get("lang", "mn"),
         })
         if len(results) >= source.get("max_items", 8):

@@ -138,6 +138,67 @@ def _event_to_news(event: dict) -> dict | None:
     }
 
 
+NBA_CDN_URL = "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json"
+
+
+def _nba_cdn_games() -> list:
+    """NBA-ийн албан ёсны CDN JSON (өнөөдрийн тоглолтууд, АНУ-ын өдрөөр).
+    ESPN datacenter IP-г хаах үед (2026-09-21: Actions-оос 403) нөөц.
+    Бүтэц: scoreboard.games[] {gameId, gameStatus 3=final, period,
+    homeTeam/awayTeam {teamCity, teamName, score, wins, losses},
+    gameLeaders {homeLeaders/awayLeaders {name, points, rebounds, assists}}}."""
+    resp = requests.get(NBA_CDN_URL, timeout=15, headers={"User-Agent": "Mozilla/5.0"})
+    resp.raise_for_status()
+    games = []
+    for g in resp.json().get("scoreboard", {}).get("games", []):
+        if int(g.get("gameStatus", 0)) != 3:
+            continue
+        home, away = g.get("homeTeam", {}), g.get("awayTeam", {})
+        hs, as_ = int(home.get("score", 0)), int(away.get("score", 0))
+        if hs == 0 and as_ == 0:
+            continue
+        hn = f"{home.get('teamCity', '')} {home.get('teamName', '')}".strip()
+        an = f"{away.get('teamCity', '')} {away.get('teamName', '')}".strip()
+        winner_home = hs > as_
+        w_name, l_name = (hn, an) if winner_home else (an, hn)
+        w_score, l_score = max(hs, as_), min(hs, as_)
+        period = int(g.get("period", 4) or 4)
+        ot = f" ({period - 4}OT)" if period > 4 else ""
+        leaders = g.get("gameLeaders", {}) or {}
+
+        def _ld(key):
+            l = leaders.get(key) or {}
+            if not l.get("name"):
+                return ""
+            return f"{l['name']} {l.get('points', 0)} points, {l.get('rebounds', 0)} rebounds, {l.get('assists', 0)} assists"
+
+        facts = [
+            f"FINAL{ot}: {an} {as_} - {hn} {hs} (home: {hn})",
+            f"Records after the game: {hn} {home.get('wins', '?')}-{home.get('losses', '?')}, "
+            f"{an} {away.get('wins', '?')}-{away.get('losses', '?')}",
+        ]
+        if _ld("homeLeaders"):
+            facts.append(f"{hn} top performer: {_ld('homeLeaders')}")
+        if _ld("awayLeaders"):
+            facts.append(f"{an} top performer: {_ld('awayLeaders')}")
+        games.append({
+            "id": game_id(str(g.get("gameId", ""))),
+            "category": "basketball",
+            "category_mn": "NBA",
+            "category_emoji": "🏀",
+            "source_name": "NBA.com Scoreboard",
+            "title": f"{w_name} beat {l_name} {w_score}-{l_score}{ot}",
+            "summary": ". ".join(facts) + ".",
+            "url": f"https://www.nba.com/game/{g.get('gameId', '')}",
+            "image_url": "",
+            "published": g.get("gameTimeUTC", ""),
+            "published_ts": datetime.now(timezone.utc).timestamp(),
+            "kind": "game_recap",
+            "lang": "en",
+        })
+    return games
+
+
 def fetch_finished_games(posted_ids: set | None = None) -> list:
     """Дууссан (FINAL) NBA тоглолтуудыг мэдээний dict болгон буцаана.
     posted_ids өгвөл аль хэдийн постолсныг хасна. Алдаа гарвал хоосон
@@ -161,6 +222,15 @@ def fetch_finished_games(posted_ids: set | None = None) -> list:
                 continue
             if news and news["id"] not in posted_ids and all(g["id"] != news["id"] for g in games):
                 games.append(news)
+    if not games:
+        # ESPN хаагдсан/хоосон бол NBA-ийн CDN
+        try:
+            for news in _nba_cdn_games():
+                if news["id"] not in posted_ids and all(g["id"] != news["id"] for g in games):
+                    games.append(news)
+            log.info("[NBA SCORES] NBA.com CDN шалгав")
+        except Exception as e:
+            log.warning(f"[NBA SCORES] NBA.com CDN алдаа: {e}")
     if games:
         log.info(f"[NBA SCORES] Дууссан, постлоогүй тоглолт: {len(games)} — " +
                  "; ".join(g["title"] for g in games[:4]))

@@ -1,0 +1,27 @@
+name: Probe endpoints (оношилгоо)
+
+# GitHub Actions-ийн IP-ээс аль өгөгдлийн endpoint нээлттэйг шалгана.
+# Постлохгүй, secret хэрэглэхгүй. ESPN/NBA datacenter IP-г үе үе хаадаг
+# тул nba_scores.py-ийн эх сурвалжийн дараалал үүгээр шийдэгдэнэ.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Endpoint бүрийн статус
+        run: |
+          for u in \
+            "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard" \
+            "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news?limit=2" \
+            "https://site.web.api.espn.com/apis/v2/scoreboard/header?sport=basketball&league=nba" \
+            "https://cdn.espn.com/core/nba/scoreboard?xhr=1&limit=50" \
+            "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json" \
+            "https://24tsag.mn/as/sport" \
+            "https://ikon.mn/rss"; do
+            code=$(curl -s -o /tmp/body -w "%{http_code}" -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/128" --max-time 20 "$u")
+            echo "$code  $(wc -c </tmp/body) bytes  $u"
+            head -c 300 /tmp/body | tr '\n' ' '; echo; echo
+          done
