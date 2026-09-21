@@ -23,7 +23,7 @@ from modules import ledger, telegram_notify
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 log = logging.getLogger(__name__)
 
-G = "https://graph.facebook.com/v19.0"
+G = "https://graph.facebook.com/" + os.environ.get("FB_API_VERSION", "v21.0")
 TOKEN = os.environ.get("FB_ACCESS_TOKEN", "")
 PAGE = os.environ.get("FB_PAGE_ID", "")
 
@@ -146,10 +146,34 @@ def weekly_report() -> str:
     return "\n".join(lines)
 
 
+def probe_metrics():
+    """Аль post metric энэ page/API хувилбарт хүчинтэйг нэг постоор шалгаж хэвлэнэ."""
+    d = _get(f"{PAGE}/posts", fields="id", limit=1)
+    pid = (d.get("data") or [{}])[0].get("id")
+    if not pid:
+        print("probe: пост алга", d); return
+    cands = ["post_impressions", "post_impressions_unique", "post_impressions_organic", "post_impressions_paid",
+             "post_clicks", "post_reactions_by_type_total", "post_reactions_like_total", "post_activity_by_action_type",
+             "post_engaged_users", "post_video_views", "post_impressions_viral"]
+    ok = []
+    for m in cands:
+        r = _get(f"{pid}/insights", metric=m)
+        status = "OK" if "error" not in r else r["error"].get("message", "")[:60]
+        print(f"  {m}: {status}")
+        if "error" not in r:
+            ok.append(m)
+    f = _get(pid, fields="reactions.summary(true).limit(0),comments.summary(true).limit(0),shares,insights.metric(post_impressions_unique)")
+    print("  fields:", {k: (v if k != 'insights' else 'ok') for k, v in f.items() if k != 'id'} if "error" not in f else f["error"].get("message"))
+    print("VALID:", ",".join(ok))
+
+
 if __name__ == "__main__":
     if not TOKEN:
         log.error("FB_ACCESS_TOKEN алга")
         sys.exit(1)
+    if "--probe" in sys.argv:
+        probe_metrics()
+        sys.exit(0)
     if "--backfill" in sys.argv:
         backfill()
     update_metrics()

@@ -11,7 +11,6 @@ mn-MN-BataaNeural) + хадмал. NBA-ийн бодит бичлэг ашигл
 Юу ч унавал "" буцаана → зурагтай пост хэвээр гарна.
 """
 
-import asyncio
 import base64
 import html
 import logging
@@ -75,11 +74,14 @@ def tts_script(text: str) -> str:
 def synthesize(text: str, out_mp3: str) -> float:
     """edge-tts → mp3; секундээр урт (ffprobe). Алдаа бол 0."""
     try:
-        import edge_tts
-
-        async def _run():
-            await edge_tts.Communicate(text, VOICE).save(out_mp3)
-        asyncio.run(_run())
+        # Playwright-ийн sync API event loop эзэмшдэг тул asyncio.run() энд ажиллахгүй —
+        # edge-tts-ийг тусдаа процессоор дуудна
+        import sys
+        r = subprocess.run([sys.executable, "-m", "edge_tts", "--voice", VOICE, "--text", text,
+                            "--write-media", out_mp3], capture_output=True, text=True, timeout=120)
+        if r.returncode != 0 or not os.path.exists(out_mp3):
+            log.warning(f"[VIDEO] edge-tts алдаа: {(r.stderr or r.stdout)[-300:]}")
+            return 0.0
         return _duration(out_mp3)
     except Exception as e:
         log.warning(f"[VIDEO] TTS алдаа: {e}")
