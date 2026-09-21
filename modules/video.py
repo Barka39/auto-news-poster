@@ -76,13 +76,16 @@ def synthesize(text: str, out_mp3: str) -> float:
     try:
         # Playwright-ийн sync API event loop эзэмшдэг тул asyncio.run() энд ажиллахгүй —
         # edge-tts-ийг тусдаа процессоор дуудна
-        import sys
-        r = subprocess.run([sys.executable, "-m", "edge_tts", "--voice", VOICE, "--text", text,
-                            "--write-media", out_mp3], capture_output=True, text=True, timeout=120)
-        if r.returncode != 0 or not os.path.exists(out_mp3):
-            log.warning(f"[VIDEO] edge-tts алдаа: {(r.stderr or r.stdout)[-300:]}")
-            return 0.0
-        return _duration(out_mp3)
+        import sys, time as _t
+        for attempt in range(3):
+            r = subprocess.run([sys.executable, "-m", "edge_tts", "--voice", VOICE, "--text", text,
+                                "--write-media", out_mp3], capture_output=True, text=True, timeout=120)
+            if r.returncode == 0 and os.path.exists(out_mp3) and os.path.getsize(out_mp3) > 1000:
+                return _duration(out_mp3)
+            log.warning(f"[VIDEO] edge-tts алдаа (оролдлого {attempt + 1}): {(r.stderr or r.stdout)[-160:]}")
+            _t.sleep(2)
+        # GitHub Actions-ийн IP-г Bing TTS үе үе 403-оор хаадаг → хоолойгүй, хадмалтай видео
+        return 0.0
     except Exception as e:
         log.warning(f"[VIDEO] TTS алдаа: {e}")
         return 0.0
@@ -192,9 +195,12 @@ def recap_video(card: dict, script: str, out_path: str) -> str:
             return ""
         mp3 = os.path.join(work, "voice.mp3")
         dur = synthesize(text, mp3)
-        if dur <= 0:
-            return ""
-        total = max(10.0, dur + 1.2)
+        has_audio = dur > 0
+        if not has_audio:
+            # Хоолойгүй хувилбар: 14 сек, хадмал 12 секундэд (FB видеоны ихэнх нь дуугүй үзэгддэг)
+            dur = 12.0
+            log.info("[VIDEO] хоолойгүй (хадмалтай) видео үүсгэнэ")
+        total = max(10.0, dur + 1.5)
         captions = caption_timeline(text, dur)
         html_doc = _recap_html(card, captions, total)
 
@@ -213,12 +219,14 @@ def recap_video(card: dict, script: str, out_path: str) -> str:
         finally:
             page.close()
 
-        cmd = [FFMPEG, "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", os.path.join(work, "f_%05d.jpg"),
-               "-i", mp3, "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p",
-               "-r", str(FPS), "-c:a", "aac", "-b:a", "128k", "-shortest", "-movflags", "+faststart", out_path]
+        cmd = [FFMPEG, "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", os.path.join(work, "f_%05d.jpg")]
+        if has_audio:
+            cmd += ["-i", mp3, "-c:a", "aac", "-b:a", "128k", "-shortest"]
+        cmd += ["-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p",
+                "-r", str(FPS), "-movflags", "+faststart", out_path]
         subprocess.run(cmd, check=True, timeout=300)
         size = os.path.getsize(out_path)
-        log.info(f"🎬 Recap видео: {total:.1f}с, {frames} кадр, {size // 1024} KB")
+        log.info(f"🎬 Recap видео: {total:.1f}с, {frames} кадр, {size // 1024} KB, {'хоолойтой' if has_audio else 'хоолойгүй'}")
         return out_path
     except Exception as e:
         log.warning(f"[VIDEO] алдаа: {e}")

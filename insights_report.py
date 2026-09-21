@@ -35,26 +35,34 @@ def _get(path: str, **params) -> dict:
 
 
 def fetch_post_metrics(post_id: str) -> dict | None:
+    """Meta 2024-25-д post_impressions* metric-үүдийг хассан (probe 2026-09-21).
+    Үлдсэн: post_clicks, post_reactions_by_type_total, post_activity_by_action_type,
+    post_video_views → engagement-ээр хэмжинэ (reach байхгүй)."""
     out = {}
-    # Meta 2024-2025-д олон post metric-ийг хассан → боломжит багцуудыг дарааллаар оролдоно
-    d = None
-    for metrics in ("post_impressions_unique,post_clicks", "post_impressions_unique", "post_impressions"):
-        d = _get(f"{post_id}/insights", metric=metrics)
-        if "error" not in d:
-            break
-    if not d or "error" in d:
-        log.warning(f"insights алдаа {post_id}: {(d or {}).get('error', {}).get('message')}")
+    d = _get(f"{post_id}/insights",
+             metric="post_clicks,post_reactions_by_type_total,post_activity_by_action_type,post_video_views")
+    if "error" in d:
+        log.warning(f"insights алдаа {post_id}: {d['error'].get('message')}")
         return None
     for m in d.get("data", []):
         vals = m.get("values") or [{}]
-        out[m["name"].replace("post_", "")] = vals[0].get("value", 0)
-    if "impressions_unique" not in out and "impressions" in out:
-        out["impressions_unique"] = out["impressions"]
-    f = _get(post_id, fields="reactions.summary(true).limit(0),comments.summary(true).limit(0),shares")
+        v = vals[0].get("value", 0)
+        name = m["name"]
+        if name == "post_reactions_by_type_total":
+            out["reactions"] = sum((v or {}).values()) if isinstance(v, dict) else (v or 0)
+        elif name == "post_activity_by_action_type":
+            v = v or {}
+            out["shares"] = v.get("share", 0)
+            out["comments"] = v.get("comment", 0)
+        elif name == "post_clicks":
+            out["clicks"] = v or 0
+        elif name == "post_video_views":
+            out["video_views"] = v or 0
+    f = _get(post_id, fields="comments.summary(true).limit(0),shares")
     if "error" not in f:
-        out["reactions"] = (f.get("reactions") or {}).get("summary", {}).get("total_count", 0)
-        out["comments"] = (f.get("comments") or {}).get("summary", {}).get("total_count", 0)
-        out["shares"] = (f.get("shares") or {}).get("count", 0)
+        out["comments"] = max(out.get("comments", 0), (f.get("comments") or {}).get("summary", {}).get("total_count", 0))
+        out["shares"] = max(out.get("shares", 0), (f.get("shares") or {}).get("count", 0))
+    out["engagement"] = out.get("reactions", 0) + out.get("comments", 0) * 3 + out.get("shares", 0) * 5 + out.get("clicks", 0) * 0.5
     out["fetched_at"] = time.time()
     return out
 
@@ -113,13 +121,13 @@ def weekly_report() -> str:
     if not week:
         return "📊 Долоо хоногийн тайлан: хэмжилттэй пост алга (insights хараахан ирээгүй)."
 
-    def reach(p):
+    def reach(p):   # reach metric байхгүй → engagement оноо (reaction + comment×3 + share×5 + click×0.5)
         m = p.get("m7d") or p.get("m24") or {}
-        return m.get("impressions_unique", 0)
+        return m.get("engagement", 0)
 
     def eng(p):
         m = p.get("m7d") or p.get("m24") or {}
-        return m.get("reactions", 0) + m.get("comments", 0) * 3 + m.get("shares", 0) * 5
+        return m.get("reactions", 0)
 
     by_kind = defaultdict(list)
     by_slot = defaultdict(list)
@@ -127,20 +135,20 @@ def weekly_report() -> str:
         by_kind[p.get("kind") or "news"].append(p)
         hour = time.strftime("%H", time.gmtime(p.get("ts", 0) + 8 * 3600))
         by_slot[hour + ":00"].append(p)
-    lines = [f"📊 Долоо хоногийн тайлан ({len(week)} пост, reach нийт {sum(reach(p) for p in week):,})", ""]
-    lines.append("Төрлөөр (дундаж reach / engagement):")
+    lines = [f"📊 Долоо хоногийн тайлан ({len(week)} пост, engagement нийт {sum(reach(p) for p in week):,.0f})", "(engagement = reaction + comment×3 + share×5 + click×0.5; Meta reach metric-ийг хассан)", ""]
+    lines.append("Төрлөөр (дундаж engagement / reaction):")
     for k, ps in sorted(by_kind.items(), key=lambda kv: -sum(reach(p) for p in kv[1]) / len(kv[1])):
         lines.append(f"  • {k}: {sum(reach(p) for p in ps) / len(ps):,.0f} / {sum(eng(p) for p in ps) / len(ps):.1f}  (n={len(ps)})")
     lines.append("")
     top = sorted(week, key=reach, reverse=True)
     lines.append("Шилдэг 3:")
     for p in top[:3]:
-        lines.append(f"  ✅ {reach(p):,} — {p.get('title', '')[:60]}")
+        lines.append(f"  ✅ {reach(p):,.0f} — {p.get('title', '')[:60]}")
     lines.append("Сул 3:")
     for p in top[-3:]:
-        lines.append(f"  ⚠️ {reach(p):,} — {p.get('title', '')[:60]}")
+        lines.append(f"  ⚠️ {reach(p):,.0f} — {p.get('title', '')[:60]}")
     lines.append("")
-    lines.append("Цагаар (УБ, дундаж reach):")
+    lines.append("Цагаар (УБ, дундаж engagement):")
     for h, ps in sorted(by_slot.items()):
         lines.append(f"  {h}: {sum(reach(p) for p in ps) / len(ps):,.0f} (n={len(ps)})")
     return "\n".join(lines)
