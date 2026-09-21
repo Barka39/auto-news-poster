@@ -14,6 +14,9 @@ on:
       min_score:
         description: "Ач холбогдлын босго 0-10 (MIN_NEWS_SCORE)"
         default: "7"
+      scores_dates:
+        description: "Тест: NBA тоглолтын огноо YYYYMMDD (таслалаар), хоосон = өнөөдөр/өчигдөр"
+        default: ""
 
 jobs:
   draft:
@@ -31,6 +34,7 @@ jobs:
           AUTONEWS_DRAFT_DIR: drafts
           MAX_POSTS_PER_RUN: ${{ github.event.inputs.max_posts }}
           MIN_NEWS_SCORE: ${{ github.event.inputs.min_score }}
+          NBA_SCORES_DATES: ${{ github.event.inputs.scores_dates }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}

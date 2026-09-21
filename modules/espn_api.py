@@ -19,11 +19,16 @@ datacenter IP-ээс requests-ээр татахад Akamai bot protection 403 ө
     ]
 """
 
+import os
 import re
 import logging
 import requests
 
 log = logging.getLogger(__name__)
+
+# site.api.espn.com 2026-09-с GitHub Actions-ийн IP-д 403; site.web.api.espn.com
+# ижил замаар 200 өгдөг (probe workflow-оор батлагдсан)
+ESPN_HOST = os.environ.get("ESPN_API_HOST", "https://site.web.api.espn.com")
 
 # espn.com/{section}/story/_/id/{id}/... URL-ийн section →
 # site.api.espn.com/apis/site/v2/sports/{sport}/{league}/news зам
@@ -66,7 +71,7 @@ def _find_article(article_url: str) -> dict | None:
 
     try:
         resp = requests.get(
-            f"https://site.api.espn.com/apis/site/v2/sports/{api_path}/news",
+            f"{ESPN_HOST}/apis/site/v2/sports/{api_path}/news",
             params={"limit": 50},
             timeout=10,
             headers={"User-Agent": "Mozilla/5.0"},

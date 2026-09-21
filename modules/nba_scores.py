@@ -17,13 +17,17 @@ ESPN-ийн энэ endpoint GitHub Actions-оос ажилладаг (espn_api.p
 """
 
 import logging
+import os
 from datetime import datetime, timedelta, timezone
 
 import requests
 
 log = logging.getLogger(__name__)
 
-SCOREBOARD_URL = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard"
+# 2026-09-21 probe: site.api.espn.com болон cdn.nba.com GitHub Actions-оос 403,
+# харин site.web.api.espn.com (ижил зам, ESPN-ийн вэб апп-ын хост) 200.
+ESPN_HOST = os.environ.get("ESPN_API_HOST", "https://site.web.api.espn.com")
+SCOREBOARD_URL = f"{ESPN_HOST}/apis/site/v2/sports/basketball/nba/scoreboard"
 SOURCE_NAME = "ESPN Scoreboard"
 SEASON_TYPE_MN = {1: "бэлтгэл (preseason)", 2: "улирлын", 3: "playoff", 4: "off-season"}
 LEADER_MN = {"points": "оноо", "rebounds": "самбар", "assists": "дамжуулалт", "rating": ""}
@@ -37,6 +41,9 @@ def _dates_to_check() -> list:
     """ESPN-ийн dates параметр АНУ-ын Зүүн эргийн өдрөөр. Монголын өглөө
     (UTC 0-6) АНУ-д өмнөх орой хэвээр байдаг тул UTC-6 цагаар өнөөдөр
     болон өчигдрийг шалгана — дуусаад удаагүй тоглолт алдагдахгүй."""
+    override = os.environ.get("NBA_SCORES_DATES", "").strip()  # тест: "20260315,20260316"
+    if override:
+        return [d.strip() for d in override.split(",") if d.strip()]
     us_now = datetime.now(timezone.utc) - timedelta(hours=6)
     return [(us_now - timedelta(days=1)).strftime("%Y%m%d"), us_now.strftime("%Y%m%d")]
 
