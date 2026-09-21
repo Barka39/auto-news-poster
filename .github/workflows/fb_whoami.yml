@@ -11,6 +11,8 @@ jobs:
         env:
           T: ${{ secrets.FB_ACCESS_TOKEN }}
           PID: ${{ secrets.FB_PAGE_ID }}
+          PID_SUNS: ${{ secrets.FB_PAGE_ID_SUNS }}
+          PID_UDESH: ${{ secrets.FB_PAGE_ID_UDESH }}
         run: |
           python3 - <<'PY'
           import json, os, urllib.request, urllib.parse
@@ -29,6 +31,10 @@ jobs:
           print("ME:", me.get("name"), "| me.id==PAGE_ID:", me.get("id") == PID)
           pg = get(PID, fields="name,username,category,link,instagram_business_account")
           print("FB_PAGE_ID ->", {k: pg.get(k) for k in ("name", "username", "category", "link")}, "| IG linked:", bool(pg.get("instagram_business_account")), "| err:", pg.get("error", {}).get("message"))
+          print("PAGE ID (нийтийн, хэсэглэн):", PID[:6], PID[6:])
+          for suf in ("SUNS", "UDESH"):
+              v = os.environ.get("PID_" + suf, "")
+              print(f"PAGE ID {suf}:", v[:6], v[6:])
           acc = get("me/accounts", fields="name,username,id")
           if "data" in acc:
               for a in acc["data"]:
