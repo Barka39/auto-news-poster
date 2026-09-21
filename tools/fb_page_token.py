@@ -117,6 +117,15 @@ def main() -> int:
 
     main_pages = [p for p in pages if NBA_PAGE_RE.search(p["name"] or "")]
     if not main_pages:
+        others = [p for p in pages if p["name"].strip().lower() not in SUFFIX_BY_NAME]
+        if others:
+            print("Сагсны мэдээний (unuudur.mgl) хуудас аль нь вэ? 0 = аль нь ч биш")
+            for i, p in enumerate(others, 1):
+                print(f"  {i}. {p['name']}")
+            ans = input("Дугаар: ").strip()
+            if ans.isdigit() and 1 <= int(ans) <= len(others):
+                main_pages = [others[int(ans) - 1]]
+    if not main_pages:
         print("⚠️ unuudur.mgl (сагсны) хуудас энэ token-д алга. Graph Explorer-т Generate Access Token дарахад гарах")
         print("   Facebook-ийн цонхонд «Edit settings / Бүх хуудас» сонгож unuudur.mgl-ийг ЧАГТАЛНА уу.")
         print("   Контент хуудсуудыг тохируулсан; NBA-ийн тохиргоонд хүрсэнгүй."); return 0
