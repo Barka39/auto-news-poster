@@ -15,6 +15,9 @@ from modules.poster import post_to_all_platforms
 from modules.storage import load_posted, save_posted
 from modules import telegram_notify
 from modules import ledger
+from modules import nba_digest
+import sys
+import os
 from modules import quote_card
 
 logging.basicConfig(
@@ -24,6 +27,56 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 
 MAX_DIGEST_ITEMS = 6  # Нэг тоймд дээд тал нь оруулах мэдээний тоо
+
+
+def run_nba_morning():
+    """S2: Өглөөний NBA — шөнийн бүх үр дүн нэг постонд. Тоглолт байхгүй бол
+    ердийн мэдээний тойм руу буцна."""
+    log.info("=== Өглөөний NBA эхэллээ ===")
+    posted_ids = load_posted()
+    post = nba_digest.build_morning(posted_ids)
+    if not post:
+        log.info("Шөнө NBA тоглолт болоогүй — мэдээний тойм руу шилжье")
+        return run()
+    if post["id"] in posted_ids:
+        log.info("Өнөөдрийн өглөөний NBA аль хэдийн постлогдсон")
+        return
+    result = post_to_all_platforms(post)
+    if result["success"]:
+        ledger.record(post, result)
+        posted_ids.add(post["id"])
+        for gid in post.get("game_ids", []):
+            posted_ids.add(gid)   # тоймд орсон тоглолт дахин recap болохгүй
+        save_posted(posted_ids)
+        log.info(f"✅ Өглөөний NBA постлогдлоо ({len(post.get('game_ids', []))} тоглолт)")
+    else:
+        log.warning(f"⚠️ Өглөөний NBA постлоход алдаа: {result['error']}")
+        sys.exit(1)
+    if not os.environ.get("AUTONEWS_DRAFT_DIR"):
+        telegram_notify.notify_posted(post, result["success"], result.get("error") or "")
+
+
+def run_standings():
+    """S2: долоо хоног бүр бүсийн байрлал (2 пост: Зүүн, Баруун)."""
+    log.info("=== Бүсийн байрлал эхэллээ ===")
+    posted_ids = load_posted()
+    posts = nba_digest.build_standings()
+    if not posts:
+        log.info("Standings өгөгдөл алга (off-season?) — дуусгалаа")
+        return
+    ok = 0
+    for post in posts:
+        if post["id"] in posted_ids:
+            continue
+        result = post_to_all_platforms(post)
+        if result["success"]:
+            ledger.record(post, result)
+            posted_ids.add(post["id"])
+            ok += 1
+        else:
+            log.warning(f"⚠️ Standings постлоход алдаа: {result['error']}")
+    save_posted(posted_ids)
+    log.info(f"=== Standings: {ok}/{len(posts)} ===")
 
 
 def run():
@@ -109,4 +162,9 @@ def run():
 
 
 if __name__ == "__main__":
-    run()
+    if "--nba" in sys.argv:
+        run_nba_morning()
+    elif "--standings" in sys.argv:
+        run_standings()
+    else:
+        run()

@@ -4,11 +4,19 @@ on:
   # Монголын цагаар 12:00 болон 19:00 (UTC+8):
   #   12:00 МН = 04:00 UTC
   #   19:00 МН = 11:00 UTC
+  # + Өглөөний NBA 13:00 МН = 05:00 UTC (шөнийн тоглолтууд дууссаны дараа)
+  # + Бүсийн байрлал Даваа 14:00 МН = 06:00 UTC
   schedule:
     - cron: "0 4 * * *"
     - cron: "0 11 * * *"
+    - cron: "0 5 * * *"
+    - cron: "0 6 * * 1"
 
   workflow_dispatch:
+    inputs:
+      mode:
+        description: "news | nba | standings"
+        default: "nba"
 
 concurrency:
   group: auto-news-poster
@@ -60,7 +68,21 @@ jobs:
           X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python digest.py
+        run: |
+          MODE="${{ github.event.inputs.mode }}"
+          if [ -z "$MODE" ]; then
+            case "$(date -u +%H)" in
+              05) MODE=nba ;;
+              06) MODE=standings ;;
+              *) MODE=news ;;
+            esac
+          fi
+          echo "digest горим: $MODE"
+          case "$MODE" in
+            nba) python digest.py --nba ;;
+            standings) python digest.py --standings ;;
+            *) python digest.py ;;
+          esac
 
       - name: posted_ids.json commit хийх
         if: always()

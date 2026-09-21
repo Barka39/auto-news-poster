@@ -21,6 +21,7 @@ from modules import gemini_image
 from modules.translator import google_translate
 from modules import espn_api
 from modules import nba_scores
+from modules import nba_digest
 from modules import cards
 from modules import scheduler
 from modules import ledger
@@ -82,6 +83,12 @@ def run():
     # ДӨНГӨЖ ДУУССАН NBA ТОГЛОЛТ (ESPN scoreboard) — редакцийн бодлогын №1,
     # шүүлтүүр давахгүй, үргэлж эхэнд
     recaps = nba_scores.fetch_finished_games(posted_ids)
+    # S2: ганцаарчилсан recap зөвхөн онцгой тоглолтод (playoff / OT / ≤3 оноо);
+    # бусад нь 13:00-ийн "Өглөөний NBA" тоймд орно
+    skipped = [g["title"] for g in recaps if not nba_digest.should_post_recap(g)]
+    recaps = [g for g in recaps if nba_digest.should_post_recap(g)]
+    if skipped:
+        log.info(f"[NBA SCORES] Өглөөний тоймд үлдээв ({len(skipped)}): " + "; ".join(skipped[:3]))
 
     new_news = [n for n in all_news if n["id"] not in posted_ids]
     log.info(f"Шинэ мэдээ: {len(new_news)} ширхэг (+{len(recaps)} тоглолтын үр дүн)")

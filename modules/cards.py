@@ -251,7 +251,7 @@ def quote_card(quote: str, name: str, subline: str, photo: str = "", headshot: s
 def digest_card(games: list, date_label: str, title: str = "ӨГЛӨӨНИЙ NBA") -> bytes:
     """games = [{away:{abbr,logo,score,winner}, home:{...}, top:'Name 34 PTS', ot:bool}]"""
     n = max(len(games), 1)
-    row_h = min(84, (1350 - 300) // n)
+    row_h = min(118, (1350 - 300) // n)   # цөөн тоглолттой шөнө мөрүүд томорно
     css = f"""
 .card{{background:linear-gradient(160deg,#0b1a33 0%,#16213e 60%,#1d428a 140%)}}
 .head{{position:absolute;top:50px;left:60px;right:60px;display:flex;justify-content:space-between;align-items:center}}
@@ -260,11 +260,11 @@ def digest_card(games: list, date_label: str, title: str = "ӨГЛӨӨНИЙ NBA
 .rows{{position:absolute;top:150px;left:60px;right:60px}}
 .row{{display:flex;align-items:center;height:{row_h}px;border-bottom:1px solid rgba(255,255,255,.12)}}
 .row img{{width:{min(56, row_h - 20)}px;height:{min(56, row_h - 20)}px;object-fit:contain}}
-.t{{width:110px;font-weight:800;font-size:30px;text-align:center}}
-.sc{{width:100px;font-weight:900;font-size:36px;text-align:center}}
+.t{{width:110px;font-weight:800;font-size:{30 if row_h < 100 else 34}px;text-align:center}}
+.sc{{width:100px;font-weight:900;font-size:{36 if row_h < 100 else 42}px;text-align:center}}
 .sc.l{{opacity:.55;font-weight:600}}
 .mid{{width:30px;text-align:center;opacity:.6;font-weight:600}}
-.top{{flex:1;font-weight:600;font-size:22px;opacity:.85;padding-left:22px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
+.top{{flex:1;font-weight:600;font-size:{22 if row_h < 100 else 26}px;opacity:.85;padding-left:22px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
 .ot{{font-size:18px;font-weight:800;color:#ffd166;margin-left:8px}}
 """
     rows = ""
