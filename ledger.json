@@ -822,6 +822,38 @@
    "scheduled_for": 1790224200,
    "slot": "2026-09-24 12:30",
    "chars": 430
+  },
+  {
+   "ts": 1790109102.540018,
+   "fb_id": "736504959542737_122185687166935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Spurs-Pelicans games in Paris, Manchester sold out, NBA says",
+   "url": "https://www.espn.com/nba/story/_/id/50008103/spurs-pelicans-games-paris-manchester-sold-nba-says",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 275
+  },
+  {
+   "ts": 1790109118.3479073,
+   "fb_id": "736504959542737_122185687280935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "quote",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Rockets, with return of VanVleet, hope to make 'real noise'",
+   "url": "https://www.espn.com/nba/story/_/id/50007712/rockets-return-vanvleet-hope-make-real-noise",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 405
   }
  ]
 }
