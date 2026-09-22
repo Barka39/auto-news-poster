@@ -710,6 +710,38 @@
    "scheduled_for": 1790170200,
    "slot": "2026-09-23 21:30",
    "chars": 588
+  },
+  {
+   "ts": 1790089371.4970255,
+   "fb_id": "736504959542737_122185648280935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Henri Veesaar Expected To Miss Upcoming Season With Torn ACL",
+   "url": "https://basketball.realgm.com/wiretap/287344/Henri-Veesaar-Expected-To-Miss-Upcoming-Season-With-Torn-ACL",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 408
+  },
+  {
+   "ts": 1790089442.444839,
+   "fb_id": "736504959542737_122185648388935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Clippers Name John S. Gibson Interim CEO, Governor",
+   "url": "https://basketball.realgm.com/wiretap/287337/Clippers-Name-John-S-Gibson-Interim-CEO-Governor",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 461
   }
  ]
 }
