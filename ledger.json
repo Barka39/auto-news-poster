@@ -870,6 +870,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 410
+  },
+  {
+   "ts": 1790114530.1222959,
+   "fb_id": "736504959542737_122185696178935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "NBA division rivals make a deal. Who the Hawks, Hornets traded",
+   "url": "https://sports.yahoo.com/articles/nba-division-rivals-deal-hawks-215226317.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 333
   }
  ]
 }
