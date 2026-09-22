@@ -742,6 +742,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 461
+  },
+  {
+   "ts": 1790089947.2981365,
+   "fb_id": "736504959542737_122185649042935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "CBS Sports NBA",
+   "title": "Clippers name interim governor to replace Steve Ballmer during one-year suspension over Kawhi Leonard deal",
+   "url": "https://www.cbssports.com/nba/news/clippers-interim-governor-steve-ballmer-suspension-kawhi-leonard/",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 887
+  },
+  {
+   "ts": 1790089983.008718,
+   "fb_id": "736504959542737_122185649114935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Lakers Buyers Project $30B-$60B Valuation Within 10 Years",
+   "url": "https://basketball.realgm.com/wiretap/287340/Lakers-Buyers-Project-$30B-$60B-Valuation-Within-10-Years",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 639
   }
  ]
 }
