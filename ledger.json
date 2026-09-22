@@ -774,6 +774,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 639
+  },
+  {
+   "ts": 1790094169.5516353,
+   "fb_id": "122185655984935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Trae Young Says Hawks' Front Office Turnover Led To Trade To Wizards",
+   "url": "https://basketball.realgm.com/wiretap/287348/Trae-Young-Says-Hawks-Front-Office-Turnover-Led-To-Trade-To-Wizards",
+   "scheduled_for": 1790208000,
+   "slot": "2026-09-24 08:00",
+   "chars": 756
   }
  ]
 }
