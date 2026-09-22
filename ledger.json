@@ -790,6 +790,22 @@
    "scheduled_for": 1790208000,
    "slot": "2026-09-24 08:00",
    "chars": 756
+  },
+  {
+   "ts": 1790104924.2129078,
+   "fb_id": "736504959542737_122185679246935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "deal",
+   "video": false,
+   "score": 10.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Raptors agree to 2-year, $115M extension with Kawhi Leonard",
+   "url": "https://www.espn.com/nba/story/_/id/50007389/raptors-agree-2-year-115m-extension-kawhi-leonard",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 245
   }
  ]
 }
