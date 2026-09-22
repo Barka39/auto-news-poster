@@ -614,6 +614,38 @@
    "slot": "",
    "chars": 1364,
    "page": "udesh"
+  },
+  {
+   "ts": 1790087627.795955,
+   "fb_id": "736504959542737_122185645418935957",
+   "ig_id": "",
+   "kind": "mn",
+   "card": "news",
+   "video": false,
+   "score": 10,
+   "category": "mn_basketball",
+   "source": "ikon.mn",
+   "title": "АЙЧИ НАГОЯ 2026: 3х3 сагсан бөмбөгийн эмэгтэй баг хэсгийн шатанд Филиппин, Малайзыг барсангүй",
+   "url": "https://ikon.mn/n/3qi6",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 474
+  },
+  {
+   "ts": 1790087645.0511234,
+   "fb_id": "122185645478935957",
+   "ig_id": "",
+   "kind": "mn",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "mn_basketball",
+   "source": "ikon.mn",
+   "title": "АЙЧИ НАГОЯ 2026: Эмэгтэй сагсан бөмбөгийн шигшээ баг шөвгийн наймд шалгарлаа",
+   "url": "https://ikon.mn/n/3qid",
+   "scheduled_for": 1790121600,
+   "slot": "2026-09-23 08:00",
+   "chars": 517
   }
  ]
 }
