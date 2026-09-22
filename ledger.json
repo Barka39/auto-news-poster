@@ -806,6 +806,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 245
+  },
+  {
+   "ts": 1790107908.9701645,
+   "fb_id": "122185685198935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Sources: Hawks trade Hield, Nembhard to Hornets for Finney-Smith",
+   "url": "https://www.espn.com/nba/story/_/id/50008021/sources-hawks-trade-hield-nembhard-hornets-finney-smith",
+   "scheduled_for": 1790224200,
+   "slot": "2026-09-24 12:30",
+   "chars": 430
   }
  ]
 }
