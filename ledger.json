@@ -886,6 +886,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 333
+  },
+  {
+   "ts": 1790115128.3239212,
+   "fb_id": "736504959542737_122185697396935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 10.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Kawhi Leonard suggests he will retire a Raptor: inks extension with Toronto",
+   "url": "https://sports.yahoo.com/articles/kawhi-leonard-suggests-retire-raptor-195424821.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 379
   }
  ]
 }
