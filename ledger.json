@@ -1327,6 +1327,22 @@
    "scheduled_for": 1790312400,
    "slot": "2026-09-25 13:00",
    "chars": 572
+  },
+  {
+   "ts": 1790190161.003006,
+   "fb_id": "736504959542737_122185846142935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "‘People around the league’ monitoring Dallas Mavs’ Kyrie Irving situation, per ESPN’s Tim MacMahon",
+   "url": "https://sports.yahoo.com/articles/people-around-league-monitoring-dallas-164519534.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 339
   }
  ]
 }
