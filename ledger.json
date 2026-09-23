@@ -1279,6 +1279,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 324
+  },
+  {
+   "ts": 1790181787.5901322,
+   "fb_id": "736504959542737_122185828910935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "What did Kevin Durant say at 2026 Houston Rockets Media Day?",
+   "url": "https://sports.yahoo.com/articles/did-kevin-durant-2026-houston-162255460.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 271
+  },
+  {
+   "ts": 1790181843.3152432,
+   "fb_id": "736504959542737_122185829030935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "The NBA's 5 most interesting newcomers, starring LeBron James, LaMelo Ball and the Lakers' big swing",
+   "url": "https://sports.yahoo.com/nba/article/the-nbas-5-most-interesting-newcomers-starring-lebron-james-lamelo-ball-and-the-lakers-big-swing-162109802.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1014
   }
  ]
 }
