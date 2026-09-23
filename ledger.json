@@ -955,6 +955,38 @@
    "slot": "",
    "chars": 1779,
    "page": "suns"
+  },
+  {
+   "ts": 1790126502.3343422,
+   "fb_id": "122185722386935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Chris Spatola, ESPN personality and son-in-law of Mike Krzyzewski, suddenly dies at 47",
+   "url": "https://sports.yahoo.com/articles/chris-spatola-espn-personality-son-010351184.html",
+   "scheduled_for": 1790247600,
+   "slot": "2026-09-24 19:00",
+   "chars": 323
+  },
+  {
+   "ts": 1790126526.072539,
+   "fb_id": "736504959542737_122185722560935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Detroit Pistons enlist DAZN as streaming platform partner",
+   "url": "https://sports.yahoo.com/articles/detroit-pistons-enlist-dazn-streaming-215047216.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 385
   }
  ]
 }
