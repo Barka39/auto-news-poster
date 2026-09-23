@@ -1343,6 +1343,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 339
+  },
+  {
+   "ts": 1790190712.9765692,
+   "fb_id": "736504959542737_122185847348935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Sources: Knicks, Karl-Anthony Towns contract talks at standstill",
+   "url": "https://www.espn.com/nba/story/_/id/50014705/sources-knicks-karl-anthony-towns-contract-talks-standstill",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 219
   }
  ]
 }
