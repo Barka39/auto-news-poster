@@ -1311,6 +1311,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1014
+  },
+  {
+   "ts": 1790189506.3516603,
+   "fb_id": "122185844888935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Alperen Şengün feels the Rockets beat the Lakers in ‘every stat’ in the playoffs",
+   "url": "https://sports.yahoo.com/articles/alperen-eng-n-feels-rockets-162121474.html",
+   "scheduled_for": 1790312400,
+   "slot": "2026-09-25 13:00",
+   "chars": 572
   }
  ]
 }
