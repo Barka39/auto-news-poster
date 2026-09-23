@@ -1003,6 +1003,23 @@
    "scheduled_for": 1790256600,
    "slot": "2026-09-24 21:30",
    "chars": 368
+  },
+  {
+   "ts": 1790137926.2428403,
+   "fb_id": "828746100324372_122147766243084055",
+   "ig_id": "",
+   "kind": "page_confession",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Хайрцаглагдсан зүрхний чимээ",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 757,
+   "page": "udesh"
   }
  ]
 }
