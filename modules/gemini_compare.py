@@ -37,38 +37,38 @@ def generate(system_prompt: str, user_prompt: str) -> str:
         },
         "generationConfig": {
             "temperature": 0.5,
-            "maxOutputTokens": 1000,
+            "maxOutputTokens": 2000,
             "thinkingConfig": {"thinkingBudget": 0},
         }
     }
 
-    for attempt in range(2):
-        try:
-            response = requests.post(
-                f"{GEMINI_API_URL}?key={api_key}",
-                json=payload,
-                timeout=30
-            )
-            response.raise_for_status()
-            data = response.json()
-            candidate = data["candidates"][0]
-            parts = candidate.get("content", {}).get("parts", [])
-            text = "".join(p.get("text", "") for p in parts).strip()
-            
-            if not text:
-                log.warning(f"Gemini хоосон гаралт буцаав (finishReason: {candidate.get('finishReason')})")
-                return ""
-            return text
-
-        except requests.exceptions.HTTPError as e:
-            if response.status_code == 503 and attempt == 0:
-                log.warning("Gemini 503 (завгүй) — 3 секундын дараа дахин оролдоно")
-                time.sleep(3)
-                continue
-            log.warning(f"Gemini харьцуулалт алдаа: {e}")
-            return ""
-        except Exception as e:
-            log.warning(f"Gemini харьцуулалт алдаа: {e}")
-            return ""
-
+    # 2026-09-23: flash-lite удаан хугацаанд 503 өгч, гурван хуудсын бүх контент зогссон тул
+    # загварын жагсаалтаар дамжина: 503/429 → дахин оролдоод дараагийн загвар; 404 → шууд дараагийн.
+    models = [m.strip() for m in os.environ.get(
+        "GEMINI_MODELS", "gemini-3.1-flash-lite,gemini-3.1-flash,gemini-2.5-flash,gemini-2.5-flash-lite").split(",") if m.strip()]
+    for model in models:
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+        for attempt in range(2):
+            try:
+                response = requests.post(f"{url}?key={api_key}", json=payload, timeout=45)
+                if response.status_code == 404:
+                    break
+                if response.status_code in (429, 500, 503):
+                    log.warning(f"Gemini {model} {response.status_code} (оролдлого {attempt + 1})")
+                    time.sleep(3)
+                    continue
+                response.raise_for_status()
+                data = response.json()
+                candidate = data["candidates"][0]
+                parts = candidate.get("content", {}).get("parts", [])
+                text = "".join(p.get("text", "") for p in parts).strip()
+                if not text:
+                    log.warning(f"Gemini {model} хоосон гаралт (finishReason: {candidate.get('finishReason')})")
+                    break
+                if model != models[0]:
+                    log.info(f"Gemini нөөц загвар ашиглав: {model}")
+                return text
+            except Exception as e:
+                log.warning(f"Gemini {model} алдаа: {e}")
+                break
     return ""
