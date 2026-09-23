@@ -1086,6 +1086,22 @@
    "slot": "",
    "chars": 1383,
    "page": "suns"
+  },
+  {
+   "ts": 1790169102.4709265,
+   "fb_id": "736504959542737_122185805852935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Bucks reportedly being investigated by NBA for possible salary-cap circumvention in deal with Gary Trent Jr.",
+   "url": "https://sports.yahoo.com/nba/breaking-news/article/bucks-reportedly-being-investigated-by-nba-for-possible-salary-cap-circumvention-in-deal-with-gary-trent-jr-130510299.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 383
   }
  ]
 }
