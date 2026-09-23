@@ -1183,6 +1183,54 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 293
+  },
+  {
+   "ts": 1790179374.8050683,
+   "fb_id": "122185824584935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 6.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Pelicans Waive Dominique Daniels Jr, Solomon Washington",
+   "url": "https://basketball.realgm.com/wiretap/287365/Pelicans-Waive-Dominique-Daniels-Jr-Solomon-Washington",
+   "scheduled_for": 1790294400,
+   "slot": "2026-09-25 08:00",
+   "chars": 290
+  },
+  {
+   "ts": 1790179424.3153543,
+   "fb_id": "122185824650935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 6.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Warriors Waive Obi Agbim",
+   "url": "https://basketball.realgm.com/wiretap/287364/Warriors-Waive-Obi-Agbim",
+   "scheduled_for": 1790305200,
+   "slot": "2026-09-25 11:00",
+   "chars": 237
+  },
+  {
+   "ts": 1790179481.7158062,
+   "fb_id": "736504959542737_122185824800935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 6.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "NBA trade tracker: Updates for every deal of the 2026 offseason",
+   "url": "https://www.espn.com/nba/story/_/id/48957844/nba-trade-tracker-details-every-deal-2026-offseason-draft-free-agency",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 224
   }
  ]
 }
