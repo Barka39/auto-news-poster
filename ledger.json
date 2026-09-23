@@ -1135,6 +1135,54 @@
    "scheduled_for": 1790218800,
    "slot": "2026-09-24 11:00",
    "chars": 347
+  },
+  {
+   "ts": 1790178748.63022,
+   "fb_id": "122185823444935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 6.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Pistons Sign Jordan Riley To Camp Deal; Waive Drake Allen",
+   "url": "https://basketball.realgm.com/wiretap/287355/Pistons-Sign-Jordan-Riley-To-Camp-Deal;-Waive-Drake-Allen",
+   "scheduled_for": 1790226000,
+   "slot": "2026-09-24 13:00",
+   "chars": 478
+  },
+  {
+   "ts": 1790178780.968992,
+   "fb_id": "122185823516935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 6.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Timberwolves Sign, Waive Jalen Crutcher",
+   "url": "https://basketball.realgm.com/wiretap/287363/Timberwolves-Sign-Waive-Jalen-Crutcher",
+   "scheduled_for": 1790236800,
+   "slot": "2026-09-24 16:00",
+   "chars": 304
+  },
+  {
+   "ts": 1790178822.9283564,
+   "fb_id": "736504959542737_122185823606935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 6.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Nets Waive DJ Rodman, Aaron Scott",
+   "url": "https://basketball.realgm.com/wiretap/287362/Nets-Waive-DJ-Rodman-Aaron-Scott",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 293
   }
  ]
 }
