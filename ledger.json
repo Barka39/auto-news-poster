@@ -987,6 +987,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 385
+  },
+  {
+   "ts": 1790134888.038454,
+   "fb_id": "122185737866935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Clippers name Trent Redden interim president of basketball ops",
+   "url": "https://www.espn.com/nba/story/_/id/50010821/clippers-name-trent-redden-interim-president-basketball-ops",
+   "scheduled_for": 1790256600,
+   "slot": "2026-09-24 21:30",
+   "chars": 368
   }
  ]
 }
