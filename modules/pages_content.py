@@ -201,8 +201,11 @@ def sensual_image(seed_text: str) -> str:
 
 
 def _gen(system: str, user: str, min_len: int = 200) -> str:
-    for attempt in range(2):
-        text = gemini_compare.generate(system, user) or ""
+    """Gemini → (унавал) Groq. 2026-09-23: Gemini 503 өгөхөд гурван хуудасны бүх
+    пост алдагдсан тул нөөц загвар нэмэв."""
+    from modules.writer import _try_qwen
+    for attempt in range(3):
+        text = (gemini_compare.generate(system, user) if attempt < 2 else _try_qwen(system, user)) or ""
         text = re.sub(r"^\s*(\*\*|#+)\s*", "", text.strip())
         text = re.sub(r"\*\*", "", text)
         if is_valid_mongolian(text, min_len=min_len):
