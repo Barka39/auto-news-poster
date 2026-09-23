@@ -80,18 +80,21 @@ CONFESSION_THEMES = [
 
 # Зурганд ашиглах уур амьсгал (AI зураг; хүний ил бие БИШ, зөвхөн санаа)
 IMAGE_MOODS = [
-    # Ихэнх нь нүүргүй (объект, гар, дүрс) — эротик санаа, ямар ч эрсдэлгүй
-    "close-up of a red lipstick mark on a wine glass beside a black silk scarf, candlelight, moody",
-    "a man's hand gently holding a woman's hand wearing a ring, dim warm restaurant light, shallow depth of field",
-    "a black evening dress draped over a velvet armchair, city lights through the window at night",
-    "a hotel key card and a pair of elegant leather gloves on dark marble, noir lighting",
+    # ЗӨВХӨН ХҮНГҮЙ натюрморт. 2026-09-23: хүнтэй prompt-ийг зураг үүсгэгч "бүрэн хувцастай,
+    # 40 настай" гэсэн зааврыг үл тоон залуу харагдах, нүцгэн мөртэй дүр гаргасан тул хүнийг
+    # бүрмөсөн хасав. Эротик санааг объектоор илэрхийлнэ.
+    "a red lipstick mark on a crystal wine glass beside a black silk scarf, candlelight",
+    "red high heels and a loosened men's silk tie on a dark hotel carpet, warm lamp light",
+    "a black lace evening dress draped over a velvet armchair, city lights through a dark window",
+    "a hotel key card and elegant black leather gloves on dark marble, noir lighting",
     "rain drops on a dark window with blurred warm city lights, a single red rose on the sill",
-    "two champagne glasses touching on a balcony at night, city skyline bokeh",
-    "a handwritten love letter and a pearl necklace on a dark wooden desk, warm lamp light",
-    "high heels and a men's tie on a hotel carpet, warm dim hallway light, cinematic",
-    # Хүнтэй бол: 40 орчим насны, бүрэн хувцастай, зогсож буй
-    "a mature couple in their forties in elegant formal evening wear dancing close in a dim ballroom, seen from behind",
-    "a mature woman in her forties in a long red evening gown looking back over her shoulder in a warm lit hallway",
+    "two champagne glasses touching on a night balcony railing, city skyline bokeh",
+    "a handwritten love letter sealed with red wax beside a pearl necklace, warm desk lamp",
+    "a burning red candle and a single rose petal on dark satin fabric, deep shadows",
+    "a perfume bottle and a red lipstick on a vanity mirror table, soft warm glow",
+    "an open door of a dim hotel room with a 'do not disturb' sign, warm corridor light",
+    "two coffee cups and a forgotten silk ribbon on a windowsill at dawn, soft light",
+    "a vinyl record playing in a dark room with red neon glow, a glass of red wine beside it",
 ]
 
 STORY_GENRES = [
@@ -172,32 +175,38 @@ _SYSTEM_UDESH = """Чи Монголын НАСАНД ХҮРЭГЧДЭД (21+) �
 
 
 def sensual_image(seed_text: str) -> str:
-    """Үдшийн шивнээний AI зураг (Pollinations) → data URI. Уур амьсгалтай, БҮРЭН
-    ХУВЦАСТАЙ, ил бие/нүцгэн дүрсгүй — Facebook-ийн дүрэмд нийцсэн эротик санаа.
-    Зургийг ТАТАЖ АВЧ base64-ээр шигтгэнэ (Chromium дахин үүсгүүлбэл 30с хүлээгээд унадаг)."""
+    """Үдшийн шивнээний AI зураг (Pollinations) → data URI.
+    Зөвхөн хүнгүй натюрморт; үүссэн зураг бүрийг Gemini-ийн хараагаар шалгаж, хүн (нүүр, мөр,
+    бие) гарсан эсвэл шалгаж чадаагүй бол ХАЯНА → дуудагч mystic карт руу буцна."""
     import base64
     import time
     import urllib.parse
 
     import requests
 
-    mood = IMAGE_MOODS[abs(hash(seed_text)) % len(IMAGE_MOODS)]
-    prompt = (f"photorealistic cinematic photograph, {mood}, sensual romantic atmosphere, "
-              "elegant, tasteful, everyone fully dressed, no nudity, no bed, not anime, not cartoon, "
-              "not illustration, soft warm cinematic lighting, 35mm film, shallow depth of field, "
-              "vertical composition")
-    url = ("https://image.pollinations.ai/prompt/" + urllib.parse.quote(prompt)
-           + "?width=1080&height=1350&nologo=true&model=flux&seed=" + str(abs(hash(seed_text)) % 99999))
+    base = abs(hash(seed_text))
     for attempt in range(3):
+        mood = IMAGE_MOODS[(base + attempt * 5) % len(IMAGE_MOODS)]
+        prompt = (f"photorealistic still life photograph, {mood}, romantic noir mood, elegant, "
+                  "no people, no person, no human, no faces, no body, no hands, empty scene, "
+                  "35mm film, shallow depth of field, rich warm shadows, vertical composition")
+        url = ("https://image.pollinations.ai/prompt/" + urllib.parse.quote(prompt)
+               + "?width=1080&height=1350&nologo=true&model=flux&seed=" + str((base + attempt) % 99999))
         try:
             r = requests.get(url, timeout=90)
-            if r.status_code == 200 and r.headers.get("content-type", "").startswith("image/") and len(r.content) > 8000:
-                log.info(f"🖼️ Үдшийн шивнээний зураг бэлэн ({len(r.content) // 1024} KB)")
-                return "data:image/jpeg;base64," + base64.b64encode(r.content).decode("ascii")
-            log.warning(f"Pollinations зураг гарсангүй ({attempt + 1}): {r.status_code}")
+            if not (r.status_code == 200 and r.headers.get("content-type", "").startswith("image/") and len(r.content) > 8000):
+                log.warning(f"Pollinations зураг гарсангүй ({attempt + 1}): {r.status_code}")
+                time.sleep(6 * (attempt + 1))
+                continue
+            b64 = base64.b64encode(r.content).decode("ascii")
+            people = gemini_compare.image_has_people(b64)
+            if people is False:
+                log.info(f"🖼️ Үдшийн шивнээний зураг бэлэн, хүнгүй ({len(r.content) // 1024} KB)")
+                return "data:image/jpeg;base64," + b64
+            log.warning(f"Зурганд хүн илэрсэн эсвэл шалгаж чадсангүй ({people}) — хаяв, дахин оролдоно")
         except Exception as e:
             log.warning(f"Pollinations алдаа ({attempt + 1}): {e}")
-        time.sleep(6 * (attempt + 1))
+        time.sleep(3)
     return ""
 
 

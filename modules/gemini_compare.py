@@ -72,3 +72,34 @@ def generate(system_prompt: str, user_prompt: str) -> str:
                 log.warning(f"Gemini {model} алдаа: {e}")
                 break
     return ""
+
+
+def image_has_people(image_b64: str, mime: str = "image/jpeg") -> bool | None:
+    """Зурган дээр хүн (нүүр, бие, мөр г.м.) байгаа эсэх — Gemini-ийн хараа.
+    True = хүнтэй, False = хүнгүй, None = шалгаж чадсангүй (дуудагч аюулгүй тал руу)."""
+    api_key = os.environ.get("GEMINI_API_KEY")
+    if not api_key:
+        return None
+    payload = {"contents": [{"role": "user", "parts": [
+        {"inline_data": {"mime_type": mime, "data": image_b64}},
+        {"text": "Does this image show any human being or any human body part other than a hand "
+                 "(face, head, hair, shoulder, back, skin, legs, silhouette of a person)? "
+                 "Answer with exactly one word: YES or NO."}]}],
+        "generationConfig": {"temperature": 0, "maxOutputTokens": 5, "thinkingConfig": {"thinkingBudget": 0}}}
+    models = [m.strip() for m in os.environ.get(
+        "GEMINI_MODELS", "gemini-3.1-flash-lite,gemini-3.1-flash,gemini-2.5-flash,gemini-2.5-flash-lite").split(",") if m.strip()]
+    for model in models:
+        try:
+            r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}",
+                              json=payload, timeout=40)
+            if r.status_code != 200:
+                continue
+            parts = r.json()["candidates"][0].get("content", {}).get("parts", [])
+            ans = "".join(p.get("text", "") for p in parts).strip().upper()
+            if ans.startswith("NO"):
+                return False
+            if ans.startswith("YES"):
+                return True
+        except Exception as e:
+            log.warning(f"Gemini зураг шалгах алдаа ({model}): {e}")
+    return None
