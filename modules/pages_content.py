@@ -80,16 +80,18 @@ CONFESSION_THEMES = [
 
 # Зурганд ашиглах уур амьсгал (AI зураг; хүний ил бие БИШ, зөвхөн санаа)
 IMAGE_MOODS = [
-    "an elegant couple almost kissing behind a rain-streaked window at night, warm amber light on their faces",
-    "a woman in a silk slip dress standing at a dark hotel window, city lights bokeh, cinematic shadows, seen from behind",
-    "two hands with fingers intertwined on crumpled white bed sheets, dim candlelight, shallow depth of field",
-    "close-up of a red lipstick mark on a wine glass beside a discarded silk scarf, moody low light",
-    "a couple dancing very close in a dim room, motion blur, warm light through curtains, seen from behind",
-    "a man's hand resting on the bare back of a woman in a backless evening dress, warm elegant room, single lamp",
-    "an unmade bed with morning light through sheer curtains, single earring on the pillow, cinematic",
-    "a woman's face half in shadow, eyes closed, biting her lip gently, warm rim light, film grain",
-    "a woman in a red evening dress looking back over her shoulder in a warm lit hallway, cinematic tension",
-    "a hotel key card and a lace glove on dark marble, moody noir lighting",
+    # Ихэнх нь нүүргүй (объект, гар, дүрс) — эротик санаа, ямар ч эрсдэлгүй
+    "close-up of a red lipstick mark on a wine glass beside a black silk scarf, candlelight, moody",
+    "a man's hand gently holding a woman's hand wearing a ring, dim warm restaurant light, shallow depth of field",
+    "a black evening dress draped over a velvet armchair, city lights through the window at night",
+    "a hotel key card and a pair of elegant leather gloves on dark marble, noir lighting",
+    "rain drops on a dark window with blurred warm city lights, a single red rose on the sill",
+    "two champagne glasses touching on a balcony at night, city skyline bokeh",
+    "a handwritten love letter and a pearl necklace on a dark wooden desk, warm lamp light",
+    "high heels and a men's tie on a hotel carpet, warm dim hallway light, cinematic",
+    # Хүнтэй бол: 40 орчим насны, бүрэн хувцастай, зогсож буй
+    "a mature couple in their forties in elegant formal evening wear dancing close in a dim ballroom, seen from behind",
+    "a mature woman in her forties in a long red evening gown looking back over her shoulder in a warm lit hallway",
 ]
 
 STORY_GENRES = [
@@ -150,24 +152,22 @@ _SYSTEM_SUNS = """Чи Монголын сүнслэг, зурхайн конт�
 гутаахгүй, ямар ч шашин, үндэстнийг доромжлохгүй. Постын төгсгөлд уншигчийг оролцуулах
 1 богино асуулт. Зөвхөн постын текстийг бич — гарчиг, тайлбар, markdown бүү нэм."""
 
-_SYSTEM_UDESH = """Чи Монголын НАСАНД ХҮРЭГЧДЭД (21+) зориулсан эротик драмын зохиолч.
-Уншигч шөнө дунд утсаа гартаа барьчихсан, амьсгаа даран уншиж байгаа гэж төсөөл.
+_SYSTEM_UDESH = """Чи Монголын НАСАНД ХҮРЭГЧДЭД (21+) зориулсан эротик драмын зохиолч. Уншигчийг
+шөнө дунд утсаа тавьж чадахгүй болтол татах нь зорилго.
 
-ӨНГӨ АЯС — МЭДРЭХҮЙ ДЭЭД ЗЭРЭГТ:
-- Бие махбодын МЭДРЭМЖийг дэлгэрэнгүй бич: арьс дээрх халуун амьсгал, нурууг татан авах
-  чичиргээ, хүзүүн дээр үлдсэн үнэрийн ул мөр, хуруунууд дундах хүрэлт, зүрхний цохилт,
-  хормын төгсгөлд алдагдах амьсгаа. Таван мэдрэхүйгээр (үнэр, амт, дуу, хүрэлцэхүй, харц).
-- ХҮСЭЛ, ТЭСВЭР, ХОРИГ гурав нь хөдөлгөгч хүч: "болохгүй" гэдгээ мэдсээр байж татагдах.
-- Харилцан яриа бага, шивнээ ихтэй. Богино, тасалдсан өгүүлбэр. Дотоод монолог.
-- Кино шиг дүрслэл: гэрэл, сүүдэр, бороо, дулаан, торгон хувцасны чимээ.
+ЗАРЧИМ:
+- Хүсэл тэмүүлэл, дотно мөчийг МЭДРЭХҮЙГЭЭР бич: хүрэлцэх, үнэр, дуу, амьсгал, харц, дулаан.
+  Үг хэллэгээ өөрөө шинээр зохио — энэ зааврын үгийг хэзээ ч хуулж бүү бич.
+- Хүсэл, тэсвэр, хориг: "болохгүй" гэдгээ мэдсээр татагдах зөрчил бол гол хөдөлгөгч.
+- Богино өгүүлбэр, шивнээ маягийн яриа, дотоод монолог. Кино шиг дүрслэл.
+- Цэвэр, зөв Монгол хэл: өгүүлбэр бүр утгатай, дүрийн нэр тогтвортой, логик дараалалтай.
 
-ХАТУУ ХЯЗГААР (Facebook-ийн дүрэм — зөрчвөл хуудас хаагдана, ЭНЭ НЬ ХАМГИЙН ЧУХАЛ):
-- Бэлгийн эрхтний нэр, бэлгийн харьцааны механик үйлдлийг ХЭЗЭЭ Ч бүү бич. Порнографи биш,
-  ЭРОТИК ДРАМА. Хамгийн халуун мөчид камер эргэдэг: "гэрэл унтарлаа", "хаалга хаагдав",
-  "тэр шөнийн үлдсэн хэсгийг үг хэлж чадахгүй" маягаар ЗҮЙРЛЭЛЭЭР таслана.
-- Бүдүүлэг, садар үг хэрэглэхгүй. Бүх дүр 25-аас дээш насны, харилцан зөвшөөрсөн.
-- Насанд хүрээгүй дүр, хүчирхийлэл, албадлага, дарамт байх ЁСГҮЙ.
-- Гэр бүлийн хүчирхийллийг сайшаахгүй.
+ХАТУУ ХЯЗГААР (Facebook — зөрчвөл хуудас хаагдана):
+- Биеийн дотно хэсгийн нэр (хөх, бэлгийн эрхтэн г.м.), нүцгэн байдал, бэлгийн харьцааны
+  үйлдлийг ХЭЗЭЭ Ч бүү бич. Хамгийн халуун мөчид үйл явдлыг зүйрлэлээр таслаад дараагийн
+  өглөө эсвэл сэтгэл хөдлөл рүү шилж.
+- Бүдүүлэг, садар үг хэрэглэхгүй. Бүх дүр 30-аас дээш насны, харилцан зөвшөөрсөн насанд
+  хүрэгчид. Насанд хүрээгүй дүр, хүчирхийлэл, албадлага огт байхгүй.
 Зөвхөн өгүүллэгийн текстийг бич — markdown, тайлбар бүү нэм."""
 
 
@@ -182,9 +182,10 @@ def sensual_image(seed_text: str) -> str:
     import requests
 
     mood = IMAGE_MOODS[abs(hash(seed_text)) % len(IMAGE_MOODS)]
-    prompt = (f"cinematic film still, {mood}, romantic erotic tension, adults in their 30s, "
-              "fully clothed, tasteful, no nudity, elegant, soft warm cinematic lighting, "
-              "visible faces and textures, 35mm, shallow depth of field, vertical composition")
+    prompt = (f"photorealistic cinematic photograph, {mood}, sensual romantic atmosphere, "
+              "elegant, tasteful, everyone fully dressed, no nudity, no bed, not anime, not cartoon, "
+              "not illustration, soft warm cinematic lighting, 35mm film, shallow depth of field, "
+              "vertical composition")
     url = ("https://image.pollinations.ai/prompt/" + urllib.parse.quote(prompt)
            + "?width=1080&height=1350&nologo=true&model=flux&seed=" + str(abs(hash(seed_text)) % 99999))
     for attempt in range(3):
@@ -198,6 +199,28 @@ def sensual_image(seed_text: str) -> str:
             log.warning(f"Pollinations алдаа ({attempt + 1}): {e}")
         time.sleep(6 * (attempt + 1))
     return ""
+
+
+UDESH_FORBIDDEN = re.compile(
+    r"нүцгэн|хөх(өн|ийг|ний|нд|өө)?\b|бэлгийн|бэлэг эрхтэн|секс|оргазм|дотуур хувцас|цээж(ээ|ийг)? нээ",
+    re.IGNORECASE)
+
+
+def polish_udesh(text: str) -> str:
+    """Монгол хэлний редактор: утгагүй/эвдэрхий өгүүлбэр, хэл зүй, зааврын хуулсан хэллэг,
+    хэт ил үгийг засна. Бүтэлгүйтвэл эхийг буцаана."""
+    from modules.writer import _try_qwen
+    system = ("Чи Монголын уран зохиолын хэлний редактор. Доорх эротик драмын текстийг: "
+              "(1) утгагүй, эвдэрхий, хэл зүйн алдаатай өгүүлбэрийг зөв, байгалийн Монгол хэлээр засаж, "
+              "(2) дүрийн нэр, үйл явдлын логикийг тогтвортой болгож, "
+              "(3) биеийн дотно хэсгийн нэр, нүцгэн байдал, бэлгийн үйлдлийг зүйрлэлээр сольж, "
+              "(4) уран сайхан, халуун, мэдрэмжтэй өнгө аясыг ХАДГАЛ. Бүтэц, урт, төгсгөлийн мөрийг "
+              "хэвээр үлдээ. Зөвхөн засварласан текстийг буцаа.")
+    out = gemini_compare.generate(system, text) or _try_qwen(system, text) or ""
+    out = re.sub(r"\*\*", "", out).strip()
+    if is_valid_mongolian(out, min_len=int(len(text) * 0.6)):
+        return out
+    return text
 
 
 def _gen(system: str, user: str, min_len: int = 200) -> str:
@@ -286,6 +309,12 @@ def build_story(ps: dict, now: datetime) -> dict | None:
 Урт: 1100-1500 тэмдэгт, 6-9 богино догол мөр. Дор хаяж НЭГ халуун дотно мөч байх
 (зүйрлэлээр таслах), нэг богино харилцан яриа, нэг дотоод монолог."""
     text = _gen(_SYSTEM_UDESH, user, min_len=500)
+    text = polish_udesh(text) if text else ""
+    if text and UDESH_FORBIDDEN.search(text):
+        log.warning("Үдшийн шивнээ: хориотой үг олдсон — дахин бичүүлнэ")
+        text = polish_udesh(text)
+        if UDESH_FORBIDDEN.search(text):
+            return None
     if not text:
         return None
     lines = [l.strip() for l in text.split("\n") if l.strip()]
@@ -310,6 +339,11 @@ def build_confession(ps: dict, now: datetime) -> dict | None:
 халуун (нэг дотно мөчийг зүйрлэлээр); төгсгөлд уншигчдаас "Та юу гэж зөвлөх вэ?" маягийн
 (өөрөөр найруулсан) асуулт. Эхний мөр: богино гарчиг (3-6 үг)."""
     text = _gen(_SYSTEM_UDESH, user, min_len=250)
+    text = polish_udesh(text) if text else ""
+    if text and UDESH_FORBIDDEN.search(text):
+        text = polish_udesh(text)
+        if UDESH_FORBIDDEN.search(text):
+            return None
     if not text:
         return None
     title = text.split("\n", 1)[0].strip()[:80]
