@@ -85,7 +85,7 @@ def image_has_people(image_b64: str, mime: str = "image/jpeg") -> bool | None:
         {"text": "Does this image show any human being or any human body part other than a hand "
                  "(face, head, hair, shoulder, back, skin, legs, silhouette of a person)? "
                  "Answer with exactly one word: YES or NO."}]}],
-        "generationConfig": {"temperature": 0, "maxOutputTokens": 5, "thinkingConfig": {"thinkingBudget": 0}}}
+        "generationConfig": {"temperature": 0, "maxOutputTokens": 20, "thinkingConfig": {"thinkingBudget": 0}}}
     models = [m.strip() for m in os.environ.get(
         "GEMINI_MODELS", "gemini-3.1-flash-lite,gemini-3.1-flash,gemini-2.5-flash,gemini-2.5-flash-lite").split(",") if m.strip()]
     for model in models:
