@@ -106,6 +106,10 @@ def _overlap(a: set, b: set) -> tuple:
 
 
 def is_duplicate_topic(title: str, previous_titles: list) -> bool:
+    for prev in previous_titles or []:
+        if same_topic(title, prev):
+            log.info(f"[DEDUP] ижил сэдэв: «{title[:45]}» ≈ «{prev[:45]}»")
+            return True
     """
     title нь previous_titles доторх аль нэгтэй ижил сэдэв мөн эсэх.
     previous_titles: str жагсаалт (эх Англи гарчгууд).
@@ -132,4 +136,62 @@ def is_duplicate_topic(title: str, previous_titles: list) -> bool:
                 f"'{title[:50]}' ≈ '{prev[:50]}'"
             )
             return True
+    return False
+
+
+# ============================================================
+# 2026-09-23: НЭМЭЛТ ХОЁР ДҮРЭМ (бодит алдаа: Kawhi-гийн гэрээ 3 удаа,
+# Hawks-Hornets-ийн трейд 2 удаа тус тусын сайтаас орсон)
+#   A) ижил ХҮНИЙ БҮТЭН НЭР (хоёр дараалсан том үсэгтэй үг) хоёуланд байвал
+#   B) ижил ХОЁР БАГИЙН нэр хоёуланд байвал
+# Мөн эзэмшлийн 's болон олон тоог таслаж харьцуулна (Leonard's = Leonard,
+# Raptors = Raptor) — өмнө нь эдгээрээс болж overlap 0.5 болж унадаг байв.
+# ============================================================
+NBA_TEAMS = {
+    "hawks", "celtics", "nets", "hornets", "bulls", "cavaliers", "cavs", "mavericks", "mavs",
+    "nuggets", "pistons", "warriors", "rockets", "pacers", "clippers", "lakers", "grizzlies",
+    "heat", "bucks", "timberwolves", "wolves", "pelicans", "knicks", "thunder", "magic",
+    "sixers", "76ers", "suns", "blazers", "trail", "kings", "spurs", "raptors", "jazz", "wizards",
+}
+
+_FULLNAME_RE = re.compile(r"\b([A-Z][a-z]{2,})[- ]([A-Z][a-z]{2,})\b")
+
+
+def _norm(word: str) -> str:
+    w = word.lower().strip(".,:;!?\"'()[]")
+    w = re.sub(r"(?:'s|’s)$", "", w)
+    if len(w) > 4 and w.endswith("s") and not w.endswith("ss"):
+        w = w[:-1]
+    return w
+
+
+def full_names(title: str) -> set:
+    """«Kawhi Leonard», «Finney Smith» гэх мэт хүний бүтэн нэрс."""
+    out = set()
+    for a, b in _FULLNAME_RE.findall(title or ""):
+        if _norm(a) in _STOPWORDS or _norm(b) in _STOPWORDS:
+            continue
+        if _norm(a) in NBA_TEAMS or _norm(b) in NBA_TEAMS:
+            continue
+        out.add(f"{_norm(a)} {_norm(b)}")
+    return out
+
+
+def teams_in(title: str) -> set:
+    return {_norm(w) for w in re.findall(r"[A-Za-z0-9'’-]+", title or "")} & NBA_TEAMS
+
+
+def same_topic(title: str, other: str) -> bool:
+    a_names, b_names = full_names(title), full_names(other)
+    if a_names & b_names:
+        return True
+    at, bt = teams_in(title), teams_in(other)
+    if len(at & bt) >= 2:
+        return True
+    # нормчилсон proper noun давхцал (эзэмшил/олон тоо арилгасан)
+    ap = {_norm(w) for w in _signatures(title)[0]}
+    bp = {_norm(w) for w in _signatures(other)[0]}
+    shared = ap & bp
+    if len(shared) >= 2 and len(shared) / max(min(len(ap), len(bp)), 1) >= 0.5:
+        return True
     return False

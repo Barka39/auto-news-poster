@@ -25,7 +25,7 @@ log = logging.getLogger(__name__)
 
 UB = timezone(timedelta(hours=8))
 STORAGE_FILE = "posted_ids.json"
-DEFAULT_SLOTS = "08:00,12:30,19:00,21:30"
+DEFAULT_SLOTS = "08:00,11:00,13:00,16:00,19:00,21:30"
 MIN_LEAD_MIN = 12          # FB доод хязгаар 10 минут; жаахан нөөц
 MAX_AHEAD_H = 36           # үүнээс хол слот бол мэдээ хуучирна → шууд
 

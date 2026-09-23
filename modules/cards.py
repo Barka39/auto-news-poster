@@ -461,3 +461,31 @@ def mystic_card(card: dict, brand: str = "") -> bytes:
 <div class='foot'><span class='brand'>{_e(brand or BRAND)}</span><span></span></div>
 </div>"""
     return render(_wrap(body, css))
+
+
+def photo_story_card(image_url: str, title: str, subtitle: str, brand: str = "",
+                     accent: str = "#ff7aa2", tag: str = "") -> bytes:
+    """Үдшийн шивнээ: AI-аар үүсгэсэн уур амьсгалтай зураг + доод талд гарчиг.
+    Зураг ачаалагдахгүй бол b"" (дуудагч mystic карт руу буцна)."""
+    size = 76 if len(title) < 20 else (62 if len(title) < 34 else 50)
+    css = f"""
+.card{{background:#080509}}
+.bg{{position:absolute;inset:0;background:url('{_e(image_url)}') center/cover;transform:scale(1.09) translateY(-24px);filter:brightness(1.35) contrast(1.05) saturate(1.1)}}
+.grad{{position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(8,5,9,.45) 0%,rgba(8,5,9,0) 28%,rgba(8,5,9,.35) 62%,rgba(8,5,9,.93) 88%)}}
+.vign{{position:absolute;inset:0;background:radial-gradient(75% 60% at 50% 40%,transparent 45%,rgba(0,0,0,.4) 100%)}}
+.top{{position:absolute;top:56px;left:60px;right:60px;display:flex;justify-content:space-between;align-items:center}}
+.badge{{background:{accent};color:#14080e}}
+.tag{{font-weight:700;font-size:24px;letter-spacing:3px;color:{accent};opacity:.95}}
+.title{{position:absolute;left:64px;right:64px;bottom:280px;font-weight:900;font-size:{size}px;line-height:1.12;
+  text-shadow:0 10px 40px rgba(0,0,0,.85)}}
+.line{{position:absolute;left:64px;bottom:238px;width:120px;height:5px;background:{accent};border-radius:3px}}
+.sub{{position:absolute;left:64px;right:64px;bottom:150px;font-weight:600;font-size:30px;opacity:.9;line-height:1.3}}
+"""
+    body = f"""<div class='card'>
+<div class='bg'></div><div class='grad'></div><div class='vign'></div>
+<div class='top'><span class='badge'>{_e(brand or BRAND)}</span><span class='tag'>{_e(tag)}</span></div>
+<div class='title'>{_e(title)}</div><div class='line'></div>
+<div class='sub'>{_e(subtitle)}</div>
+</div>"""
+    return render(_wrap(body, css))

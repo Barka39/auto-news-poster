@@ -35,7 +35,7 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-MAX_POSTS_PER_RUN = int(os.environ.get("MAX_POSTS_PER_RUN", "2"))
+MAX_POSTS_PER_RUN = int(os.environ.get("MAX_POSTS_PER_RUN", "3"))
 
 
 def _translate_overlay(text_en: str) -> str:
@@ -123,6 +123,10 @@ def run():
     # Ач холбогдлын ОНОО — босгоос доош бүгд хасагдана, үлдсэн нь
     # оноо → шинэлэг байдлаар эрэмбэлэгдсэн ирнэ
     new_news = filter_relevant_news(new_news) if new_news else []
+    # Ижил сэдвийн хэд хэдэн эх сурвалжаас ДЭЛГЭРЭНГҮЙг нь түрүүлж авна
+    # (2026-09-23: Yahoo-гийн "Who the Hawks, Hornets traded" гэсэн тодорхойгүй
+    # хувилбар ESPN-ий нэр, багийг дурдсан хувилбарыг түрүүлж постлогдсон)
+    new_news.sort(key=lambda n: (n.get("score", 0), len(n.get("summary", "") or "")), reverse=True)
     new_news = recaps + new_news
 
     # СЭДВИЙН ДАВХАРДЛЫН ШҮҮЛТҮҮР:

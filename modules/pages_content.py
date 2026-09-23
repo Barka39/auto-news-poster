@@ -78,6 +78,20 @@ CONFESSION_THEMES = [
     "нэг мессежээс эхэлсэн бүх зүйл",
 ]
 
+# Зурганд ашиглах уур амьсгал (AI зураг; хүний ил бие БИШ, зөвхөн санаа)
+IMAGE_MOODS = [
+    "an elegant couple almost kissing behind a rain-streaked window at night, warm amber light on their faces",
+    "a woman in a silk slip dress standing at a dark hotel window, city lights bokeh, cinematic shadows, seen from behind",
+    "two hands with fingers intertwined on crumpled white bed sheets, dim candlelight, shallow depth of field",
+    "close-up of a red lipstick mark on a wine glass beside a discarded silk scarf, moody low light",
+    "a couple dancing very close in a dim room, motion blur, warm light through curtains, seen from behind",
+    "a man's hand resting on the bare back of a woman in a backless evening dress, warm elegant room, single lamp",
+    "an unmade bed with morning light through sheer curtains, single earring on the pillow, cinematic",
+    "a woman's face half in shadow, eyes closed, biting her lip gently, warm rim light, film grain",
+    "a woman in a red evening dress looking back over her shoulder in a warm lit hallway, cinematic tension",
+    "a hotel key card and a lace glove on dark marble, moody noir lighting",
+]
+
 STORY_GENRES = [
     "хайрын гурвалжин ба урвалт", "олон жилийн дараа буцаж ирсэн хайр", "нууцтай шинэ хөрш",
     "гэрлэлтээ аварч буй хосын сүүлчийн оролдлого", "ажил дээрх хориотой татах хүч",
@@ -136,14 +150,54 @@ _SYSTEM_SUNS = """Чи Монголын сүнслэг, зурхайн конт�
 гутаахгүй, ямар ч шашин, үндэстнийг доромжлохгүй. Постын төгсгөлд уншигчийг оролцуулах
 1 богино асуулт. Зөвхөн постын текстийг бич — гарчиг, тайлбар, markdown бүү нэм."""
 
-_SYSTEM_UDESH = """Чи Монголын насанд хүрсэн уншигчдад зориулсан өгүүллэгийн зохиолч. Сэдэв:
-хайр, хүсэл, урвалт, нууц, сэтгэлийн зовлон, уучлал. Хэв маяг: мэдрэмжтэй, дур татам,
-амьд яриа, богино өгүүлбэр, дотоод монолог; уншигч "дараа нь юу болох вэ" гэж хүлээхээр.
-ХАТУУ ХЯЗГААР (хуудас хаагдахаас сэргийлнэ): бэлгийн харьцааг ил задгай дүрслэхгүй —
-хүсэл, дотно байдлыг сэтгэл хөдлөл, харц, хүрэлцэх мөч, "хаалга хаагдав" маягийн зүйрлэлээр
-илэрхийл; насанд хүрээгүй дүр огт байхгүй; хүчирхийлэл, албадлагыг ямар ч байдлаар
-магтахгүй; бүх дүр нас бие гүйцсэн, харилцан зөвшөөрсөн. Бүдүүлэг үг бүү хэрэглэ.
+_SYSTEM_UDESH = """Чи Монголын НАСАНД ХҮРЭГЧДЭД (21+) зориулсан эротик драмын зохиолч.
+Уншигч шөнө дунд утсаа гартаа барьчихсан, амьсгаа даран уншиж байгаа гэж төсөөл.
+
+ӨНГӨ АЯС — МЭДРЭХҮЙ ДЭЭД ЗЭРЭГТ:
+- Бие махбодын МЭДРЭМЖийг дэлгэрэнгүй бич: арьс дээрх халуун амьсгал, нурууг татан авах
+  чичиргээ, хүзүүн дээр үлдсэн үнэрийн ул мөр, хуруунууд дундах хүрэлт, зүрхний цохилт,
+  хормын төгсгөлд алдагдах амьсгаа. Таван мэдрэхүйгээр (үнэр, амт, дуу, хүрэлцэхүй, харц).
+- ХҮСЭЛ, ТЭСВЭР, ХОРИГ гурав нь хөдөлгөгч хүч: "болохгүй" гэдгээ мэдсээр байж татагдах.
+- Харилцан яриа бага, шивнээ ихтэй. Богино, тасалдсан өгүүлбэр. Дотоод монолог.
+- Кино шиг дүрслэл: гэрэл, сүүдэр, бороо, дулаан, торгон хувцасны чимээ.
+
+ХАТУУ ХЯЗГААР (Facebook-ийн дүрэм — зөрчвөл хуудас хаагдана, ЭНЭ НЬ ХАМГИЙН ЧУХАЛ):
+- Бэлгийн эрхтний нэр, бэлгийн харьцааны механик үйлдлийг ХЭЗЭЭ Ч бүү бич. Порнографи биш,
+  ЭРОТИК ДРАМА. Хамгийн халуун мөчид камер эргэдэг: "гэрэл унтарлаа", "хаалга хаагдав",
+  "тэр шөнийн үлдсэн хэсгийг үг хэлж чадахгүй" маягаар ЗҮЙРЛЭЛЭЭР таслана.
+- Бүдүүлэг, садар үг хэрэглэхгүй. Бүх дүр 25-аас дээш насны, харилцан зөвшөөрсөн.
+- Насанд хүрээгүй дүр, хүчирхийлэл, албадлага, дарамт байх ЁСГҮЙ.
+- Гэр бүлийн хүчирхийллийг сайшаахгүй.
 Зөвхөн өгүүллэгийн текстийг бич — markdown, тайлбар бүү нэм."""
+
+
+def sensual_image(seed_text: str) -> str:
+    """Үдшийн шивнээний AI зураг (Pollinations) → data URI. Уур амьсгалтай, БҮРЭН
+    ХУВЦАСТАЙ, ил бие/нүцгэн дүрсгүй — Facebook-ийн дүрэмд нийцсэн эротик санаа.
+    Зургийг ТАТАЖ АВЧ base64-ээр шигтгэнэ (Chromium дахин үүсгүүлбэл 30с хүлээгээд унадаг)."""
+    import base64
+    import time
+    import urllib.parse
+
+    import requests
+
+    mood = IMAGE_MOODS[abs(hash(seed_text)) % len(IMAGE_MOODS)]
+    prompt = (f"cinematic film still, {mood}, romantic erotic tension, adults in their 30s, "
+              "fully clothed, tasteful, no nudity, elegant, soft warm cinematic lighting, "
+              "visible faces and textures, 35mm, shallow depth of field, vertical composition")
+    url = ("https://image.pollinations.ai/prompt/" + urllib.parse.quote(prompt)
+           + "?width=1080&height=1350&nologo=true&model=flux&seed=" + str(abs(hash(seed_text)) % 99999))
+    for attempt in range(3):
+        try:
+            r = requests.get(url, timeout=90)
+            if r.status_code == 200 and r.headers.get("content-type", "").startswith("image/") and len(r.content) > 8000:
+                log.info(f"🖼️ Үдшийн шивнээний зураг бэлэн ({len(r.content) // 1024} KB)")
+                return "data:image/jpeg;base64," + base64.b64encode(r.content).decode("ascii")
+            log.warning(f"Pollinations зураг гарсангүй ({attempt + 1}): {r.status_code}")
+        except Exception as e:
+            log.warning(f"Pollinations алдаа ({attempt + 1}): {e}")
+        time.sleep(6 * (attempt + 1))
+    return ""
 
 
 def _gen(system: str, user: str, min_len: int = 200) -> str:
@@ -226,7 +280,8 @@ def build_story(ps: dict, now: datetime) -> dict | None:
 {"Өгүүллэгийн нэр: " + story['title'] if story.get('title') else "Эхний мөрөнд өгүүллэгийн НЭР (2-5 үг), хоёр дахь мөрөнд '1-р хэсэг'."}
 {"Эхний мөрөнд '" + str(part) + "-р хэсэг'." if story.get('title') else ""}
 {"Энэ бол СҮҮЛИЙН хэсэг: зөрчлийг шийдэж, сэтгэл хөдөлгөм төгсгөл өг, дараа нь 'Төгсөв.' гэж бич." if part == story['parts'] else "Хэсгийг ХҮЛЭЭЛТ төрүүлэх мөчид (cliffhanger) таслаад төгсгөлд 'Үргэлжлэл маргааш 21:30-д' гэж бич."}
-Урт: 1000-1400 тэмдэгт, 5-8 богино догол мөр, яриа (харилцан яриа) орсон байх."""
+Урт: 1100-1500 тэмдэгт, 6-9 богино догол мөр. Дор хаяж НЭГ халуун дотно мөч байх
+(зүйрлэлээр таслах), нэг богино харилцан яриа, нэг дотоод монолог."""
     text = _gen(_SYSTEM_UDESH, user, min_len=500)
     if not text:
         return None
@@ -248,8 +303,9 @@ def build_confession(ps: dict, now: datetime) -> dict | None:
     theme = random.choice(CONFESSION_THEMES)
     recent = "; ".join(ps.get("recent", [])[:20])
     user = f"""Богино "нууц захидал" хэлбэрийн бичвэр (уншигчийн илгээсэн мэт, нэргүй, 1-р биеэр): сэдэв — {theme}.
-Давтагдахгүй (сүүлийнх: {recent or 'алга'}). 400-650 тэмдэгт, чин сэтгэлийн, мэдрэмжтэй; төгсгөлд уншигчдаас
-"Та юу гэж зөвлөх вэ?" маягийн (өөрөөр найруулсан) асуулт. Эхний мөр: богино гарчиг (3-6 үг)."""
+Давтагдахгүй (сүүлийнх: {recent or 'алга'}). 500-750 тэмдэгт, чин сэтгэлийн, МЭДРЭМЖТЭЙ, бага зэрэг
+халуун (нэг дотно мөчийг зүйрлэлээр); төгсгөлд уншигчдаас "Та юу гэж зөвлөх вэ?" маягийн
+(өөрөөр найруулсан) асуулт. Эхний мөр: богино гарчиг (3-6 үг)."""
     text = _gen(_SYSTEM_UDESH, user, min_len=250)
     if not text:
         return None
@@ -288,7 +344,16 @@ def mark_posted(ps: dict, now: datetime, slot: str):
 
 def compose_post(page: str, item: dict) -> dict:
     cfg = PAGES[page]
-    png = cards.mystic_card(item["card"], brand=cfg["brand"])
+    png = b""
+    if page == "udesh":
+        # Эротик уур амьсгалтай AI зураг + гарчгийн давхарга; зураг гарахгүй бол mystic карт
+        img = sensual_image(item["title"] + item["kind"])
+        if img:
+            png = cards.photo_story_card(img, item["card"].get("title", item["title"]),
+                                         item["card"].get("subtitle", ""), brand=cfg["brand"],
+                                         tag="21+" )
+    if not png:
+        png = cards.mystic_card(item["card"], brand=cfg["brand"])
     return {
         "id": f"{page}-{item['kind']}-{datetime.now(UB).strftime('%Y%m%d%H%M')}",
         "kind": f"page_{item['kind']}", "category": page, "category_mn": cfg["name"], "category_emoji": "✨",

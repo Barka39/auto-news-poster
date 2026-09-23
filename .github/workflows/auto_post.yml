@@ -93,4 +93,8 @@ jobs:
           git config --local user.name "GitHub Action"
           git add posted_ids.json ledger.json pages_state.json || true
           git diff --staged --quiet || git commit -m "posted_ids шинэчлэгдлээ [skip ci]"
-          git push || true
+          for i in 1 2 3; do
+            git push && break
+            echo "push мөргөлдлөө — rebase хийж дахин оролдоно ($i)"
+            git pull --rebase --autostash origin main || break
+          done
