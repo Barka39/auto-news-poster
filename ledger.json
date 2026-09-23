@@ -406,7 +406,13 @@
    "source": "backfill",
    "title": "Gonzaga-гийн од Anton Watson Los Angeles Lakers-тэй training camp-ийн гэрээ байгууллаа. Гэвч энэ баярт мэдээ удаан үргэл",
    "url": "",
-   "slot": ""
+   "slot": "",
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790122411.1303632
+   }
   },
   {
    "ts": 1789965287.0,
@@ -418,7 +424,13 @@
    "source": "backfill",
    "title": "Golden State Warriors баг Graham Ike-тай two-way гэрээ байгуулснаар NBA-д тоглох Gonzaga-гийн төгсөгчдийн тоо 11-т хүрлэ",
    "url": "",
-   "slot": ""
+   "slot": "",
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790122411.79493
+   }
   },
   {
    "ts": 1789967604.0,
@@ -430,7 +442,13 @@
    "source": "backfill",
    "title": "\"Айчи Нагояа 2026\" Азийн наадамд Монголын 3х3 сагсан бөмбөгийн эрэгтэй шигшээ баг тивийн чансааг тэргүүлэн оролцоно. 23 ",
    "url": "",
-   "slot": ""
+   "slot": "",
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790122412.1983564
+   }
   },
   {
    "ts": 1789976037.9872267,
@@ -446,7 +464,13 @@
    "url": "https://ikon.mn/n/3qgt",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 811
+   "chars": 811,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790122412.629524
+   }
   },
   {
    "ts": 1789989860.0403209,
@@ -511,7 +535,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1431,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1790122413.1959724
+   }
   },
   {
    "ts": 1789997531.059249,
@@ -528,7 +556,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1593,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1790122413.8157344
+   }
   },
   {
    "ts": 1790035302.9435291,
@@ -545,7 +577,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1759,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1790122414.1971066
+   }
   },
   {
    "ts": 1790051469.970713,
