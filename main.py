@@ -188,6 +188,12 @@ def run():
             news["og_description"] = context["og_description"]
             news["body_excerpt"] = context["body_excerpt"]
 
+            # ДЭЛГЭРЭНГҮЙ МАТЕРИАЛГҮЙ мэдээг бичихгүй (2026-09-23: RealGM-ийн хуудас 403 өгөөд
+            # "Buddy Hield солигдлоо" гэсэн нэг мөрөөс хэн хэнээр солигдсоныг бичиж чадаагүй)
+            material = len(news.get("summary", "") or "") + len(news.get("og_description", "") or "") + len(news.get("body_excerpt", "") or "")
+            if material < 160 and float(news.get("score", 0) or 0) < 10 and news.get("kind") != "game_recap":
+                log.info(f"⏭️ Материал хомс ({material}ch) — ижил сэдвийн дэлгэрэнгүй эх сурвалжийг хүлээнэ: {news['title'][:50]}")
+                continue
             written = write_article(news)
 
             # ЧАНАРЫН ХАМГААЛАЛТ: орчуулга/бичвэр бүтэлгүйтсэн бол
