@@ -1664,6 +1664,22 @@
    "slot": "",
    "chars": 2095,
    "page": "udesh"
+  },
+  {
+   "ts": 1790257960.1708636,
+   "fb_id": "736504959542737_122186005040935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Shai Gilgeous-Alexander's next evolution: Why the 2-time MVP should give up touches to his Thunder teammates",
+   "url": "https://sports.yahoo.com/nba/article/shai-gilgeous-alexanders-next-evolution-why-the-2-time-mvp-should-give-up-touches-to-his-thunder-teammates-134018999.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 163
   }
  ]
 }
