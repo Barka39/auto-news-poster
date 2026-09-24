@@ -1516,6 +1516,22 @@
    "scheduled_for": 1790343000,
    "slot": "2026-09-25 21:30",
    "chars": 258
+  },
+  {
+   "ts": 1790218353.3308985,
+   "fb_id": "736504959542737_122185900178935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "CBS Sports NBA",
+   "title": "Gregg Popovich marries ex-wife of his former longtime Spurs assistant coach",
+   "url": "https://www.cbssports.com/nba/news/gregg-popovich-wife-spurs-assistant-coach-mike-budenholzer/",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 666
   }
  ]
 }
