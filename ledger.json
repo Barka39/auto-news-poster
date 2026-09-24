@@ -1582,6 +1582,22 @@
    "slot": "",
    "chars": 1135,
    "page": "suns"
+  },
+  {
+   "ts": 1790227322.5936515,
+   "fb_id": "736504959542737_122185916594935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Longtime Lakers PA announcer Lawrence Tanter dies at 76: NBA world pays tribute to legendary voice",
+   "url": "https://sports.yahoo.com/articles/longtime-lakers-pa-announcer-lawrence-050350476.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 309
   }
  ]
 }
