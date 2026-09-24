@@ -1500,6 +1500,22 @@
    "scheduled_for": 1790334000,
    "slot": "2026-09-25 19:00",
    "chars": 310
+  },
+  {
+   "ts": 1790214697.470555,
+   "fb_id": "122185889636935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Luka Dončić lays out Lakers championship ‘plan’ in passionate vow",
+   "url": "https://sports.yahoo.com/articles/luka-don-lays-lakers-championship-212924936.html",
+   "scheduled_for": 1790343000,
+   "slot": "2026-09-25 21:30",
+   "chars": 258
   }
  ]
 }
