@@ -1696,6 +1696,38 @@
    "scheduled_for": 1790380800,
    "slot": "2026-09-26 08:00",
    "chars": 918
+  },
+  {
+   "ts": 1790280124.468776,
+   "fb_id": "122186050970935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Terry Rozier's mother asks judge to allow him NBA return",
+   "url": "https://www.espn.com/nba/story/_/id/50022277/terry-rozier-mother-gina-tucker-asks-judge-nba-gambling-case",
+   "scheduled_for": 1790391600,
+   "slot": "2026-09-26 11:00",
+   "chars": 453
+  },
+  {
+   "ts": 1790280152.1360662,
+   "fb_id": "122186051042935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Presti not expecting Thunder downturn despite departures",
+   "url": "https://www.espn.com/nba/story/_/id/50022435/presti-not-expecting-thunder-downturn-departures",
+   "scheduled_for": 1790398800,
+   "slot": "2026-09-26 13:00",
+   "chars": 377
   }
  ]
 }
