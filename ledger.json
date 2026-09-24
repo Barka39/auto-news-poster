@@ -1484,6 +1484,22 @@
    "scheduled_for": 1790323200,
    "slot": "2026-09-25 16:00",
    "chars": 268
+  },
+  {
+   "ts": 1790212905.1970127,
+   "fb_id": "122185886090935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Sources: Mavs' Dereck Lively II (foot) not cleared for camp",
+   "url": "https://www.espn.com/nba/story/_/id/50016983/sources-mavs-dereck-lively-ii-foot-not-cleared-camp",
+   "scheduled_for": 1790334000,
+   "slot": "2026-09-25 19:00",
+   "chars": 310
   }
  ]
 }
