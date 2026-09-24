@@ -1728,6 +1728,22 @@
    "scheduled_for": 1790398800,
    "slot": "2026-09-26 13:00",
    "chars": 377
+  },
+  {
+   "ts": 1790285529.13327,
+   "fb_id": "122186058392935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Bob Pettit, who starred at LSU and then in NBA, dies at 93",
+   "url": "https://www.espn.com/nba/story/_/id/50023100/bob-pettit-starred-lsu-nba-dies-93",
+   "scheduled_for": 1790409600,
+   "slot": "2026-09-26 16:00",
+   "chars": 399
   }
  ]
 }
