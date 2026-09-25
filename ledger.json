@@ -2053,6 +2053,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 718
+  },
+  {
+   "ts": 1790319715.6390095,
+   "fb_id": "736504959542737_122186117990935957",
+   "ig_id": "",
+   "kind": "mn",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "mn_basketball",
+   "source": "Asia-Basket Mongolia",
+   "title": "McDaniels comes back to Miners, ex Marinos",
+   "url": "https://www.asia-basket.com/Mongolia/news/1032719/McDaniels-comes-back-to-Miners-ex-Marinos",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 758
   }
  ]
 }
