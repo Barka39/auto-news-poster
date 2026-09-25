@@ -2003,6 +2003,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 414
+  },
+  {
+   "ts": 1790310833.6315267,
+   "fb_id": "828746100324372_122148073833084055",
+   "ig_id": "",
+   "kind": "page_confession",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Цагаан даашинзны доорх сүүдэр",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 983,
+   "page": "udesh"
   }
  ]
 }
