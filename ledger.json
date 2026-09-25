@@ -2215,6 +2215,22 @@
    "scheduled_for": 1790485200,
    "slot": "2026-09-27 13:00",
    "chars": 402
+  },
+  {
+   "ts": 1790375539.1599987,
+   "fb_id": "122186227676935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Kon Knueppel To Miss Start Of Regular Season With Hamstring Strain",
+   "url": "https://basketball.realgm.com/wiretap/287396/Kon-Knueppel-To-Miss-Start-Of-Regular-Season-With-Hamstring-Strain",
+   "scheduled_for": 1790496000,
+   "slot": "2026-09-27 16:00",
+   "chars": 693
   }
  ]
 }
