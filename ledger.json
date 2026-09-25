@@ -1971,6 +1971,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 881
+  },
+  {
+   "ts": 1790309497.7256927,
+   "fb_id": "736504959542737_122186101100935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Did JJ Redick throw shade at LeBron James with eye-opening comments?",
+   "url": "https://sports.yahoo.com/articles/did-jj-redick-throw-shade-233950133.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 685
   }
  ]
 }
