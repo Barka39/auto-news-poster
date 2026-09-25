@@ -1891,6 +1891,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 508
+  },
+  {
+   "ts": 1790298113.2154102,
+   "fb_id": "736504959542737_122186075612935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Knicks' Jalen Brunson says he's fully cleared after offseason surgery",
+   "url": "https://sports.yahoo.com/articles/knicks-jalen-brunson-says-hes-003709002.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 514
   }
  ]
 }
