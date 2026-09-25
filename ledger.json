@@ -2199,6 +2199,22 @@
    "scheduled_for": 1790478000,
    "slot": "2026-09-27 11:00",
    "chars": 598
+  },
+  {
+   "ts": 1790364711.2897584,
+   "fb_id": "122186210396935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "quote",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Kyrie Irving has no restrictions after 19-month ACL recovery",
+   "url": "https://www.espn.com/nba/story/_/id/50028686/kyrie-irving-no-restrictions-19-month-acl-recovery",
+   "scheduled_for": 1790485200,
+   "slot": "2026-09-27 13:00",
+   "chars": 402
   }
  ]
 }
