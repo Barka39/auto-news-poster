@@ -2069,6 +2069,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 758
+  },
+  {
+   "ts": 1790321028.6402833,
+   "fb_id": "736504959542737_122186120186935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Oscar winner Lupita Nyong'o invests in BAL team Nairobi City Thunder",
+   "url": "https://www.espn.com/espn/story/_/id/50025576/oscar-winner-lupita-nyongo-invests-bal-team-nairobi-city-thunder",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 285
   }
  ]
 }
