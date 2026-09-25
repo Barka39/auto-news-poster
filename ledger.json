@@ -1923,6 +1923,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 410
+  },
+  {
+   "ts": 1790302283.0381093,
+   "fb_id": "122186083136935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "JJ Redick addresses Lakers starting lineup then drops viral quote",
+   "url": "https://sports.yahoo.com/articles/jj-redick-addresses-lakers-starting-020114042.html",
+   "scheduled_for": 1790429400,
+   "slot": "2026-09-26 21:30",
+   "chars": 490
   }
  ]
 }
