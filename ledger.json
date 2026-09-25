@@ -2135,6 +2135,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 508
+  },
+  {
+   "ts": 1790349726.1045022,
+   "fb_id": "736504959542737_122186184242935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Cooper Flagg Debut Patch Card Sells For Record $8.04M",
+   "url": "https://basketball.realgm.com/wiretap/287391/Cooper-Flagg-Debut-Patch-Card-Sells-For-Record-$804M",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 568
+  },
+  {
+   "ts": 1790349764.8749964,
+   "fb_id": "736504959542737_122186184350935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "What would a title do for Paul George’s legacy?",
+   "url": "https://sports.yahoo.com/articles/title-paul-george-legacy-100000229.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 266
   }
  ]
 }
