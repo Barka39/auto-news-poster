@@ -1955,6 +1955,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 814
+  },
+  {
+   "ts": 1790307152.8689835,
+   "fb_id": "736504959542737_122186097236935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Jon Scheyer Addresses Mavericks' Interest, Says He's 'In For Long Haul' With Duke",
+   "url": "https://basketball.realgm.com/wiretap/287387/Jon-Scheyer-Addresses-Mavericks-Interest-Says-Hes-In-For-Long-Haul-With-Duke",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 881
   }
  ]
 }
