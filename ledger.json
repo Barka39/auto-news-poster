@@ -1777,6 +1777,22 @@
    "slot": "",
    "chars": 1507,
    "page": "suns"
+  },
+  {
+   "ts": 1790295696.7990215,
+   "fb_id": "736504959542737_122186071508935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 10.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Luka-led Lakers are younger, deeper and built on connectivity: ‘The best teams are the most connected teams’",
+   "url": "https://sports.yahoo.com/nba/article/luka-led-lakers-are-younger-deeper-and-built-on-connectivity-the-best-teams-are-the-most-connected-teams-001649035.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 508
   }
  ]
 }
