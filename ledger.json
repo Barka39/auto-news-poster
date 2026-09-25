@@ -1939,6 +1939,22 @@
    "scheduled_for": 1790429400,
    "slot": "2026-09-26 21:30",
    "chars": 490
+  },
+  {
+   "ts": 1790306489.9418368,
+   "fb_id": "736504959542737_122186095388935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Lonzo Ball Clarifies He Is Not Retiring From NBA",
+   "url": "https://basketball.realgm.com/wiretap/287386/Lonzo-Ball-Clarifies-He-Is-Not-Retiring-From-NBA",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 814
   }
  ]
 }
