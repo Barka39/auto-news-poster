@@ -2119,6 +2119,22 @@
    "slot": "",
    "chars": 2172,
    "page": "udesh"
+  },
+  {
+   "ts": 1790348546.8249989,
+   "fb_id": "736504959542737_122186181956935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "The Bounce: Remembering when Michael Jordan became a Wizard, 25 years ago",
+   "url": "https://sports.yahoo.com/articles/bounce-remembering-michael-jordan-became-143107658.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 508
   }
  ]
 }
