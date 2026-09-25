@@ -2167,6 +2167,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 266
+  },
+  {
+   "ts": 1790352236.128173,
+   "fb_id": "122186188868935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "LeBron James: Maxey friendship, helping Embiid were 76ers factors",
+   "url": "https://www.espn.com/nba/story/_/id/50027833/lebron-james-maxey-friendship-helping-embiid-were-76ers-factors",
+   "scheduled_for": 1790467200,
+   "slot": "2026-09-27 08:00",
+   "chars": 259
   }
  ]
 }
