@@ -2231,6 +2231,22 @@
    "scheduled_for": 1790496000,
    "slot": "2026-09-27 16:00",
    "chars": 693
+  },
+  {
+   "ts": 1790380291.4696212,
+   "fb_id": "122186234792935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "quote",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Altman: Cavs built for 'sustainable run' despite missing on LeBron",
+   "url": "https://www.espn.com/nba/story/_/id/50029817/altman-cavs-built-sustainable-run-missing-lebron",
+   "scheduled_for": 1790506800,
+   "slot": "2026-09-27 19:00",
+   "chars": 375
   }
  ]
 }
