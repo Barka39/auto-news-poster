@@ -1078,7 +1078,13 @@
    "url": "https://sports.yahoo.com/articles/detroit-pistons-enlist-dazn-streaming-215047216.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 385
+   "chars": 385,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790295814.0822024
+   }
   },
   {
    "ts": 1790134888.038454,
@@ -1111,7 +1117,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 757,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1790295814.3321593
+   }
   },
   {
    "ts": 1790139724.9096134,
@@ -1128,7 +1138,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1159,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1790295814.5564134
+   }
   },
   {
    "ts": 1790140903.166018,
@@ -1144,7 +1158,13 @@
    "url": "https://basketball.realgm.com/wiretap/287351/Ryan-Nembhard-To-Attract-Interest-From-Multiple-Teams-Including-Nuggets-If-Waived-By-Hornets",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 441
+   "chars": 441,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790295814.8118346
+   }
   },
   {
    "ts": 1790157718.826942,
@@ -1160,7 +1180,13 @@
    "url": "https://ikon.mn/n/3qjj",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 632
+   "chars": 632,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790295815.0440524
+   }
   },
   {
    "ts": 1790168516.1791527,
@@ -1177,7 +1203,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1383,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1790295815.2709143
+   }
   },
   {
    "ts": 1790169102.4709265,
@@ -1193,7 +1223,13 @@
    "url": "https://sports.yahoo.com/nba/breaking-news/article/bucks-reportedly-being-investigated-by-nba-for-possible-salary-cap-circumvention-in-deal-with-gary-trent-jr-130510299.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 383
+   "chars": 383,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790295815.6469934
+   }
   },
   {
    "ts": 1790170935.6395793,
@@ -1210,7 +1246,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1696,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1790295815.890893
+   }
   },
   {
    "ts": 1790177518.4128485,
@@ -1274,7 +1314,13 @@
    "url": "https://basketball.realgm.com/wiretap/287362/Nets-Waive-DJ-Rodman-Aaron-Scott",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 293
+   "chars": 293,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790295816.1050632
+   }
   },
   {
    "ts": 1790179374.8050683,
@@ -1322,7 +1368,13 @@
    "url": "https://www.espn.com/nba/story/_/id/48957844/nba-trade-tracker-details-every-deal-2026-offseason-draft-free-agency",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 224
+   "chars": 224,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790295816.3555841
+   }
   },
   {
    "ts": 1790179665.093215,
@@ -1338,7 +1390,13 @@
    "url": "https://sports.yahoo.com/articles/thirty-third-thriving-101038775.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 122
+   "chars": 122,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790295816.5921113
+   }
   },
   {
    "ts": 1790179752.970283,
@@ -1354,7 +1412,13 @@
    "url": "https://www.cbssports.com/nba/news/steven-adams-rockets-grand-theft-auto-6-release/",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 431
+   "chars": 431,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790295816.830706
+   }
   },
   {
    "ts": 1790179843.3551316,
@@ -1370,7 +1434,13 @@
    "url": "https://sports.yahoo.com/nba/article/how-will-the-hornets-replace-lamelo-ball-heres-what-charlotte-is-betting-on-this-season-134659672.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 324
+   "chars": 324,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790295817.0861654
+   }
   },
   {
    "ts": 1790181787.5901322,
@@ -1386,7 +1456,13 @@
    "url": "https://sports.yahoo.com/articles/did-kevin-durant-2026-houston-162255460.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 271
+   "chars": 271,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790295817.3178823
+   }
   },
   {
    "ts": 1790181843.3152432,
@@ -1402,7 +1478,13 @@
    "url": "https://sports.yahoo.com/nba/article/the-nbas-5-most-interesting-newcomers-starring-lebron-james-lamelo-ball-and-the-lakers-big-swing-162109802.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 1014
+   "chars": 1014,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790295817.564136
+   }
   },
   {
    "ts": 1790189506.3516603,
@@ -1434,7 +1516,13 @@
    "url": "https://sports.yahoo.com/articles/people-around-league-monitoring-dallas-164519534.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 339
+   "chars": 339,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790295817.8262165
+   }
   },
   {
    "ts": 1790190712.9765692,
@@ -1450,7 +1538,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50014705/sources-knicks-karl-anthony-towns-contract-talks-standstill",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 219
+   "chars": 219,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790295818.039826
+   }
   },
   {
    "ts": 1790208128.2412333,
@@ -1467,7 +1561,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1714,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1790295818.269381
+   }
   },
   {
    "ts": 1790209914.661868,
