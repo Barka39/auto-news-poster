@@ -2247,6 +2247,23 @@
    "scheduled_for": 1790506800,
    "slot": "2026-09-27 19:00",
    "chars": 375
+  },
+  {
+   "ts": 1790380926.9317796,
+   "fb_id": "846498595210295_122146213005086375",
+   "ig_id": "",
+   "kind": "page_zurhai",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өнөөдрийн зурхай 2026.09.26",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1654,
+   "page": "suns"
   }
  ]
 }
