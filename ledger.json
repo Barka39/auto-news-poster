@@ -2554,6 +2554,22 @@
    "scheduled_for": 1790582400,
    "slot": "2026-09-28 16:00",
    "chars": 376
+  },
+  {
+   "ts": 1790459493.9913385,
+   "fb_id": "736504959542737_122186440688935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Sources: Bulls to trade Dillingham to Hornets for Buddy Hield",
+   "url": "https://www.espn.com/nba/story/_/id/50036563/sources-bulls-trade-rob-dillingham-hornets-buddy-hield",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 303
   }
  ]
 }
