@@ -2570,6 +2570,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 303
+  },
+  {
+   "ts": 1790461909.5536385,
+   "fb_id": "736504959542737_122186444888935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "LeBron James, Rob Pelinka closed the book on an era of Lakers basketball",
+   "url": "https://sports.yahoo.com/articles/lebron-james-rob-pelinka-closed-201715631.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 278
+  },
+  {
+   "ts": 1790461932.6614947,
+   "fb_id": "736504959542737_122186444996935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "A suggestion for Dereck Lively II: Log off, sir.",
+   "url": "https://sports.yahoo.com/articles/suggestion-dereck-lively-ii-log-201328328.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 473
   }
  ]
 }
