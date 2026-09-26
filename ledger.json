@@ -2358,6 +2358,22 @@
    "scheduled_for": 1790515800,
    "slot": "2026-09-27 21:30",
    "chars": 347
+  },
+  {
+   "ts": 1790389911.7996912,
+   "fb_id": "736504959542737_122186255258935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "deal",
+   "video": false,
+   "score": 10.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Sources: Warriors, Curry reach 2-year extension worth $116 million",
+   "url": "https://www.espn.com/nba/story/_/id/50030670/sources-warriors-curry-reach-2-year-extension-worth-116-million",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 297
   }
  ]
 }
