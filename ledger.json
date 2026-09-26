@@ -2538,6 +2538,22 @@
    "scheduled_for": 1790571600,
    "slot": "2026-09-28 13:00",
    "chars": 743
+  },
+  {
+   "ts": 1790454111.7853742,
+   "fb_id": "122186424152935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Lakers fans are going to miss Lawrence Tanter",
+   "url": "https://sports.yahoo.com/articles/lakers-fans-going-miss-lawrence-154400807.html",
+   "scheduled_for": 1790582400,
+   "slot": "2026-09-28 16:00",
+   "chars": 376
   }
  ]
 }
