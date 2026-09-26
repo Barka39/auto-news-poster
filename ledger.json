@@ -2506,6 +2506,22 @@
    "scheduled_for": 1790553600,
    "slot": "2026-09-28 08:00",
    "chars": 223
+  },
+  {
+   "ts": 1790443300.7823772,
+   "fb_id": "122186390924935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Karl-Anthony Towns, Knicks reportedly 'tens of millions apart' in contract talks",
+   "url": "https://sports.yahoo.com/articles/karl-anthony-towns-knicks-reportedly-170746769.html",
+   "scheduled_for": 1790564400,
+   "slot": "2026-09-28 11:00",
+   "chars": 489
   }
  ]
 }
