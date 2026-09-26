@@ -2522,6 +2522,22 @@
    "scheduled_for": 1790564400,
    "slot": "2026-09-28 11:00",
    "chars": 489
+  },
+  {
+   "ts": 1790450492.6564403,
+   "fb_id": "122186402540935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Miles McBride 'A Little Disappointed' In How Extension Talks Have Gone With Knicks",
+   "url": "https://basketball.realgm.com/wiretap/287415/Miles-McBride-A-Little-Disappointed-In-How-Extension-Talks-Have-Gone-With-Knicks",
+   "scheduled_for": 1790571600,
+   "slot": "2026-09-28 13:00",
+   "chars": 743
   }
  ]
 }
