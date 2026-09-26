@@ -2374,6 +2374,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 297
+  },
+  {
+   "ts": 1790397102.1296098,
+   "fb_id": "828746100324372_122148226347084055",
+   "ig_id": "",
+   "kind": "page_confession",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Хүйтэн дарсны халуун дурсамж",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1120,
+   "page": "udesh"
   }
  ]
 }
