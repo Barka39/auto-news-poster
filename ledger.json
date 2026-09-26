@@ -2490,6 +2490,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 251
+  },
+  {
+   "ts": 1790438514.3062408,
+   "fb_id": "122186369912935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Hornets' Kon Knueppel likely to miss start of season with hamstring strain",
+   "url": "https://sports.yahoo.com/articles/hornets-kon-knueppel-likely-miss-154600016.html",
+   "scheduled_for": 1790553600,
+   "slot": "2026-09-28 08:00",
+   "chars": 223
   }
  ]
 }
