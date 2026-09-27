@@ -2602,6 +2602,39 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 473
+  },
+  {
+   "ts": 1790467310.9260223,
+   "fb_id": "122186452388935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Jordi Fernandez finally gets chance to truly coach Nets as rebuild enters new phase",
+   "url": "https://sports.yahoo.com/articles/jordi-fernandez-finally-gets-chance-194154017.html",
+   "scheduled_for": 1790593200,
+   "slot": "2026-09-28 19:00",
+   "chars": 613
+  },
+  {
+   "ts": 1790467326.9284027,
+   "fb_id": "846498595210295_122146330509086375",
+   "ig_id": "",
+   "kind": "page_zurhai",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өнөөдрийн зурхай 2026.09.27",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1633,
+   "page": "suns"
   }
  ]
 }
