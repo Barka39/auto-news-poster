@@ -2749,6 +2749,23 @@
    "scheduled_for": 1790602200,
    "slot": "2026-09-28 21:30",
    "chars": 451
+  },
+  {
+   "ts": 1790483557.8385932,
+   "fb_id": "828746100324372_122148364407084055",
+   "ig_id": "",
+   "kind": "page_confession",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Хоёр ертөнцийн зааг дээр",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 874,
+   "page": "udesh"
   }
  ]
 }
