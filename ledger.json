@@ -2849,6 +2849,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 366
+  },
+  {
+   "ts": 1790524911.3659875,
+   "fb_id": "122186584262935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Joel Embiid’s Best Playoff Games, Part V: Game 7 vs Boston in 2026",
+   "url": "https://sports.yahoo.com/articles/joel-embiid-best-playoff-games-133254559.html",
+   "scheduled_for": 1790640000,
+   "slot": "2026-09-29 08:00",
+   "chars": 354
+  },
+  {
+   "ts": 1790524930.0227742,
+   "fb_id": "122186584310935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Do the Knicks have enough frontcourt depth for title defense? 3 reasons for optimism",
+   "url": "https://sports.yahoo.com/nba/article/do-the-knicks-have-enough-frontcourt-depth-for-title-defense-3-reasons-for-optimism-154347419.html",
+   "scheduled_for": 1790650800,
+   "slot": "2026-09-29 11:00",
+   "chars": 660
   }
  ]
 }
