@@ -2766,6 +2766,22 @@
    "slot": "",
    "chars": 874,
    "page": "udesh"
+  },
+  {
+   "ts": 1790484690.277182,
+   "fb_id": "736504959542737_122186491640935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "quote",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Host Jalen Brunson gets assist from Knicks on 'SNL' premiere",
+   "url": "https://www.espn.com/nba/story/_/id/50039929/host-jalen-brunson-gets-assist-knicks-snl-premiere",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 424
   }
  ]
 }
