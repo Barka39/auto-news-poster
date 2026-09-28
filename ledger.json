@@ -3056,6 +3056,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 760
+  },
+  {
+   "ts": 1790570007.2167017,
+   "fb_id": "828746100324372_122148468687084055",
+   "ig_id": "",
+   "kind": "page_confession",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Хөшигний цаана нуугдсан харц",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1075,
+   "page": "udesh"
   }
  ]
 }
