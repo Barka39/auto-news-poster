@@ -3748,6 +3748,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 570
+  },
+  {
+   "ts": 1790629355.5503469,
+   "fb_id": "736504959542737_122186805752935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Warriors' Draymond Green still finding new tricks, embraces challenge",
+   "url": "https://sports.yahoo.com/articles/warriors-draymond-green-still-finding-205416977.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 467
   }
  ]
 }
