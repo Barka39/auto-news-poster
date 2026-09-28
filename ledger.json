@@ -3924,6 +3924,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 333
+  },
+  {
+   "ts": 1790637698.2681444,
+   "fb_id": "736504959542737_122186820164935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Austin Reaves ‘happy to be back’ with Lakers after ‘weird’ contract negotiations",
+   "url": "https://sports.yahoo.com/articles/austin-reaves-happy-back-lakers-210816113.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 426
   }
  ]
 }
