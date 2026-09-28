@@ -3396,6 +3396,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 216
+  },
+  {
+   "ts": 1790619136.0879781,
+   "fb_id": "736504959542737_122186782634935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "State of the East: Knicks title defense, Duren drama & Philly’s upside with Jonathan Macri",
+   "url": "https://sports.yahoo.com/nba/article/state-of-the-east-knicks-title-defense-duren-drama--phillys-upside-with-jonathan-macri-180401573.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 220
   }
  ]
 }
