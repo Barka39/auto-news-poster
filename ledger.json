@@ -3892,6 +3892,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 321
+  },
+  {
+   "ts": 1790636547.377808,
+   "fb_id": "122186818406935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Sacramento Kings guard Ben Simmons addresses critics in expletive clip",
+   "url": "https://sports.yahoo.com/articles/sacramento-kings-guard-ben-simmons-224409755.html",
+   "scheduled_for": 1790766000,
+   "slot": "2026-09-30 19:00",
+   "chars": 614
   }
  ]
 }
