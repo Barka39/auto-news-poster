@@ -3812,6 +3812,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 355
+  },
+  {
+   "ts": 1790631719.1395993,
+   "fb_id": "736504959542737_122186810450935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "CBS Sports NBA",
+   "title": "Spurs star Dylan Harper, heading into Year 2, already knows he's too good to come off the bench",
+   "url": "https://www.cbssports.com/nba/news/spurs-star-dylan-harper-too-good-come-off-bench/",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 914
   }
  ]
 }
