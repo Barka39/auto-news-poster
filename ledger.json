@@ -3732,6 +3732,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 316
+  },
+  {
+   "ts": 1790628115.9777284,
+   "fb_id": "736504959542737_122186803214935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "How the mighty have fallen: Steph Curry reacts to Warriors expectations",
+   "url": "https://sports.yahoo.com/articles/mighty-fallen-steph-curry-reacts-202844554.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 570
   }
  ]
 }
