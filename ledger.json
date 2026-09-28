@@ -3252,6 +3252,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 330
+  },
+  {
+   "ts": 1790610722.3205557,
+   "fb_id": "736504959542737_122186768636935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "How LeBron James can complete the process",
+   "url": "https://sports.yahoo.com/articles/lebron-james-complete-process-133329708.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 360
   }
  ]
 }
