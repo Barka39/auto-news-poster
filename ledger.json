@@ -2992,6 +2992,22 @@
    "scheduled_for": 1790668800,
    "slot": "2026-09-29 16:00",
    "chars": 613
+  },
+  {
+   "ts": 1790560293.1906455,
+   "fb_id": "122186641052935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Video emerges of Isaiah Stewart punching new Knick Drew Eubanks before 2024 arrest",
+   "url": "https://sports.yahoo.com/articles/video-emerges-isaiah-stewart-punching-212841947.html",
+   "scheduled_for": 1790679600,
+   "slot": "2026-09-29 19:00",
+   "chars": 432
   }
  ]
 }
