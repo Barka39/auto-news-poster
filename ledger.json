@@ -3364,6 +3364,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 217
+  },
+  {
+   "ts": 1790618588.8763556,
+   "fb_id": "736504959542737_122186781242935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Karl-Anthony Towns wants extension to stay with Knicks",
+   "url": "https://www.espn.com/nba/story/_/id/50053583/karl-anthony-towns-wants-extension-stay-knicks",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 325
+  },
+  {
+   "ts": 1790618683.1992483,
+   "fb_id": "736504959542737_122186781590935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "All-Star Brandon Ingram has partially torn Achilles, will miss start of Clippers' season",
+   "url": "https://sports.yahoo.com/nba/breaking-news/article/all-star-brandon-ingram-has-partially-torn-achilles-will-miss-start-of-clippers-season-175425286.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 216
   }
  ]
 }
