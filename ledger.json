@@ -3844,6 +3844,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 353
+  },
+  {
+   "ts": 1790632921.0689213,
+   "fb_id": "736504959542737_122186812400935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "'The vibes are immaculate right now': Clippers begin penalty era by playing the spin game",
+   "url": "https://sports.yahoo.com/nba/article/the-vibes-are-immaculate-right-now-clippers-begin-penalty-era-by-playing-the-spin-game-214927039.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 423
   }
  ]
 }
