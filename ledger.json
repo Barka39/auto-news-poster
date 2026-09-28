@@ -3040,6 +3040,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 741
+  },
+  {
+   "ts": 1790562095.9293323,
+   "fb_id": "736504959542737_122186645720935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Jalen Duren Expected To Skip Pistons Media Day Amid Contract Stalemate",
+   "url": "https://basketball.realgm.com/wiretap/287435/Jalen-Duren-Expected-To-Skip-Pistons-Media-Day-Amid-Contract-Stalemate",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 760
   }
  ]
 }
