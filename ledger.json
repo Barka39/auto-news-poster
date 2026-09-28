@@ -3316,6 +3316,22 @@
    "scheduled_for": 1790737200,
    "slot": "2026-09-30 11:00",
    "chars": 214
+  },
+  {
+   "ts": 1790616728.0548453,
+   "fb_id": "122186778518935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Kawhi Leonard focused on being a Raptor after Clippers exit",
+   "url": "https://www.espn.com/nba/story/_/id/50053340/kawhi-leonard-focused-being-raptor-clippers-exit",
+   "scheduled_for": 1790744400,
+   "slot": "2026-09-30 13:00",
+   "chars": 272
   }
  ]
 }
