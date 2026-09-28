@@ -3764,6 +3764,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 467
+  },
+  {
+   "ts": 1790630530.4776738,
+   "fb_id": "736504959542737_122186807900935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "What did Jalen Brunson say at New York Knicks media day?",
+   "url": "https://sports.yahoo.com/articles/did-jalen-brunson-york-knicks-205344999.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 215
   }
  ]
 }
