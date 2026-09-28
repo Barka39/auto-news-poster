@@ -3300,6 +3300,22 @@
    "scheduled_for": 1790726400,
    "slot": "2026-09-30 08:00",
    "chars": 225
+  },
+  {
+   "ts": 1790612526.1182315,
+   "fb_id": "122186771336935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "More good Sixers news — the 2001 black jerseys are back for 2026-27",
+   "url": "https://sports.yahoo.com/articles/more-good-sixers-news-2001-140048522.html",
+   "scheduled_for": 1790737200,
+   "slot": "2026-09-30 11:00",
+   "chars": 214
   }
  ]
 }
