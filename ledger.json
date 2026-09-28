@@ -3876,6 +3876,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 484
+  },
+  {
+   "ts": 1790634746.4019537,
+   "fb_id": "736504959542737_122186815604935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Anthony Edwards happy to cede PG duties to LaMelo Ball",
+   "url": "https://www.espn.com/nba/story/_/id/50055051/anthony-edwards-happy-cede-pg-duties-lamelo-ball",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 321
   }
  ]
 }
