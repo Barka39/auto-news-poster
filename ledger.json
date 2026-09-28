@@ -3008,6 +3008,22 @@
    "scheduled_for": 1790679600,
    "slot": "2026-09-29 19:00",
    "chars": 432
+  },
+  {
+   "ts": 1790560929.2805037,
+   "fb_id": "122186642102935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Wizards announce 2026 training camp roster",
+   "url": "https://sports.yahoo.com/articles/wizards-announce-2026-training-camp-224723707.html",
+   "scheduled_for": 1790688600,
+   "slot": "2026-09-29 21:30",
+   "chars": 564
   }
  ]
 }
