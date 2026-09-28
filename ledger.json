@@ -3540,6 +3540,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 938
+  },
+  {
+   "ts": 1790624530.7864327,
+   "fb_id": "736504959542737_122186794526935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Jaylen Brown Calls Character Claims 'Bizarre' Following Trade To 76ers",
+   "url": "https://basketball.realgm.com/wiretap/287443/Jaylen-Brown-Calls-Character-Claims-Bizarre-Following-Trade-To-76ers",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 638
+  },
+  {
+   "ts": 1790624619.5834157,
+   "fb_id": "736504959542737_122186795012935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Brandon Ingram's Partially Torn Achilles Discovered During May Surgery",
+   "url": "https://basketball.realgm.com/wiretap/287448/Brandon-Ingrams-Partially-Torn-Achilles-Discovered-During-May-Surgery",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 840
   }
  ]
 }
