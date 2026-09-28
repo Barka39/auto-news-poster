@@ -3492,6 +3492,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 255
+  },
+  {
+   "ts": 1790622157.6917937,
+   "fb_id": "736504959542737_122186789162935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "LeBron James 'had visions' of joining Knicks over 76ers but changed mind after they won NBA championship",
+   "url": "https://sports.yahoo.com/nba/article/lebron-james-had-visions-of-joining-knicks-over-76ers-but-changed-mind-after-they-won-nba-championship-185007354.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 442
   }
  ]
 }
