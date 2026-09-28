@@ -3652,6 +3652,54 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 381
+  },
+  {
+   "ts": 1790626347.2026255,
+   "fb_id": "736504959542737_122186799740935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Pistons still awaiting Jalen Duren decision as training camp begins",
+   "url": "https://sports.yahoo.com/articles/pistons-still-awaiting-jalen-duren-194423363.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 356
+  },
+  {
+   "ts": 1790626370.3295524,
+   "fb_id": "736504959542737_122186799950935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Owner Mat Ishbia says mortgage company woes won't hurt Suns",
+   "url": "https://www.espn.com/nba/story/_/id/50054069/owner-mat-ishbia-says-mortgage-company-woes-hurt-suns",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 367
+  },
+  {
+   "ts": 1790626391.322084,
+   "fb_id": "736504959542737_122186800070935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "CBS Sports NBA",
+   "title": "Spurs' Stephon Castle says Knicks crowd at MSG was 'underwhelming' in NBA Finals, OKC fans were 'way louder'",
+   "url": "https://www.cbssports.com/nba/news/spurs-stephon-castle-knicks-crowd-msg-underwhelming/",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 775
   }
  ]
 }
