@@ -3024,6 +3024,22 @@
    "scheduled_for": 1790688600,
    "slot": "2026-09-29 21:30",
    "chars": 564
+  },
+  {
+   "ts": 1790561522.1856923,
+   "fb_id": "736504959542737_122186643638935957",
+   "ig_id": "",
+   "kind": "mn",
+   "card": "news",
+   "video": false,
+   "score": 10,
+   "category": "mn_basketball",
+   "source": "ikon.mn",
+   "title": "Nongshim брэнд хүүхэд, залуусыг дэмжиж “Nongshim x Magic Trio 3x3” сагсан бөмбөгийн тэмцээний ерөнхий ивээн тэтгэгчээр а",
+   "url": "https://ikon.mn/n/3qmh",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 741
   }
  ]
 }
