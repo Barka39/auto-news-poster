@@ -3412,6 +3412,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 220
+  },
+  {
+   "ts": 1790619757.2347653,
+   "fb_id": "736504959542737_122186783840935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Joel Embiid health update: 76ers center 'feeling pretty good' entering season",
+   "url": "https://sports.yahoo.com/articles/joel-embiid-health-76ers-center-180327079.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 293
+  },
+  {
+   "ts": 1790619834.934677,
+   "fb_id": "736504959542737_122186784128935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "After summer of adoration, Knicks get back to business of title defense",
+   "url": "https://sports.yahoo.com/articles/summer-adoration-knicks-back-business-180017029.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 302
   }
  ]
 }
