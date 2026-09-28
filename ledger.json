@@ -3444,6 +3444,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 302
+  },
+  {
+   "ts": 1790620282.2418332,
+   "fb_id": "736504959542737_122186785136935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Myles Turner reflects on transformative offseason and Giannis' departure from Milwaukee",
+   "url": "https://sports.yahoo.com/articles/myles-turner-reflects-transformative-offseason-182103419.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 678
   }
  ]
 }
