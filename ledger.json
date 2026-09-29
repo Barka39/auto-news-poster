@@ -4381,6 +4381,22 @@
    "scheduled_for": 1790830800,
    "slot": "2026-10-01 13:00",
    "chars": 291
+  },
+  {
+   "ts": 1790713307.9012134,
+   "fb_id": "122186970692935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Sources: NBA reviewing finalists' bids for Vegas expansion team",
+   "url": "https://www.espn.com/nba/story/_/id/50060732/nba-reviewing-finalists-bids-vegas-team-12-13b",
+   "scheduled_for": 1790841600,
+   "slot": "2026-10-01 16:00",
+   "chars": 439
   }
  ]
 }
