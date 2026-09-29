@@ -4037,6 +4037,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 423
+  },
+  {
+   "ts": 1790644926.0762029,
+   "fb_id": "736504959542737_122186834510935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Jalen Green sought the advice of a Suns’ legend to improve his game",
+   "url": "https://sports.yahoo.com/articles/jalen-green-sought-advice-suns-230000323.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 217
   }
  ]
 }
