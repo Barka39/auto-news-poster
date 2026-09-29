@@ -4219,6 +4219,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 489
+  },
+  {
+   "ts": 1790679725.7227197,
+   "fb_id": "736504959542737_122186904296935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Nets carrying ‘delusional confidence’ they can defy odds with lofty win goal",
+   "url": "https://sports.yahoo.com/articles/nets-carrying-delusional-confidence-defy-051802580.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 547
   }
  ]
 }
