@@ -4365,6 +4365,22 @@
    "scheduled_for": 1790823600,
    "slot": "2026-10-01 11:00",
    "chars": 327
+  },
+  {
+   "ts": 1790710321.5901282,
+   "fb_id": "122186966396935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Knicks still undecided if they will visit White House",
+   "url": "https://www.espn.com/nba/story/_/id/50060343/knicks-undecided-visit-white-house",
+   "scheduled_for": 1790830800,
+   "slot": "2026-10-01 13:00",
+   "chars": 291
   }
  ]
 }
