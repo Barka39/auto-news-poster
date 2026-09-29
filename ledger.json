@@ -4251,6 +4251,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 401
+  },
+  {
+   "ts": 1790682130.280277,
+   "fb_id": "736504959542737_122186908712935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Baylor Scheierman on the new-look Boston Celtics: “We’re just gonna hoop”",
+   "url": "https://sports.yahoo.com/articles/baylor-scheierman-look-boston-celtics-080000393.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 409
   }
  ]
 }
