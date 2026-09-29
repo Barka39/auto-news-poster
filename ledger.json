@@ -4121,6 +4121,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 217
+  },
+  {
+   "ts": 1790656357.6267025,
+   "fb_id": "828746100324372_122148620367084055",
+   "ig_id": "",
+   "kind": "page_confession",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Хэлж амжаагүй нууцхан үгс",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1023,
+   "page": "udesh"
   }
  ]
 }
