@@ -4397,6 +4397,38 @@
    "scheduled_for": 1790841600,
    "slot": "2026-10-01 16:00",
    "chars": 439
+  },
+  {
+   "ts": 1790725886.575779,
+   "fb_id": "122186987354935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "'This is a meritocracy': Lakers open training camp with mandate of competition",
+   "url": "https://sports.yahoo.com/articles/meritocracy-lakers-open-training-camp-232241645.html",
+   "scheduled_for": 1790852400,
+   "slot": "2026-10-01 19:00",
+   "chars": 481
+  },
+  {
+   "ts": 1790725905.6244566,
+   "fb_id": "736504959542737_122186987426935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "76ers training camp opens with Nick Nurse ready to experiment: 'We need to clearly define roles for everybody'",
+   "url": "https://sports.yahoo.com/nba/article/76ers-training-camp-opens-with-nick-nurse-ready-to-experiment-we-need-to-clearly-define-roles-for-everybody-194710078.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 430
   }
  ]
 }
