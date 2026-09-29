@@ -4187,6 +4187,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 568
+  },
+  {
+   "ts": 1790671907.793743,
+   "fb_id": "736504959542737_122186887076935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Where Nets’ ongoing Michael Porter Jr. extension talks stand entering training camp",
+   "url": "https://sports.yahoo.com/articles/where-nets-ongoing-michael-porter-042353580.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 326
   }
  ]
 }
