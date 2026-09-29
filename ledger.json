@@ -4333,6 +4333,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 409
+  },
+  {
+   "ts": 1790699515.0341241,
+   "fb_id": "122186943674935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Former NBA star J.R. Smith arrested in Texas on assault",
+   "url": "https://sports.yahoo.com/articles/former-nba-star-j-r-161706728.html",
+   "scheduled_for": 1790812800,
+   "slot": "2026-10-01 08:00",
+   "chars": 275
   }
  ]
 }
