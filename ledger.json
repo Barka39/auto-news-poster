@@ -4267,6 +4267,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 409
+  },
+  {
+   "ts": 1790684499.7086654,
+   "fb_id": "736504959542737_122186914580935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Kawhi Leonard Declines To Discuss NBA Investigation, Ready To 'Move Forward' With Raptors",
+   "url": "https://basketball.realgm.com/wiretap/287455/Kawhi-Leonard-Declines-To-Discuss-NBA-Investigation-Ready-To-Move-Forward-With-Raptors",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 794
   }
  ]
 }
