@@ -4814,6 +4814,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 397
+  },
+  {
+   "ts": 1790767917.6357017,
+   "fb_id": "736504959542737_122187071240935957",
+   "ig_id": "",
+   "kind": "mn",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "mn_basketball",
+   "source": "Asia-Basket Mongolia",
+   "title": "Tychique Bosango (ex Johor Tigers) joins Miners",
+   "url": "https://www.asia-basket.com/Mongolia/news/1033633/Tychique-Bosango-ex-Johor-Tigers-joins-Miners",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 665
   }
  ]
 }
