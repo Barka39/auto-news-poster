@@ -5104,6 +5104,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 344
+  },
+  {
+   "ts": 1790797359.7151036,
+   "fb_id": "736504959542737_122187130742935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "CBS Sports NBA",
+   "title": "Jalen Duren contract standoff: Pistons reportedly remove weight clause from $200 million offer",
+   "url": "https://www.cbssports.com/nba/news/jalen-duren-contract-standoff-pistons-weight-clause/",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 814
+  },
+  {
+   "ts": 1790797380.879069,
+   "fb_id": "736504959542737_122187130874935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Suns guard Dillon Brooks officially charged with DUI from March arrest",
+   "url": "https://sports.yahoo.com/articles/suns-guard-dillon-brooks-officially-192312980.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 349
   }
  ]
 }
