@@ -5136,6 +5136,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 349
+  },
+  {
+   "ts": 1790799704.127306,
+   "fb_id": "122187135440935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "76ers guard Tyrese Maxey: 'I want to be judged by winning'",
+   "url": "https://www.espn.com/nba/story/_/id/50070779/76ers-guard-tyrese-maxey-want-judged-winning",
+   "scheduled_for": 1790928000,
+   "slot": "2026-10-02 16:00",
+   "chars": 340
   }
  ]
 }
