@@ -4700,6 +4700,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 382
+  },
+  {
+   "ts": 1790736697.9737933,
+   "fb_id": "736504959542737_122187007436935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Longtime NBA coach retires from JJ Redick’s staff as part of shakeups",
+   "url": "https://sports.yahoo.com/articles/longtime-nba-coach-retires-jj-222849220.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 294
   }
  ]
 }
