@@ -4798,6 +4798,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 697
+  },
+  {
+   "ts": 1790751096.586774,
+   "fb_id": "736504959542737_122187029786935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Rui Hachimura converts Lakers fan to Clippers stan in wild gift exchange",
+   "url": "https://sports.yahoo.com/articles/rui-hachimura-converts-lakers-fan-022508433.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 397
   }
  ]
 }
