@@ -5184,6 +5184,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 372
+  },
+  {
+   "ts": 1790808144.9812882,
+   "fb_id": "736504959542737_122187147050935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Celtics notice Jayson Tatum leadership leap to begin camp",
+   "url": "https://sports.yahoo.com/articles/celtics-notice-jayson-tatum-leadership-202830097.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 363
   }
  ]
 }
