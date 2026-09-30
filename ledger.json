@@ -4992,6 +4992,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 222
+  },
+  {
+   "ts": 1790788924.0002959,
+   "fb_id": "122187116516935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Walker Kessler already has won over Lakers teammates without even playing game",
+   "url": "https://sports.yahoo.com/articles/walker-kessler-already-won-over-130000138.html",
+   "scheduled_for": 1790917200,
+   "slot": "2026-10-02 13:00",
+   "chars": 333
+  },
+  {
+   "ts": 1790788950.144678,
+   "fb_id": "736504959542737_122187116606935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Michael Jordan's 'Last Dance' Jersey Sells For Record $12.26M",
+   "url": "https://basketball.realgm.com/wiretap/287471/Michael-Jordans-Last-Dance-Jersey-Sells-For-Record-$1226M",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 685
   }
  ]
 }
