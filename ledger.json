@@ -4732,6 +4732,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 328
+  },
+  {
+   "ts": 1790742743.2152553,
+   "fb_id": "828746100324372_122148774579084055",
+   "ig_id": "",
+   "kind": "page_confession",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Дэлгэц дээрх ганцхан үг",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1036,
+   "page": "udesh"
   }
  ]
 }
