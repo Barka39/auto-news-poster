@@ -638,6 +638,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790209294.644156
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1790730707.2821174
    }
   },
   {
@@ -659,6 +663,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790209295.0643625
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1790730707.6060233
    }
   },
   {
@@ -680,6 +688,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790209295.362727
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1790730708.0022912
    }
   },
   {
@@ -701,6 +713,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790209295.6427898
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1790730708.2645328
    }
   },
   {
@@ -723,6 +739,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790209295.95687
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730708.585343
    }
   },
   {
@@ -761,6 +783,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790209296.278454
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730708.8214025
    }
   },
   {
@@ -831,6 +859,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790209296.5439377
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730709.070774
    }
   },
   {
@@ -853,6 +887,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790209296.788939
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730709.2934542
    }
   },
   {
@@ -875,6 +915,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790209297.0690348
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730709.5551805
    }
   },
   {
@@ -897,6 +943,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790209297.3869195
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730709.8425794
    }
   },
   {
@@ -935,6 +987,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790209297.6636806
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730710.111871
    }
   },
   {
@@ -973,6 +1031,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790209297.933777
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730710.3904293
    }
   },
   {
@@ -995,6 +1059,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790209298.1954005
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730710.6528976
    }
   },
   {
@@ -1017,6 +1087,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790209298.466779
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730711.0760238
    }
   },
   {
@@ -1039,6 +1115,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790209298.7335181
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730711.3463771
    }
   },
   {
@@ -1061,6 +1143,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790209299.0860193
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730711.8442197
    }
   },
   {
@@ -1082,6 +1170,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790209299.4131148
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1790730712.1596086
    }
   },
   {
@@ -3107,7 +3199,13 @@
    "url": "https://ikon.mn/n/3qmh",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 741
+   "chars": 741,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730712.4275885
+   }
   },
   {
    "ts": 1790562095.9293323,
@@ -3123,7 +3221,13 @@
    "url": "https://basketball.realgm.com/wiretap/287435/Jalen-Duren-Expected-To-Skip-Pistons-Media-Day-Amid-Contract-Stalemate",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 760
+   "chars": 760,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730712.7298133
+   }
   },
   {
    "ts": 1790570007.2167017,
@@ -3140,7 +3244,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1075,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1790730713.0337095
+   }
   },
   {
    "ts": 1790571717.1023607,
@@ -3157,7 +3265,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 958,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1790730713.3136587
+   }
   },
   {
    "ts": 1790572889.6059294,
@@ -3173,7 +3285,13 @@
    "url": "https://basketball.realgm.com/wiretap/287437/Mavs-Intend-To-Keep-Dwight-Powell-On-Roster",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 545
+   "chars": 545,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730713.5697901
+   }
   },
   {
    "ts": 1790590309.4924526,
@@ -3189,7 +3307,13 @@
    "url": "https://sports.yahoo.com/articles/vanvleet-adams-conquered-injury-rehab-095531818.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 364
+   "chars": 364,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730713.8934727
+   }
   },
   {
    "ts": 1790592352.1503456,
@@ -3205,7 +3329,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 191
+   "chars": 191,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730714.6219375
+   }
   },
   {
    "ts": 1790595726.128996,
@@ -3221,7 +3351,13 @@
    "url": "https://ikon.mn/n/3qn5",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 923
+   "chars": 923,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730715.1030014
+   }
   },
   {
    "ts": 1790598106.9834523,
@@ -3237,7 +3373,13 @@
    "url": "https://sports.yahoo.com/articles/naji-marshall-little-bit-everything-100000374.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 412
+   "chars": 412,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730715.466001
+   }
   },
   {
    "ts": 1790600526.6809819,
@@ -3254,7 +3396,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1205,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1790730715.6938016
+   }
   },
   {
    "ts": 1790602313.0826952,
@@ -3270,7 +3416,13 @@
    "url": "https://www.espn.com/nba/story/_/id/41519907/jimmy-butler-hair-styles-nba-media-day",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 421
+   "chars": 421,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730715.955795
+   }
   },
   {
    "ts": 1790602470.945325,
@@ -3287,7 +3439,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 2145,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1790730716.2268105
+   }
   },
   {
    "ts": 1790604193.0435593,
@@ -3303,7 +3459,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50051681/sources-pistons-duren-not-media-day-amid-contract-standoff",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 328
+   "chars": 328,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730716.488179
+   }
   },
   {
    "ts": 1790604727.7920988,
@@ -3319,7 +3481,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50016779/aj-dybantsa-washington-wizards-2026-topps-flagship-basketball-cover",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 330
+   "chars": 330,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730716.725811
+   }
   },
   {
    "ts": 1790610722.3205557,
@@ -3335,7 +3503,13 @@
    "url": "https://sports.yahoo.com/articles/lebron-james-complete-process-133329708.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 360
+   "chars": 360,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730716.9687495
+   }
   },
   {
    "ts": 1790611343.0292492,
@@ -3351,7 +3525,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50052354/giannis-confident-offer-overhauled-heat",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 285
+   "chars": 285,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730717.314903
+   }
   },
   {
    "ts": 1790611372.6696825,
@@ -3415,7 +3595,13 @@
    "url": "https://www.espn.com/mens-college-basketball/story/_/id/50053258/big-ten-basketball-adopts-rule-preventing-pros-returning",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 266
+   "chars": 266,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730717.5720382
+   }
   },
   {
    "ts": 1790617368.5488987,
@@ -3431,7 +3617,13 @@
    "url": "https://sports.yahoo.com/articles/tyrese-haliburton-declares-himself-100-172947563.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 217
+   "chars": 217,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730717.835203
+   }
   },
   {
    "ts": 1790618588.8763556,
@@ -3447,7 +3639,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50053583/karl-anthony-towns-wants-extension-stay-knicks",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 325
+   "chars": 325,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730718.1099887
+   }
   },
   {
    "ts": 1790618683.1992483,
@@ -3463,7 +3661,13 @@
    "url": "https://sports.yahoo.com/nba/breaking-news/article/all-star-brandon-ingram-has-partially-torn-achilles-will-miss-start-of-clippers-season-175425286.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 216
+   "chars": 216,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730718.3854244
+   }
   },
   {
    "ts": 1790619136.0879781,
@@ -3479,7 +3683,13 @@
    "url": "https://sports.yahoo.com/nba/article/state-of-the-east-knicks-title-defense-duren-drama--phillys-upside-with-jonathan-macri-180401573.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 220
+   "chars": 220,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730718.6666431
+   }
   },
   {
    "ts": 1790619757.2347653,
@@ -3495,7 +3705,13 @@
    "url": "https://sports.yahoo.com/articles/joel-embiid-health-76ers-center-180327079.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 293
+   "chars": 293,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730719.07163
+   }
   },
   {
    "ts": 1790619834.934677,
@@ -3511,7 +3727,13 @@
    "url": "https://sports.yahoo.com/articles/summer-adoration-knicks-back-business-180017029.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 302
+   "chars": 302,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790730719.3090837
+   }
   },
   {
    "ts": 1790620282.2418332,
