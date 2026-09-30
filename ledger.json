@@ -4716,6 +4716,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 294
+  },
+  {
+   "ts": 1790742099.6114242,
+   "fb_id": "736504959542737_122187017156935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Mike Brown sets Knicks’ regular-season expectations as adversity awaits reigning champs",
+   "url": "https://sports.yahoo.com/articles/mike-brown-sets-knicks-regular-000003218.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 328
   }
  ]
 }
