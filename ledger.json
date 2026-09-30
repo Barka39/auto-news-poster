@@ -4912,6 +4912,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 668
+  },
+  {
+   "ts": 1790785318.6573842,
+   "fb_id": "122187108614935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "There’s finally a silver lining to the Knicks’ championship for the Sixers",
+   "url": "https://sports.yahoo.com/articles/finally-silver-lining-knicks-championship-141056535.html",
+   "scheduled_for": 1790899200,
+   "slot": "2026-10-02 08:00",
+   "chars": 373
+  },
+  {
+   "ts": 1790785339.4317305,
+   "fb_id": "122187108746935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Rare Kobe Bryant jersey from birth of ‘Black Mamba’ era could fetch millions",
+   "url": "https://sports.yahoo.com/articles/rare-kobe-bryant-jersey-birth-114500156.html",
+   "scheduled_for": 1790910000,
+   "slot": "2026-10-02 11:00",
+   "chars": 314
   }
  ]
 }
