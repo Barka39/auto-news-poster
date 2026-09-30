@@ -4782,6 +4782,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 378
+  },
+  {
+   "ts": 1790749293.894704,
+   "fb_id": "736504959542737_122187026912935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "NBA Close To Agreements With European Soccer Powerhouses For NBA Europe League",
+   "url": "https://basketball.realgm.com/wiretap/287462/NBA-Close-To-Agreements-With-European-Soccer-Powerhouses-For-NBA-Europe-League",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 697
   }
  ]
 }
