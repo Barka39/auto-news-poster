@@ -4830,6 +4830,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 665
+  },
+  {
+   "ts": 1790770941.3486109,
+   "fb_id": "736504959542737_122187076532935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "NBA To Call More Offensive Push-Off Fouls For 2026-27 Season",
+   "url": "https://basketball.realgm.com/wiretap/287464/NBA-To-Call-More-Offensive-Push-Off-Fouls-For-2026-27-Season",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 679
   }
  ]
 }
