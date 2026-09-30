@@ -5152,6 +5152,22 @@
    "scheduled_for": 1790928000,
    "slot": "2026-10-02 16:00",
    "chars": 340
+  },
+  {
+   "ts": 1790801717.8132286,
+   "fb_id": "736504959542737_122187138374935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "An Early Argument for Coach of the Year, Chris Finch",
+   "url": "https://sports.yahoo.com/articles/early-argument-coach-chris-finch-170000514.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 334
   }
  ]
 }
