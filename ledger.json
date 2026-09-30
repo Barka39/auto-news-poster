@@ -5024,6 +5024,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 685
+  },
+  {
+   "ts": 1790790703.4791365,
+   "fb_id": "736504959542737_122187119756935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Two Celtics players forming close bond as training camp kicks off",
+   "url": "https://sports.yahoo.com/articles/two-celtics-players-forming-close-153848258.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 237
   }
  ]
 }
