@@ -5168,6 +5168,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 334
+  },
+  {
+   "ts": 1790807517.322327,
+   "fb_id": "736504959542737_122187145874935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Karl Anthony Towns’ wife Jordyn stopped going to Knicks games over fan vitriol: ‘It was turning dark’",
+   "url": "https://sports.yahoo.com/articles/karl-anthony-towns-wife-jordyn-180212503.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 372
   }
  ]
 }
