@@ -4944,6 +4944,38 @@
    "scheduled_for": 1790910000,
    "slot": "2026-10-02 11:00",
    "chars": 314
+  },
+  {
+   "ts": 1790786411.1764386,
+   "fb_id": "736504959542737_122187110684935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Suns' Dillon Brooks charged with DUI from March arrest",
+   "url": "https://www.espn.com/nba/story/_/id/50068731/suns-dillon-brooks-charged-dui-march-arrest",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 266
+  },
+  {
+   "ts": 1790786458.0998282,
+   "fb_id": "736504959542737_122187110918935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Knicks Bulletin: ‘If I get a joint replacement, my career is over’",
+   "url": "https://sports.yahoo.com/articles/knicks-bulletin-joint-replacement-career-141857816.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 502
   }
  ]
 }
