@@ -5088,6 +5088,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 354
+  },
+  {
+   "ts": 1790796761.338812,
+   "fb_id": "736504959542737_122187129632935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Clippers' Brandon Ingram gets in light work before practice",
+   "url": "https://www.espn.com/nba/story/_/id/50070155/clippers-brandom-ingram-gets-light-work-practice",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 344
   }
  ]
 }
