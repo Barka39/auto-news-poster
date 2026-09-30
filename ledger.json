@@ -5040,6 +5040,54 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 237
+  },
+  {
+   "ts": 1790796152.0623195,
+   "fb_id": "736504959542737_122187128744935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "D'Angelo Russell Signs With Shanghai Sharks Of CBA",
+   "url": "https://basketball.realgm.com/wiretap/287472/DAngelo-Russell-Signs-With-Shanghai-Sharks-Of-CBA",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 823
+  },
+  {
+   "ts": 1790796169.7630582,
+   "fb_id": "736504959542737_122187128852935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Knicks Hoping For Karl-Anthony Towns Extension Closer To $200M Over Four Years",
+   "url": "https://basketball.realgm.com/wiretap/287473/Knicks-Hoping-For-Karl-Anthony-Towns-Extension-Closer-To-$200M-Over-Four-Years",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 666
+  },
+  {
+   "ts": 1790796197.2398994,
+   "fb_id": "736504959542737_122187128984935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Raptors, RJ Barrett reportedly have not had substantive extension talks (yet)",
+   "url": "https://sports.yahoo.com/articles/raptors-rj-barrett-reportedly-not-190252226.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 354
   }
  ]
 }
