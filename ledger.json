@@ -5819,6 +5819,22 @@
    "scheduled_for": 1790985600,
    "slot": "2026-10-03 08:00",
    "chars": 345
+  },
+  {
+   "ts": 1790886564.354614,
+   "fb_id": "122187278564935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Knicks Bulletin: ‘I’ll let the front office and my agency handle that’",
+   "url": "https://sports.yahoo.com/articles/knicks-bulletin-ll-let-front-170000136.html",
+   "scheduled_for": 1790996400,
+   "slot": "2026-10-03 11:00",
+   "chars": 478
   }
  ]
 }
