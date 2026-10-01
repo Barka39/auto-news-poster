@@ -5559,6 +5559,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 520
+  },
+  {
+   "ts": 1790829117.723374,
+   "fb_id": "828746100324372_122148940095084055",
+   "ig_id": "",
+   "kind": "page_confession",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Хагацал үгүй хоосон орон зай",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 976,
+   "page": "udesh"
   }
  ]
 }
