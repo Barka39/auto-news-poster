@@ -5771,6 +5771,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 280
+  },
+  {
+   "ts": 1790865336.1275253,
+   "fb_id": "736504959542737_122187248648935957",
+   "ig_id": "",
+   "kind": "mn",
+   "card": "news",
+   "video": false,
+   "score": 10.0,
+   "category": "mn_basketball",
+   "source": "Asia-Basket Mongolia",
+   "title": "Ochirbat Otgonbayar agreed terms with Apes",
+   "url": "https://www.asia-basket.com/Mongolia/news/1033900/Ochirbat-Otgonbayar-agreed-terms-with-Apes",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 535
+  },
+  {
+   "ts": 1790865357.5308576,
+   "fb_id": "736504959542737_122187248738935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "deal",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Jamal Shead, Raptors reach 3-year, $24M extension through 2029-30",
+   "url": "https://www.espn.com/nba/story/_/id/50076974/jamal-shead-raptors-reach-3-year-24m-extension-2029-30",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 262
   }
  ]
 }
