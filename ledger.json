@@ -5883,6 +5883,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 362
+  },
+  {
+   "ts": 1790895755.8594708,
+   "fb_id": "122187293624935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Bradley Beal makes stunning comments about why he chose ailing Clippers",
+   "url": "https://sports.yahoo.com/articles/bradley-beal-makes-stunning-comments-183756461.html",
+   "scheduled_for": 1791025200,
+   "slot": "2026-10-03 19:00",
+   "chars": 430
   }
  ]
 }
