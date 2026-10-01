@@ -5248,6 +5248,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 653
+  },
+  {
+   "ts": 1790812914.9676046,
+   "fb_id": "846498595210295_122146797033086375",
+   "ig_id": "",
+   "kind": "page_zurhai",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өнөөдрийн зурхай 2026.10.01",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1644,
+   "page": "suns"
   }
  ]
 }
