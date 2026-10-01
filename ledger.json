@@ -5738,6 +5738,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 515
+  },
+  {
+   "ts": 1790861624.6962893,
+   "fb_id": "828746100324372_122148985779084055",
+   "ig_id": "",
+   "kind": "page_story",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Хууль бус шөнийн сүүдэр — 1-р хэсэг",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1903,
+   "page": "udesh"
   }
  ]
 }
