@@ -5689,6 +5689,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 411
+  },
+  {
+   "ts": 1790858505.320914,
+   "fb_id": "736504959542737_122187238082935957",
+   "ig_id": "",
+   "kind": "mn",
+   "card": "news",
+   "video": false,
+   "score": 10.0,
+   "category": "mn_basketball",
+   "source": "Asia-Basket Mongolia",
+   "title": "Miners ink Khalil Ahmad, ex Niagara",
+   "url": "https://www.asia-basket.com/Mongolia/news/1033866/Miners-ink-Khalil-Ahmad-ex-Niagara",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 696
   }
  ]
 }
