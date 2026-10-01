@@ -5851,6 +5851,22 @@
    "scheduled_for": 1791003600,
    "slot": "2026-10-03 13:00",
    "chars": 318
+  },
+  {
+   "ts": 1790889725.25052,
+   "fb_id": "122187282950935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Rumored Warriors free agent target headed to Italy",
+   "url": "https://sports.yahoo.com/articles/rumored-warriors-free-agent-target-185714975.html",
+   "scheduled_for": 1791014400,
+   "slot": "2026-10-03 16:00",
+   "chars": 343
   }
  ]
 }
