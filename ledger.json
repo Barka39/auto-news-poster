@@ -5867,6 +5867,22 @@
    "scheduled_for": 1791014400,
    "slot": "2026-10-03 16:00",
    "chars": 343
+  },
+  {
+   "ts": 1790893935.0280726,
+   "fb_id": "736504959542737_122187289844935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Laker select Derrin Horton to be new public-address announcer",
+   "url": "https://sports.yahoo.com/articles/laker-select-derrin-horton-public-220620300.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 362
   }
  ]
 }
