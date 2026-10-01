@@ -5835,6 +5835,22 @@
    "scheduled_for": 1790996400,
    "slot": "2026-10-03 11:00",
    "chars": 478
+  },
+  {
+   "ts": 1790888518.3868463,
+   "fb_id": "122187281144935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Now that Payton Pritchard is extension eligible, the Celtics should pay him, right?",
+   "url": "https://sports.yahoo.com/articles/now-payton-pritchard-extension-eligible-183403590.html",
+   "scheduled_for": 1791003600,
+   "slot": "2026-10-03 13:00",
+   "chars": 318
   }
  ]
 }
