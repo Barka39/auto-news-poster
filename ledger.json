@@ -5625,6 +5625,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 292
+  },
+  {
+   "ts": 1790833889.943996,
+   "fb_id": "736504959542737_122187193100935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Michael Porter Jr. knows exactly what he needs to show Nets as contract talks continue",
+   "url": "https://sports.yahoo.com/articles/michael-porter-jr-knows-exactly-014022177.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 445
   }
  ]
 }
