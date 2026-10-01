@@ -5641,6 +5641,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 445
+  },
+  {
+   "ts": 1790835695.9571273,
+   "fb_id": "736504959542737_122187196136935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Can Frank Vogel provide a jolt to Warriors’ lackluster defense?",
+   "url": "https://sports.yahoo.com/articles/frank-vogel-jolt-warriors-lackluster-040311349.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 439
   }
  ]
 }
