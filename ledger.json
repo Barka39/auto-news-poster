@@ -5609,6 +5609,22 @@
    "slot": "",
    "chars": 1116,
    "page": "suns"
+  },
+  {
+   "ts": 1790833299.1018023,
+   "fb_id": "736504959542737_122187192272935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Bronny on LeBron James' Lakers exit: 'He's got his own path'",
+   "url": "https://www.espn.com/nba/story/_/id/50055730/bronny-lebron-james-lakers-exit-got-own-path",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 292
   }
  ]
 }
