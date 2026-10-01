@@ -5511,6 +5511,22 @@
    "scheduled_for": 1790947800,
    "slot": "2026-10-02 21:30",
    "chars": 335
+  },
+  {
+   "ts": 1790824299.9663346,
+   "fb_id": "736504959542737_122187175688935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Isiah Thomas returning to Knicks on newly formed board of directors despite his past failures with franchise",
+   "url": "https://sports.yahoo.com/nba/article/isiah-thomas-returning-to-knicks-on-newly-formed-board-of-directors-despite-his-past-failures-with-franchise-030707666.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 416
   }
  ]
 }
