@@ -5803,6 +5803,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 262
+  },
+  {
+   "ts": 1790882631.4555638,
+   "fb_id": "122187274694935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Spurs' Victor Wembanyama not interested in promoting betting sites",
+   "url": "https://www.espn.com/nba/story/_/id/50078401/spurs-victor-wembanyama-not-interested-promoting-betting-sites",
+   "scheduled_for": 1790985600,
+   "slot": "2026-10-03 08:00",
+   "chars": 345
   }
  ]
 }
