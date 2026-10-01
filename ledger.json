@@ -5543,6 +5543,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 443
+  },
+  {
+   "ts": 1790827896.9739656,
+   "fb_id": "736504959542737_122187182714935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Lakers forced to alter practice due to ‘great effort and physicality’",
+   "url": "https://sports.yahoo.com/articles/lakers-forced-alter-practice-due-233952292.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 520
   }
  ]
 }
