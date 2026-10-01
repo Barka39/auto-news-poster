@@ -5527,6 +5527,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 416
+  },
+  {
+   "ts": 1790826708.4126494,
+   "fb_id": "736504959542737_122187180200935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Miles McBride is playing for a future that may not be with the Knicks",
+   "url": "https://sports.yahoo.com/articles/miles-mcbride-playing-future-may-231310012.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 443
   }
  ]
 }
