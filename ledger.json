@@ -6152,6 +6152,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 278
+  },
+  {
+   "ts": 1790914891.442805,
+   "fb_id": "122187332204935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "NBA team fires broadcaster hours after hiring him over racist social posts",
+   "url": "https://sports.yahoo.com/articles/nba-team-fires-broadcaster-hours-040403596.html",
+   "scheduled_for": 1791034200,
+   "slot": "2026-10-03 21:30",
+   "chars": 385
   }
  ]
 }
