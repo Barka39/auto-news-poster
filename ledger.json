@@ -6460,6 +6460,22 @@
    "scheduled_for": 1791072000,
    "slot": "2026-10-04 08:00",
    "chars": 610
+  },
+  {
+   "ts": 1790964705.1284258,
+   "fb_id": "122187467342935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Knicks Bulletin: ‘Either joint replacement, let it go, or, I guess, amputation’",
+   "url": "https://sports.yahoo.com/articles/knicks-bulletin-either-joint-replacement-155416257.html",
+   "scheduled_for": 1791082800,
+   "slot": "2026-10-04 11:00",
+   "chars": 490
   }
  ]
 }
