@@ -6298,6 +6298,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 385
+  },
+  {
+   "ts": 1790944899.46878,
+   "fb_id": "736504959542737_122187398726935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Victor Wembanyama said no to gambling money. In today’s NBA, that feels radical",
+   "url": "https://sports.yahoo.com/articles/victor-wembanyama-said-no-gambling-121506587.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 550
   }
  ]
 }
