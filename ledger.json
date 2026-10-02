@@ -6218,6 +6218,22 @@
    "slot": "",
    "chars": 1033,
    "page": "suns"
+  },
+  {
+   "ts": 1790918531.4098504,
+   "fb_id": "736504959542737_122187338342935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Blazers Fire New Play-By-Play Announcers Braiden Bell",
+   "url": "https://basketball.realgm.com/wiretap/287487/Blazers-Fire-New-Play-By-Play-Announcers-Braiden-Bell",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 623
   }
  ]
 }
