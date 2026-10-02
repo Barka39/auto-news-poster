@@ -5899,6 +5899,23 @@
    "scheduled_for": 1791025200,
    "slot": "2026-10-03 19:00",
    "chars": 430
+  },
+  {
+   "ts": 1790899316.0787163,
+   "fb_id": "846498595210295_122146902849086375",
+   "ig_id": "",
+   "kind": "page_zurhai",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өнөөдрийн зурхай 2026.10.02",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1570,
+   "page": "suns"
   }
  ]
 }
