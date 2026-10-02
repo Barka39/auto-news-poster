@@ -6444,6 +6444,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 396
+  },
+  {
+   "ts": 1790963799.7114441,
+   "fb_id": "122187465416935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "NBA reportedly won't discipline Wizards, Bub Carrington after guard admitted team held back to get AJ Dybantsa",
+   "url": "https://sports.yahoo.com/nba/article/nba-reportedly-wont-discipline-wizards-bub-carrington-after-guard-admitted-team-held-back-to-get-aj-dybantsa-172801586.html",
+   "scheduled_for": 1791072000,
+   "slot": "2026-10-04 08:00",
+   "chars": 610
   }
  ]
 }
