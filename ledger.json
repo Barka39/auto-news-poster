@@ -6250,6 +6250,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 252
+  },
+  {
+   "ts": 1790937702.0260868,
+   "fb_id": "736504959542737_122187372134935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Cavs' Donovan Mitchell signs new multiyear deal with Adidas",
+   "url": "https://www.espn.com/nba/story/_/id/50076885/cavs-donovan-mitchell-signs-new-multi-year-deal-adidas",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 262
   }
  ]
 }
