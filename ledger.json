@@ -6168,6 +6168,23 @@
    "scheduled_for": 1791034200,
    "slot": "2026-10-03 21:30",
    "chars": 385
+  },
+  {
+   "ts": 1790915567.396113,
+   "fb_id": "828746100324372_122149076805084055",
+   "ig_id": "",
+   "kind": "page_confession",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Түгшүүртэй шөнийн гашуун амт",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1012,
+   "page": "udesh"
   }
  ]
 }
