@@ -6540,6 +6540,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 313
+  },
+  {
+   "ts": 1790972481.8272295,
+   "fb_id": "122187482486935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Luka Doncic Files Petition Seeking Daughters' Move From Slovenia Amid Custody Dispute",
+   "url": "https://basketball.realgm.com/wiretap/287498/Luka-Doncic-Files-Petition-Seeking-Daughters-Move-From-Slovenia-Amid-Custody-Dispute",
+   "scheduled_for": 1791100800,
+   "slot": "2026-10-04 16:00",
+   "chars": 598
   }
  ]
 }
