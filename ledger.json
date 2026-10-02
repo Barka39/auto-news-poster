@@ -6588,6 +6588,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 812
+  },
+  {
+   "ts": 1790982687.9751987,
+   "fb_id": "122187498134935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Disturbing allegations from ex-NBA star J.R. Smith’s assault arrest emerge",
+   "url": "https://sports.yahoo.com/articles/disturbing-allegations-ex-nba-star-190626314.html",
+   "scheduled_for": 1791111600,
+   "slot": "2026-10-04 19:00",
+   "chars": 379
   }
  ]
 }
