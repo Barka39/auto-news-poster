@@ -6314,6 +6314,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 550
+  },
+  {
+   "ts": 1790945499.230697,
+   "fb_id": "736504959542737_122187399794935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "CBS Sports NBA",
+   "title": "Grading Jalen Duren's $200 million contract: Pistons pay up to keep All-NBA center",
+   "url": "https://www.cbssports.com/nba/news/grading-jalen-duren-contract-pistons-pay-up/",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 946
+  },
+  {
+   "ts": 1790945511.3458517,
+   "fb_id": "736504959542737_122187399920935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Trail Blazers fire new announcer over past inappropriate posts",
+   "url": "https://www.espn.com/nba/story/_/id/50084279/trail-blazers-fire-new-announcer-inappropriate-posts",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 241
   }
  ]
 }
