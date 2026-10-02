@@ -1861,6 +1861,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790382482.9070868
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904568.8087213
    }
   },
   {
@@ -1883,6 +1889,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790382483.345942
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904569.1228757
    }
   },
   {
@@ -1904,6 +1916,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790382483.874559
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1790904569.4036276
    }
   },
   {
@@ -1925,6 +1941,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790382484.2996
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1790904569.6853044
    }
   },
   {
@@ -1947,6 +1967,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790382484.8007658
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904569.9724803
    }
   },
   {
@@ -1969,6 +1995,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790382485.2009704
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904570.2702281
    }
   },
   {
@@ -1991,6 +2023,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790382485.5463345
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904570.5601137
    }
   },
   {
@@ -2012,6 +2050,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790382485.9228847
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1790904570.8270822
    }
   },
   {
@@ -2033,6 +2075,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790382486.4115436
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1790904571.1013448
    }
   },
   {
@@ -2055,6 +2101,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790382486.7568161
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904571.3812492
    }
   },
   {
@@ -2156,6 +2208,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790382487.084092
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1790904571.643794
    }
   },
   {
@@ -2178,6 +2234,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790382487.4535148
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904571.941695
    }
   },
   {
@@ -2200,6 +2262,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790468619.47966
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904572.3140109
    }
   },
   {
@@ -2222,6 +2290,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790468619.8904161
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904572.6242197
    }
   },
   {
@@ -4347,7 +4421,13 @@
    "url": "https://www.cbssports.com/nba/news/spurs-star-dylan-harper-too-good-come-off-bench/",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 914
+   "chars": 914,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904572.903967
+   }
   },
   {
    "ts": 1790632319.1572735,
@@ -4363,7 +4443,13 @@
    "url": "https://sports.yahoo.com/articles/nikola-jokic-intends-remain-nuggets-213453553.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 353
+   "chars": 353,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904573.166977
+   }
   },
   {
    "ts": 1790632921.0689213,
@@ -4379,7 +4465,13 @@
    "url": "https://sports.yahoo.com/nba/article/the-vibes-are-immaculate-right-now-clippers-begin-penalty-era-by-playing-the-spin-game-214927039.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 423
+   "chars": 423,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904573.430601
+   }
   },
   {
    "ts": 1790634147.6307938,
@@ -4395,7 +4487,13 @@
    "url": "https://sports.yahoo.com/articles/warriors-yaxel-lendeborg-believes-could-212920714.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 484
+   "chars": 484,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904573.698261
+   }
   },
   {
    "ts": 1790634746.4019537,
@@ -4411,7 +4509,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50055051/anthony-edwards-happy-cede-pg-duties-lamelo-ball",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 321
+   "chars": 321,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904574.011311
+   }
   },
   {
    "ts": 1790636547.377808,
@@ -4443,7 +4547,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50055229/wizards-anthony-davis-wait-summer-extension-talks",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 333
+   "chars": 333,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904574.2870884
+   }
   },
   {
    "ts": 1790637698.2681444,
@@ -4459,7 +4569,13 @@
    "url": "https://sports.yahoo.com/articles/austin-reaves-happy-back-lakers-210816113.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 426
+   "chars": 426,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904574.5576859
+   }
   },
   {
    "ts": 1790638401.9827037,
@@ -4475,7 +4591,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50055235/zion-williamson-cusp-8th-season-not-where-wants-be",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 295
+   "chars": 295,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904574.8477378
+   }
   },
   {
    "ts": 1790638438.6913683,
@@ -4491,7 +4613,13 @@
    "url": "https://sports.yahoo.com/articles/did-victor-wembanyama-san-antonio-231218917.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 223
+   "chars": 223,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904575.1502154
+   }
   },
   {
    "ts": 1790639489.6213474,
@@ -4507,7 +4635,13 @@
    "url": "https://sports.yahoo.com/articles/media-day-clippers-begin-apology-233129929.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 401
+   "chars": 401,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904575.4324038
+   }
   },
   {
    "ts": 1790639503.5717533,
@@ -4523,7 +4657,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50016779/aj-dybantsa-washington-wizards-2026-topps-flagship-basketball-cover",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 262
+   "chars": 262,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904575.7275393
+   }
   },
   {
    "ts": 1790640114.2725441,
@@ -4540,7 +4680,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1413,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1790904575.987492
+   }
   },
   {
    "ts": 1790640694.170752,
@@ -4556,7 +4700,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50055438/tatum-comfortable-leading-new-look-celtics-post-brown-trade",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 423
+   "chars": 423,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904576.268996
+   }
   },
   {
    "ts": 1790644926.0762029,
@@ -4572,7 +4722,13 @@
    "url": "https://sports.yahoo.com/articles/jalen-green-sought-advice-suns-230000323.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 217
+   "chars": 217,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904576.5467505
+   }
   },
   {
    "ts": 1790656357.6267025,
@@ -4589,7 +4745,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1023,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1790904576.8025568
+   }
   },
   {
    "ts": 1790658120.1874366,
@@ -4606,7 +4766,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1051,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1790904577.0694373
+   }
   },
   {
    "ts": 1790660534.7037692,
@@ -4638,7 +4802,13 @@
    "url": "https://basketball.realgm.com/wiretap/287452/Bradley-Beal-To-Miss-Start-Of-Training-Camp-Due-To-Right-Knee-Inflammation",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 568
+   "chars": 568,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904577.3998175
+   }
   },
   {
    "ts": 1790671907.793743,
@@ -4654,7 +4824,13 @@
    "url": "https://sports.yahoo.com/articles/where-nets-ongoing-michael-porter-042353580.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 326
+   "chars": 326,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904577.7217526
+   }
   },
   {
    "ts": 1790676110.1111217,
@@ -4670,7 +4846,13 @@
    "url": "https://basketball.realgm.com/wiretap/287451/Hornets-Waive-Rob-Dillingham",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 489
+   "chars": 489,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904578.001166
+   }
   },
   {
    "ts": 1790679725.7227197,
@@ -4686,7 +4868,13 @@
    "url": "https://sports.yahoo.com/articles/nets-carrying-delusional-confidence-defy-051802580.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 547
+   "chars": 547,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904578.2929482
+   }
   },
   {
    "ts": 1790680898.3959281,
@@ -4702,7 +4890,13 @@
    "url": "https://sports.yahoo.com/articles/jayson-tatum-used-time-bench-090000934.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 401
+   "chars": 401,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904578.5724416
+   }
   },
   {
    "ts": 1790682130.280277,
@@ -4718,7 +4912,13 @@
    "url": "https://sports.yahoo.com/articles/baylor-scheierman-look-boston-celtics-080000393.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 409
+   "chars": 409,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904578.8602207
+   }
   },
   {
    "ts": 1790684499.7086654,
@@ -4734,7 +4934,13 @@
    "url": "https://basketball.realgm.com/wiretap/287455/Kawhi-Leonard-Declines-To-Discuss-NBA-Investigation-Ready-To-Move-Forward-With-Raptors",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 794
+   "chars": 794,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904579.2889729
+   }
   },
   {
    "ts": 1790686909.3896687,
@@ -4751,7 +4957,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1200,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1790904579.5666885
+   }
   },
   {
    "ts": 1790688761.695666,
@@ -4768,7 +4978,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1576,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1790904579.8218558
+   }
   },
   {
    "ts": 1790689355.0665922,
@@ -4784,7 +4998,13 @@
    "url": "https://sports.yahoo.com/articles/healthy-motivated-walker-kessler-could-110000101.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 409
+   "chars": 409,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790904580.1357763
+   }
   },
   {
    "ts": 1790699515.0341241,
