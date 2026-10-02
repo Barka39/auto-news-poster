@@ -6396,6 +6396,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 406
+  },
+  {
+   "ts": 1790951505.9021509,
+   "fb_id": "736504959542737_122187408986935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "What if Miles Bridges is closer to Aaron Gordon than we think?",
+   "url": "https://sports.yahoo.com/articles/miles-bridges-closer-aaron-gordon-120000799.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 403
+  },
+  {
+   "ts": 1790951518.4941163,
+   "fb_id": "736504959542737_122187409088935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "ESPN says that Raptors have two top-20 players: they’re absolutely right",
+   "url": "https://sports.yahoo.com/articles/espn-says-raptors-two-top-120000975.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 357
   }
  ]
 }
