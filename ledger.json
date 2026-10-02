@@ -6282,6 +6282,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 324
+  },
+  {
+   "ts": 1790939484.9319685,
+   "fb_id": "736504959542737_122187387386935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Where NBA expansion stands ahead of the 2026-27 season",
+   "url": "https://www.espn.com/nba/story/_/id/50079137/nba-expansion-las-vegas-seattle",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 385
   }
  ]
 }
