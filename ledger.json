@@ -2334,6 +2334,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790468620.2748477
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989297.5793345
    }
   },
   {
@@ -2356,6 +2362,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790468620.74788
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989297.880202
    }
   },
   {
@@ -2378,6 +2390,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790468621.142952
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989298.2079477
    }
   },
   {
@@ -2400,6 +2418,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790468621.5699892
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989298.5079284
    }
   },
   {
@@ -2421,6 +2445,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790468621.995367
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1790989298.741781
    }
   },
   {
@@ -2442,6 +2470,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790468622.4809828
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1790989299.0106878
    }
   },
   {
@@ -2464,6 +2496,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790468622.8694313
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989299.3389273
    }
   },
   {
@@ -2486,6 +2524,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790468623.2973735
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989299.6403015
    }
   },
   {
@@ -2508,6 +2552,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790468623.7151089
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989299.96142
    }
   },
   {
@@ -2529,6 +2579,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790468624.2175255
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1790989300.2293026
    }
   },
   {
@@ -2550,6 +2604,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790468624.6112835
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1790989300.576686
    }
   },
   {
@@ -2572,6 +2630,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790468625.0710433
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989300.8853207
    }
   },
   {
@@ -2594,6 +2658,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790468625.4836483
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989301.577441
    }
   },
   {
@@ -2616,6 +2686,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790468625.8628745
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989301.856624
    }
   },
   {
@@ -2717,6 +2793,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790468626.3105323
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1790989302.103219
    }
   },
   {
@@ -2739,6 +2819,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790468626.753529
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989302.466132
    }
   },
   {
@@ -5100,7 +5186,13 @@
    "url": "https://sports.yahoo.com/nba/article/76ers-training-camp-opens-with-nick-nurse-ready-to-experiment-we-need-to-clearly-define-roles-for-everybody-194710078.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 430
+   "chars": 430,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989302.7827601
+   }
   },
   {
    "ts": 1790726525.213092,
@@ -5117,7 +5209,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1466,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1790989303.0728245
+   }
   },
   {
    "ts": 1790732491.5877714,
@@ -5149,7 +5245,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50063714/nba-issues-new-guidelines-instructs-refs-crack-push-offs",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 382
+   "chars": 382,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989303.3882482
+   }
   },
   {
    "ts": 1790736697.9737933,
@@ -5165,7 +5267,13 @@
    "url": "https://sports.yahoo.com/articles/longtime-nba-coach-retires-jj-222849220.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 294
+   "chars": 294,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989303.6896079
+   }
   },
   {
    "ts": 1790742099.6114242,
@@ -5181,7 +5289,13 @@
    "url": "https://sports.yahoo.com/articles/mike-brown-sets-knicks-regular-000003218.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 328
+   "chars": 328,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989303.992308
+   }
   },
   {
    "ts": 1790742743.2152553,
@@ -5198,7 +5312,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1036,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1790989304.2356985
+   }
   },
   {
    "ts": 1790744519.5892634,
@@ -5215,7 +5333,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1189,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1790989304.4779584
+   }
   },
   {
    "ts": 1790745686.1196597,
@@ -5231,7 +5353,13 @@
    "url": "https://basketball.realgm.com/wiretap/287461/Ryan-Nembhard-Attracting-Interest-From-Nuggets",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 378
+   "chars": 378,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989304.8987763
+   }
   },
   {
    "ts": 1790749293.894704,
@@ -5247,7 +5375,13 @@
    "url": "https://basketball.realgm.com/wiretap/287462/NBA-Close-To-Agreements-With-European-Soccer-Powerhouses-For-NBA-Europe-League",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 697
+   "chars": 697,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989305.1926699
+   }
   },
   {
    "ts": 1790751096.586774,
@@ -5263,7 +5397,13 @@
    "url": "https://sports.yahoo.com/articles/rui-hachimura-converts-lakers-fan-022508433.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 397
+   "chars": 397,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989305.5208085
+   }
   },
   {
    "ts": 1790767917.6357017,
@@ -5279,7 +5419,13 @@
    "url": "https://www.asia-basket.com/Mongolia/news/1033633/Tychique-Bosango-ex-Johor-Tigers-joins-Miners",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 665
+   "chars": 665,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989305.8984337
+   }
   },
   {
    "ts": 1790770941.3486109,
@@ -5295,7 +5441,13 @@
    "url": "https://basketball.realgm.com/wiretap/287464/NBA-To-Call-More-Offensive-Push-Off-Fouls-For-2026-27-Season",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 679
+   "chars": 679,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989306.2100394
+   }
   },
   {
    "ts": 1790773352.2866175,
@@ -5312,7 +5464,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1274,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1790989306.5123038
+   }
   },
   {
    "ts": 1790774512.1133578,
@@ -5328,7 +5484,13 @@
    "url": "https://basketball.realgm.com/wiretap/287466/DAngelo-Russell-Agrees-To-Deal-With-Shanghai-Sharks",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 563
+   "chars": 563,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989306.8739955
+   }
   },
   {
    "ts": 1790775338.317496,
@@ -5345,7 +5507,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1886,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1790989308.069688
+   }
   },
   {
    "ts": 1790778348.2310255,
@@ -5361,7 +5527,13 @@
    "url": "https://basketball.realgm.com/wiretap/287468/RJ-Barrett-Raptors-Havent-Engaged-In-Serious-Extension-Talks",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 668
+   "chars": 668,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989308.4250839
+   }
   },
   {
    "ts": 1790785318.6573842,
@@ -5409,7 +5581,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50068731/suns-dillon-brooks-charged-dui-march-arrest",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 266
+   "chars": 266,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989308.793391
+   }
   },
   {
    "ts": 1790786458.0998282,
@@ -5425,7 +5603,13 @@
    "url": "https://sports.yahoo.com/articles/knicks-bulletin-joint-replacement-career-141857816.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 502
+   "chars": 502,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989309.0826309
+   }
   },
   {
    "ts": 1790786850.807114,
@@ -5441,7 +5625,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 222
+   "chars": 222,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989309.3600907
+   }
   },
   {
    "ts": 1790788924.0002959,
@@ -5473,7 +5663,13 @@
    "url": "https://basketball.realgm.com/wiretap/287471/Michael-Jordans-Last-Dance-Jersey-Sells-For-Record-$1226M",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 685
+   "chars": 685,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989309.6534312
+   }
   },
   {
    "ts": 1790790703.4791365,
@@ -5489,7 +5685,13 @@
    "url": "https://sports.yahoo.com/articles/two-celtics-players-forming-close-153848258.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 237
+   "chars": 237,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989309.9660795
+   }
   },
   {
    "ts": 1790796152.0623195,
@@ -5505,7 +5707,13 @@
    "url": "https://basketball.realgm.com/wiretap/287472/DAngelo-Russell-Signs-With-Shanghai-Sharks-Of-CBA",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 823
+   "chars": 823,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989310.240871
+   }
   },
   {
    "ts": 1790796169.7630582,
@@ -5521,7 +5729,13 @@
    "url": "https://basketball.realgm.com/wiretap/287473/Knicks-Hoping-For-Karl-Anthony-Towns-Extension-Closer-To-$200M-Over-Four-Years",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 666
+   "chars": 666,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989310.5711222
+   }
   },
   {
    "ts": 1790796197.2398994,
@@ -5537,7 +5751,13 @@
    "url": "https://sports.yahoo.com/articles/raptors-rj-barrett-reportedly-not-190252226.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 354
+   "chars": 354,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1790989310.8856018
+   }
   },
   {
    "ts": 1790796761.338812,
