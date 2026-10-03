@@ -7021,6 +7021,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 297
+  },
+  {
+   "ts": 1791047487.280906,
+   "fb_id": "122187619034935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "The Blazers are betting on a Ja Morant comeback",
+   "url": "https://sports.yahoo.com/nba/article/the-blazers-are-betting-on-a-ja-morant-comeback-170000225.html",
+   "scheduled_for": 1791158400,
+   "slot": "2026-10-05 08:00",
+   "chars": 389
   }
  ]
 }
