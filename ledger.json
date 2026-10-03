@@ -6636,6 +6636,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 838
+  },
+  {
+   "ts": 1790985704.1040425,
+   "fb_id": "846498595210295_122147032137086375",
+   "ig_id": "",
+   "kind": "page_zurhai",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өнөөдрийн зурхай 2026.10.03",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1647,
+   "page": "suns"
   }
  ]
 }
