@@ -7133,6 +7133,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 357
+  },
+  {
+   "ts": 1791070877.2927856,
+   "fb_id": "122187672002935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Bronny James continues to refine his skills and role with the Lakers",
+   "url": "https://sports.yahoo.com/articles/bronny-james-continues-refine-skills-231620517.html",
+   "scheduled_for": 1791198000,
+   "slot": "2026-10-05 19:00",
+   "chars": 342
   }
  ]
 }
