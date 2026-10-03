@@ -7037,6 +7037,54 @@
    "scheduled_for": 1791158400,
    "slot": "2026-10-05 08:00",
    "chars": 389
+  },
+  {
+   "ts": 1791051071.7560852,
+   "fb_id": "122187637010935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Knicks Prioritizing Center For Final Roster Spot",
+   "url": "https://basketball.realgm.com/wiretap/287508/Knicks-Prioritizing-Center-For-Final-Roster-Spot",
+   "scheduled_for": 1791169200,
+   "slot": "2026-10-05 11:00",
+   "chars": 390
+  },
+  {
+   "ts": 1791051082.5409214,
+   "fb_id": "122187637064935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Pooh Jeter Hired As Lakers' Director of Pro Scouting",
+   "url": "https://basketball.realgm.com/wiretap/287506/Pooh-Jeter-Hired-As-Lakers-Director-of-Pro-Scouting",
+   "scheduled_for": 1791176400,
+   "slot": "2026-10-05 13:00",
+   "chars": 332
+  },
+  {
+   "ts": 1791051094.8713856,
+   "fb_id": "736504959542737_122187637130935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Cameron Payne Signs With Anadolu Efes",
+   "url": "https://basketball.realgm.com/wiretap/287507/Cameron-Payne-Signs-With-Anadolu-Efes",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 317
   }
  ]
 }
