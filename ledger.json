@@ -7085,6 +7085,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 317
+  },
+  {
+   "ts": 1791057082.2711594,
+   "fb_id": "736504959542737_122187649598935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "LeBron James calls scrimmage 'great first step' for new-look 76ers",
+   "url": "https://www.espn.com/nba/story/_/id/50092448/lebron-james-calls-scrimmage-great-first-step-new-look-76ers",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 337
   }
  ]
 }
