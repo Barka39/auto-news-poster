@@ -6889,6 +6889,39 @@
    "scheduled_for": 1791120600,
    "slot": "2026-10-04 21:30",
    "chars": 302
+  },
+  {
+   "ts": 1791001898.4282851,
+   "fb_id": "736504959542737_122187536366935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "LeBron James says it still bothers him Lakers didn’t get a parade for 2020 championship",
+   "url": "https://sports.yahoo.com/articles/lebron-james-says-still-bothers-021601498.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 398
+  },
+  {
+   "ts": 1791001951.7781765,
+   "fb_id": "828746100324372_122149237221084055",
+   "ig_id": "",
+   "kind": "page_confession",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Бороотой үдшийн гэнэтийн тааралдалт",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1021,
+   "page": "udesh"
   }
  ]
 }
