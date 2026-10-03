@@ -7117,6 +7117,22 @@
    "scheduled_for": 1791187200,
    "slot": "2026-10-05 16:00",
    "chars": 367
+  },
+  {
+   "ts": 1791067292.3129158,
+   "fb_id": "736504959542737_122187666542935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Knicks' Mike Brown challenges Mo Diawara to 'take a step forward' in 2026-27",
+   "url": "https://sports.yahoo.com/articles/knicks-mike-brown-challenges-mo-185624959.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 357
   }
  ]
 }
