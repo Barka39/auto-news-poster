@@ -7402,6 +7402,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 691
+  },
+  {
+   "ts": 1791088335.379124,
+   "fb_id": "828746100324372_122149367061084055",
+   "ig_id": "",
+   "kind": "page_confession",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Цагаан даашинзны цаана нуугдсан эргэлзээ",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 923,
+   "page": "udesh"
   }
  ]
 }
