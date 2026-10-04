@@ -7518,6 +7518,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 434
+  },
+  {
+   "ts": 1791145883.104219,
+   "fb_id": "122187822884935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Lakers ace defender Matisse Thybulle learning from savants Luka Doncic, Austin Reaves",
+   "url": "https://sports.yahoo.com/articles/lakers-ace-defender-matisse-thybulle-195301150.html",
+   "scheduled_for": 1791244800,
+   "slot": "2026-10-06 08:00",
+   "chars": 420
   }
  ]
 }
