@@ -7469,6 +7469,39 @@
    "slot": "",
    "chars": 1203,
    "page": "suns"
+  },
+  {
+   "ts": 1791120681.946912,
+   "fb_id": "122187772046935957",
+   "ig_id": "",
+   "kind": "mn",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "mn_basketball",
+   "source": "Asia-Basket Mongolia",
+   "title": "Lino Manhom (ex Goldfields G.) agreed terms with TLG Bagana",
+   "url": "https://www.asia-basket.com/Mongolia/news/1034423/Lino-Manhom-ex-Goldfields-G-agreed-terms-with-TLG-Bagana",
+   "scheduled_for": 1791207000,
+   "slot": "2026-10-05 21:30",
+   "chars": 496
+  },
+  {
+   "ts": 1791120705.0261748,
+   "fb_id": "828746100324372_122149413321084055",
+   "ig_id": "",
+   "kind": "page_story",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Хууль бус шөнийн сүүдэр — Төгсгөл",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 2064,
+   "page": "udesh"
   }
  ]
 }
