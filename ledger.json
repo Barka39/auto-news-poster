@@ -2863,6 +2863,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790555277.5855906
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073676.973931
    }
   },
   {
@@ -2884,6 +2890,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790555277.9235425
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791073677.3404732
    }
   },
   {
@@ -2905,6 +2915,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790555278.323235
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791073677.7165463
    }
   },
   {
@@ -2926,6 +2940,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790555278.6005437
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791073677.9707787
    }
   },
   {
@@ -2947,6 +2965,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790555278.8502414
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791073678.190663
    }
   },
   {
@@ -2969,6 +2991,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790555279.4792933
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073678.918022
    }
   },
   {
@@ -2991,6 +3019,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790555279.7945585
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073679.2729917
    }
   },
   {
@@ -3013,6 +3047,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790555280.1605787
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073679.6308186
    }
   },
   {
@@ -3099,6 +3139,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790555280.4089186
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073679.8878093
    }
   },
   {
@@ -3121,6 +3167,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790555280.668759
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073680.2364557
    }
   },
   {
@@ -3143,6 +3195,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790555280.9140701
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073680.599417
    }
   },
   {
@@ -3180,6 +3238,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790555281.1590478
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791073680.9523938
    }
   },
   {
@@ -5773,7 +5835,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50070155/clippers-brandom-ingram-gets-light-work-practice",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 344
+   "chars": 344,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073681.2126548
+   }
   },
   {
    "ts": 1790797359.7151036,
@@ -5789,7 +5857,13 @@
    "url": "https://www.cbssports.com/nba/news/jalen-duren-contract-standoff-pistons-weight-clause/",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 814
+   "chars": 814,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073681.483881
+   }
   },
   {
    "ts": 1790797380.879069,
@@ -5805,7 +5879,13 @@
    "url": "https://sports.yahoo.com/articles/suns-guard-dillon-brooks-officially-192312980.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 349
+   "chars": 349,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073681.7672298
+   }
   },
   {
    "ts": 1790799704.127306,
@@ -5837,7 +5917,13 @@
    "url": "https://sports.yahoo.com/articles/early-argument-coach-chris-finch-170000514.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 334
+   "chars": 334,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073682.037954
+   }
   },
   {
    "ts": 1790807517.322327,
@@ -5853,7 +5939,13 @@
    "url": "https://sports.yahoo.com/articles/karl-anthony-towns-wife-jordyn-180212503.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 372
+   "chars": 372,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073682.2905414
+   }
   },
   {
    "ts": 1790808144.9812882,
@@ -5869,7 +5961,13 @@
    "url": "https://sports.yahoo.com/articles/celtics-notice-jayson-tatum-leadership-202830097.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 363
+   "chars": 363,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073682.561967
+   }
   },
   {
    "ts": 1790810531.0664315,
@@ -5901,7 +5999,13 @@
    "url": "https://sports.yahoo.com/articles/lakers-early-defensive-prowess-impresses-230028904.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 358
+   "chars": 358,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073682.814124
+   }
   },
   {
    "ts": 1790811156.771527,
@@ -5917,7 +6021,13 @@
    "url": "https://www.asia-basket.com/Mongolia/news/1033633/Tychique-Bosango-ex-Johor-Tigers-joins-Miners",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 653
+   "chars": 653,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073683.1316526
+   }
   },
   {
    "ts": 1790812914.9676046,
@@ -5934,7 +6044,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1644,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791073683.4457211
+   }
   },
   {
    "ts": 1790821903.4633093,
@@ -5966,7 +6080,13 @@
    "url": "https://sports.yahoo.com/nba/article/isiah-thomas-returning-to-knicks-on-newly-formed-board-of-directors-despite-his-past-failures-with-franchise-030707666.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 416
+   "chars": 416,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073683.7429163
+   }
   },
   {
    "ts": 1790826708.4126494,
@@ -5982,7 +6102,13 @@
    "url": "https://sports.yahoo.com/articles/miles-mcbride-playing-future-may-231310012.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 443
+   "chars": 443,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073683.9977593
+   }
   },
   {
    "ts": 1790827896.9739656,
@@ -5998,7 +6124,13 @@
    "url": "https://sports.yahoo.com/articles/lakers-forced-alter-practice-due-233952292.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 520
+   "chars": 520,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073684.2495427
+   }
   },
   {
    "ts": 1790829117.723374,
@@ -6015,7 +6147,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 976,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791073684.4627876
+   }
   },
   {
    "ts": 1790830903.4156742,
@@ -6031,7 +6167,13 @@
    "url": "https://sports.yahoo.com/articles/julius-randle-lays-nets-mission-003258866.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 479
+   "chars": 479,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073684.7078702
+   }
   },
   {
    "ts": 1790830916.4876866,
@@ -6048,7 +6190,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1116,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791073685.010977
+   }
   },
   {
    "ts": 1790833299.1018023,
@@ -6064,7 +6210,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50055730/bronny-lebron-james-lakers-exit-got-own-path",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 292
+   "chars": 292,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073685.2691653
+   }
   },
   {
    "ts": 1790833889.943996,
@@ -6080,7 +6232,13 @@
    "url": "https://sports.yahoo.com/articles/michael-porter-jr-knows-exactly-014022177.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 445
+   "chars": 445,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073685.5300603
+   }
   },
   {
    "ts": 1790835695.9571273,
@@ -6096,7 +6254,13 @@
    "url": "https://sports.yahoo.com/articles/frank-vogel-jolt-warriors-lackluster-040311349.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 439
+   "chars": 439,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073685.799566
+   }
   },
   {
    "ts": 1790846500.4988465,
@@ -6112,7 +6276,13 @@
    "url": "https://sports.yahoo.com/articles/southeast-division-watch-heat-reloaded-070749325.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 564
+   "chars": 564,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073686.0510397
+   }
   },
   {
    "ts": 1790846517.3933027,
@@ -6128,7 +6298,13 @@
    "url": "https://sports.yahoo.com/articles/atlantic-division-watch-hail-york-052143270.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 411
+   "chars": 411,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073686.359412
+   }
   },
   {
    "ts": 1790858505.320914,
@@ -6144,7 +6320,13 @@
    "url": "https://www.asia-basket.com/Mongolia/news/1033866/Miners-ink-Khalil-Ahmad-ex-Niagara",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 696
+   "chars": 696,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073686.6092062
+   }
   },
   {
    "ts": 1790859741.3229046,
@@ -6161,7 +6343,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1088,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791073686.8395872
+   }
   },
   {
    "ts": 1790861161.04169,
@@ -6177,7 +6363,13 @@
    "url": "https://basketball.realgm.com/wiretap/287483/Kelly-Olynyk-BC-Roma-Agree-To-Contract",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 515
+   "chars": 515,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073687.1679013
+   }
   },
   {
    "ts": 1790861624.6962893,
@@ -6194,7 +6386,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1903,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791073687.4751434
+   }
   },
   {
    "ts": 1790863901.462694,
@@ -6210,7 +6406,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50076885/cavs-donovan-mitchell-signs-new-multi-year-deal-adidas",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 280
+   "chars": 280,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073687.7283
+   }
   },
   {
    "ts": 1790865336.1275253,
@@ -6226,7 +6428,13 @@
    "url": "https://www.asia-basket.com/Mongolia/news/1033900/Ochirbat-Otgonbayar-agreed-terms-with-Apes",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 535
+   "chars": 535,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073688.0346951
+   }
   },
   {
    "ts": 1790865357.5308576,
@@ -6242,7 +6450,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50076974/jamal-shead-raptors-reach-3-year-24m-extension-2029-30",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 262
+   "chars": 262,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073688.2733772
+   }
   },
   {
    "ts": 1790882631.4555638,
@@ -6322,7 +6536,13 @@
    "url": "https://sports.yahoo.com/articles/laker-select-derrin-horton-public-220620300.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 362
+   "chars": 362,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791073688.5551872
+   }
   },
   {
    "ts": 1790895755.8594708,
