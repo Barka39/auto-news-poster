@@ -7534,6 +7534,22 @@
    "scheduled_for": 1791244800,
    "slot": "2026-10-06 08:00",
    "chars": 420
+  },
+  {
+   "ts": 1791148396.2046976,
+   "fb_id": "122187827714935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "CBS Sports NBA",
+   "title": "Jalen Duren says he wants 'to be a Piston for life' despite contentious free agency, trade rumors",
+   "url": "https://www.cbssports.com/nba/news/jalen-duren-piston-for-life-free-agency/",
+   "scheduled_for": 1791255600,
+   "slot": "2026-10-06 11:00",
+   "chars": 742
   }
  ]
 }
