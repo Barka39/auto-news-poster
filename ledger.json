@@ -8077,6 +8077,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 388
+  },
+  {
+   "ts": 1791239493.5467265,
+   "fb_id": "736504959542737_122188011068935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Sources: Clippers' Max Strus (foot) out at least 4 weeks",
+   "url": "https://www.espn.com/nba/story/_/id/50112557/sources-clippers-max-strus-foot-least-4-weeks",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 379
   }
  ]
 }
