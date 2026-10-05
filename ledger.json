@@ -8061,6 +8061,22 @@
    "scheduled_for": 1791360000,
    "slot": "2026-10-07 16:00",
    "chars": 279
+  },
+  {
+   "ts": 1791237504.4989872,
+   "fb_id": "736504959542737_122188006868935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "NBA testing smart basketballs, wrist wearables in preseason",
+   "url": "https://www.espn.com/nba/story/_/id/50112238/nba-testing-smart-basketballs-wrist-wearables-preseason",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 388
   }
  ]
 }
