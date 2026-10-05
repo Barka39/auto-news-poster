@@ -8013,6 +8013,22 @@
    "scheduled_for": 1791331200,
    "slot": "2026-10-07 08:00",
    "chars": 488
+  },
+  {
+   "ts": 1791219705.5469902,
+   "fb_id": "122187965702935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Knicks' Karl-Anthony Towns not expecting extension soon",
+   "url": "https://www.espn.com/nba/story/_/id/50110415/knicks-karl-anthony-towns-not-expecting-extension-soon",
+   "scheduled_for": 1791342000,
+   "slot": "2026-10-07 11:00",
+   "chars": 231
   }
  ]
 }
