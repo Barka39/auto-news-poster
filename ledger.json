@@ -8029,6 +8029,22 @@
    "scheduled_for": 1791342000,
    "slot": "2026-10-07 11:00",
    "chars": 231
+  },
+  {
+   "ts": 1791226297.4158447,
+   "fb_id": "122187985994935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "The ‘right mix’ of talent might be the Sixers’ secret sauce",
+   "url": "https://sports.yahoo.com/articles/mix-talent-might-sixers-secret-163357642.html",
+   "scheduled_for": 1791349200,
+   "slot": "2026-10-07 13:00",
+   "chars": 269
   }
  ]
 }
