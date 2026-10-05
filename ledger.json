@@ -8045,6 +8045,22 @@
    "scheduled_for": 1791349200,
    "slot": "2026-10-07 13:00",
    "chars": 269
+  },
+  {
+   "ts": 1791235203.3798094,
+   "fb_id": "122188003676935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "James, Embiid, Maxey sit out 76ers' preseason opener vs. Knicks",
+   "url": "https://www.espn.com/nba/story/_/id/50111838/james-embiid-maxey-sit-76ers-preseason-opener-vs-knicks",
+   "scheduled_for": 1791360000,
+   "slot": "2026-10-07 16:00",
+   "chars": 279
   }
  ]
 }
