@@ -7434,7 +7434,13 @@
    "url": "https://sports.yahoo.com/articles/julius-randle-just-brooklyn-nets-115509454.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 387
+   "chars": 387,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791162639.3429976
+   }
   },
   {
    "ts": 1791040035.7312555,
@@ -7450,7 +7456,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 297
+   "chars": 297,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791162639.560977
+   }
   },
   {
    "ts": 1791047487.280906,
@@ -7514,7 +7526,13 @@
    "url": "https://basketball.realgm.com/wiretap/287507/Cameron-Payne-Signs-With-Anadolu-Efes",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 317
+   "chars": 317,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791162639.7985063
+   }
   },
   {
    "ts": 1791057082.2711594,
@@ -7530,7 +7548,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50092448/lebron-james-calls-scrimmage-great-first-step-new-look-76ers",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 337
+   "chars": 337,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791162640.2875633
+   }
   },
   {
    "ts": 1791061895.1061306,
@@ -7562,7 +7586,13 @@
    "url": "https://sports.yahoo.com/articles/knicks-mike-brown-challenges-mo-185624959.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 357
+   "chars": 357,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791162640.5036466
+   }
   },
   {
    "ts": 1791070877.2927856,
@@ -7595,7 +7625,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1712,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791162640.7323627
+   }
   },
   {
    "ts": 1791073289.6546443,
@@ -7611,7 +7645,13 @@
    "url": "https://www.yahoo.com/entertainment/celebrity/articles/lakers-ziaire-williams-proposes-girlfriend-195953084.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 691
+   "chars": 691,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791162640.9542701
+   }
   },
   {
    "ts": 1791088335.379124,
