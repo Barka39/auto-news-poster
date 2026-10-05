@@ -7980,6 +7980,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 169
+  },
+  {
+   "ts": 1791207756.129294,
+   "fb_id": "828746100324372_122149546785084055",
+   "ig_id": "",
+   "kind": "page_story",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Хүлээлт, хайр, эсвэл үхэл — 1-р хэсэг",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1558,
+   "page": "udesh"
   }
  ]
 }
