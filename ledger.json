@@ -3279,6 +3279,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790646166.6565573
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791160731.100673
    }
   },
   {
@@ -3301,6 +3305,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790646167.027967
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160731.7039049
    }
   },
   {
@@ -3322,6 +3332,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790646167.3454318
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791160732.203379
    }
   },
   {
@@ -3343,6 +3357,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790646167.6130717
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791160732.6806648
    }
   },
   {
@@ -3364,6 +3382,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790646168.0035152
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791160733.2082846
    }
   },
   {
@@ -3386,6 +3408,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1790646168.336613
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160733.7393117
    }
   },
   {
@@ -3455,6 +3483,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1790646168.6619995
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791160734.2724392
    }
   },
   {
@@ -6575,7 +6607,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1570,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791160734.778761
+   }
   },
   {
    "ts": 1790907097.5357983,
@@ -6591,7 +6627,13 @@
    "url": "https://24tsag.mn/a/248528",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 278
+   "chars": 278,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160735.2177274
+   }
   },
   {
    "ts": 1790914891.442805,
@@ -6624,7 +6666,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1012,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791160735.8810098
+   }
   },
   {
    "ts": 1790917350.6535065,
@@ -6640,7 +6686,13 @@
    "url": "https://www.cbssports.com/nba/news/blazers-fire-new-announcer-hours-after-hiring-him-braiden-bell/",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 837
+   "chars": 837,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160736.3366077
+   }
   },
   {
    "ts": 1790917364.8695874,
@@ -6657,7 +6709,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1033,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791160736.8199787
+   }
   },
   {
    "ts": 1790918531.4098504,
@@ -6673,7 +6729,13 @@
    "url": "https://basketball.realgm.com/wiretap/287487/Blazers-Fire-New-Play-By-Play-Announcers-Braiden-Bell",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 623
+   "chars": 623,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160737.2277567
+   }
   },
   {
    "ts": 1790936724.403391,
@@ -6689,7 +6751,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 252
+   "chars": 252,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160737.6448493
+   }
   },
   {
    "ts": 1790937702.0260868,
@@ -6705,7 +6773,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50076885/cavs-donovan-mitchell-signs-new-multi-year-deal-adidas",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 262
+   "chars": 262,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160738.1033638
+   }
   },
   {
    "ts": 1790937978.3159268,
@@ -6721,7 +6795,13 @@
    "url": "https://sports.yahoo.com/articles/warriors-melton-thumbing-way-back-083211329.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 324
+   "chars": 324,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160738.522248
+   }
   },
   {
    "ts": 1790939484.9319685,
@@ -6737,7 +6817,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50079137/nba-expansion-las-vegas-seattle",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 385
+   "chars": 385,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160738.947571
+   }
   },
   {
    "ts": 1790944899.46878,
@@ -6753,7 +6839,13 @@
    "url": "https://sports.yahoo.com/articles/victor-wembanyama-said-no-gambling-121506587.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 550
+   "chars": 550,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160739.3472202
+   }
   },
   {
    "ts": 1790945499.230697,
@@ -6769,7 +6861,13 @@
    "url": "https://www.cbssports.com/nba/news/grading-jalen-duren-contract-pistons-pay-up/",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 946
+   "chars": 946,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160739.7974553
+   }
   },
   {
    "ts": 1790945511.3458517,
@@ -6785,7 +6883,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50084279/trail-blazers-fire-new-announcer-inappropriate-posts",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 241
+   "chars": 241,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160740.2147493
+   }
   },
   {
    "ts": 1790946104.914312,
@@ -6802,7 +6906,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1333,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791160740.7558768
+   }
   },
   {
    "ts": 1790947917.9322655,
@@ -6819,7 +6927,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1688,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791160741.0905516
+   }
   },
   {
    "ts": 1790950908.4576101,
@@ -6835,7 +6947,13 @@
    "url": "https://basketball.realgm.com/wiretap/287488/Tristan-Vukcevic-To-Miss-Four-Weeks-With-Left-Hip-Impingement-",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 406
+   "chars": 406,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160741.38191
+   }
   },
   {
    "ts": 1790951505.9021509,
@@ -6851,7 +6969,13 @@
    "url": "https://sports.yahoo.com/articles/miles-bridges-closer-aaron-gordon-120000799.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 403
+   "chars": 403,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160741.662002
+   }
   },
   {
    "ts": 1790951518.4941163,
@@ -6867,7 +6991,13 @@
    "url": "https://sports.yahoo.com/articles/espn-says-raptors-two-top-120000975.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 357
+   "chars": 357,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160741.9418948
+   }
   },
   {
    "ts": 1790955643.9957626,
@@ -6883,7 +7013,13 @@
    "url": "https://sports.yahoo.com/nba/article/kawhi-leonard-solves-one-raptors-problem-who-solves-the-others-153000091.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 396
+   "chars": 396,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160742.2492638
+   }
   },
   {
    "ts": 1790963799.7114441,
@@ -6947,7 +7083,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50085674/miami-heat-night-vice-city-game",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 479
+   "chars": 479,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160742.5581884
+   }
   },
   {
    "ts": 1790970083.722208,
@@ -6963,7 +7105,13 @@
    "url": "https://sports.yahoo.com/articles/tale-two-trades-lamelo-kat-170000039.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 464
+   "chars": 464,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160742.858572
+   }
   },
   {
    "ts": 1790970096.2042108,
@@ -6979,7 +7127,13 @@
    "url": "https://sports.yahoo.com/articles/nbas-las-vegas-expansion-team-192824181.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 313
+   "chars": 313,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160743.5292797
+   }
   },
   {
    "ts": 1790972481.8272295,
@@ -7011,7 +7165,13 @@
    "url": "https://basketball.realgm.com/wiretap/287500/Josh-Hart-To-Play-Through-Finger-Injury-Rather-Than-Undergo-Career-Ending-Surgery",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 771
+   "chars": 771,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160743.8408003
+   }
   },
   {
    "ts": 1790976107.5038648,
@@ -7027,7 +7187,13 @@
    "url": "https://basketball.realgm.com/wiretap/287490/Angel-Reese-Wins-WNBA-Defensive-Player-of-the-Year-Award",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 812
+   "chars": 812,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160744.152759
+   }
   },
   {
    "ts": 1790982687.9751987,
@@ -7059,7 +7225,13 @@
    "url": "https://sports.yahoo.com/articles/warriors-star-steph-curry-reveals-191021762.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 394
+   "chars": 394,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160744.586941
+   }
   },
   {
    "ts": 1790985106.0277214,
@@ -7075,7 +7247,13 @@
    "url": "https://www.yahoo.com/entertainment/celebrity/articles/anne-hathaway-reveals-she-d-193003148.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 838
+   "chars": 838,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160744.970789
+   }
   },
   {
    "ts": 1790985704.1040425,
@@ -7092,7 +7270,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1647,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791160745.2235234
+   }
   },
   {
    "ts": 1790992281.7532187,
@@ -7124,7 +7306,13 @@
    "url": "https://sports.yahoo.com/articles/lebron-james-says-still-bothers-021601498.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 398
+   "chars": 398,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160745.522129
+   }
   },
   {
    "ts": 1791001951.7781765,
@@ -7141,7 +7329,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1021,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791160745.7891233
+   }
   },
   {
    "ts": 1791003692.6811438,
@@ -7158,7 +7350,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1244,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791160746.068412
+   }
   },
   {
    "ts": 1791012686.4785094,
@@ -7174,7 +7370,13 @@
    "url": "https://sports.yahoo.com/articles/nba-just-keeps-disrespecting-jazz-051729585.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 585
+   "chars": 585,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791160746.3485777
+   }
   },
   {
    "ts": 1791032499.2513533,
@@ -7191,7 +7393,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1257,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791160746.6691277
+   }
   },
   {
    "ts": 1791034318.2067983,
@@ -7208,7 +7414,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1588,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791160746.9308345
+   }
   },
   {
    "ts": 1791036677.676592,
