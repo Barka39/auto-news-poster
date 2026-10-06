@@ -8374,6 +8374,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 486
+  },
+  {
+   "ts": 1791261132.3951426,
+   "fb_id": "828746100324372_122149636857084055",
+   "ig_id": "",
+   "kind": "page_confession",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Шинэ сүүдэрт хийгдсэн зогсолт",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1049,
+   "page": "udesh"
   }
  ]
 }
