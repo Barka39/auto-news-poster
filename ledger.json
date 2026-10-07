@@ -8676,6 +8676,22 @@
    "slot": "",
    "chars": 1487,
    "page": "suns"
+  },
+  {
+   "ts": 1791340898.958545,
+   "fb_id": "122188201610935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Without LeBron James, Bronny has chance to prove he really belongs",
+   "url": "https://sports.yahoo.com/articles/without-lebron-james-bronny-chance-221019801.html",
+   "scheduled_for": 1791379800,
+   "slot": "2026-10-07 21:30",
+   "chars": 357
   }
  ]
 }
