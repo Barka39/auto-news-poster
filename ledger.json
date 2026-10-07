@@ -8920,6 +8920,22 @@
    "scheduled_for": 1791514800,
    "slot": "2026-10-09 11:00",
    "chars": 511
+  },
+  {
+   "ts": 1791396270.4935443,
+   "fb_id": "122188308944935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Oregon basketball coach Dana Altman retiring less than one month before season starts",
+   "url": "https://sports.yahoo.com/articles/oregon-basketball-coach-dana-altman-171531294.html",
+   "scheduled_for": 1791522000,
+   "slot": "2026-10-09 13:00",
+   "chars": 482
   }
  ]
 }
