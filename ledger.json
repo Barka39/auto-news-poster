@@ -8888,6 +8888,38 @@
    "scheduled_for": 1791466200,
    "slot": "2026-10-08 21:30",
    "chars": 438
+  },
+  {
+   "ts": 1791395459.2116728,
+   "fb_id": "122188307222935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Trail Blazers owner Tom Dundon: 'My intention here is clear: bring a championship to Portland'",
+   "url": "https://sports.yahoo.com/nba/article/trail-blazers-owner-tom-dundon-my-intention-here-is-clear-bring-a-championship-to-portland-173242169.html",
+   "scheduled_for": 1791504000,
+   "slot": "2026-10-09 08:00",
+   "chars": 368
+  },
+  {
+   "ts": 1791395473.3486998,
+   "fb_id": "122188307312935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Giannis Antetokounmpo, Klay Thompson praise Heat Culture in training camp",
+   "url": "https://sports.yahoo.com/articles/giannis-antetokounmpo-klay-thompson-praise-173410923.html",
+   "scheduled_for": 1791514800,
+   "slot": "2026-10-09 11:00",
+   "chars": 511
   }
  ]
 }
