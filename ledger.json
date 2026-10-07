@@ -8872,6 +8872,22 @@
    "scheduled_for": 1791457200,
    "slot": "2026-10-08 19:00",
    "chars": 579
+  },
+  {
+   "ts": 1791393692.693568,
+   "fb_id": "122188301948935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "The Hawks have everything except a closer. Can Jalen Johnson be the guy?",
+   "url": "https://sports.yahoo.com/nba/article/the-hawks-have-everything-except-a-closer-can-jalen-johnson-be-the-guy-164259024.html",
+   "scheduled_for": 1791466200,
+   "slot": "2026-10-08 21:30",
+   "chars": 438
   }
  ]
 }
