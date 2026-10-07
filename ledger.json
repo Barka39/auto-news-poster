@@ -8856,6 +8856,22 @@
    "scheduled_for": 1791446400,
    "slot": "2026-10-08 16:00",
    "chars": 332
+  },
+  {
+   "ts": 1791390203.735047,
+   "fb_id": "122188295486935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "The Blueprint: Jessica Holtz Meets the Moment",
+   "url": "https://sports.yahoo.com/articles/blueprint-jessica-holtz-meets-moment-120520678.html",
+   "scheduled_for": 1791457200,
+   "slot": "2026-10-08 19:00",
+   "chars": 579
   }
  ]
 }
