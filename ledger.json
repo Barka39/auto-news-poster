@@ -9371,6 +9371,22 @@
    "scheduled_for": 1791590400,
    "slot": "2026-10-10 08:00",
    "chars": 330
+  },
+  {
+   "ts": 1791490895.4082675,
+   "fb_id": "122188489376935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "ICE detains Mississippi Valley State men's basketball player over visa",
+   "url": "https://sports.yahoo.com/articles/ice-detains-mississippi-valley-state-151526404.html",
+   "scheduled_for": 1791601200,
+   "slot": "2026-10-10 11:00",
+   "chars": 396
   }
  ]
 }
