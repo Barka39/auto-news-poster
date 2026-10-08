@@ -9255,6 +9255,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 387
+  },
+  {
+   "ts": 1791433931.2999914,
+   "fb_id": "828746100324372_122149919055084055",
+   "ig_id": "",
+   "kind": "page_confession",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Хязгааргүй орон зайн гашуун үнэр",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 774,
+   "page": "udesh"
   }
  ]
 }
