@@ -9355,6 +9355,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 300
+  },
+  {
+   "ts": 1791475891.0554132,
+   "fb_id": "122188459538935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "76ers lose backup center Ariel Hukporti to torn Achilles",
+   "url": "https://www.espn.com/nba/story/_/id/50118908/76ers-lose-backup-center-ariel-hukporti-torn-achilles",
+   "scheduled_for": 1791590400,
+   "slot": "2026-10-10 08:00",
+   "chars": 330
   }
  ]
 }
