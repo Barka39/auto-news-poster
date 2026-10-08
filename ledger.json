@@ -9001,6 +9001,22 @@
    "slot": "",
    "chars": 1579,
    "page": "suns"
+  },
+  {
+   "ts": 1791423093.6518114,
+   "fb_id": "122188356722935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Tyrese Haliburton returns from Achilles injury in preseason game in Ames, where he bought out the Iowa State student sec",
+   "url": "https://sports.yahoo.com/nba/article/tyrese-haliburton-returns-from-achilles-injury-in-preseason-game-in-ames-where-he-bought-out-the-iowa-state-student-section-012220653.html",
+   "scheduled_for": 1791552600,
+   "slot": "2026-10-09 21:30",
+   "chars": 343
   }
  ]
 }
