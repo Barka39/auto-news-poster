@@ -9994,6 +9994,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 590
+  },
+  {
+   "ts": 1791587484.3552144,
+   "fb_id": "122188691288935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Wild Kobe Bryant ‘stripper party’ confession dropped by Lakers teammate",
+   "url": "https://sports.yahoo.com/articles/wild-kobe-bryant-stripper-party-184305682.html",
+   "scheduled_for": 1791716400,
+   "slot": "2026-10-11 19:00",
+   "chars": 480
   }
  ]
 }
