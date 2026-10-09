@@ -9654,6 +9654,38 @@
    "scheduled_for": 1791639000,
    "slot": "2026-10-10 21:30",
    "chars": 394
+  },
+  {
+   "ts": 1791519678.3867295,
+   "fb_id": "736504959542737_122188541060935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Matt Barnes rips cursed Clippers, suggests name change after scandal",
+   "url": "https://sports.yahoo.com/articles/matt-barnes-rips-cursed-clippers-234627599.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 410
+  },
+  {
+   "ts": 1791519691.748669,
+   "fb_id": "736504959542737_122188541162935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Sixers’ starters dazzle at times, play sloppy at others in preseason loss to Nets",
+   "url": "https://sports.yahoo.com/articles/sixers-starters-dazzle-times-play-020708486.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 420
   }
  ]
 }
