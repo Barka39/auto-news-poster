@@ -9898,6 +9898,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 692
+  },
+  {
+   "ts": 1791562298.9800947,
+   "fb_id": "122188642898935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Rockets vs. Mavericks in China: What to know about NBA China Games 2026",
+   "url": "https://sports.yahoo.com/articles/rockets-vs-mavericks-china-know-150155621.html",
+   "scheduled_for": 1791676800,
+   "slot": "2026-10-11 08:00",
+   "chars": 372
   }
  ]
 }
