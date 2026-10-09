@@ -9686,6 +9686,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 420
+  },
+  {
+   "ts": 1791520313.5793412,
+   "fb_id": "828746100324372_122150038623084055",
+   "ig_id": "",
+   "kind": "page_confession",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Эцэг эхийн зөвшөөрөлгүй зүрхний сонголт",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 952,
+   "page": "udesh"
   }
  ]
 }
