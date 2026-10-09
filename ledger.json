@@ -9736,6 +9736,38 @@
    "slot": "",
    "chars": 1089,
    "page": "suns"
+  },
+  {
+   "ts": 1791527499.5145483,
+   "fb_id": "736504959542737_122188555958935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "James suffers defeat on 76ers debut in pre-season",
+   "url": "https://sports.yahoo.com/articles/james-suffers-defeat-76ers-debut-061717333.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 374
+  },
+  {
+   "ts": 1791527511.9736307,
+   "fb_id": "736504959542737_122188556060935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Nick Young reveals bizarre revenge plot against D’Angelo Russell after Iggy Azalea cheating scandal",
+   "url": "https://sports.yahoo.com/articles/nick-young-reveals-bizarre-revenge-021021493.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 340
   }
  ]
 }
