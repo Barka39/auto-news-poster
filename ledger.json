@@ -9914,6 +9914,22 @@
    "scheduled_for": 1791676800,
    "slot": "2026-10-11 08:00",
    "chars": 372
+  },
+  {
+   "ts": 1791568296.6791663,
+   "fb_id": "122188655384935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "J.R. Smith barred from contacting woman after assault accusations",
+   "url": "https://sports.yahoo.com/articles/j-r-smith-barred-contacting-132714264.html",
+   "scheduled_for": 1791687600,
+   "slot": "2026-10-11 11:00",
+   "chars": 335
   }
  ]
 }
