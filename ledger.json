@@ -9768,6 +9768,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 340
+  },
+  {
+   "ts": 1791541304.7405694,
+   "fb_id": "736504959542737_122188585526935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "‘I’m a basketball player’: Sandro Mamukelashvili’s connectivity continues to lift Lakers",
+   "url": "https://sports.yahoo.com/articles/m-basketball-player-sandro-mamukelashvili-072529020.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 573
   }
  ]
 }
