@@ -9930,6 +9930,38 @@
    "scheduled_for": 1791687600,
    "slot": "2026-10-11 11:00",
    "chars": 335
+  },
+  {
+   "ts": 1791573677.4520686,
+   "fb_id": "122188667348935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "NBA Franchises Worth Combined $199 Billion, Average Team Value Rises 21%",
+   "url": "https://basketball.realgm.com/wiretap/287573/NBA-Franchises-Worth-Combined-$199-Billion-Average-Team-Value-Rises-21-perc",
+   "scheduled_for": 1791694800,
+   "slot": "2026-10-11 13:00",
+   "chars": 868
+  },
+  {
+   "ts": 1791573692.2896786,
+   "fb_id": "736504959542737_122188667420935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "NBA Pushes Back On Claims Second Apron Hurts Middle-Class Players",
+   "url": "https://basketball.realgm.com/wiretap/287574/NBA-Pushes-Back-On-Claims-Second-Apron-Hurts-Middle-Class-Players",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 612
   }
  ]
 }
