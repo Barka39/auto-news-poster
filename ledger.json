@@ -9452,6 +9452,22 @@
    "scheduled_for": 1791630000,
    "slot": "2026-10-10 19:00",
    "chars": 292
+  },
+  {
+   "ts": 1791510702.6903214,
+   "fb_id": "122188521242935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Austin Reaves proposes crazy idea to help Luka Doncic reach ‘different’ level",
+   "url": "https://sports.yahoo.com/articles/austin-reaves-proposes-crazy-idea-212933179.html",
+   "scheduled_for": 1791639000,
+   "slot": "2026-10-10 21:30",
+   "chars": 394
   }
  ]
 }
