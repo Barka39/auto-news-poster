@@ -9882,6 +9882,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 341
+  },
+  {
+   "ts": 1791555698.198894,
+   "fb_id": "736504959542737_122188631678935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Knicks Tabling All Extension Talks To Focus On Upcoming Season",
+   "url": "https://basketball.realgm.com/wiretap/287566/Knicks-Tabling-All-Extension-Talks-To-Focus-On-Upcoming-Season",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 692
   }
  ]
 }
