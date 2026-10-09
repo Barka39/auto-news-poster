@@ -9850,6 +9850,22 @@
    "slot": "",
    "chars": 1901,
    "page": "udesh"
+  },
+  {
+   "ts": 1791553897.577628,
+   "fb_id": "736504959542737_122188627748935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "quote",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Knicks tabling Karl-Anthony Towns, Josh Hart contract talks",
+   "url": "https://www.espn.com/nba/story/_/id/50140136/knicks-tabling-karl-anthony-towns-josh-hart-contract-talks",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 440
   }
  ]
 }
