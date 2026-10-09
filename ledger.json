@@ -10010,6 +10010,22 @@
    "scheduled_for": 1791716400,
    "slot": "2026-10-11 19:00",
    "chars": 480
+  },
+  {
+   "ts": 1791589285.2980435,
+   "fb_id": "736504959542737_122188693646935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Jabari Walker appears ready to play his role",
+   "url": "https://sports.yahoo.com/articles/jabari-walker-appears-ready-play-185737920.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 387
   }
  ]
 }
