@@ -9436,6 +9436,22 @@
    "slot": "",
    "chars": 1628,
    "page": "suns"
+  },
+  {
+   "ts": 1791508943.044693,
+   "fb_id": "122188517420935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Celtics will be without 8 players in preseason opener",
+   "url": "https://sports.yahoo.com/articles/celtics-without-8-players-preseason-225447696.html",
+   "scheduled_for": 1791630000,
+   "slot": "2026-10-10 19:00",
+   "chars": 292
   }
  ]
 }
