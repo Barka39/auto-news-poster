@@ -10497,6 +10497,22 @@
    "scheduled_for": 1791763200,
    "slot": "2026-10-12 08:00",
    "chars": 325
+  },
+  {
+   "ts": 1791658297.4423609,
+   "fb_id": "122188841426935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Film breakdown: How Jaylen Brown can become invaluable to Sixers offense",
+   "url": "https://sports.yahoo.com/articles/film-breakdown-jaylen-brown-become-123800250.html",
+   "scheduled_for": 1791774000,
+   "slot": "2026-10-12 11:00",
+   "chars": 448
   }
  ]
 }
