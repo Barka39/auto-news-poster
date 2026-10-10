@@ -10545,6 +10545,22 @@
    "scheduled_for": 1791792000,
    "slot": "2026-10-12 16:00",
    "chars": 330
+  },
+  {
+   "ts": 1791670887.662576,
+   "fb_id": "736504959542737_122188864778935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Caitlin Clark Undecided On EPIC Extension, Says 'No Matter What, I'm Gonna Be Here'",
+   "url": "https://basketball.realgm.com/wiretap/287586/Caitlin-Clark-Undecided-On-EPIC-Extension-Says-No-Matter-What-Im-Gonna-Be-Here",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 778
   }
  ]
 }
