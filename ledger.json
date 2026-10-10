@@ -10253,6 +10253,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 473
+  },
+  {
+   "ts": 1791604904.673553,
+   "fb_id": "122188726682935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Steph Curry drops truth bomb on Warriors’ front office failure",
+   "url": "https://sports.yahoo.com/articles/steph-curry-drops-truth-bomb-233659758.html",
+   "scheduled_for": 1791725400,
+   "slot": "2026-10-11 21:30",
+   "chars": 554
   }
  ]
 }
