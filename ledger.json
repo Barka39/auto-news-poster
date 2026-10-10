@@ -10561,6 +10561,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 778
+  },
+  {
+   "ts": 1791672078.4962144,
+   "fb_id": "736504959542737_122188867124935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Lakers still waiting for preseason debuts of Walker Kessler, Collin Sexton",
+   "url": "https://sports.yahoo.com/articles/lakers-still-waiting-preseason-debuts-221140889.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 309
   }
  ]
 }
