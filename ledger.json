@@ -10513,6 +10513,22 @@
    "scheduled_for": 1791774000,
    "slot": "2026-10-12 11:00",
    "chars": 448
+  },
+  {
+   "ts": 1791660086.542019,
+   "fb_id": "122188845596935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Josh Hart 'Not Too Stressed' About Knicks Stopping Extension Talks",
+   "url": "https://basketball.realgm.com/wiretap/287584/Josh-Hart-Not-Too-Stressed-About-Knicks-Stopping-Extension-Talks",
+   "scheduled_for": 1791781200,
+   "slot": "2026-10-12 13:00",
+   "chars": 700
   }
  ]
 }
