@@ -10481,6 +10481,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 244
+  },
+  {
+   "ts": 1791654082.5863426,
+   "fb_id": "122188834658935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Warriors sign Brandin Podziemski to extension worth reported $110M",
+   "url": "https://sports.yahoo.com/articles/warriors-sign-brandin-podziemski-extension-172853964.html",
+   "scheduled_for": 1791763200,
+   "slot": "2026-10-12 08:00",
+   "chars": 325
   }
  ]
 }
