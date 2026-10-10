@@ -10269,6 +10269,23 @@
    "scheduled_for": 1791725400,
    "slot": "2026-10-11 21:30",
    "chars": 554
+  },
+  {
+   "ts": 1791606734.3979802,
+   "fb_id": "828746100324372_122150191629084055",
+   "ig_id": "",
+   "kind": "page_confession",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Цэнхэр дэлгэц дээрх цахилгаан оч",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1090,
+   "page": "udesh"
   }
  ]
 }
