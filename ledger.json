@@ -10577,6 +10577,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 309
+  },
+  {
+   "ts": 1791673899.9626043,
+   "fb_id": "122188869872935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "VJ Edgecombe reveals he’d rather play for Bahamas at Olympics than win NBA Finals",
+   "url": "https://sports.yahoo.com/articles/vj-edgecombe-reveals-d-rather-185245943.html",
+   "scheduled_for": 1791802800,
+   "slot": "2026-10-12 19:00",
+   "chars": 488
   }
  ]
 }
