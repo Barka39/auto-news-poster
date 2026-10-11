@@ -11086,6 +11086,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 699
+  },
+  {
+   "ts": 1791760884.479059,
+   "fb_id": "122189041094935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "JJ Redick feels the Lakers are in a good spot so far this preseason",
+   "url": "https://sports.yahoo.com/articles/jj-redick-feels-lakers-good-193231209.html",
+   "scheduled_for": 1791878400,
+   "slot": "2026-10-13 16:00",
+   "chars": 375
   }
  ]
 }
