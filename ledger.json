@@ -8162,6 +8162,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791160745.522129
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679566.420004
    }
   },
   {
@@ -8183,6 +8189,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791160745.7891233
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791679566.9448195
    }
   },
   {
@@ -8204,6 +8214,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791160746.068412
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791679567.419063
    }
   },
   {
@@ -8226,6 +8240,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791160746.3485777
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679568.009282
    }
   },
   {
@@ -8247,6 +8267,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791160746.6691277
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791679568.52047
    }
   },
   {
@@ -8268,6 +8292,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791160746.9308345
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791679568.9445138
    }
   },
   {
@@ -8290,6 +8318,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791162639.3429976
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679569.5022504
    }
   },
   {
@@ -8312,6 +8346,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791162639.560977
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679570.0168717
    }
   },
   {
@@ -8382,6 +8422,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791162639.7985063
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679570.5333712
    }
   },
   {
@@ -8404,6 +8450,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791162640.2875633
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679571.0593033
    }
   },
   {
@@ -8442,6 +8494,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791162640.5036466
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679571.5796573
    }
   },
   {
@@ -8479,6 +8537,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791162640.7323627
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791679572.0191216
    }
   },
   {
@@ -8501,6 +8563,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791162640.9542701
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679572.5387764
    }
   },
   {
@@ -9847,7 +9915,13 @@
    "url": "https://sports.yahoo.com/articles/matt-barnes-rips-cursed-clippers-234627599.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 410
+   "chars": 410,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679573.0812924
+   }
   },
   {
    "ts": 1791519691.748669,
@@ -9863,7 +9937,13 @@
    "url": "https://sports.yahoo.com/articles/sixers-starters-dazzle-times-play-020708486.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 420
+   "chars": 420,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679573.6022573
+   }
   },
   {
    "ts": 1791520313.5793412,
@@ -9880,7 +9960,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 952,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791679574.0264742
+   }
   },
   {
    "ts": 1791520888.017974,
@@ -9896,7 +9980,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50137826/76ers-embiid-calls-not-true-lebron-report-unfortunate",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 403
+   "chars": 403,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679574.9136446
+   }
   },
   {
    "ts": 1791522114.231298,
@@ -9913,7 +10003,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1089,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791679575.379199
+   }
   },
   {
    "ts": 1791527499.5145483,
@@ -9929,7 +10023,13 @@
    "url": "https://sports.yahoo.com/articles/james-suffers-defeat-76ers-debut-061717333.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 374
+   "chars": 374,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679575.9407241
+   }
   },
   {
    "ts": 1791527511.9736307,
@@ -9945,7 +10045,13 @@
    "url": "https://sports.yahoo.com/articles/nick-young-reveals-bizarre-revenge-021021493.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 340
+   "chars": 340,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679576.4693108
+   }
   },
   {
    "ts": 1791541304.7405694,
@@ -9961,7 +10067,13 @@
    "url": "https://sports.yahoo.com/articles/m-basketball-player-sandro-mamukelashvili-072529020.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 573
+   "chars": 573,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679577.0391016
+   }
   },
   {
    "ts": 1791546082.271295,
@@ -9977,7 +10089,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50118254/detroit-pistons-jalen-duren-new-contract",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 428
+   "chars": 428,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679577.538824
+   }
   },
   {
    "ts": 1791547890.7823122,
@@ -9993,7 +10111,13 @@
    "url": "https://sports.yahoo.com/articles/darko-rajakovic-kawhi-leonard-scottie-120000609.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 589
+   "chars": 589,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679578.0741353
+   }
   },
   {
    "ts": 1791550914.2099752,
@@ -10010,7 +10134,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1265,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791679578.5093956
+   }
   },
   {
    "ts": 1791552715.8884919,
@@ -10027,7 +10155,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1901,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791679578.9732852
+   }
   },
   {
    "ts": 1791553897.577628,
@@ -10043,7 +10175,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50140136/knicks-tabling-karl-anthony-towns-josh-hart-contract-talks",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 440
+   "chars": 440,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679579.768671
+   }
   },
   {
    "ts": 1791555101.2755463,
@@ -10059,7 +10197,13 @@
    "url": "https://sports.yahoo.com/articles/sixers-starters-together-preseason-first-100256920.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 341
+   "chars": 341,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679580.2982106
+   }
   },
   {
    "ts": 1791555698.198894,
@@ -10075,7 +10219,13 @@
    "url": "https://basketball.realgm.com/wiretap/287566/Knicks-Tabling-All-Extension-Talks-To-Focus-On-Upcoming-Season",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 692
+   "chars": 692,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679580.8324904
+   }
   },
   {
    "ts": 1791562298.9800947,
@@ -10139,7 +10289,13 @@
    "url": "https://basketball.realgm.com/wiretap/287574/NBA-Pushes-Back-On-Claims-Second-Apron-Hurts-Middle-Class-Players",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 612
+   "chars": 612,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679581.3591895
+   }
   },
   {
    "ts": 1791583324.2875164,
@@ -10171,7 +10327,13 @@
    "url": "https://sports.yahoo.com/articles/breaking-down-nba-second-apron-181918728.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 590
+   "chars": 590,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679581.917424
+   }
   },
   {
    "ts": 1791587484.3552144,
@@ -10203,7 +10365,13 @@
    "url": "https://sports.yahoo.com/articles/jabari-walker-appears-ready-play-185737920.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 387
+   "chars": 387,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679582.4950328
+   }
   },
   {
    "ts": 1791590510.8097768,
@@ -10220,7 +10388,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1830,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791679582.9437947
+   }
   },
   {
    "ts": 1791592300.4311745,
@@ -10236,7 +10408,13 @@
    "url": "https://sports.yahoo.com/articles/bronny-james-just-t-wait-200738494.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 321
+   "chars": 321,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679583.4773266
+   }
   },
   {
    "ts": 1791592894.2726843,
@@ -10252,7 +10430,13 @@
    "url": "https://sports.yahoo.com/articles/kings-owner-prolonged-roast-team-202456485.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 473
+   "chars": 473,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791679584.0362577
+   }
   },
   {
    "ts": 1791604904.673553,
