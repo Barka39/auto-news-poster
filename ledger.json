@@ -11054,6 +11054,38 @@
    "scheduled_for": 1791860400,
    "slot": "2026-10-13 11:00",
    "chars": 897
+  },
+  {
+   "ts": 1791748294.6200247,
+   "fb_id": "122189019332935957",
+   "ig_id": "",
+   "kind": "mn",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "mn_basketball",
+   "source": "Asia-Basket Mongolia",
+   "title": "MBL Round 4 of Regular Season",
+   "url": "https://www.asia-basket.com/Mongolia/news/1035652/MBL-Round-4-of-Regular-Season",
+   "scheduled_for": 1791867600,
+   "slot": "2026-10-13 13:00",
+   "chars": 886
+  },
+  {
+   "ts": 1791748309.8780787,
+   "fb_id": "736504959542737_122189019404935957",
+   "ig_id": "",
+   "kind": "mn",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "mn_basketball",
+   "source": "Asia-Basket Mongolia",
+   "title": "Hugley IV's 28 points give him Hoops Agents Player of the Week award",
+   "url": "https://www.asia-basket.com/Mongolia/news/1035651/Hugley-IVs-28-points-give-him-Hoops-Agents-Player-of-the-Week-award",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 699
   }
  ]
 }
