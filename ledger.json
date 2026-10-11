@@ -11038,6 +11038,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 216
+  },
+  {
+   "ts": 1791746489.6730893,
+   "fb_id": "122189016356935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Karl-Anthony Towns 'Very Disappointed' By Knicks' Decision To Pause Extension Talks",
+   "url": "https://basketball.realgm.com/wiretap/287591/Karl-Anthony-Towns-Very-Disappointed-By-Knicks-Decision-To-Pause-Extension-Talks",
+   "scheduled_for": 1791860400,
+   "slot": "2026-10-13 11:00",
+   "chars": 897
   }
  ]
 }
