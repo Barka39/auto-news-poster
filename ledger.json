@@ -10826,6 +10826,22 @@
    "scheduled_for": 1791811800,
    "slot": "2026-10-12 21:30",
    "chars": 700
+  },
+  {
+   "ts": 1791688291.9443107,
+   "fb_id": "736504959542737_122188894484935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Kings lose Maxime Raynaud to apparent serious knee injury",
+   "url": "https://www.espn.com/nba/story/_/id/50153526/kings-lose-maxime-raynaud-apparent-serious-knee-injury",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 303
   }
  ]
 }
