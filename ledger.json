@@ -10974,6 +10974,38 @@
    "slot": "",
    "chars": 1725,
    "page": "udesh"
+  },
+  {
+   "ts": 1791728486.9015427,
+   "fb_id": "736504959542737_122188982606935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Ben Simmons Debuts For Kings",
+   "url": "https://basketball.realgm.com/wiretap/287590/Ben-Simmons-Debuts-For-Kings",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 740
+  },
+  {
+   "ts": 1791728500.826065,
+   "fb_id": "736504959542737_122188982690935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Kyrie Irving Plays For Mavericks For First Time In 19 Months",
+   "url": "https://basketball.realgm.com/wiretap/287589/Kyrie-Irving-Plays-For-Mavericks-For-First-Time-In-19-Months",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 728
   }
  ]
 }
