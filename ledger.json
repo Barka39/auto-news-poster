@@ -10908,6 +10908,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 719
+  },
+  {
+   "ts": 1791717691.726023,
+   "fb_id": "736504959542737_122188944278935957",
+   "ig_id": "",
+   "kind": "mn",
+   "card": "news",
+   "video": false,
+   "score": 10,
+   "category": "mn_basketball",
+   "source": "Asia-Basket Mongolia",
+   "title": "Isaiah Todd (ex Xac Broncos) agreed terms with Gence",
+   "url": "https://www.asia-basket.com/Mongolia/news/1035543/Isaiah-Todd-ex-Xac-Broncos-agreed-terms-with-Gence",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 619
+  },
+  {
+   "ts": 1791717703.5237656,
+   "fb_id": "736504959542737_122188944440935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Jayson Tatum got a ‘surreal’ first look playing alongside Paul George",
+   "url": "https://sports.yahoo.com/articles/jayson-tatum-got-surreal-first-090300081.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 279
   }
  ]
 }
