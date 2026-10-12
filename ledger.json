@@ -8590,6 +8590,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791336133.1830502
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791767253.942199
    }
   },
   {
@@ -8611,6 +8615,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791336133.6470766
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791767254.3885045
    }
   },
   {
@@ -8633,6 +8641,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791336134.1806164
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791767254.7541437
    }
   },
   {
@@ -8654,6 +8668,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791336134.7090619
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791767255.1987796
    }
   },
   {
@@ -8691,6 +8709,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791336135.0461254
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791767255.6267304
    }
   },
   {
@@ -8713,6 +8735,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791336135.5711927
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791767256.0421815
    }
   },
   {
@@ -8798,6 +8826,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791336136.0139863
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791767256.482002
    }
   },
   {
@@ -10469,7 +10501,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1090,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791767256.770877
+   }
   },
   {
    "ts": 1791608496.647983,
@@ -10486,7 +10522,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1140,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791767257.203176
+   }
   },
   {
    "ts": 1791613282.3509018,
@@ -10502,7 +10542,13 @@
    "url": "https://basketball.realgm.com/wiretap/287575/Isaiah-Stewart-Suffers-Left-Ankle-Sprain-Will-Be-Re-Evaluated-In-2-Weeks",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 388
+   "chars": 388,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791767257.5138104
+   }
   },
   {
    "ts": 1791628281.2844043,
@@ -10518,7 +10564,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 254
+   "chars": 254,
+   "m24": {
+    "comments": 1,
+    "shares": 0,
+    "engagement": 3.0,
+    "fetched_at": 1791767257.9203968
+   }
   },
   {
    "ts": 1791628894.4342618,
@@ -10534,7 +10586,13 @@
    "url": "https://basketball.realgm.com/wiretap/287567/LeBron-James-Logs-10-Points-Five-Assists-In-76ers-Preseason-Debut",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 889
+   "chars": 889,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791767258.234882
+   }
   },
   {
    "ts": 1791629559.3048928,
@@ -10550,7 +10608,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 275
+   "chars": 275,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791767258.5477989
+   }
   },
   {
    "ts": 1791636702.3191237,
@@ -10566,7 +10630,13 @@
    "url": "https://basketball.realgm.com/wiretap/287579/Valkyries-Sweep-Aces-Become-First-Expansion-Team-To-Reach-WNBA-Finals-In-Second-Season",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 826
+   "chars": 826,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791767258.8672416
+   }
   },
   {
    "ts": 1791636717.3153665,
@@ -10582,7 +10652,13 @@
    "url": "https://basketball.realgm.com/wiretap/287578/Angel-Reese-Leads-Dream-Past-Liberty-Into-First-WNBA-Finals-Since-2013",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 547
+   "chars": 547,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791767259.1814663
+   }
   },
   {
    "ts": 1791637319.9310715,
@@ -10599,7 +10675,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1470,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791767259.626547
+   }
   },
   {
    "ts": 1791639402.7778122,
@@ -10616,7 +10696,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 2122,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791767259.9346137
+   }
   },
   {
    "ts": 1791642122.9739313,
@@ -10632,7 +10716,13 @@
    "url": "https://basketball.realgm.com/wiretap/287580/Stephen-Curry-Acknowledges-Warriors-Roster-Building-Troubles-Since-2022-Title",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 653
+   "chars": 653,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791767260.2404835
+   }
   },
   {
    "ts": 1791645697.460646,
@@ -10648,7 +10738,13 @@
    "url": "https://basketball.realgm.com/wiretap/287583/Brandin-Podziemski-Warriors-Agree-To-Five-Year-$110-Million-Extension",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 682
+   "chars": 682,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791767260.567129
+   }
   },
   {
    "ts": 1791648641.3793383,
@@ -10664,7 +10760,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 244
+   "chars": 244,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791767260.866762
+   }
   },
   {
    "ts": 1791654082.5863426,
@@ -10744,7 +10846,13 @@
    "url": "https://basketball.realgm.com/wiretap/287586/Caitlin-Clark-Undecided-On-EPIC-Extension-Says-No-Matter-What-Im-Gonna-Be-Here",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 778
+   "chars": 778,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791767261.165126
+   }
   },
   {
    "ts": 1791672078.4962144,
@@ -10760,7 +10868,13 @@
    "url": "https://sports.yahoo.com/articles/lakers-still-waiting-preseason-debuts-221140889.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 309
+   "chars": 309,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791767261.472124
+   }
   },
   {
    "ts": 1791673899.9626043,
@@ -10792,7 +10906,13 @@
    "url": "https://www.yahoo.com/entertainment/celebrity/articles/dylan-harper-breaks-silence-girlfriend-191708042.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 714
+   "chars": 714,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791767261.7730021
+   }
   },
   {
    "ts": 1791676897.604412,
@@ -10809,7 +10929,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1858,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791767262.1203382
+   }
   },
   {
    "ts": 1791686490.2644641,
