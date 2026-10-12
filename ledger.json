@@ -11615,6 +11615,22 @@
    "scheduled_for": 1791936000,
    "slot": "2026-10-14 08:00",
    "chars": 792
+  },
+  {
+   "ts": 1791825094.818548,
+   "fb_id": "122189163428935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Knicks Bulletin: ‘Very disappointed, to say the least’",
+   "url": "https://sports.yahoo.com/articles/knicks-bulletin-very-disappointed-least-141411183.html",
+   "scheduled_for": 1791946800,
+   "slot": "2026-10-14 11:00",
+   "chars": 394
   }
  ]
 }
