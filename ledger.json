@@ -11339,6 +11339,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 618
+  },
+  {
+   "ts": 1791779504.9466138,
+   "fb_id": "828746100324372_122150427813084055",
+   "ig_id": "",
+   "kind": "page_confession",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "ХӨХ ТЭНГЭРИЙН ДООРХ НУУЦ ШИВНЭЭ",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1071,
+   "page": "udesh"
   }
  ]
 }
