@@ -11599,6 +11599,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 323
+  },
+  {
+   "ts": 1791824504.188827,
+   "fb_id": "122189162342935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "CBS Sports NBA",
+   "title": "Warriors' Kristaps Porziņģis remains away from team as he deals with mystery illness",
+   "url": "https://www.cbssports.com/nba/news/warriors-kristaps-porzingis-away-from-team-mystery-illness/",
+   "scheduled_for": 1791936000,
+   "slot": "2026-10-14 08:00",
+   "chars": 792
   }
  ]
 }
