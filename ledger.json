@@ -11243,6 +11243,22 @@
    "slot": "",
    "chars": 1768,
    "page": "suns"
+  },
+  {
+   "ts": 1791768101.1611645,
+   "fb_id": "122189057822935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Final Score: Cavs beat Magic 119-105",
+   "url": "https://sports.yahoo.com/articles/final-score-cavs-beat-magic-010223732.html",
+   "scheduled_for": 1791889200,
+   "slot": "2026-10-13 19:00",
+   "chars": 367
   }
  ]
 }
