@@ -11389,6 +11389,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 551
+  },
+  {
+   "ts": 1791792100.0912423,
+   "fb_id": "736504959542737_122189100782935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Jayson Tatum, Jaylen Brown ignore each other in awkward Celtics-76ers pregame scene",
+   "url": "https://sports.yahoo.com/articles/jayson-tatum-jaylen-brown-ignore-034355338.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 537
   }
  ]
 }
