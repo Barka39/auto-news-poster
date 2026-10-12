@@ -11743,6 +11743,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 227
+  },
+  {
+   "ts": 1791840074.7037516,
+   "fb_id": "122189220134935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Jordan 'Last Dance' jersey sells for record £10.6m",
+   "url": "https://sports.yahoo.com/articles/jordan-last-dance-jersey-sells-211027548.html",
+   "scheduled_for": 1791964800,
+   "slot": "2026-10-14 16:00",
+   "chars": 339
   }
  ]
 }
