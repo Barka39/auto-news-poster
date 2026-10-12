@@ -11275,6 +11275,54 @@
    "scheduled_for": 1791898200,
    "slot": "2026-10-13 21:30",
    "chars": 344
+  },
+  {
+   "ts": 1791775290.9300368,
+   "fb_id": "736504959542737_122189072186935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Cason Wallace, Thunder Discussing Deal In $25M Annual Average Range",
+   "url": "https://basketball.realgm.com/wiretap/287599/Cason-Wallace-Thunder-Discussing-Deal-In-$25M-Annual-Average-Range",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 811
+  },
+  {
+   "ts": 1791775304.8563738,
+   "fb_id": "736504959542737_122189072324935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Brandon Miller Could Sign Richer Extension Than Amen Thompson",
+   "url": "https://basketball.realgm.com/wiretap/287598/Brandon-Miller-Could-Sign-Richer-Extension-Than-Amen-Thompson",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 525
+  },
+  {
+   "ts": 1791775318.391255,
+   "fb_id": "736504959542737_122189072426935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Anthony Black, Magic Unlikely To Agree To Extension By Deadline",
+   "url": "https://basketball.realgm.com/wiretap/287597/Anthony-Black-Magic-Unlikely-To-Agree-To-Extension-By-Deadline",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 721
   }
  ]
 }
