@@ -11631,6 +11631,38 @@
    "scheduled_for": 1791946800,
    "slot": "2026-10-14 11:00",
    "chars": 394
+  },
+  {
+   "ts": 1791826304.7710395,
+   "fb_id": "122189164778935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "The Celtics are valued lower than other top NBA franchises, and here’s why",
+   "url": "https://sports.yahoo.com/articles/celtics-valued-lower-other-top-151356447.html",
+   "scheduled_for": 1791954000,
+   "slot": "2026-10-14 13:00",
+   "chars": 363
+  },
+  {
+   "ts": 1791826318.4651058,
+   "fb_id": "736504959542737_122189164850935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Maybe Bob Iger and Josh Kushner didn’t overpay for the Lakers after all?",
+   "url": "https://sports.yahoo.com/articles/maybe-bob-iger-josh-kushner-152400194.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 346
   }
  ]
 }
