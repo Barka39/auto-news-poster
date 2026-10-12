@@ -11421,6 +11421,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 546
+  },
+  {
+   "ts": 1791803037.61315,
+   "fb_id": "736504959542737_122189121326935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Windhorst: Why Cooper Flagg's ascension is starting to feel inevitable",
+   "url": "https://www.espn.com/nba/story/_/id/50163354/cooper-flagg-kyrie-irving-mavericks-china",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 484
   }
  ]
 }
