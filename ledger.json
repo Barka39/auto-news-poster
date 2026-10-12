@@ -11679,6 +11679,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 341
+  },
+  {
+   "ts": 1791832291.5632153,
+   "fb_id": "736504959542737_122189202368935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Kentavious Caldwell-Pope cites team chemistry as key to 76ers' success",
+   "url": "https://www.espn.com/nba/story/_/id/50168000/kentavious-caldwell-pope-cites-team-chemistry-key-76ers",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 457
   }
  ]
 }
