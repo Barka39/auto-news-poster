@@ -11259,6 +11259,22 @@
    "scheduled_for": 1791889200,
    "slot": "2026-10-13 19:00",
    "chars": 367
+  },
+  {
+   "ts": 1791774117.1180058,
+   "fb_id": "122189069570935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Luke Kennard is showing the Suns he’s more than a shooter",
+   "url": "https://sports.yahoo.com/articles/luke-kennard-showing-suns-more-000000264.html",
+   "scheduled_for": 1791898200,
+   "slot": "2026-10-13 21:30",
+   "chars": 344
   }
  ]
 }
