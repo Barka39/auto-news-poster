@@ -11486,6 +11486,22 @@
    "slot": "",
    "chars": 1463,
    "page": "suns"
+  },
+  {
+   "ts": 1791811292.498462,
+   "fb_id": "736504959542737_122189139482935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Mario Hezonja is embracing the challenge of returning to the NBA",
+   "url": "https://sports.yahoo.com/articles/mario-hezonja-embracing-challenge-returning-130000815.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 394
   }
  ]
 }
