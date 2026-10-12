@@ -11567,6 +11567,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 190
+  },
+  {
+   "ts": 1791815658.445739,
+   "fb_id": "736504959542737_122189149400935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Michael Jordan's 1998 NBA Finals Jersey Sells For Record $14M",
+   "url": "https://basketball.realgm.com/wiretap/287604/Michael-Jordans-1998-NBA-Finals-Jersey-Sells-For-Record-$14M",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 928
   }
  ]
 }
