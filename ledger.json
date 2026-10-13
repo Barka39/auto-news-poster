@@ -12326,6 +12326,22 @@
    "scheduled_for": 1792051200,
    "slot": "2026-10-15 16:00",
    "chars": 228
+  },
+  {
+   "ts": 1791932508.7978587,
+   "fb_id": "122189389790935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Preseason updates on Sixers' injuries and rotation plans",
+   "url": "https://sports.yahoo.com/articles/preseason-updates-sixers-injuries-rotation-181849161.html",
+   "scheduled_for": 1792062000,
+   "slot": "2026-10-15 19:00",
+   "chars": 354
   }
  ]
 }
