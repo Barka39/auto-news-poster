@@ -12052,6 +12052,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 417
+  },
+  {
+   "ts": 1791885091.746948,
+   "fb_id": "736504959542737_122189306402935957",
+   "ig_id": "",
+   "kind": "mn",
+   "card": "news",
+   "video": false,
+   "score": 10,
+   "category": "mn_basketball",
+   "source": "Asia-Basket Mongolia",
+   "title": "MBL Round 5 (Regular Season): Apes hand first defeat to Xac Broncos",
+   "url": "https://www.asia-basket.com/Mongolia/news/1036033/MBL-Round-5-Regular-Season-Apes-hand-first-defeat-to-Xac-Broncos",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 628
   }
  ]
 }
