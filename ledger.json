@@ -12166,6 +12166,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 555
+  },
+  {
+   "ts": 1791908497.4589126,
+   "fb_id": "122189353916935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Giannis Antetokounmpo Now Eligible For Extension, Waiting Until January Adds $82M",
+   "url": "https://basketball.realgm.com/wiretap/287620/Giannis-Antetokounmpo-Now-Eligible-For-Extension-Waiting-Until-January-Adds-$82M",
+   "scheduled_for": 1792022400,
+   "slot": "2026-10-15 08:00",
+   "chars": 813
   }
  ]
 }
