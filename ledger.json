@@ -12310,6 +12310,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 313
+  },
+  {
+   "ts": 1791921700.387468,
+   "fb_id": "122189376500935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "deal",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Celtics to extend guard Payton Pritchard on 2-year, $44.2M deal",
+   "url": "https://www.espn.com/nba/story/_/id/50176173/celtics-extend-payton-pritchard-two-year-442m-deal",
+   "scheduled_for": 1792051200,
+   "slot": "2026-10-15 16:00",
+   "chars": 228
   }
  ]
 }
