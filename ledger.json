@@ -8851,6 +8851,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791423734.972779
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791860181.9036045
    }
   },
   {
@@ -8872,6 +8876,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791423735.4176097
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791860182.425801
    }
   },
   {
@@ -8926,6 +8934,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791423735.7412784
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791860182.8021684
    }
   },
   {
@@ -8947,6 +8961,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791423736.1532784
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791860183.2363682
    }
   },
   {
@@ -8969,6 +8987,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791423736.497222
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791860183.5896528
    }
   },
   {
@@ -8991,6 +9015,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791423736.8545258
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791860183.9443123
    }
   },
   {
@@ -9012,6 +9042,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791423737.2023783
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791860184.2750185
    }
   },
   {
@@ -9098,6 +9132,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791423737.5494971
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791860184.6512108
    }
   },
   {
@@ -9120,6 +9160,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791423738.036215
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791860185.015156
    }
   },
   {
@@ -9157,6 +9203,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791510899.2541611
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791860185.5322654
    }
   },
   {
@@ -9179,6 +9229,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791510899.560503
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791860185.8870976
    }
   },
   {
@@ -10965,7 +11021,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50153526/kings-lose-maxime-raynaud-apparent-serious-knee-injury",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 303
+   "chars": 303,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791860186.2390747
+   }
   },
   {
    "ts": 1791693095.6375806,
@@ -10982,7 +11044,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 775,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791860186.5973043
+   }
   },
   {
    "ts": 1791693700.3595338,
@@ -10998,7 +11064,13 @@
    "url": "https://sports.yahoo.com/articles/why-luka-doncic-believes-lakers-003103954.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 338
+   "chars": 338,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791860186.9456854
+   }
   },
   {
    "ts": 1791694900.670878,
@@ -11015,7 +11087,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1073,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791860187.472494
+   }
   },
   {
    "ts": 1791696082.555814,
@@ -11031,7 +11107,13 @@
    "url": "https://basketball.realgm.com/wiretap/287587/Kyle-Filipowski-Yet-To-Return-To-On-Cout-Work-After-Offseason-Back-Surgery",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 719
+   "chars": 719,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791860187.8081338
+   }
   },
   {
    "ts": 1791717691.726023,
@@ -11047,7 +11129,13 @@
    "url": "https://www.asia-basket.com/Mongolia/news/1035543/Isaiah-Todd-ex-Xac-Broncos-agreed-terms-with-Gence",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 619
+   "chars": 619,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791860188.1535003
+   }
   },
   {
    "ts": 1791717703.5237656,
@@ -11063,7 +11151,13 @@
    "url": "https://sports.yahoo.com/articles/jayson-tatum-got-surreal-first-090300081.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 279
+   "chars": 279,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791860188.5169158
+   }
   },
   {
    "ts": 1791723712.946583,
@@ -11080,7 +11174,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1277,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791860188.9880648
+   }
   },
   {
    "ts": 1791725508.4827182,
@@ -11097,7 +11195,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1725,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791860189.3277075
+   }
   },
   {
    "ts": 1791728486.9015427,
@@ -11113,7 +11215,13 @@
    "url": "https://basketball.realgm.com/wiretap/287590/Ben-Simmons-Debuts-For-Kings",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 740
+   "chars": 740,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791860189.6427891
+   }
   },
   {
    "ts": 1791728500.826065,
@@ -11129,7 +11237,13 @@
    "url": "https://basketball.realgm.com/wiretap/287589/Kyrie-Irving-Plays-For-Mavericks-For-First-Time-In-19-Months",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 728
+   "chars": 728,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791860190.1213102
+   }
   },
   {
    "ts": 1791736487.868085,
@@ -11161,7 +11275,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 216
+   "chars": 216,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791860190.4667072
+   }
   },
   {
    "ts": 1791746489.6730893,
@@ -11209,7 +11329,13 @@
    "url": "https://www.asia-basket.com/Mongolia/news/1035651/Hugley-IVs-28-points-give-him-Hoops-Agents-Player-of-the-Week-award",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 699
+   "chars": 699,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791860190.8190296
+   }
   },
   {
    "ts": 1791760884.479059,
@@ -11242,7 +11368,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1768,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791860191.3023715
+   }
   },
   {
    "ts": 1791768101.1611645,
