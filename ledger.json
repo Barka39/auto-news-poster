@@ -12036,6 +12036,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 467
+  },
+  {
+   "ts": 1791876703.3125315,
+   "fb_id": "736504959542737_122189290556935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Knicks 'really excited' with Andre Drummond's 'unbelievable' communication on floor",
+   "url": "https://sports.yahoo.com/articles/knicks-really-excited-andre-drummonds-044509597.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 417
   }
  ]
 }
