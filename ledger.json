@@ -12278,6 +12278,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 800
+  },
+  {
+   "ts": 1791919306.8912647,
+   "fb_id": "736504959542737_122189371028935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Kyshawn George shows added muscle in 21-point showing vs. Nets",
+   "url": "https://sports.yahoo.com/articles/kyshawn-george-shows-added-muscle-164330198.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 550
+  },
+  {
+   "ts": 1791919319.5940244,
+   "fb_id": "736504959542737_122189371118935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "NBA, WNBA campaign will remind fans of risks of betting on basketball",
+   "url": "https://www.espn.com/espn/betting/story/_/id/50173984/nba-wnba-responsible-gaming",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 313
   }
  ]
 }
