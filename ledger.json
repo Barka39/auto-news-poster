@@ -11954,6 +11954,38 @@
    "scheduled_for": 1791975600,
    "slot": "2026-10-14 19:00",
    "chars": 312
+  },
+  {
+   "ts": 1791861694.800469,
+   "fb_id": "122189272334935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Chris Finch: LaMelo Ball Has Helped Wolves Trade 'Moodiness For Giddiness'",
+   "url": "https://basketball.realgm.com/wiretap/287608/Chris-Finch-LaMelo-Ball-Has-Helped-Wolves-Trade-Moodiness-For-Giddiness",
+   "scheduled_for": 1791984600,
+   "slot": "2026-10-14 21:30",
+   "chars": 619
+  },
+  {
+   "ts": 1791861707.9009178,
+   "fb_id": "736504959542737_122189272394935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Kentavious Caldwell-Pope Says Chemistry Will Be Key To 76ers' Title Hopes",
+   "url": "https://basketball.realgm.com/wiretap/287607/Kentavious-Caldwell-Pope-Says-Chemistry-Will-Be-Key-To-76ers-Title-Hopes",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 684
   }
  ]
 }
