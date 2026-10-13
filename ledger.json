@@ -12182,6 +12182,22 @@
    "scheduled_for": 1792022400,
    "slot": "2026-10-15 08:00",
    "chars": 813
+  },
+  {
+   "ts": 1791909105.2868705,
+   "fb_id": "122189354576935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "What's next in Karl-Anthony Towns, Knicks contract drama: Will he pick up his player option?",
+   "url": "https://sports.yahoo.com/articles/whats-next-karl-anthony-towns-161308889.html",
+   "scheduled_for": 1792033200,
+   "slot": "2026-10-15 11:00",
+   "chars": 393
   }
  ]
 }
