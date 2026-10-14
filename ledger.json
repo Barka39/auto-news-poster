@@ -12869,6 +12869,22 @@
    "scheduled_for": 1792126800,
    "slot": "2026-10-16 13:00",
    "chars": 876
+  },
+  {
+   "ts": 1792008712.3364332,
+   "fb_id": "122189522576935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "JJ Redick wants Walker Kessler to be relentless this season",
+   "url": "https://sports.yahoo.com/articles/jj-redick-wants-walker-kessler-170856764.html",
+   "scheduled_for": 1792137600,
+   "slot": "2026-10-16 16:00",
+   "chars": 203
   }
  ]
 }
