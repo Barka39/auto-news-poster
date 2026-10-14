@@ -12691,6 +12691,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 294
+  },
+  {
+   "ts": 1791979901.6117814,
+   "fb_id": "736504959542737_122189473442935957",
+   "ig_id": "",
+   "kind": "mn",
+   "card": "news",
+   "video": false,
+   "score": 10,
+   "category": "mn_basketball",
+   "source": "Asia-Basket Mongolia",
+   "title": "Best players of Mongolian MBL round 5 (by Hoops Agents)",
+   "url": "https://www.asia-basket.com/Mongolia/news/1036143/Best-players-of-Mongolian-MBL-round-5-by-Hoops-Agents",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 601
   }
  ]
 }
