@@ -12885,6 +12885,22 @@
    "scheduled_for": 1792137600,
    "slot": "2026-10-16 16:00",
    "chars": 203
+  },
+  {
+   "ts": 1792011102.8983276,
+   "fb_id": "736504959542737_122189527928935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Tyrese Maxey is built for this",
+   "url": "https://sports.yahoo.com/articles/tyrese-maxey-built-171739098.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 337
   }
  ]
 }
