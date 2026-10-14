@@ -12821,6 +12821,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 219
+  },
+  {
+   "ts": 1791993715.6095335,
+   "fb_id": "122189500406935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Payton Pritchard’s big contract is years in the making",
+   "url": "https://sports.yahoo.com/articles/payton-pritchard-big-contract-years-134530058.html",
+   "scheduled_for": 1792108800,
+   "slot": "2026-10-16 08:00",
+   "chars": 349
   }
  ]
 }
