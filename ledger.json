@@ -12724,6 +12724,39 @@
    "slot": "",
    "chars": 1321,
    "page": "suns"
+  },
+  {
+   "ts": 1791984711.128944,
+   "fb_id": "736504959542737_122189483624935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Paul George previewed his defensive prowess in preseason victory over Philadelphia",
+   "url": "https://sports.yahoo.com/articles/paul-george-previewed-defensive-prowess-110000360.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 279
+  },
+  {
+   "ts": 1791984774.0871086,
+   "fb_id": "828746100324372_122150763123084055",
+   "ig_id": "",
+   "kind": "page_story",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Хуучин захидлын нууц — 1-р хэсэг",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 2103,
+   "page": "udesh"
   }
  ]
 }
