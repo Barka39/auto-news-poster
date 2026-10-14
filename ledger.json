@@ -12853,6 +12853,22 @@
    "scheduled_for": 1792119600,
    "slot": "2026-10-16 11:00",
    "chars": 475
+  },
+  {
+   "ts": 1792002095.9508255,
+   "fb_id": "122189513006935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "CBS Sports NBA",
+   "title": "Lakers coach JJ Redick on Bronny James: 'I don't think he's played well' in preseason games",
+   "url": "https://www.cbssports.com/nba/news/bronny-james-lakers-roster-jj-redick-lebron-james/",
+   "scheduled_for": 1792126800,
+   "slot": "2026-10-16 13:00",
+   "chars": 876
   }
  ]
 }
