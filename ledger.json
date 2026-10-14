@@ -9256,6 +9256,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791510899.831733
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791939743.7319698
    }
   },
   {
@@ -9277,6 +9281,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791510900.1864245
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791939744.316426
    }
   },
   {
@@ -9299,6 +9307,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791510900.4928038
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939744.793499
    }
   },
   {
@@ -9320,6 +9334,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791510900.8437824
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791939745.365905
    }
   },
   {
@@ -9341,6 +9359,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791510901.166092
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1791939745.8382897
    }
   },
   {
@@ -11420,7 +11442,13 @@
    "url": "https://basketball.realgm.com/wiretap/287599/Cason-Wallace-Thunder-Discussing-Deal-In-$25M-Annual-Average-Range",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 811
+   "chars": 811,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939746.303966
+   }
   },
   {
    "ts": 1791775304.8563738,
@@ -11436,7 +11464,13 @@
    "url": "https://basketball.realgm.com/wiretap/287598/Brandon-Miller-Could-Sign-Richer-Extension-Than-Amen-Thompson",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 525
+   "chars": 525,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939746.7530408
+   }
   },
   {
    "ts": 1791775318.391255,
@@ -11452,7 +11486,13 @@
    "url": "https://basketball.realgm.com/wiretap/287597/Anthony-Black-Magic-Unlikely-To-Agree-To-Extension-By-Deadline",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 721
+   "chars": 721,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939747.335756
+   }
   },
   {
    "ts": 1791775886.9084551,
@@ -11468,7 +11508,13 @@
    "url": "https://sports.yahoo.com/articles/lakers-walker-kessler-ready-play-230408727.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 618
+   "chars": 618,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939747.800213
+   }
   },
   {
    "ts": 1791779504.9466138,
@@ -11485,7 +11531,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1071,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791939748.3017938
+   }
   },
   {
    "ts": 1791781239.525845,
@@ -11502,7 +11552,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1172,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791939749.0345874
+   }
   },
   {
    "ts": 1791786088.3453488,
@@ -11518,7 +11572,13 @@
    "url": "https://basketball.realgm.com/wiretap/287602/Knicks-To-Prioritize-Re-Signing-Karl-Anthony-Towns-Over-Josh-Hart-Could-Trade-Deuce-McBride",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 551
+   "chars": 551,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939749.4912975
+   }
   },
   {
    "ts": 1791792100.0912423,
@@ -11534,7 +11594,13 @@
    "url": "https://sports.yahoo.com/articles/jayson-tatum-jaylen-brown-ignore-034355338.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 537
+   "chars": 537,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939749.9528432
+   }
   },
   {
    "ts": 1791799797.7379198,
@@ -11550,7 +11616,13 @@
    "url": "https://www.asia-basket.com/Mongolia/news/1035714/Keith-Braxtons-triple-double-lands-him-Player-of-the-Week-award",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 546
+   "chars": 546,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939750.5117228
+   }
   },
   {
    "ts": 1791803037.61315,
@@ -11566,7 +11638,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50163354/cooper-flagg-kyrie-irving-mavericks-china",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 484
+   "chars": 484,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939751.0260694
+   }
   },
   {
    "ts": 1791805775.5925944,
@@ -11582,7 +11660,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 517
+   "chars": 517,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939751.640828
+   }
   },
   {
    "ts": 1791808438.4018471,
@@ -11598,7 +11682,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 230
+   "chars": 230,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939752.57687
+   }
   },
   {
    "ts": 1791810122.8017013,
@@ -11615,7 +11705,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1463,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791939753.1617742
+   }
   },
   {
    "ts": 1791811292.498462,
@@ -11631,7 +11725,13 @@
    "url": "https://sports.yahoo.com/articles/mario-hezonja-embracing-challenge-returning-130000815.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 394
+   "chars": 394,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939753.6368883
+   }
   },
   {
    "ts": 1791811901.3488798,
@@ -11647,7 +11747,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50165903/jordan-game-worn-1998-nba-finals-jersey-sells-14-million",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 246
+   "chars": 246,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939754.2481303
+   }
   },
   {
    "ts": 1791811924.3155117,
@@ -11664,7 +11770,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1740,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791939754.741001
+   }
   },
   {
    "ts": 1791813965.460881,
@@ -11680,7 +11790,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 172
+   "chars": 172,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939755.2138495
+   }
   },
   {
    "ts": 1791813968.5281837,
@@ -11696,7 +11812,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 190
+   "chars": 190,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939755.6866767
+   }
   },
   {
    "ts": 1791815658.445739,
@@ -11712,7 +11834,13 @@
    "url": "https://basketball.realgm.com/wiretap/287604/Michael-Jordans-1998-NBA-Finals-Jersey-Sells-For-Record-$14M",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 928
+   "chars": 928,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939756.2047744
+   }
   },
   {
    "ts": 1791820290.287144,
@@ -11728,7 +11856,13 @@
    "url": "https://sports.yahoo.com/articles/sixers-business-booming-thanks-part-133551333.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 323
+   "chars": 323,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939756.6891937
+   }
   },
   {
    "ts": 1791824504.188827,
@@ -11792,7 +11926,13 @@
    "url": "https://sports.yahoo.com/articles/maybe-bob-iger-josh-kushner-152400194.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 346
+   "chars": 346,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939757.1516447
+   }
   },
   {
    "ts": 1791829280.2709785,
@@ -11808,7 +11948,13 @@
    "url": "https://sports.yahoo.com/articles/kyrie-irving-hasn-t-missed-160000622.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 341
+   "chars": 341,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939757.6722808
+   }
   },
   {
    "ts": 1791832291.5632153,
@@ -11824,7 +11970,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50168000/kentavious-caldwell-pope-cites-team-chemistry-key-76ers",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 457
+   "chars": 457,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939758.1297116
+   }
   },
   {
    "ts": 1791832902.4411478,
@@ -11840,7 +11992,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50167264/spurs-nuggets-pacers-nets-aba-uniforms",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 268
+   "chars": 268,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939758.6548982
+   }
   },
   {
    "ts": 1791834091.3118684,
@@ -11856,7 +12014,13 @@
    "url": "https://basketball.realgm.com/wiretap/287593/Maxime-Raynaud-Out-At-Least-Two-Weeks-Due-To-Knee-Injury",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 622
+   "chars": 622,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939759.6184719
+   }
   },
   {
    "ts": 1791835999.5751038,
@@ -11872,7 +12036,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 227
+   "chars": 227,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939760.2289312
+   }
   },
   {
    "ts": 1791840074.7037516,
@@ -11904,7 +12074,13 @@
    "url": "https://sports.yahoo.com/articles/three-big-questions-trae-young-190000498.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 568
+   "chars": 568,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939760.6922812
+   }
   },
   {
    "ts": 1791841308.8350165,
@@ -11920,7 +12096,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50168743/kristaps-porzingis-expected-warriors-facility-tue",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 220
+   "chars": 220,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1791939761.1889021
+   }
   },
   {
    "ts": 1791849712.3582788,
@@ -11937,7 +12119,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1633,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1791939761.7761014
+   }
   },
   {
    "ts": 1791850887.8807704,
