@@ -12837,6 +12837,22 @@
    "scheduled_for": 1792108800,
    "slot": "2026-10-16 08:00",
    "chars": 349
+  },
+  {
+   "ts": 1792000316.6335344,
+   "fb_id": "122189509934935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "ESPN’s Brian Windhorst won’t stop banging the Cooper Flagg drum",
+   "url": "https://sports.yahoo.com/articles/espn-brian-windhorst-won-t-153245395.html",
+   "scheduled_for": 1792119600,
+   "slot": "2026-10-16 11:00",
+   "chars": 475
   }
  ]
 }
