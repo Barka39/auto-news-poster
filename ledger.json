@@ -12773,6 +12773,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 780
+  },
+  {
+   "ts": 1791987693.7474434,
+   "fb_id": "736504959542737_122189489390935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Thunder Guard Otega Oweh Suffers Apparently Serious Leg Injury",
+   "url": "https://basketball.realgm.com/wiretap/287628/Thunder-Guard-Otega-Oweh-Suffers-Apparently-Serious-Leg-Injury",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 594
   }
  ]
 }
