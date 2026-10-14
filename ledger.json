@@ -12901,6 +12901,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 337
+  },
+  {
+   "ts": 1792013004.8990946,
+   "fb_id": "736504959542737_122189530472935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Kristaps Porziņģis is 'getting better and better,' but Warriors say he will remain out indefinitely due to 'health-relat",
+   "url": "https://sports.yahoo.com/nba/article/kristaps-porzingis-is-getting-better-and-better-but-warriors-say-he-will-remain-out-indefinitely-due-to-health-related-matter-211509375.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 401
   }
  ]
 }
