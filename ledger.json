@@ -12561,6 +12561,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 443
+  },
+  {
+   "ts": 1791942700.1585224,
+   "fb_id": "122189408690935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Kawhi Leonard drops 21 points in opening half of Raptors preseason debut after Clippers trade, scandal",
+   "url": "https://sports.yahoo.com/nba/article/kawhi-leonard-drops-21-points-in-opening-half-of-raptors-preseason-debut-after-clippers-trade-scandal-013454152.html",
+   "scheduled_for": 1792071000,
+   "slot": "2026-10-15 21:30",
+   "chars": 347
   }
  ]
 }
