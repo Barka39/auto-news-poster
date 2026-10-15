@@ -13352,6 +13352,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 461
+  },
+  {
+   "ts": 1792090802.210278,
+   "fb_id": "736504959542737_122189644706935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "CBS Sports NBA",
+   "title": "Explaining the NBA's mutual option trend: Could it be used to fight back against the dreaded second apron?",
+   "url": "https://www.cbssports.com/nba/news/nba-mutual-option-contract-trend-second-apron/",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 952
   }
  ]
 }
