@@ -13124,6 +13124,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 379
+  },
+  {
+   "ts": 1792035981.3293123,
+   "fb_id": "736504959542737_122189564024935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Luke Kennard exits early with apparent left knee injury",
+   "url": "https://sports.yahoo.com/articles/luke-kennard-exits-early-apparent-010938604.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 220
+  },
+  {
+   "ts": 1792035995.7302203,
+   "fb_id": "736504959542737_122189564126935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Trail Blazers hire temporary TV voice after Braiden Bell tweet controversy",
+   "url": "https://sports.yahoo.com/articles/trail-blazers-hire-temporary-tv-231325432.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 432
   }
  ]
 }
