@@ -13239,6 +13239,22 @@
    "slot": "",
    "chars": 1146,
    "page": "suns"
+  },
+  {
+   "ts": 1792069892.4448478,
+   "fb_id": "736504959542737_122189613662935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Former Knicks star Amar’e Stoudemire graduates Florida police academy, becomes officer",
+   "url": "https://sports.yahoo.com/articles/former-knicks-star-amar-e-084142663.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 383
   }
  ]
 }
