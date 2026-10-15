@@ -13400,6 +13400,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 468
+  },
+  {
+   "ts": 1792104683.8521194,
+   "fb_id": "736504959542737_122189661788935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Moment Warriors rookie learns he’s guarding Luka Doncic goes viral: ‘What the f–k’",
+   "url": "https://sports.yahoo.com/articles/moment-warriors-rookie-learns-guarding-182249638.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 361
   }
  ]
 }
