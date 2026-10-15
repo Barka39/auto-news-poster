@@ -13092,6 +13092,38 @@
    "scheduled_for": 1792148400,
    "slot": "2026-10-16 19:00",
    "chars": 818
+  },
+  {
+   "ts": 1792032084.2761376,
+   "fb_id": "122189556836935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Celtics announce starting lineup ahead of preseason vs. Hornets",
+   "url": "https://sports.yahoo.com/articles/celtics-announce-starting-lineup-ahead-231004137.html",
+   "scheduled_for": 1792157400,
+   "slot": "2026-10-16 21:30",
+   "chars": 241
+  },
+  {
+   "ts": 1792032096.2344072,
+   "fb_id": "736504959542737_122189556968935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Who will be the Lakers’ fifth starter this season?",
+   "url": "https://sports.yahoo.com/articles/lakers-fifth-starter-season-001440045.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 379
   }
  ]
 }
