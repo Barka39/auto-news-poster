@@ -9400,6 +9400,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791510901.5159736
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1792023762.4502156
    }
   },
   {
@@ -9421,6 +9425,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791510901.760153
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1792023762.9558327
    }
   },
   {
@@ -9443,6 +9451,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791510902.0786512
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792023763.3164072
    }
   },
   {
@@ -9465,6 +9479,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791510902.4405012
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792023763.6395795
    }
   },
   {
@@ -9502,6 +9522,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791510902.81091
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1792023764.0533357
    }
   },
   {
@@ -9523,6 +9547,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791510903.136518
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1792023764.3641393
    }
   },
   {
@@ -9705,6 +9733,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791510903.406253
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792023764.7225006
    }
   },
   {
@@ -9726,6 +9760,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791510903.7419329
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1792023765.1387298
    }
   },
   {
@@ -12171,7 +12209,13 @@
    "url": "https://basketball.realgm.com/wiretap/287607/Kentavious-Caldwell-Pope-Says-Chemistry-Will-Be-Key-To-76ers-Title-Hopes",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 684
+   "chars": 684,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792023765.4461515
+   }
   },
   {
    "ts": 1791865909.9435914,
@@ -12188,7 +12232,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 956,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1792023765.7550745
+   }
   },
   {
    "ts": 1791867713.5414147,
@@ -12205,7 +12253,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1174,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1792023766.146675
+   }
   },
   {
    "ts": 1791874918.2273543,
@@ -12221,7 +12273,13 @@
    "url": "https://sports.yahoo.com/articles/madison-square-garden-host-gop-030238535.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 467
+   "chars": 467,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792023766.482259
+   }
   },
   {
    "ts": 1791876703.3125315,
@@ -12237,7 +12295,13 @@
    "url": "https://sports.yahoo.com/articles/knicks-really-excited-andre-drummonds-044509597.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 417
+   "chars": 417,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792023766.7897716
+   }
   },
   {
    "ts": 1791885091.746948,
@@ -12253,7 +12317,13 @@
    "url": "https://www.asia-basket.com/Mongolia/news/1036033/MBL-Round-5-Regular-Season-Apes-hand-first-defeat-to-Xac-Broncos",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 628
+   "chars": 628,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792023767.114616
+   }
   },
   {
    "ts": 1791889888.550936,
@@ -12269,7 +12339,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50168604/tyrese-haliburton-indiana-pacers-return-injury",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 360
+   "chars": 360,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792023767.4316504
+   }
   },
   {
    "ts": 1791891085.362216,
@@ -12285,7 +12361,13 @@
    "url": "https://sports.yahoo.com/articles/could-rockets-trade-kevin-durant-091448320.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 447
+   "chars": 447,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792023767.7454774
+   }
   },
   {
    "ts": 1791893515.2181358,
@@ -12301,7 +12383,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50166436/rookie-veteran-contract-extensions-towns-giannis-jokic",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 472
+   "chars": 472,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792023768.0580444
+   }
   },
   {
    "ts": 1791896509.358684,
@@ -12318,7 +12406,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1288,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1792023768.4002812
+   }
   },
   {
    "ts": 1791898312.1760652,
@@ -12335,7 +12427,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 2193,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1792023768.7472122
+   }
   },
   {
    "ts": 1791906697.1737995,
@@ -12351,7 +12447,13 @@
    "url": "https://basketball.realgm.com/wiretap/287617/KJ-Simpson-Nearing-Deal-With-Turkish-Club-Galatasaray",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 555
+   "chars": 555,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792023769.0623205
+   }
   },
   {
    "ts": 1791908497.4589126,
@@ -12415,7 +12517,13 @@
    "url": "https://sports.yahoo.com/articles/kyle-anderson-speaks-jamal-shead-153000454.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 431
+   "chars": 431,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792023769.6283727
+   }
   },
   {
    "ts": 1791913904.7952273,
@@ -12431,7 +12539,13 @@
    "url": "https://sports.yahoo.com/articles/nba-unveils-nba-cup-courts-170510744.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 366
+   "chars": 366,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792023769.933271
+   }
   },
   {
    "ts": 1791916888.1659033,
@@ -12447,7 +12561,13 @@
    "url": "https://sports.yahoo.com/articles/cooper-flagg-poised-one-greats-163000971.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 341
+   "chars": 341,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792023770.237153
+   }
   },
   {
    "ts": 1791917506.3568983,
@@ -12463,7 +12583,13 @@
    "url": "https://www.cbssports.com/nba/news/victor-wembanyama-spurs-year-4-level-up-mvp-dpoy/",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 800
+   "chars": 800,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792023770.556394
+   }
   },
   {
    "ts": 1791919306.8912647,
@@ -12479,7 +12605,13 @@
    "url": "https://sports.yahoo.com/articles/kyshawn-george-shows-added-muscle-164330198.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 550
+   "chars": 550,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792023770.8565242
+   }
   },
   {
    "ts": 1791919319.5940244,
@@ -12495,7 +12627,13 @@
    "url": "https://www.espn.com/espn/betting/story/_/id/50173984/nba-wnba-responsible-gaming",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 313
+   "chars": 313,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792023771.1590097
+   }
   },
   {
    "ts": 1791921700.387468,
@@ -12544,7 +12682,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1615,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1792023771.4652567
+   }
   },
   {
    "ts": 1791939084.568607,
