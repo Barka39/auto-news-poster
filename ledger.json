@@ -13336,6 +13336,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 353
+  },
+  {
+   "ts": 1792090287.7668533,
+   "fb_id": "736504959542737_122189643860935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "NBA general managers love what the 76ers did. But there's a catch.",
+   "url": "https://sports.yahoo.com/articles/nba-general-managers-love-76ers-174319561.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 461
   }
  ]
 }
