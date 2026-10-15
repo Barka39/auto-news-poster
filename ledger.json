@@ -13384,6 +13384,22 @@
    "scheduled_for": 1792224000,
    "slot": "2026-10-17 16:00",
    "chars": 375
+  },
+  {
+   "ts": 1792097489.497677,
+   "fb_id": "736504959542737_122189653028935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Delonte West gives cheeky 4-word answer about sleeping with LeBron James’ mom",
+   "url": "https://www.yahoo.com/entertainment/celebrity/articles/delonte-west-gives-cheeky-4-163716582.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 468
   }
  ]
 }
