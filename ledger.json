@@ -13368,6 +13368,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 952
+  },
+  {
+   "ts": 1792095680.891344,
+   "fb_id": "122189651858935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "quote",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Maxey: Healthy Embiid 'changes everything' for Sixers",
+   "url": "https://www.espn.com/nba/story/_/id/50191473/maxey-healthy-embiid-changes-everything-sixers",
+   "scheduled_for": 1792224000,
+   "slot": "2026-10-17 16:00",
+   "chars": 375
   }
  ]
 }
