@@ -1,58 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1789967604.0,
-   "fb_id": "736504959542737_122185403240935957",
-   "kind": "unknown",
-   "card": "",
-   "score": 0,
-   "category": "",
-   "source": "backfill",
-   "title": "\"Айчи Нагояа 2026\" Азийн наадамд Монголын 3х3 сагсан бөмбөгийн эрэгтэй шигшээ баг тивийн чансааг тэргүүлэн оролцоно. 23 ",
-   "url": "",
-   "slot": "",
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790122412.1983564
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790646164.442858
-   }
-  },
-  {
-   "ts": 1789976037.9872267,
-   "fb_id": "736504959542737_122185416620935957",
-   "ig_id": "",
-   "kind": "mn",
-   "card": "news",
-   "video": false,
-   "score": 10,
-   "category": "mn_basketball",
-   "source": "ikon.mn",
-   "title": "Айчи Нагоя 2026: 3х3 сагсан бөмбөгийн эрэгтэй баг хэсгийн шатанд Филиппинд хожигдсон ч Казахстаныг илүүрхлээ",
-   "url": "https://ikon.mn/n/3qgt",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 811,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790122412.629524
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790646164.8849516
-   }
-  },
-  {
    "ts": 1789989860.0403209,
    "fb_id": "122185451114935957",
    "ig_id": "",
@@ -13519,6 +13467,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 258
+  },
+  {
+   "ts": 1792167694.391527,
+   "fb_id": "122189752958935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Raptors fall to Knicks in rematch",
+   "url": "https://sports.yahoo.com/articles/raptors-fall-knicks-rematch-141254752.html",
+   "scheduled_for": 1792281600,
+   "slot": "2026-10-18 08:00",
+   "chars": 477
+  },
+  {
+   "ts": 1792167708.8835564,
+   "fb_id": "122189753006935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Knicks Bulletin: ‘New York will explore other deals this weekend and Monday’",
+   "url": "https://sports.yahoo.com/articles/knicks-bulletin-york-explore-other-140025182.html",
+   "scheduled_for": 1792292400,
+   "slot": "2026-10-18 11:00",
+   "chars": 581
   }
  ]
 }
