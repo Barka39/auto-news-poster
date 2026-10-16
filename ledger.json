@@ -1,24 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1788723210.0,
-   "fb_id": "736504959542737_122183542286935957",
-   "kind": "unknown",
-   "card": "",
-   "score": 0,
-   "category": "",
-   "source": "backfill",
-   "title": "Emirates Stadium-д болсон Лондонгийн дербид талбайн эзэн Arsenal баг Chelsea-г 2-1 харьцаагаар буулган авлаа.\n\nТоглолтын",
-   "url": "",
-   "slot": "",
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1789975767.132931
-   }
-  },
-  {
    "ts": 1788731182.0,
    "fb_id": "736504959542737_122183554976935957",
    "kind": "unknown",
@@ -13563,6 +13545,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 762
+  },
+  {
+   "ts": 1792140929.1018698,
+   "fb_id": "736504959542737_122189706836935957",
+   "ig_id": "",
+   "kind": "digest",
+   "card": "",
+   "video": false,
+   "score": 0,
+   "category": "",
+   "source": "",
+   "title": "",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 517
   }
  ]
 }
