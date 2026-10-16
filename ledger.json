@@ -1,24 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1788713341.0,
-   "fb_id": "736504959542737_122183526146935957",
-   "kind": "unknown",
-   "card": "",
-   "score": 0,
-   "category": "",
-   "source": "backfill",
-   "title": "Everton болон Manchester United багуудын тоглолт тун ширүүн өрнөж, сүүлийн мөчид гайхалтай үйл явдлаар өндөрлөлөө. Тогло",
-   "url": "",
-   "slot": "",
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1789975766.2820642
-   }
-  },
-  {
    "ts": 1788716061.0,
    "fb_id": "736504959542737_122183530862935957",
    "kind": "unknown",
@@ -13568,6 +13550,22 @@
    "slot": "",
    "chars": 979,
    "page": "udesh"
+  },
+  {
+   "ts": 1792125682.5790725,
+   "fb_id": "736504959542737_122189687324935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Lakers trade rumors heat up as Opening Night quickly approaches",
+   "url": "https://sports.yahoo.com/articles/lakers-trade-rumors-heat-opening-234508716.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 430
   }
  ]
 }
