@@ -1,54 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1789965274.0,
-   "fb_id": "736504959542737_122185398932935957",
-   "kind": "unknown",
-   "card": "",
-   "score": 0,
-   "category": "",
-   "source": "backfill",
-   "title": "Gonzaga-гийн од Anton Watson Los Angeles Lakers-тэй training camp-ийн гэрээ байгууллаа. Гэвч энэ баярт мэдээ удаан үргэл",
-   "url": "",
-   "slot": "",
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790122411.1303632
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790646163.6636682
-   }
-  },
-  {
-   "ts": 1789965287.0,
-   "fb_id": "736504959542737_122185399046935957",
-   "kind": "unknown",
-   "card": "",
-   "score": 0,
-   "category": "",
-   "source": "backfill",
-   "title": "Golden State Warriors баг Graham Ike-тай two-way гэрээ байгуулснаар NBA-д тоглох Gonzaga-гийн төгсөгчдийн тоо 11-т хүрлэ",
-   "url": "",
-   "slot": "",
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790122411.79493
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790646164.04892
-   }
-  },
-  {
    "ts": 1789967604.0,
    "fb_id": "736504959542737_122185403240935957",
    "kind": "unknown",
@@ -13535,6 +13487,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1016
+  },
+  {
+   "ts": 1792165902.6618361,
+   "fb_id": "736504959542737_122189750246935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Sixers linked to a pair of backup center options to replace Ariel Hukporti",
+   "url": "https://sports.yahoo.com/articles/sixers-linked-pair-backup-center-131254549.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 308
+  },
+  {
+   "ts": 1792165915.292622,
+   "fb_id": "736504959542737_122189750354935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Bucks adjust home opener to avoid World Series time conflict",
+   "url": "https://www.espn.com/nba/story/_/id/50196749/bucks-adjust-home-opener-avoid-world-series-conflict",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 258
   }
  ]
 }
