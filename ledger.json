@@ -1,24 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1788791288.0,
-   "fb_id": "736504959542737_122183640176935957",
-   "kind": "unknown",
-   "card": "",
-   "score": 0,
-   "category": "",
-   "source": "backfill",
-   "title": "\"Real Madrid-д тоглох үедээ энэ шагналыг хүртэх нь зүйн ёс мэт\"\n- Kylian Mbappe Ballon d'Or-ын талаар ингэж хэлжээ.\n\n27 ",
-   "url": "",
-   "slot": "",
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1789975769.7285166
-   }
-  },
-  {
    "ts": 1788797913.0,
    "fb_id": "736504959542737_122183648024935957",
    "kind": "unknown",
@@ -13546,6 +13528,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 654
+  },
+  {
+   "ts": 1792157513.5165555,
+   "fb_id": "828746100324372_122151006861084055",
+   "ig_id": "",
+   "kind": "page_story",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Хуучин захидлын нууц — 3-р хэсэг",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1750,
+   "page": "udesh"
   }
  ]
 }
