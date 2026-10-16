@@ -1,24 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1788716077.0,
-   "fb_id": "736504959542737_122183530946935957",
-   "kind": "unknown",
-   "card": "",
-   "score": 0,
-   "category": "",
-   "source": "backfill",
-   "title": "\"Бид гурван оноо авахад маш ойрхон байлаа. Хөлбөмбөг гэдэг ийм л зүйл. Бид зарим жижиг алдаагаа засаад авахад л бүх зүйл",
-   "url": "",
-   "slot": "",
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1789975766.8735957
-   }
-  },
-  {
    "ts": 1788723210.0,
    "fb_id": "736504959542737_122183542286935957",
    "kind": "unknown",
@@ -13565,6 +13547,22 @@
    "slot": "",
    "chars": 1123,
    "page": "suns"
+  },
+  {
+   "ts": 1792138307.479075,
+   "fb_id": "736504959542737_122189702282935957",
+   "ig_id": "",
+   "kind": "mn",
+   "card": "news",
+   "video": false,
+   "score": 10,
+   "category": "mn_basketball",
+   "source": "ikon.mn",
+   "title": "Богд банк “Omni Erdenet Miners” багийн албан ёсны ивээн тэтгэгчээр ажиллана",
+   "url": "https://ikon.mn/n/3r2m",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 762
   }
  ]
 }
