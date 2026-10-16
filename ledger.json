@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790088132.4798024,
-   "fb_id": "736504959542737_122185646084935957",
-   "ig_id": "",
-   "kind": "mn",
-   "card": "",
-   "video": false,
-   "score": 10,
-   "category": "mn_basketball",
-   "source": "Asia-Basket Mongolia",
-   "title": "Xac Broncos tab Kavell Bigby-Williams",
-   "url": "https://www.asia-basket.com/Mongolia/news/1032042/Xac-Broncos-tab-Kavell-Bigby-Williams",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 891,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790209296.278454
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790730708.8214025
-   }
-  },
-  {
    "ts": 1790088165.1228373,
    "fb_id": "122185646150935957",
    "ig_id": "",
@@ -13424,6 +13396,22 @@
    "scheduled_for": 1792310400,
    "slot": "2026-10-18 16:00",
    "chars": 337
+  },
+  {
+   "ts": 1792191089.8971708,
+   "fb_id": "736504959542737_122189797082935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Buss family war over Lakers sale deepens with new court filing",
+   "url": "https://sports.yahoo.com/articles/buss-family-war-over-lakers-183633995.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 445
   }
  ]
 }
