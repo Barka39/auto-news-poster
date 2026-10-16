@@ -1,24 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1788703057.0,
-   "fb_id": "736504959542737_122183513030935957",
-   "kind": "unknown",
-   "card": "",
-   "score": 0,
-   "category": "",
-   "source": "backfill",
-   "title": "\"Энэ клуб бол жинхэнэ хөлбөмбөгийн түүхтэй, өөрсдийг нь болон хотыг нь төлөөлөх багийг хүртэх ёстой үнэнч фэнүүдтэй газа",
-   "url": "",
-   "slot": "",
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1789975765.1346693
-   }
-  },
-  {
    "ts": 1788703070.0,
    "fb_id": "736504959542737_122183513156935957",
    "kind": "unknown",
@@ -13575,6 +13557,22 @@
    "slot": "",
    "chars": 1428,
    "page": "suns"
+  },
+  {
+   "ts": 1792115489.5663857,
+   "fb_id": "122189675282935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "John Calipari reveals nervous Taylor Swift moment at NBA Finals: ‘Too scared’",
+   "url": "https://sports.yahoo.com/articles/john-calipari-reveals-nervous-taylor-213241060.html",
+   "scheduled_for": 1792234800,
+   "slot": "2026-10-17 19:00",
+   "chars": 440
   }
  ]
 }
