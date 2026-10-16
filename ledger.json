@@ -1,31 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790035302.9435291,
-   "fb_id": "846498595210295_122145766197086375",
-   "ig_id": "",
-   "kind": "page_zurhai",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "suns",
-   "source": "Сүнсний код",
-   "title": "Өнөөдрийн зурхай 2026.09.22",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 1759,
-   "page": "suns",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1790122414.1971066
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1790646166.243349
-   }
-  },
-  {
    "ts": 1790051469.970713,
    "fb_id": "828746100324372_122147611317084055",
    "ig_id": "",
@@ -13481,6 +13456,22 @@
    "scheduled_for": 1792299600,
    "slot": "2026-10-18 13:00",
    "chars": 348
+  },
+  {
+   "ts": 1792173084.603725,
+   "fb_id": "736504959542737_122189768084935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Mike Gansey was reportedly key in the James Harden acquisition",
+   "url": "https://sports.yahoo.com/articles/mike-gansey-reportedly-key-james-173000709.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 463
   }
  ]
 }
