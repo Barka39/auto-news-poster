@@ -1,60 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1788731193.0,
-   "fb_id": "736504959542737_122183555054935957",
-   "kind": "unknown",
-   "card": "",
-   "score": 0,
-   "category": "",
-   "source": "backfill",
-   "title": "Зуны цонхоор элит довтлогч авч чадаагүй гэх шүүмжлэл Arsenal-д огт хамаагүй бололтой. Шинэ улирлыг гайхалтай эхлүүлсэн т",
-   "url": "",
-   "slot": "",
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1789975767.6434534
-   }
-  },
-  {
-   "ts": 1788738082.0,
-   "fb_id": "736504959542737_122183562488935957",
-   "kind": "unknown",
-   "card": "",
-   "score": 0,
-   "category": "",
-   "source": "backfill",
-   "title": "\"Энэ бол үнэхээр гайхалтай тоглолт байлаа. Тоглолтын эхлэл хүндхэн байсан ч багийнхан маань шийдэмгий, чанартай тоглолто",
-   "url": "",
-   "slot": "",
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1789975767.9105592
-   }
-  },
-  {
-   "ts": 1788743961.0,
-   "fb_id": "736504959542737_122183569742935957",
-   "kind": "unknown",
-   "card": "",
-   "score": 0,
-   "category": "",
-   "source": "backfill",
-   "title": "Women’s Super League-ийн шинэ улирлыг Manchester City ялалтаар эхлүүллээ. Тэд Birmingham-ийн эсрэг 3-1-ээр илүүрхэж, ава",
-   "url": "",
-   "slot": "",
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1789975768.1709447
-   }
-  },
-  {
    "ts": 1788752067.0,
    "fb_id": "736504959542737_122183582702935957",
    "kind": "unknown",
@@ -13559,6 +13505,54 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 361
+  },
+  {
+   "ts": 1792149083.9140246,
+   "fb_id": "736504959542737_122189721092935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 10.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "MMBets: Post Giannis, are the Bucks building with?",
+   "url": "https://sports.yahoo.com/articles/mmbets-post-giannis-bucks-building-090000826.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 482
+  },
+  {
+   "ts": 1792149096.7083228,
+   "fb_id": "736504959542737_122189721194935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "NBA intel: Seattle expansion update, Towns extension drama, more from preseason",
+   "url": "https://www.espn.com/nba/story/_/id/50190888/preseason-intel-expansion-seattle-towns-extensions",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 476
+  },
+  {
+   "ts": 1792149109.8687005,
+   "fb_id": "736504959542737_122189721308935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Can Jimmy Butler return in time to resurrect Steph Curry's final chapter?",
+   "url": "https://www.espn.com/nba/story/_/id/50182801/jimmy-butler-acl-injury-return-warriors-title",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 570
   }
  ]
 }
