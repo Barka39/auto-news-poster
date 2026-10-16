@@ -1,31 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1789997531.059249,
-   "fb_id": "828746100324372_122147488653084055",
-   "ig_id": "",
-   "kind": "page_story",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "udesh",
-   "source": "Үдшийн шивнээ",
-   "title": "Хуучирсан цаг хугацааны хэлхээс — 1-р хэсэг",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 1593,
-   "page": "udesh",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1790122413.8157344
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1790646165.815092
-   }
-  },
-  {
    "ts": 1790035302.9435291,
    "fb_id": "846498595210295_122145766197086375",
    "ig_id": "",
@@ -13490,6 +13465,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 317
+  },
+  {
+   "ts": 1792170115.1179147,
+   "fb_id": "122189758070935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "NBA Preview 2026-27: Seven players most likely to be traded this season",
+   "url": "https://sports.yahoo.com/articles/nba-preview-2026-27-seven-164358628.html",
+   "scheduled_for": 1792299600,
+   "slot": "2026-10-18 13:00",
+   "chars": 348
   }
  ]
 }
