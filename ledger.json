@@ -1,24 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1788703070.0,
-   "fb_id": "736504959542737_122183513156935957",
-   "kind": "unknown",
-   "card": "",
-   "score": 0,
-   "category": "",
-   "source": "backfill",
-   "title": "Arsenal Women баг WSL-ийн хүрээнд Brighton-ы талбайд зочилж, 1-0 харьцаатайгаар хүндхэн ялалт байгууллаа. Тоглолтын хувь",
-   "url": "",
-   "slot": "",
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1789975765.4521275
-   }
-  },
-  {
    "ts": 1788703481.0,
    "fb_id": "736504959542737_122183514074935957",
    "kind": "unknown",
@@ -13573,6 +13555,22 @@
    "scheduled_for": 1792234800,
    "slot": "2026-10-17 19:00",
    "chars": 440
+  },
+  {
+   "ts": 1792116691.904803,
+   "fb_id": "122189676896935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Collin Sexton ‘trending in right direction’ for debut",
+   "url": "https://sports.yahoo.com/articles/collin-sexton-trending-direction-debut-232742709.html",
+   "scheduled_for": 1792243800,
+   "slot": "2026-10-17 21:30",
+   "chars": 242
   }
  ]
 }
