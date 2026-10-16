@@ -9802,6 +9802,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791510904.0116894
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792109502.3677568
    }
   },
   {
@@ -9823,6 +9829,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791596204.6596174
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1792109502.6828794
    }
   },
   {
@@ -9844,6 +9854,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791596205.0129852
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1792109503.0640666
    }
   },
   {
@@ -9866,6 +9880,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791596205.485851
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792109503.3207257
    }
   },
   {
@@ -9887,6 +9907,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791596205.8417048
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1792109503.6406121
    }
   },
   {
@@ -9908,6 +9932,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791596206.20746
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1792109503.855753
    }
   },
   {
@@ -9930,6 +9958,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791596206.6716118
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792109504.0795407
    }
   },
   {
@@ -10015,6 +10049,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791596207.0045984
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1792109504.397269
    }
   },
   {
@@ -12702,7 +12740,13 @@
    "url": "https://sports.yahoo.com/articles/warriors-starting-five-could-surprising-203014802.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 443
+   "chars": 443,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792109504.6513531
+   }
   },
   {
    "ts": 1791942700.1585224,
@@ -12734,7 +12778,13 @@
    "url": "https://sports.yahoo.com/articles/knicks-drop-0-4-preseason-013812037.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 400
+   "chars": 400,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792109504.8635256
+   }
   },
   {
    "ts": 1791952295.770727,
@@ -12751,7 +12801,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 997,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1792109505.0921874
+   }
   },
   {
    "ts": 1791954102.1847112,
@@ -12767,7 +12821,13 @@
    "url": "https://sports.yahoo.com/articles/walker-kessler-debuts-luka-doncic-043725996.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 316
+   "chars": 316,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792109505.3362465
+   }
   },
   {
    "ts": 1791954115.385783,
@@ -12784,7 +12844,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1113,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1792109505.653267
+   }
   },
   {
    "ts": 1791958286.9285736,
@@ -12800,7 +12864,13 @@
    "url": "https://basketball.realgm.com/wiretap/287624/Dylan-Cardwell-Out-At-Least-2-Weeks-With-Calf-Injury",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 456
+   "chars": 456,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792109505.8669367
+   }
   },
   {
    "ts": 1791971409.3473623,
@@ -12816,7 +12886,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 361
+   "chars": 361,
+   "m24": {
+    "comments": 1,
+    "shares": 0,
+    "engagement": 3.0,
+    "fetched_at": 1792109506.0929692
+   }
   },
   {
    "ts": 1791976283.1682448,
@@ -12832,7 +12908,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50174585/san-antonio-spurs-wembanyama-expectations-nba",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 294
+   "chars": 294,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792109506.3373253
+   }
   },
   {
    "ts": 1791979901.6117814,
@@ -12848,7 +12930,13 @@
    "url": "https://www.asia-basket.com/Mongolia/news/1036143/Best-players-of-Mongolian-MBL-round-5-by-Hoops-Agents",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 601
+   "chars": 601,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792109506.5679486
+   }
   },
   {
    "ts": 1791982904.1138413,
@@ -12865,7 +12953,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1321,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1792109506.802816
+   }
   },
   {
    "ts": 1791984711.128944,
@@ -12881,7 +12973,13 @@
    "url": "https://sports.yahoo.com/articles/paul-george-previewed-defensive-prowess-110000360.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 279
+   "chars": 279,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792109507.0214717
+   }
   },
   {
    "ts": 1791984774.0871086,
@@ -12898,7 +12996,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 2103,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1792109507.256407
+   }
   },
   {
    "ts": 1791985302.6787462,
@@ -12914,7 +13016,13 @@
    "url": "https://basketball.realgm.com/wiretap/287620/Giannis-Antetokounmpo-Now-Eligible-For-Extension-Waiting-Until-January-Adds-$82M",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 780
+   "chars": 780,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792109507.4599817
+   }
   },
   {
    "ts": 1791987693.7474434,
@@ -12930,7 +13038,13 @@
    "url": "https://basketball.realgm.com/wiretap/287628/Thunder-Guard-Otega-Oweh-Suffers-Apparently-Serious-Leg-Injury",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 594
+   "chars": 594,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792109507.6768281
+   }
   },
   {
    "ts": 1791988297.7087066,
@@ -12946,7 +13060,13 @@
    "url": "https://sports.yahoo.com/articles/kawhi-leonard-doesn-t-raptors-120000470.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 355
+   "chars": 355,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792109507.9036114
+   }
   },
   {
    "ts": 1791992806.054691,
@@ -12962,7 +13082,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 219
+   "chars": 219,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792109508.1175551
+   }
   },
   {
    "ts": 1791993715.6095335,
@@ -13042,7 +13168,13 @@
    "url": "https://sports.yahoo.com/articles/tyrese-maxey-built-171739098.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 337
+   "chars": 337,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792109508.3712442
+   }
   },
   {
    "ts": 1792013004.8990946,
@@ -13058,7 +13190,13 @@
    "url": "https://sports.yahoo.com/nba/article/kristaps-porzingis-is-getting-better-and-better-but-warriors-say-he-will-remain-out-indefinitely-due-to-health-related-matter-211509375.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 401
+   "chars": 401,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792109508.6361177
+   }
   },
   {
    "ts": 1792022524.8002284,
@@ -13075,7 +13213,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1846,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1792109508.8659418
+   }
   },
   {
    "ts": 1792027292.1028268,
