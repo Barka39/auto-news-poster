@@ -1,60 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1788797930.0,
-   "fb_id": "736504959542737_122183648210935957",
-   "kind": "unknown",
-   "card": "",
-   "score": 0,
-   "category": "",
-   "source": "backfill",
-   "title": "Richard Hughes Saudi Arabia-ийн Al-Hilal клуб рүү явснаар Liverpool дахин нэг удаа спортын захирлын суудлаа эзэнгүйдүүлэ",
-   "url": "",
-   "slot": "",
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1789975770.2047217
-   }
-  },
-  {
-   "ts": 1788798116.0,
-   "fb_id": "736504959542737_122183648492935957",
-   "kind": "unknown",
-   "card": "",
-   "score": 0,
-   "category": "",
-   "source": "backfill",
-   "title": "Nottingham Forest-ийн хамгаалагч Neco Williams-ийн Tottenham-ын эсрэг оруулсан гоолыг гараар тоглосон гэх шалтгаанаар хү",
-   "url": "",
-   "slot": "",
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1789975770.4706416
-   }
-  },
-  {
-   "ts": 1788807868.0,
-   "fb_id": "736504959542737_122183667038935957",
-   "kind": "unknown",
-   "card": "",
-   "score": 0,
-   "category": "",
-   "source": "backfill",
-   "title": "Charles Barkley дахин нэг удаа зодог тайлахаа зарлалаа. Тэрээр өмнө нь ч мөн ийм мэдэгдэл хийж байсан ч удалгүй эргэн ир",
-   "url": "",
-   "slot": "",
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1789975770.7195802
-   }
-  },
-  {
    "ts": 1788807880.0,
    "fb_id": "736504959542737_122183667158935957",
    "kind": "unknown",
@@ -13543,6 +13489,54 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 579
+  },
+  {
+   "ts": 1792163486.7808118,
+   "fb_id": "736504959542737_122189744372935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "NBA tells sportsbooks to stop certain bets, restrict parlays",
+   "url": "https://www.espn.com/nba/story/_/id/50196498/nba-tells-sportsbooks-stop-certain-bets-restrict-parlays",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 513
+  },
+  {
+   "ts": 1792163499.9496443,
+   "fb_id": "736504959542737_122189744474935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "10 people who will define the NBA season: Zion, Kawhi, Kyrie",
+   "url": "https://www.espn.com/nba/story/_/id/50182803/nba-most-important-names-season",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 394
+  },
+  {
+   "ts": 1792163514.3507547,
+   "fb_id": "736504959542737_122189744582935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "CBS Sports NBA",
+   "title": "NBA's five biggest starting lineup questions: Three guards for Spurs? Morant-Lillard backcourt in Portland?",
+   "url": "https://www.cbssports.com/nba/news/nba-biggest-starting-lineup-questions-spurs-lakers-raptors-blazers-pelicans/",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 803
   }
  ]
 }
