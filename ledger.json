@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1789989860.0403209,
-   "fb_id": "122185451114935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "ESPN",
-   "title": "Raptors honor Kyle Lowry with golden 'GROAT' statue",
-   "url": "https://www.espn.com/nba/story/_/id/49983952/kyle-lowry-block-party-toronto-raptors-statue",
-   "scheduled_for": 1789997400,
-   "slot": "2026-09-21 21:30",
-   "chars": 227
-  },
-  {
    "ts": 1789993212.7662683,
    "fb_id": "736504959542737_122185457000935957",
    "ig_id": "",
@@ -13499,6 +13483,22 @@
    "scheduled_for": 1792292400,
    "slot": "2026-10-18 11:00",
    "chars": 581
+  },
+  {
+   "ts": 1792168304.179084,
+   "fb_id": "736504959542737_122189753696935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "NBA tells sportsbooks to stop certain bets, restrict parlays",
+   "url": "https://www.espn.com/nba/story/_/id/50196498/nba-tells-sportsbooks-stop-certain-bets-restrict-parlays",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 493
   }
  ]
 }
