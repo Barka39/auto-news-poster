@@ -1,24 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1788797913.0,
-   "fb_id": "736504959542737_122183648024935957",
-   "kind": "unknown",
-   "card": "",
-   "score": 0,
-   "category": "",
-   "source": "backfill",
-   "title": "\"Ballon d'Or-ын түүхэнд зөвхөн гоол хийхэд хангалтгүй байсан.\"\n\nHarry Kane одоогоор букмекеруудын таамаглалаар тэргүүлж ",
-   "url": "",
-   "slot": "",
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1789975769.9666371
-   }
-  },
-  {
    "ts": 1788797930.0,
    "fb_id": "736504959542737_122183648210935957",
    "kind": "unknown",
@@ -13545,6 +13527,22 @@
    "slot": "",
    "chars": 1750,
    "page": "udesh"
+  },
+  {
+   "ts": 1792159315.6470776,
+   "fb_id": "736504959542737_122189737718935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Grizzlies Exploring Trades Involving GG Jackson, Walter Clayton Jr.",
+   "url": "https://basketball.realgm.com/wiretap/287664/Grizzlies-Exploring-Trades-Involving-GG-Jackson-Walter-Clayton-Jr",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 579
   }
  ]
 }
