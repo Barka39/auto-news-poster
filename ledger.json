@@ -1,31 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790170935.6395793,
-   "fb_id": "828746100324372_122147823507084055",
-   "ig_id": "",
-   "kind": "page_story",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "udesh",
-   "source": "Үдшийн шивнээ",
-   "title": "Хуучирсан цаг хугацааны хэлхээс — 3-р хэсэг",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 1696,
-   "page": "udesh",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1790295815.890893
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1790817135.0065732
-   }
-  },
-  {
    "ts": 1790177518.4128485,
    "fb_id": "122185821752935957",
    "ig_id": "",
@@ -13403,6 +13378,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 465
+  },
+  {
+   "ts": 1792249897.117849,
+   "fb_id": "736504959542737_122189897324935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Julian Strawther Out Six Weeks With Sprained Knee",
+   "url": "https://basketball.realgm.com/wiretap/287695/Julian-Strawther-Out-Six-Weeks-With-Sprained-Knee",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 740
   }
  ]
 }
