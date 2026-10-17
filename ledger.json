@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790179752.970283,
-   "fb_id": "736504959542737_122185825718935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "CBS Sports NBA",
-   "title": "Steven Adams predicts level of play across sports will 'plummet' when 'Grand Theft Auto 6' is released",
-   "url": "https://www.cbssports.com/nba/news/steven-adams-rockets-grand-theft-auto-6-release/",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 431,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790295816.830706
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790817136.088496
-   }
-  },
-  {
    "ts": 1790179843.3551316,
    "fb_id": "736504959542737_122185825946935957",
    "ig_id": "",
@@ -13358,6 +13330,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 418
+  },
+  {
+   "ts": 1792267297.7987154,
+   "fb_id": "122189921996935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Trail Blazers Waive Jeremy Sochan",
+   "url": "https://basketball.realgm.com/wiretap/287717/Trail-Blazers-Waive-Jeremy-Sochan",
+   "scheduled_for": 1792396800,
+   "slot": "2026-10-19 16:00",
+   "chars": 586
   }
  ]
 }
