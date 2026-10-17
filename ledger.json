@@ -1,62 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790089371.4970255,
-   "fb_id": "736504959542737_122185648280935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "Henri Veesaar Expected To Miss Upcoming Season With Torn ACL",
-   "url": "https://basketball.realgm.com/wiretap/287344/Henri-Veesaar-Expected-To-Miss-Upcoming-Season-With-Torn-ACL",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 408,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790209296.5439377
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790730709.070774
-   }
-  },
-  {
-   "ts": 1790089442.444839,
-   "fb_id": "736504959542737_122185648388935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "Clippers Name John S. Gibson Interim CEO, Governor",
-   "url": "https://basketball.realgm.com/wiretap/287337/Clippers-Name-John-S-Gibson-Interim-CEO-Governor",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 461,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790209296.788939
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790730709.2934542
-   }
-  },
-  {
    "ts": 1790089947.2981365,
    "fb_id": "736504959542737_122185649042935957",
    "ig_id": "",
@@ -13603,6 +13547,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 341
+  },
+  {
+   "ts": 1792201287.3261313,
+   "fb_id": "122189814710935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "LeBron James makes home preseason debut for 76ers with well-rounded performance as Joel Embiid shines",
+   "url": "https://sports.yahoo.com/nba/article/lebron-james-makes-home-preseason-debut-for-76ers-with-well-rounded-performance-as-joel-embiid-shines-012903806.html",
+   "scheduled_for": 1792330200,
+   "slot": "2026-10-18 21:30",
+   "chars": 381
+  },
+  {
+   "ts": 1792201300.6289878,
+   "fb_id": "736504959542737_122189814770935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Spurs' 3-guard lineup of Fox, Castle, Harper to start in opener vs. Thunder",
+   "url": "https://www.espn.com/nba/story/_/id/50199096/spurs-start-3-guard-lineup-season-opener-vs-thunder",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 300
   }
  ]
 }
