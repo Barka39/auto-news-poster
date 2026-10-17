@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790126526.072539,
-   "fb_id": "736504959542737_122185722560935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Detroit Pistons enlist DAZN as streaming platform partner",
-   "url": "https://sports.yahoo.com/articles/detroit-pistons-enlist-dazn-streaming-215047216.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 385,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790295814.0822024
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790817133.1340895
-   }
-  },
-  {
    "ts": 1790134888.038454,
    "fb_id": "122185737866935957",
    "ig_id": "",
@@ -13476,6 +13448,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 245
+  },
+  {
+   "ts": 1792227308.0214376,
+   "fb_id": "736504959542737_122189862158935957",
+   "ig_id": "",
+   "kind": "digest",
+   "card": "",
+   "video": false,
+   "score": 0,
+   "category": "",
+   "source": "",
+   "title": "",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 253
   }
  ]
 }
