@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790178780.968992,
-   "fb_id": "122185823516935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 6.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "Timberwolves Sign, Waive Jalen Crutcher",
-   "url": "https://basketball.realgm.com/wiretap/287363/Timberwolves-Sign-Waive-Jalen-Crutcher",
-   "scheduled_for": 1790236800,
-   "slot": "2026-09-24 16:00",
-   "chars": 304
-  },
-  {
    "ts": 1790178822.9283564,
    "fb_id": "736504959542737_122185823606935957",
    "ig_id": "",
@@ -13394,6 +13378,22 @@
    "scheduled_for": 1792378800,
    "slot": "2026-10-19 11:00",
    "chars": 905
+  },
+  {
+   "ts": 1792254696.4593992,
+   "fb_id": "736504959542737_122189902610935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Bill Kennedy hilariously side-eyes Steph Curry's golf swing during replay ruling",
+   "url": "https://sports.yahoo.com/articles/bill-kennedy-hilariously-side-eyes-092040833.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 494
   }
  ]
 }
