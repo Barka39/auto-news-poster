@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790178748.63022,
-   "fb_id": "122185823444935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 6.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "Pistons Sign Jordan Riley To Camp Deal; Waive Drake Allen",
-   "url": "https://basketball.realgm.com/wiretap/287355/Pistons-Sign-Jordan-Riley-To-Camp-Deal;-Waive-Drake-Allen",
-   "scheduled_for": 1790226000,
-   "slot": "2026-09-24 13:00",
-   "chars": 478
-  },
-  {
    "ts": 1790178780.968992,
    "fb_id": "122185823516935957",
    "ig_id": "",
@@ -13394,6 +13378,22 @@
    "scheduled_for": 1792368000,
    "slot": "2026-10-19 08:00",
    "chars": 421
+  },
+  {
+   "ts": 1792253488.3088496,
+   "fb_id": "122189901344935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "CBS Sports NBA",
+   "title": "How LeBron James, in his 24th season and first with the 76ers, can pass Michael Jordan in NBA GOAT debate",
+   "url": "https://www.cbssports.com/nba/news/lebron-james-24th-season-michael-jordan-nba-goat-debate/",
+   "scheduled_for": 1792378800,
+   "slot": "2026-10-19 11:00",
+   "chars": 905
   }
  ]
 }
