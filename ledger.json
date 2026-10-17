@@ -1,50 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790178822.9283564,
-   "fb_id": "736504959542737_122185823606935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 6.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "Nets Waive DJ Rodman, Aaron Scott",
-   "url": "https://basketball.realgm.com/wiretap/287362/Nets-Waive-DJ-Rodman-Aaron-Scott",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 293,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790295816.1050632
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790817135.312631
-   }
-  },
-  {
-   "ts": 1790179374.8050683,
-   "fb_id": "122185824584935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 6.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "Pelicans Waive Dominique Daniels Jr, Solomon Washington",
-   "url": "https://basketball.realgm.com/wiretap/287365/Pelicans-Waive-Dominique-Daniels-Jr-Solomon-Washington",
-   "scheduled_for": 1790294400,
-   "slot": "2026-09-25 08:00",
-   "chars": 290
-  },
-  {
    "ts": 1790179424.3153543,
    "fb_id": "122185824650935957",
    "ig_id": "",
@@ -13394,6 +13350,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 494
+  },
+  {
+   "ts": 1792256758.0519764,
+   "fb_id": "122189905928935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "CBS Sports NBA",
+   "title": "Joel Embiid explains why he's 'against the concept of sacrificing' for the star-studded 76ers",
+   "url": "https://www.cbssports.com/nba/news/joel-embiid-against-the-concept-of-sacrificing-76ers/",
+   "scheduled_for": 1792386000,
+   "slot": "2026-10-19 13:00",
+   "chars": 890
+  },
+  {
+   "ts": 1792256770.8096457,
+   "fb_id": "736504959542737_122189905988935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Pat Connaughton Waived By Hornets",
+   "url": "https://basketball.realgm.com/wiretap/287692/Pat-Connaughton-Waived-By-Hornets",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 403
   }
  ]
 }
