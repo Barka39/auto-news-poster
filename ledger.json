@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790257960.1708636,
-   "fb_id": "736504959542737_122186005040935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Shai Gilgeous-Alexander's next evolution: Why the 2-time MVP should give up touches to his Thunder teammates",
-   "url": "https://sports.yahoo.com/nba/article/shai-gilgeous-alexanders-next-evolution-why-the-2-time-mvp-should-give-up-touches-to-his-thunder-teammates-134018999.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 163,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790382486.7568161
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790904571.3812492
-   }
-  },
-  {
    "ts": 1790274165.9215417,
    "fb_id": "122186040950935957",
    "ig_id": "",
@@ -13410,6 +13382,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 494
+  },
+  {
+   "ts": 1792337494.0123837,
+   "fb_id": "736504959542737_122190031496935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "CBS Sports NBA",
+   "title": "Why Kevin Durant completely missed Mat Ishbia's point about his Suns tenure, building a championship culture",
+   "url": "https://www.cbssports.com/nba/news/kevin-durant-mat-ishbia-phoenix-suns-championship-culture/",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 845
   }
  ]
 }
