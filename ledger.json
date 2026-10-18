@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790280152.1360662,
-   "fb_id": "122186051042935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "ESPN",
-   "title": "Presti not expecting Thunder downturn despite departures",
-   "url": "https://www.espn.com/nba/story/_/id/50022435/presti-not-expecting-thunder-downturn-departures",
-   "scheduled_for": 1790398800,
-   "slot": "2026-09-26 13:00",
-   "chars": 377
-  },
-  {
    "ts": 1790285529.13327,
    "fb_id": "122186058392935957",
    "ig_id": "",
@@ -13398,6 +13382,22 @@
    "scheduled_for": 1792465200,
    "slot": "2026-10-20 11:00",
    "chars": 679
+  },
+  {
+   "ts": 1792357907.0006902,
+   "fb_id": "122190073574935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Devin Carter Out Indefinitely With Mononucleosis",
+   "url": "https://basketball.realgm.com/wiretap/287743/Devin-Carter-Out-Indefinitely-With-Mononucleosis",
+   "scheduled_for": 1792472400,
+   "slot": "2026-10-20 13:00",
+   "chars": 409
   }
  ]
 }
