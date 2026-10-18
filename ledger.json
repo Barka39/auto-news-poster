@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790214697.470555,
-   "fb_id": "122185889636935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Luka Dončić lays out Lakers championship ‘plan’ in passionate vow",
-   "url": "https://sports.yahoo.com/articles/luka-don-lays-lakers-championship-212924936.html",
-   "scheduled_for": 1790343000,
-   "slot": "2026-09-25 21:30",
-   "chars": 258
-  },
-  {
    "ts": 1790218353.3308985,
    "fb_id": "736504959542737_122185900178935957",
    "ig_id": "",
@@ -13502,6 +13486,23 @@
    "scheduled_for": 1792416600,
    "slot": "2026-10-19 21:30",
    "chars": 361
+  },
+  {
+   "ts": 1792297907.9200368,
+   "fb_id": "828746100324372_122151211203084055",
+   "ig_id": "",
+   "kind": "page_confession",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "ЗӨВШӨӨРӨЛГҮЙ ЗҮРХНИЙ ДАЛД ШИВНЭЭ",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 905,
+   "page": "udesh"
   }
  ]
 }
