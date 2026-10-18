@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790218353.3308985,
-   "fb_id": "736504959542737_122185900178935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "CBS Sports NBA",
-   "title": "Gregg Popovich marries ex-wife of his former longtime Spurs assistant coach",
-   "url": "https://www.cbssports.com/nba/news/gregg-popovich-wife-spurs-assistant-coach-mike-budenholzer/",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 666,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790382482.9070868
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790904568.8087213
-   }
-  },
-  {
    "ts": 1790224306.6434364,
    "fb_id": "736504959542737_122185912142935957",
    "ig_id": "",
@@ -13503,6 +13475,23 @@
    "slot": "",
    "chars": 905,
    "page": "udesh"
+  },
+  {
+   "ts": 1792299699.9674356,
+   "fb_id": "846498595210295_122148771405086375",
+   "ig_id": "",
+   "kind": "page_spirit",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Гал голомт бол бидний амьд холбоос",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1150,
+   "page": "suns"
   }
  ]
 }
