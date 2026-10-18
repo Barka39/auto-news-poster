@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790280124.468776,
-   "fb_id": "122186050970935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 9.0,
-   "category": "basketball",
-   "source": "ESPN",
-   "title": "Terry Rozier's mother asks judge to allow him NBA return",
-   "url": "https://www.espn.com/nba/story/_/id/50022277/terry-rozier-mother-gina-tucker-asks-judge-nba-gambling-case",
-   "scheduled_for": 1790391600,
-   "slot": "2026-09-26 11:00",
-   "chars": 453
-  },
-  {
    "ts": 1790280152.1360662,
    "fb_id": "122186051042935957",
    "ig_id": "",
@@ -13398,6 +13382,22 @@
    "scheduled_for": 1792454400,
    "slot": "2026-10-20 08:00",
    "chars": 299
+  },
+  {
+   "ts": 1792354910.5395854,
+   "fb_id": "122190065408935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Paul George Says He Found 'A Love Again For This Game' After Joining Celtics",
+   "url": "https://basketball.realgm.com/wiretap/287744/Paul-George-Says-He-Found-A-Love-Again-For-This-Game-After-Joining-Celtics",
+   "scheduled_for": 1792465200,
+   "slot": "2026-10-20 11:00",
+   "chars": 679
   }
  ]
 }
