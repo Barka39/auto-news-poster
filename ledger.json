@@ -1,31 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790310833.6315267,
-   "fb_id": "828746100324372_122148073833084055",
-   "ig_id": "",
-   "kind": "page_confession",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "udesh",
-   "source": "Үдшийн шивнээ",
-   "title": "Цагаан даашинзны доорх сүүдэр",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 983,
-   "page": "udesh",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1790468621.995367
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1790989298.741781
-   }
-  },
-  {
    "ts": 1790312506.9413118,
    "fb_id": "846498595210295_122146127469086375",
    "ig_id": "",
@@ -13650,6 +13625,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 237
+  },
+  {
+   "ts": 1792395679.5350583,
+   "fb_id": "736504959542737_122190141890935957",
+   "ig_id": "",
+   "kind": "mn",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "mn_basketball",
+   "source": "Asia-Basket Mongolia",
+   "title": "Gankhuyag's 29 points give him Player of the Week award",
+   "url": "https://www.asia-basket.com/Mongolia/news/1037028/Gankhuyags-29-points-give-him-Player-of-the-Week-award",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 561
   }
  ]
 }
