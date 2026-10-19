@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790382117.0972733,
-   "fb_id": "736504959542737_122186237948935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "Sparks Fire Head Coach Lynne Roberts After Second Season",
-   "url": "https://basketball.realgm.com/wiretap/287398/Sparks-Fire-Head-Coach-Lynne-Roberts-After-Second-Season",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 695,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790468626.753529
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790989302.466132
-   }
-  },
-  {
    "ts": 1790386899.2140913,
    "fb_id": "122186249360935957",
    "ig_id": "",
@@ -13535,6 +13507,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 364
+  },
+  {
+   "ts": 1792431099.6695468,
+   "fb_id": "122190200348935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Cason Wallace, Thunder Agree To Five-Year, $139M Extension",
+   "url": "https://basketball.realgm.com/wiretap/287751/Cason-Wallace-Thunder-Agree-To-Five-Year-$139M-Extension",
+   "scheduled_for": 1792551600,
+   "slot": "2026-10-21 11:00",
+   "chars": 845
   }
  ]
 }
