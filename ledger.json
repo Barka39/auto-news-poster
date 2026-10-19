@@ -1,59 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790321028.6402833,
-   "fb_id": "736504959542737_122186120186935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "ESPN",
-   "title": "Oscar winner Lupita Nyong'o invests in BAL team Nairobi City Thunder",
-   "url": "https://www.espn.com/espn/story/_/id/50025576/oscar-winner-lupita-nyongo-invests-bal-team-nairobi-city-thunder",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 285,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790468623.7151089
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790989299.96142
-   }
-  },
-  {
-   "ts": 1790341344.7717063,
-   "fb_id": "846498595210295_122146164057086375",
-   "ig_id": "",
-   "kind": "page_numerology",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "suns",
-   "source": "Сүнсний код",
-   "title": "Өдрийн тоо 8 · 2026.09.25",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 1440,
-   "page": "suns",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1790468624.2175255
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1790989300.2293026
-   }
-  },
-  {
    "ts": 1790343174.256241,
    "fb_id": "828746100324372_122148121431084055",
    "ig_id": "",
@@ -13608,6 +13555,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 427
+  },
+  {
+   "ts": 1792410399.7657042,
+   "fb_id": "736504959542737_122190166934935957",
+   "ig_id": "",
+   "kind": "standings",
+   "card": "standings",
+   "video": false,
+   "score": 0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "NBA standings ЗҮҮН БҮС 2026.10.19",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 169
+  },
+  {
+   "ts": 1792410403.3783946,
+   "fb_id": "736504959542737_122190166994935957",
+   "ig_id": "",
+   "kind": "standings",
+   "card": "standings",
+   "video": false,
+   "score": 0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "NBA standings БАРУУН БҮС 2026.10.19",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 175
   }
  ]
 }
