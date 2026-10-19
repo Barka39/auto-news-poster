@@ -12843,7 +12843,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 245
+   "chars": 245,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792369506.4982293
+   }
   },
   {
    "ts": 1792227308.0214376,
@@ -12859,7 +12865,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 253
+   "chars": 253,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792369507.0034533
+   }
   },
   {
    "ts": 1792228287.9117095,
@@ -12875,7 +12887,13 @@
    "url": "https://www.cbssports.com/nba/news/nba-western-conference-tiers-spurs-thunder-lakers/",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 965
+   "chars": 965,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792369507.4739108
+   }
   },
   {
    "ts": 1792228303.0633068,
@@ -12891,7 +12909,13 @@
    "url": "https://www.cbssports.com/nba/news/nba-biggest-starting-lineup-questions-spurs-lakers-raptors-blazers-pelicans/",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 806
+   "chars": 806,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792369507.9082391
+   }
   },
   {
    "ts": 1792237889.8068616,
@@ -12907,7 +12931,13 @@
    "url": "https://sports.yahoo.com/articles/ages-21-41-top-3-070000286.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 435
+   "chars": 435,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792369508.430807
+   }
   },
   {
    "ts": 1792242098.4599385,
@@ -12924,7 +12954,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1259,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1792369509.0298376
+   }
   },
   {
    "ts": 1792243296.2895594,
@@ -12940,7 +12974,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50200909/no-1-pick-aj-dybantsa-set-evaluation-injuring-ankle",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 264
+   "chars": 264,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792369509.5473711
+   }
   },
   {
    "ts": 1792243905.9896283,
@@ -12957,7 +12997,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 2154,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1792369510.1467817
+   }
   },
   {
    "ts": 1792246289.3767586,
@@ -12973,7 +13017,13 @@
    "url": "https://sports.yahoo.com/articles/hugo-gonz-lez-puts-cherry-083138801.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 465
+   "chars": 465,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792369510.640934
+   }
   },
   {
    "ts": 1792249897.117849,
@@ -12989,7 +13039,13 @@
    "url": "https://basketball.realgm.com/wiretap/287695/Julian-Strawther-Out-Six-Weeks-With-Sprained-Knee",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 740
+   "chars": 740,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792369511.150563
+   }
   },
   {
    "ts": 1792252913.6810641,
@@ -13037,7 +13093,13 @@
    "url": "https://sports.yahoo.com/articles/bill-kennedy-hilariously-side-eyes-092040833.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 494
+   "chars": 494,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792369511.67676
+   }
   },
   {
    "ts": 1792256758.0519764,
@@ -13069,7 +13131,13 @@
    "url": "https://basketball.realgm.com/wiretap/287692/Pat-Connaughton-Waived-By-Hornets",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 403
+   "chars": 403,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792369512.4657383
+   }
   },
   {
    "ts": 1792258298.1007059,
@@ -13085,7 +13153,13 @@
    "url": "https://sports.yahoo.com/articles/lebron-plays-down-concerns-over-171500076.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 352
+   "chars": 352,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792369512.9987118
+   }
   },
   {
    "ts": 1792263085.880381,
@@ -13101,7 +13175,13 @@
    "url": "https://sports.yahoo.com/articles/owner-tom-dundon-says-keeping-183549119.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 271
+   "chars": 271,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792369513.4662428
+   }
   },
   {
    "ts": 1792264280.7582302,
@@ -13117,7 +13197,13 @@
    "url": "https://sports.yahoo.com/articles/ziaire-williams-emerges-fan-favorite-163000266.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 418
+   "chars": 418,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792369513.9778426
+   }
   },
   {
    "ts": 1792267297.7987154,
@@ -13149,7 +13235,13 @@
    "url": "https://basketball.realgm.com/wiretap/287719/Spurs-Pick-Up-27-28-Team-Options-For-Carter-Bryant-Stephon-Castle-Dylan-Harper",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 694
+   "chars": 694,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792369514.4750295
+   }
   },
   {
    "ts": 1792272102.420809,
@@ -13165,7 +13257,13 @@
    "url": "https://basketball.realgm.com/wiretap/287725/Knicks-Waive-Bruce-Brown;-James-Wiseman-Set-To-Make-Opening-Night-Roster",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 613
+   "chars": 613,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792369514.974873
+   }
   },
   {
    "ts": 1792276295.5101745,
@@ -13181,7 +13279,13 @@
    "url": "https://sports.yahoo.com/articles/walker-kessler-forced-face-reality-180150034.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 430
+   "chars": 430,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792369515.4913554
+   }
   },
   {
    "ts": 1792278094.5138593,
@@ -13213,7 +13317,13 @@
    "url": "https://sports.yahoo.com/articles/jj-redick-drops-major-hint-185642739.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 458
+   "chars": 458,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792369516.0207336
+   }
   },
   {
    "ts": 1792279891.925669,
@@ -13229,7 +13339,13 @@
    "url": "https://basketball.realgm.com/wiretap/287728/Noah-Penda-To-Miss-Significant-Time-Due-To-Partially-Torn-Hamstring",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 626
+   "chars": 626,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792369516.5940704
+   }
   },
   {
    "ts": 1792281699.7293339,
@@ -13246,7 +13362,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1830,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1792369517.138984
+   }
   },
   {
    "ts": 1792284686.7078996,
