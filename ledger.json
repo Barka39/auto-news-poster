@@ -9049,6 +9049,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791767262.1203382
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1792368224.5951035
    }
   },
   {
@@ -9087,6 +9091,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791860186.2390747
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368224.979697
    }
   },
   {
@@ -9108,6 +9118,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791860186.5973043
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1792368225.293407
    }
   },
   {
@@ -9130,6 +9144,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791860186.9456854
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368225.5669842
    }
   },
   {
@@ -9151,6 +9171,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791860187.472494
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1792368225.7761624
    }
   },
   {
@@ -9173,6 +9197,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791860187.8081338
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368226.0447507
    }
   },
   {
@@ -9195,6 +9225,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791860188.1535003
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368226.3274138
    }
   },
   {
@@ -9217,6 +9253,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791860188.5169158
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368226.5947838
    }
   },
   {
@@ -9238,6 +9280,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791860188.9880648
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1792368226.8038588
    }
   },
   {
@@ -9259,6 +9305,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791860189.3277075
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1792368227.0704262
    }
   },
   {
@@ -9281,6 +9331,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791860189.6427891
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368227.3350515
    }
   },
   {
@@ -9303,6 +9359,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791860190.1213102
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368227.6147556
    }
   },
   {
@@ -9341,6 +9403,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791860190.4667072
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368227.9206412
    }
   },
   {
@@ -9395,6 +9463,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1791860190.8190296
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368228.2107153
    }
   },
   {
@@ -9432,6 +9506,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1791860191.3023715
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1792368228.4279294
    }
   },
   {
@@ -12182,7 +12260,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50196498/nba-tells-sportsbooks-stop-certain-bets-restrict-parlays",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 493
+   "chars": 493,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368228.707394
+   }
   },
   {
    "ts": 1792168889.538227,
@@ -12198,7 +12282,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50195321/buss-siblings-filing-challenges-jeanie-petition-oust-them",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 372
+   "chars": 372,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368229.0013924
+   }
   },
   {
    "ts": 1792168904.0672998,
@@ -12214,7 +12304,13 @@
    "url": "https://sports.yahoo.com/articles/celtics-coach-joe-mazzulla-getting-163000405.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 408
+   "chars": 408,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368229.3081613
+   }
   },
   {
    "ts": 1792169489.1464164,
@@ -12230,7 +12326,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50197100/spanish-team-challenging-thunder-rookie-mara-nba-eligibility",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 317
+   "chars": 317,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368229.5961754
+   }
   },
   {
    "ts": 1792170115.1179147,
@@ -12262,7 +12364,13 @@
    "url": "https://sports.yahoo.com/articles/mike-gansey-reportedly-key-james-173000709.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 463
+   "chars": 463,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368229.8708544
+   }
   },
   {
    "ts": 1792174889.3467226,
@@ -12278,7 +12386,13 @@
    "url": "https://basketball.realgm.com/wiretap/287682/NBA-Bans-Same-Player-Under-Parlays-Opening-Tip-Bets-This-Season",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 902
+   "chars": 902,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368230.16305
+   }
   },
   {
    "ts": 1792174903.1957455,
@@ -12294,7 +12408,13 @@
    "url": "https://sports.yahoo.com/articles/knicks-reportedly-exploring-pacome-dadiet-180339237.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 416
+   "chars": 416,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368230.4427164
+   }
   },
   {
    "ts": 1792175516.179371,
@@ -12310,7 +12430,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50182801/jimmy-butler-acl-injury-return-warriors-title",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 378
+   "chars": 378,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368230.7614067
+   }
   },
   {
    "ts": 1792178491.315919,
@@ -12326,7 +12452,13 @@
    "url": "https://basketball.realgm.com/wiretap/287685/NBA-Expansion-History-Shows-Paired-Teams-Paid-Identical-Fees",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 815
+   "chars": 815,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368231.0375237
+   }
   },
   {
    "ts": 1792178510.230975,
@@ -12342,7 +12474,13 @@
    "url": "https://www.cbssports.com/nba/news/nba-sportsbook-partners-ban-certain-bets/",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 932
+   "chars": 932,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368231.3285983
+   }
   },
   {
    "ts": 1792186886.0065796,
@@ -12374,7 +12512,13 @@
    "url": "https://sports.yahoo.com/articles/buss-family-war-over-lakers-183633995.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 445
+   "chars": 445,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368231.6222026
+   }
   },
   {
    "ts": 1792192890.0368237,
@@ -12407,7 +12551,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1641,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1792368231.8470044
+   }
   },
   {
    "ts": 1792197096.3989227,
@@ -12423,7 +12571,13 @@
    "url": "https://sports.yahoo.com/articles/former-nba-star-delonte-west-201525397.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 341
+   "chars": 341,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368232.1511314
+   }
   },
   {
    "ts": 1792201287.3261313,
@@ -12455,7 +12609,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50199096/spurs-start-3-guard-lineup-season-opener-vs-thunder",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 300
+   "chars": 300,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368232.4276943
+   }
   },
   {
    "ts": 1792203089.325212,
@@ -12471,7 +12631,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50199062/strawther-indefinitely-knee-sprain-nuggets-say",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 487
+   "chars": 487,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368232.702855
+   }
   },
   {
    "ts": 1792203686.5525029,
@@ -12487,7 +12653,13 @@
    "url": "https://basketball.realgm.com/wiretap/287694/Spurs-Commit-To-Three-Guard-Starting-Lineup-For-Opener-Against-Thunder",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 762
+   "chars": 762,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368232.9795983
+   }
   },
   {
    "ts": 1792207287.0814009,
@@ -12503,7 +12675,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50199345/lebron-fires-crowd-monster-slam-sixers-home-debut",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 328
+   "chars": 328,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368233.2868028
+   }
   },
   {
    "ts": 1792209695.8588517,
@@ -12519,7 +12697,13 @@
    "url": "https://sports.yahoo.com/articles/jalen-brunson-afraid-open-bag-233102209.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 321
+   "chars": 321,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368233.5628822
+   }
   },
   {
    "ts": 1792210285.6306074,
@@ -12535,7 +12719,13 @@
    "url": "https://sports.yahoo.com/articles/embiid-maxey-dazzle-third-quarter-013952255.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 386
+   "chars": 386,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368233.8490539
+   }
   },
   {
    "ts": 1792210298.103469,
@@ -12551,7 +12741,13 @@
    "url": "https://sports.yahoo.com/articles/stay-ready-celtics-beat-76ers-014606779.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 430
+   "chars": 430,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368234.1426826
+   }
   },
   {
    "ts": 1792211505.4869444,
@@ -12568,7 +12764,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 857,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1792368234.372052
+   }
   },
   {
    "ts": 1792213315.6377063,
@@ -12585,7 +12785,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1138,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1792368234.57077
+   }
   },
   {
    "ts": 1792216275.4763021,
@@ -12601,7 +12805,13 @@
    "url": "https://sports.yahoo.com/articles/dalton-knecht-trade-coming-first-053723529.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 488
+   "chars": 488,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368234.8629508
+   }
   },
   {
    "ts": 1792217487.9177585,
@@ -12617,7 +12827,13 @@
    "url": "https://sports.yahoo.com/articles/lakers-fans-expect-bronny-james-055531355.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 286
+   "chars": 286,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368235.1409588
+   }
   },
   {
    "ts": 1792217501.8045275,
@@ -12633,7 +12849,13 @@
    "url": "https://sports.yahoo.com/articles/jj-redick-may-tipped-hand-033054610.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 351
+   "chars": 351,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1792368235.4490979
+   }
   },
   {
    "ts": 1792225649.6140206,
