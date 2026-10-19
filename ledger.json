@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790314902.1847215,
-   "fb_id": "736504959542737_122186109896935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "Nevada Coach Steve Alford To Retire At End Of Upcoming Season",
-   "url": "https://basketball.realgm.com/wiretap/287388/Nevada-Coach-Steve-Alford-To-Retire-At-End-Of-Upcoming-Season",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 718,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790468622.8694313
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790989299.3389273
-   }
-  },
-  {
    "ts": 1790319715.6390095,
    "fb_id": "736504959542737_122186117990935957",
    "ig_id": "",
@@ -13632,6 +13604,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 470
+  },
+  {
+   "ts": 1792403192.4215496,
+   "fb_id": "736504959542737_122190156332935957",
+   "ig_id": "",
+   "kind": "digest",
+   "card": "",
+   "video": false,
+   "score": 0,
+   "category": "",
+   "source": "",
+   "title": "",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 287
   }
  ]
 }
