@@ -1,62 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790307152.8689835,
-   "fb_id": "736504959542737_122186097236935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "Jon Scheyer Addresses Mavericks' Interest, Says He's 'In For Long Haul' With Duke",
-   "url": "https://basketball.realgm.com/wiretap/287387/Jon-Scheyer-Addresses-Mavericks-Interest-Says-Hes-In-For-Long-Haul-With-Duke",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 881,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790468620.74788
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790989297.880202
-   }
-  },
-  {
-   "ts": 1790309497.7256927,
-   "fb_id": "736504959542737_122186101100935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Did JJ Redick throw shade at LeBron James with eye-opening comments?",
-   "url": "https://sports.yahoo.com/articles/did-jj-redick-throw-shade-233950133.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 685,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790468621.142952
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790989298.2079477
-   }
-  },
-  {
    "ts": 1790310087.7455776,
    "fb_id": "736504959542737_122186101778935957",
    "ig_id": "",
@@ -13686,6 +13630,38 @@
    "slot": "",
    "chars": 1258,
    "page": "suns"
+  },
+  {
+   "ts": 1792390876.4743237,
+   "fb_id": "736504959542737_122190134582935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Warriors get Steph Curry injury scare days before season opener against Lakers",
+   "url": "https://sports.yahoo.com/articles/warriors-steph-curry-injury-scare-015723490.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 383
+  },
+  {
+   "ts": 1792390889.8052375,
+   "fb_id": "736504959542737_122190134678935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Brandon Miller Likely To Sign Rookie Extension; Magic Not Expected To Extend Anthony Black",
+   "url": "https://basketball.realgm.com/wiretap/287754/Brandon-Miller-Likely-To-Sign-Rookie-Extension;-Magic-Not-Expected-To-Extend-Anthony-Black",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 470
   }
  ]
 }
