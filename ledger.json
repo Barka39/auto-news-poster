@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790295696.7990215,
-   "fb_id": "736504959542737_122186071508935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 10.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Luka-led Lakers are younger, deeper and built on connectivity: ‘The best teams are the most connected teams’",
-   "url": "https://sports.yahoo.com/nba/article/luka-led-lakers-are-younger-deeper-and-built-on-connectivity-the-best-teams-are-the-most-connected-teams-001649035.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 508,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790382487.4535148
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790904571.941695
-   }
-  },
-  {
    "ts": 1790298113.2154102,
    "fb_id": "736504959542737_122186075612935957",
    "ig_id": "",
@@ -13389,6 +13361,23 @@
    "scheduled_for": 1792483200,
    "slot": "2026-10-20 16:00",
    "chars": 389
+  },
+  {
+   "ts": 1792368109.9336805,
+   "fb_id": "846498595210295_122148847533086375",
+   "ig_id": "",
+   "kind": "page_zurhai",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өнөөдрийн зурхай 2026.10.19",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1865,
+   "page": "suns"
   }
  ]
 }
