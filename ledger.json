@@ -1,31 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790397102.1296098,
-   "fb_id": "828746100324372_122148226347084055",
-   "ig_id": "",
-   "kind": "page_confession",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "udesh",
-   "source": "Үдшийн шивнээ",
-   "title": "Хүйтэн дарсны халуун дурсамж",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 1120,
-   "page": "udesh",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1790555277.9235425
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1791073677.3404732
-   }
-  },
-  {
    "ts": 1790398903.2381005,
    "fb_id": "846498595210295_122146237065086375",
    "ig_id": "",
@@ -13511,6 +13486,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 245
+  },
+  {
+   "ts": 1792434703.4425504,
+   "fb_id": "736504959542737_122190206876935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Dwight Powell Waived By Mavericks",
+   "url": "https://basketball.realgm.com/wiretap/287759/Dwight-Powell-Waived-By-Mavericks",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 735
   }
  ]
 }
