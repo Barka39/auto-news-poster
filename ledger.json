@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790434651.2019339,
-   "fb_id": "736504959542737_122186363036935957",
-   "ig_id": "",
-   "kind": "digest",
-   "card": "",
-   "video": false,
-   "score": 0,
-   "category": "",
-   "source": "",
-   "title": "",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 251,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790555280.1605787
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791073679.6308186
-   }
-  },
-  {
    "ts": 1790438514.3062408,
    "fb_id": "122186369912935957",
    "ig_id": "",
@@ -13451,6 +13423,22 @@
    "scheduled_for": 1792569600,
    "slot": "2026-10-21 16:00",
    "chars": 429
+  },
+  {
+   "ts": 1792441898.6798594,
+   "fb_id": "736504959542737_122190217940935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Spencer Jones On Track To Play In Season Opener",
+   "url": "https://basketball.realgm.com/wiretap/287745/Spencer-Jones-On-Track-To-Play-In-Season-Opener",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 575
   }
  ]
 }
