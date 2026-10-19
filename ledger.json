@@ -1,38 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790364711.2897584,
-   "fb_id": "122186210396935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "quote",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "ESPN",
-   "title": "Kyrie Irving has no restrictions after 19-month ACL recovery",
-   "url": "https://www.espn.com/nba/story/_/id/50028686/kyrie-irving-no-restrictions-19-month-acl-recovery",
-   "scheduled_for": 1790485200,
-   "slot": "2026-09-27 13:00",
-   "chars": 402
-  },
-  {
-   "ts": 1790375539.1599987,
-   "fb_id": "122186227676935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "Kon Knueppel To Miss Start Of Regular Season With Hamstring Strain",
-   "url": "https://basketball.realgm.com/wiretap/287396/Kon-Knueppel-To-Miss-Start-Of-Regular-Season-With-Hamstring-Strain",
-   "scheduled_for": 1790496000,
-   "slot": "2026-09-27 16:00",
-   "chars": 693
-  },
-  {
    "ts": 1790380291.4696212,
    "fb_id": "122186234792935957",
    "ig_id": "",
@@ -13544,6 +13512,38 @@
    "slot": "",
    "chars": 2234,
    "page": "udesh"
+  },
+  {
+   "ts": 1792419087.6086714,
+   "fb_id": "736504959542737_122190184160935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "CBS Sports NBA",
+   "title": "The 76ers seem to finally have everything they need, and it makes their season both thrilling and terrifying",
+   "url": "https://www.cbssports.com/nba/news/76ers-everything-they-need-season-thrilling-terrifying/",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 738
+  },
+  {
+   "ts": 1792419102.8239956,
+   "fb_id": "736504959542737_122190184274935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "CBS Sports NBA",
+   "title": "Thunder extend Cason Wallace on five-year, $139M deal, setting up another summer of second apron questions",
+   "url": "https://www.cbssports.com/nba/news/thunder-cason-wallace-contract-extension-second-apron-payroll/",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 937
   }
  ]
 }
