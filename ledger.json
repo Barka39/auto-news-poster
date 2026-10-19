@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790389911.7996912,
-   "fb_id": "736504959542737_122186255258935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "deal",
-   "video": false,
-   "score": 10.0,
-   "category": "basketball",
-   "source": "ESPN",
-   "title": "Sources: Warriors, Curry reach 2-year extension worth $116 million",
-   "url": "https://www.espn.com/nba/story/_/id/50030670/sources-warriors-curry-reach-2-year-extension-worth-116-million",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 297,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790555277.5855906
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791073676.973931
-   }
-  },
-  {
    "ts": 1790397102.1296098,
    "fb_id": "828746100324372_122148226347084055",
    "ig_id": "",
@@ -13523,6 +13495,22 @@
    "scheduled_for": 1792558800,
    "slot": "2026-10-21 13:00",
    "chars": 396
+  },
+  {
+   "ts": 1792432909.2389226,
+   "fb_id": "736504959542737_122190202814935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Tacko Fall is a unique player with a unique opportunity",
+   "url": "https://sports.yahoo.com/articles/tacko-fall-unique-player-unique-155640665.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 245
   }
  ]
 }
