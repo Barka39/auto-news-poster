@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790380291.4696212,
-   "fb_id": "122186234792935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "quote",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "ESPN",
-   "title": "Altman: Cavs built for 'sustainable run' despite missing on LeBron",
-   "url": "https://www.espn.com/nba/story/_/id/50029817/altman-cavs-built-sustainable-run-missing-lebron",
-   "scheduled_for": 1790506800,
-   "slot": "2026-09-27 19:00",
-   "chars": 375
-  },
-  {
    "ts": 1790380926.9317796,
    "fb_id": "846498595210295_122146213005086375",
    "ig_id": "",
@@ -13544,6 +13528,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 937
+  },
+  {
+   "ts": 1792429310.2027056,
+   "fb_id": "122190198164935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Bettors are heavily backing LeBron James' 76ers to win the title: 'The enthusiasm for betting this team doesn’t seem to ",
+   "url": "https://sports.yahoo.com/nba/betting/article/bettors-are-heavily-backing-lebron-james-76ers-to-win-the-title-the-enthusiasm-for-betting-this-team-doesnt-seem-to-let-up-165549727.html",
+   "scheduled_for": 1792540800,
+   "slot": "2026-10-21 08:00",
+   "chars": 366
   }
  ]
 }
