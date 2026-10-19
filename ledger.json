@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790459493.9913385,
-   "fb_id": "736504959542737_122186440688935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 9.0,
-   "category": "basketball",
-   "source": "ESPN",
-   "title": "Sources: Bulls to trade Dillingham to Hornets for Buddy Hield",
-   "url": "https://www.espn.com/nba/story/_/id/50036563/sources-bulls-trade-rob-dillingham-hornets-buddy-hield",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 303,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790555280.4089186
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791073679.8878093
-   }
-  },
-  {
    "ts": 1790461909.5536385,
    "fb_id": "736504959542737_122186444888935957",
    "ig_id": "",
@@ -13439,6 +13411,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 752
+  },
+  {
+   "ts": 1792449685.7923152,
+   "fb_id": "736504959542737_122190226490935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "CBS Sports NBA",
+   "title": "Grading every NBA rookie extension: Evaluating new contracts for Victor Wembanyama, Keyonte George, more",
+   "url": "https://www.cbssports.com/nba/news/grading-nba-rookie-extensions-wembanyama-george-thompson-podziemski-wallace-miller/",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 740
   }
  ]
 }
