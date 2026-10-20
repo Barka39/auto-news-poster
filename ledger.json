@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790554892.4888005,
-   "fb_id": "122186632142935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "Pistons Waive Gary Harris",
-   "url": "https://basketball.realgm.com/wiretap/287433/Pistons-Waive-Gary-Harris",
-   "scheduled_for": 1790668800,
-   "slot": "2026-09-29 16:00",
-   "chars": 613
-  },
-  {
    "ts": 1790560293.1906455,
    "fb_id": "122186641052935957",
    "ig_id": "",
@@ -13550,6 +13534,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 393
+  },
+  {
+   "ts": 1792498894.606701,
+   "fb_id": "736504959542737_122190307586935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Watch: Cooper Flagg comically helps stock Foot Locker shelves in new ad",
+   "url": "https://sports.yahoo.com/articles/watch-cooper-flagg-comically-helps-120259597.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 386
   }
  ]
 }
