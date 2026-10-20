@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790604727.7920988,
-   "fb_id": "736504959542737_122186759846935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "ESPN",
-   "title": "AJ Dybantsa named cover athlete for 2026 Topps Flagship Basketball",
-   "url": "https://www.espn.com/nba/story/_/id/50016779/aj-dybantsa-washington-wizards-2026-topps-flagship-basketball-cover",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 330,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790730716.725811
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791252546.1615677
-   }
-  },
-  {
    "ts": 1790610722.3205557,
    "fb_id": "736504959542737_122186768636935957",
    "ig_id": "",
@@ -13408,6 +13380,22 @@
    "scheduled_for": 1792656000,
    "slot": "2026-10-22 16:00",
    "chars": 256
+  },
+  {
+   "ts": 1792533713.7430995,
+   "fb_id": "736504959542737_122190365960935957",
+   "ig_id": "",
+   "kind": "mn",
+   "card": "news",
+   "video": false,
+   "score": 10.0,
+   "category": "mn_basketball",
+   "source": "Asia-Basket Mongolia",
+   "title": "MBL Round 7 (Regular Season): Apes climb to the leadership position",
+   "url": "https://www.asia-basket.com/Mongolia/news/1037390/MBL-Round-7-Regular-Season-Apes-climb-to-the-leadership-position",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 785
   }
  ]
 }
