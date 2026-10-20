@@ -1,31 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790602470.945325,
-   "fb_id": "828746100324372_122148509889084055",
-   "ig_id": "",
-   "kind": "page_story",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "udesh",
-   "source": "Үдшийн шивнээ",
-   "title": "Хормын төдий учрал — 3-р хэсэг",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 2145,
-   "page": "udesh",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1790730716.2268105
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1791252545.2639928
-   }
-  },
-  {
    "ts": 1790604193.0435593,
    "fb_id": "736504959542737_122186752682935957",
    "ig_id": "",
@@ -13429,6 +13404,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 414
+  },
+  {
+   "ts": 1792525889.76327,
+   "fb_id": "736504959542737_122190355070935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Who will the Suns face in Portland’s opening night lineup?",
+   "url": "https://sports.yahoo.com/articles/suns-face-portland-opening-night-170000350.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 374
   }
  ]
 }
