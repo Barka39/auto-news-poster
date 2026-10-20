@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790560293.1906455,
-   "fb_id": "122186641052935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Video emerges of Isaiah Stewart punching new Knick Drew Eubanks before 2024 arrest",
-   "url": "https://sports.yahoo.com/articles/video-emerges-isaiah-stewart-punching-212841947.html",
-   "scheduled_for": 1790679600,
-   "slot": "2026-09-29 19:00",
-   "chars": 432
-  },
-  {
    "ts": 1790560929.2805037,
    "fb_id": "122186642102935957",
    "ig_id": "",
@@ -13550,6 +13534,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 386
+  },
+  {
+   "ts": 1792499533.9793417,
+   "fb_id": "736504959542737_122190310178935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "CBS Sports NBA",
+   "title": "The 76ers seem to finally have everything they need, and it makes their season both thrilling and terrifying",
+   "url": "https://www.cbssports.com/nba/news/76ers-everything-they-need-season-thrilling-terrifying/",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 831
   }
  ]
 }
