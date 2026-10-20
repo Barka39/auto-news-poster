@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790598106.9834523,
-   "fb_id": "736504959542737_122186720732935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Naji Marshall can do a little bit of everything for the Dallas Mavericks",
-   "url": "https://sports.yahoo.com/articles/naji-marshall-little-bit-everything-100000374.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 412,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790730715.466001
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791252544.0652165
-   }
-  },
-  {
    "ts": 1790600526.6809819,
    "fb_id": "846498595210295_122146515903086375",
    "ig_id": "",
@@ -13462,6 +13434,22 @@
    "scheduled_for": 1792627200,
    "slot": "2026-10-22 08:00",
    "chars": 331
+  },
+  {
+   "ts": 1792515084.472319,
+   "fb_id": "122190337964935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "AJ Dybantsa ruled out by Wizards for season opener vs. Bucks due to ankle injury",
+   "url": "https://sports.yahoo.com/nba/breaking-news/article/aj-dybantsa-ruled-out-by-wizards-for-season-opener-vs-bucks-due-to-ankle-injury-164612339.html",
+   "scheduled_for": 1792638000,
+   "slot": "2026-10-22 11:00",
+   "chars": 341
   }
  ]
 }
