@@ -1,62 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790610722.3205557,
-   "fb_id": "736504959542737_122186768636935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "How LeBron James can complete the process",
-   "url": "https://sports.yahoo.com/articles/lebron-james-complete-process-133329708.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 360,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790730716.9687495
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791252546.5390546
-   }
-  },
-  {
-   "ts": 1790611343.0292492,
-   "fb_id": "736504959542737_122186769632935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 10.0,
-   "category": "basketball",
-   "source": "ESPN",
-   "title": "Giannis confident in what he can offer to overhauled Heat",
-   "url": "https://www.espn.com/nba/story/_/id/50052354/giannis-confident-offer-overhauled-heat",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 285,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790730717.314903
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791252547.027272
-   }
-  },
-  {
    "ts": 1790611372.6696825,
    "fb_id": "122186769758935957",
    "ig_id": "",
@@ -13396,6 +13340,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 785
+  },
+  {
+   "ts": 1792534831.4637709,
+   "fb_id": "736504959542737_122190367622935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "JJ Redick says Lakers' 'biggest unknown' is how they will deal with adversity",
+   "url": "https://www.espn.com/nba/story/_/id/50232351/redick-lakers-biggest-test-dealing-adversity",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 415
+  },
+  {
+   "ts": 1792534846.0591455,
+   "fb_id": "736504959542737_122190367730935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "'2026-27 Champions Night?' Knicks championship celebration shirts raise eyebrows",
+   "url": "https://sports.yahoo.com/articles/2026-27-champions-night-knicks-220749374.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 398
   }
  ]
 }
