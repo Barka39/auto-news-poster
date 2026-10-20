@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790592352.1503456,
-   "fb_id": "736504959542737_122186706392935957",
-   "ig_id": "",
-   "kind": "digest",
-   "card": "",
-   "video": false,
-   "score": 0,
-   "category": "",
-   "source": "",
-   "title": "",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 191,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790730714.6219375
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791252543.2461283
-   }
-  },
-  {
    "ts": 1790595726.128996,
    "fb_id": "736504959542737_122186716118935957",
    "ig_id": "",
@@ -13486,6 +13458,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 418
+  },
+  {
+   "ts": 1792510293.1636536,
+   "fb_id": "736504959542737_122190327746935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Why Landry Shamet is Knicks' X-Factor in New York's title defense",
+   "url": "https://sports.yahoo.com/articles/why-landry-shamet-knicks-x-142059981.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 294
   }
  ]
 }
