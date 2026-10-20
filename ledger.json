@@ -1,31 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790571717.1023607,
-   "fb_id": "846498595210295_122146478559086375",
-   "ig_id": "",
-   "kind": "page_spirit",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "suns",
-   "source": "Сүнсний код",
-   "title": "Зүрхний чакра буюу хайр энэрлийн төв",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 958,
-   "page": "suns",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1790730713.3136587
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1791252541.905866
-   }
-  },
-  {
    "ts": 1790572889.6059294,
    "fb_id": "736504959542737_122186669978935957",
    "ig_id": "",
@@ -13519,6 +13494,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 770
+  },
+  {
+   "ts": 1792506086.293582,
+   "fb_id": "736504959542737_122190320684935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Kyrie Irving Doesn't See Himself Playing Into His 40s, Cites Changes To NBA",
+   "url": "https://basketball.realgm.com/wiretap/287781/Kyrie-Irving-Doesnt-See-Himself-Playing-Into-His-40s-Cites-Changes-To-NBA",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 725
   }
  ]
 }
