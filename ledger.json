@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790622157.6917937,
-   "fb_id": "736504959542737_122186789162935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 9.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "LeBron James 'had visions' of joining Knicks over 76ers but changed mind after they won NBA championship",
-   "url": "https://sports.yahoo.com/nba/article/lebron-james-had-visions-of-joining-knicks-over-76ers-but-changed-mind-after-they-won-nba-championship-185007354.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 442,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790817138.698227
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791252551.8826377
-   }
-  },
-  {
    "ts": 1790623933.4016702,
    "fb_id": "736504959542737_122186792492935957",
    "ig_id": "",
@@ -13475,6 +13447,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 548
+  },
+  {
+   "ts": 1792561299.5244503,
+   "fb_id": "736504959542737_122190408068935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Sixers Bell Ringer: Philly win portends great things to come in victory over defending champs",
+   "url": "https://sports.yahoo.com/articles/sixers-bell-ringer-philly-win-033005852.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 388
   }
  ]
 }
