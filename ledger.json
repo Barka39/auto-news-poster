@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790637698.2681444,
-   "fb_id": "736504959542737_122186820164935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Austin Reaves ‘happy to be back’ with Lakers after ‘weird’ contract negotiations",
-   "url": "https://sports.yahoo.com/articles/austin-reaves-happy-back-lakers-210816113.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 426,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790904574.5576859
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791336122.5833182
-   }
-  },
-  {
    "ts": 1790638401.9827037,
    "fb_id": "736504959542737_122186821082935957",
    "ig_id": "",
@@ -13177,6 +13149,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 217
+  },
+  {
+   "ts": 1792603277.70397,
+   "fb_id": "122190492116935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "NBA Generated $14.5 Billion In Revenue Last Season, Led By Warriors' $895M",
+   "url": "https://basketball.realgm.com/wiretap/287812/NBA-Generated-$145-Billion-In-Revenue-Last-Season-Led-By-Warriors-$895M",
+   "scheduled_for": 1792731600,
+   "slot": "2026-10-23 13:00",
+   "chars": 981
   }
  ]
 }
