@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790632319.1572735,
-   "fb_id": "736504959542737_122186811284935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 9.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Nikola Jokic intends to remain with Nuggets long term: 'I’m going to sign next year'",
-   "url": "https://sports.yahoo.com/articles/nikola-jokic-intends-remain-nuggets-213453553.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 353,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790904573.166977
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791336120.0280006
-   }
-  },
-  {
    "ts": 1790632921.0689213,
    "fb_id": "736504959542737_122186812400935957",
    "ig_id": "",
@@ -13237,6 +13209,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 784
+  },
+  {
+   "ts": 1792598100.3085113,
+   "fb_id": "736504959542737_122190478064935957",
+   "ig_id": "",
+   "kind": "digest",
+   "card": "",
+   "video": false,
+   "score": 0,
+   "category": "",
+   "source": "",
+   "title": "",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 363
   }
  ]
 }
