@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790786850.807114,
-   "fb_id": "736504959542737_122187112172935957",
-   "ig_id": "",
-   "kind": "digest",
-   "card": "",
-   "video": false,
-   "score": 0,
-   "category": "",
-   "source": "",
-   "title": "",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 222,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790989309.3600907
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791423729.5501542
-   }
-  },
-  {
    "ts": 1790788924.0002959,
    "fb_id": "122187116516935957",
    "ig_id": "",
@@ -12979,6 +12951,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 349
+  },
+  {
+   "ts": 1792676772.8098319,
+   "fb_id": "828746100324372_122151703677084055",
+   "ig_id": "",
+   "kind": "page_story",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Хуучин дурсамжийн сүүдэр — Төгсгөл",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1417,
+   "page": "udesh"
   }
  ]
 }
