@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790689355.0665922,
-   "fb_id": "736504959542737_122186926880935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "How a healthy and motivated Walker Kessler could transform the Lakers' defense",
-   "url": "https://sports.yahoo.com/articles/healthy-motivated-walker-kessler-could-110000101.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 409,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790904580.1357763
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791336131.7269719
-   }
-  },
-  {
    "ts": 1790699515.0341241,
    "fb_id": "122186943674935957",
    "ig_id": "",
@@ -13189,6 +13161,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 451
+  },
+  {
+   "ts": 1792642280.381829,
+   "fb_id": "736504959542737_122190557072935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 10.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Recap: Wizards beat Bucks in season opener, 128-116",
+   "url": "https://sports.yahoo.com/articles/recap-wizards-beat-bucks-season-015539514.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 349
   }
  ]
 }
