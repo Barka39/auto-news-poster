@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790778348.2310255,
-   "fb_id": "736504959542737_122187097952935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "RJ Barrett, Raptors Haven't Engaged In Serious Extension Talks",
-   "url": "https://basketball.realgm.com/wiretap/287468/RJ-Barrett-Raptors-Havent-Engaged-In-Serious-Extension-Talks",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 668,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790989308.4250839
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791423728.4864948
-   }
-  },
-  {
    "ts": 1790785318.6573842,
    "fb_id": "122187108614935957",
    "ig_id": "",
@@ -13014,6 +12986,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 422
+  },
+  {
+   "ts": 1792672497.972296,
+   "fb_id": "736504959542737_122190623030935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Draymond Green Plans To Play Next Season, Even If Not With Warriors",
+   "url": "https://basketball.realgm.com/wiretap/287809/Draymond-Green-Plans-To-Play-Next-Season-Even-If-Not-With-Warriors",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 758
   }
  ]
 }
