@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790699515.0341241,
-   "fb_id": "122186943674935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Former NBA star J.R. Smith arrested in Texas on assault",
-   "url": "https://sports.yahoo.com/articles/former-nba-star-j-r-161706728.html",
-   "scheduled_for": 1790812800,
-   "slot": "2026-10-01 08:00",
-   "chars": 275
-  },
-  {
    "ts": 1790707949.9419496,
    "fb_id": "122186961206935957",
    "ig_id": "",
@@ -13177,6 +13161,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 349
+  },
+  {
+   "ts": 1792643495.8146968,
+   "fb_id": "828746100324372_122151667551084055",
+   "ig_id": "",
+   "kind": "page_confession",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "ХҮЛЭЭЛТИЙН ЦЭГТЭЙ НЭГ МЕССЕЖ",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1121,
+   "page": "udesh"
   }
  ]
 }
