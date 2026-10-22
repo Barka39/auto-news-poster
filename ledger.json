@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790811156.771527,
-   "fb_id": "736504959542737_122187150620935957",
-   "ig_id": "",
-   "kind": "mn",
-   "card": "",
-   "video": false,
-   "score": 8.0,
-   "category": "mn_basketball",
-   "source": "Asia-Basket Mongolia",
-   "title": "Tychique Bosango (ex Johor Tigers) joins Miners",
-   "url": "https://www.asia-basket.com/Mongolia/news/1033633/Tychique-Bosango-ex-Johor-Tigers-joins-Miners",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 653,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791073683.1316526
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791423734.2448123
-   }
-  },
-  {
    "ts": 1790812914.9676046,
    "fb_id": "846498595210295_122146797033086375",
    "ig_id": "",
@@ -12824,6 +12796,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 842
+  },
+  {
+   "ts": 1792713586.008251,
+   "fb_id": "736504959542737_122190718526935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "James Harden booed in return to Philadelphia with Cavaliers",
+   "url": "https://sports.yahoo.com/articles/james-harden-booed-return-philadelphia-234324065.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 434
   }
  ]
 }
