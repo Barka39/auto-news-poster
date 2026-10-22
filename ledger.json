@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790644926.0762029,
-   "fb_id": "736504959542737_122186834510935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Jalen Green sought the advice of a Suns’ legend to improve his game",
-   "url": "https://sports.yahoo.com/articles/jalen-green-sought-advice-suns-230000323.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 217,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790904576.5467505
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791336126.1805134
-   }
-  },
-  {
    "ts": 1790656357.6267025,
    "fb_id": "828746100324372_122148620367084055",
    "ig_id": "",
@@ -13096,6 +13068,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 229
+  },
+  {
+   "ts": 1792627299.1708603,
+   "fb_id": "846498595210295_122149159137086375",
+   "ig_id": "",
+   "kind": "page_zurhai",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өнөөдрийн зурхай 2026.10.22",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1802,
+   "page": "suns"
   }
  ]
 }
