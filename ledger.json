@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790767917.6357017,
-   "fb_id": "736504959542737_122187071240935957",
-   "ig_id": "",
-   "kind": "mn",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "mn_basketball",
-   "source": "Asia-Basket Mongolia",
-   "title": "Tychique Bosango (ex Johor Tigers) joins Miners",
-   "url": "https://www.asia-basket.com/Mongolia/news/1033633/Tychique-Bosango-ex-Johor-Tigers-joins-Miners",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 665,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790989305.8984337
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791423726.6691787
-   }
-  },
-  {
    "ts": 1790770941.3486109,
    "fb_id": "736504959542737_122187076532935957",
    "ig_id": "",
@@ -13068,6 +13040,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 264
+  },
+  {
+   "ts": 1792666275.1726127,
+   "fb_id": "736504959542737_122190612380935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Walker Kessler’s historic Lakers debut earns hilarious nickname from Shaq",
+   "url": "https://sports.yahoo.com/articles/walker-kessler-historic-lakers-debut-063332337.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 402
   }
  ]
 }
