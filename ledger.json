@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790788950.144678,
-   "fb_id": "736504959542737_122187116606935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "Michael Jordan's 'Last Dance' Jersey Sells For Record $12.26M",
-   "url": "https://basketball.realgm.com/wiretap/287471/Michael-Jordans-Last-Dance-Jersey-Sells-For-Record-$1226M",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 685,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1790989309.6534312
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791423729.92881
-   }
-  },
-  {
    "ts": 1790790703.4791365,
    "fb_id": "736504959542737_122187119756935957",
    "ig_id": "",
@@ -12968,6 +12940,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 613
+  },
+  {
+   "ts": 1792684265.3848224,
+   "fb_id": "736504959542737_122190640082935957",
+   "ig_id": "",
+   "kind": "digest",
+   "card": "",
+   "video": false,
+   "score": 0,
+   "category": "",
+   "source": "",
+   "title": "",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 246
   }
  ]
 }
