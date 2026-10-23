@@ -1,50 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790889725.25052,
-   "fb_id": "122187282950935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Rumored Warriors free agent target headed to Italy",
-   "url": "https://sports.yahoo.com/articles/rumored-warriors-free-agent-target-185714975.html",
-   "scheduled_for": 1791014400,
-   "slot": "2026-10-03 16:00",
-   "chars": 343
-  },
-  {
-   "ts": 1790893935.0280726,
-   "fb_id": "736504959542737_122187289844935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Laker select Derrin Horton to be new public-address announcer",
-   "url": "https://sports.yahoo.com/articles/laker-select-derrin-horton-public-220620300.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 362,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791073688.5551872
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791510898.5365582
-   }
-  },
-  {
    "ts": 1790895755.8594708,
    "fb_id": "122187293624935957",
    "ig_id": "",
@@ -12604,6 +12560,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 830
+  },
+  {
+   "ts": 1792770078.0675719,
+   "fb_id": "736504959542737_122190856964935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "NBA GM: Repeater Tax Bigger Hurdle For Contenders Than Apron",
+   "url": "https://basketball.realgm.com/wiretap/287850/NBA-GM-Repeater-Tax-Bigger-Hurdle-For-Contenders-Than-Apron",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 892
+  },
+  {
+   "ts": 1792770093.1264188,
+   "fb_id": "736504959542737_122190857054935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "NBA opening week intel: New trend in contract talks; OKC's pricey future",
+   "url": "https://www.espn.com/nba/story/_/id/50241622/contract-talks-thunder-payroll-opening-week",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 381
   }
  ]
 }
