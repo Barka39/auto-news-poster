@@ -1,31 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790915567.396113,
-   "fb_id": "828746100324372_122149076805084055",
-   "ig_id": "",
-   "kind": "page_confession",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "udesh",
-   "source": "Үдшийн шивнээ",
-   "title": "Түгшүүртэй шөнийн гашуун амт",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 1012,
-   "page": "udesh",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1791160735.8810098
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1791596194.0644813
-   }
-  },
-  {
    "ts": 1790917350.6535065,
    "fb_id": "736504959542737_122187336458935957",
    "ig_id": "",
@@ -12571,6 +12546,22 @@
    "scheduled_for": 1792904400,
    "slot": "2026-10-25 13:00",
    "chars": 432
+  },
+  {
+   "ts": 1792786281.5173798,
+   "fb_id": "122190882806935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Knicks call plan to use fake championship rings as employee phishing test 'an unfortunate mistake,' will issue rings to ",
+   "url": "https://sports.yahoo.com/nba/article/knicks-call-plan-to-use-fake-championship-rings-as-employee-phishing-test-an-unfortunate-mistake-will-issue-rings-to-employees-195704256.html",
+   "scheduled_for": 1792915200,
+   "slot": "2026-10-25 16:00",
+   "chars": 382
   }
  ]
 }
