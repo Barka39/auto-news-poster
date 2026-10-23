@@ -1,47 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790895755.8594708,
-   "fb_id": "122187293624935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Bradley Beal makes stunning comments about why he chose ailing Clippers",
-   "url": "https://sports.yahoo.com/articles/bradley-beal-makes-stunning-comments-183756461.html",
-   "scheduled_for": 1791025200,
-   "slot": "2026-10-03 19:00",
-   "chars": 430
-  },
-  {
-   "ts": 1790899316.0787163,
-   "fb_id": "846498595210295_122146902849086375",
-   "ig_id": "",
-   "kind": "page_zurhai",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "suns",
-   "source": "Сүнсний код",
-   "title": "Өнөөдрийн зурхай 2026.10.02",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 1570,
-   "page": "suns",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1791160734.778761
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1791510898.8958604
-   }
-  },
-  {
    "ts": 1790907097.5357983,
    "fb_id": "736504959542737_122187317924935957",
    "ig_id": "",
@@ -12592,6 +12551,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 381
+  },
+  {
+   "ts": 1792772476.4242227,
+   "fb_id": "122190861230935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Knicks Bulletin: ‘You’re a freaking perennial All-Star, so just make the bucket’",
+   "url": "https://sports.yahoo.com/articles/knicks-bulletin-freaking-perennial-star-134201412.html",
+   "scheduled_for": 1792886400,
+   "slot": "2026-10-25 08:00",
+   "chars": 350
+  },
+  {
+   "ts": 1792772491.891658,
+   "fb_id": "122190861368935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "How Jaylen Brown remedies a decade-long issue for Sixers",
+   "url": "https://sports.yahoo.com/articles/jaylen-brown-remedies-decade-long-130339854.html",
+   "scheduled_for": 1792897200,
+   "slot": "2026-10-25 11:00",
+   "chars": 427
   }
  ]
 }
