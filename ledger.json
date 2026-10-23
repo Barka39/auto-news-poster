@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790936724.403391,
-   "fb_id": "736504959542737_122187370226935957",
-   "ig_id": "",
-   "kind": "digest",
-   "card": "",
-   "video": false,
-   "score": 0,
-   "category": "",
-   "source": "",
-   "title": "",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 252,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791160737.6448493
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791596195.6925075
-   }
-  },
-  {
    "ts": 1790937702.0260868,
    "fb_id": "736504959542737_122187372134935957",
    "ig_id": "",
@@ -12529,6 +12501,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 356
+  },
+  {
+   "ts": 1792794691.8867817,
+   "fb_id": "736504959542737_122190893744935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "quote",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "76ers' LeBron James after President Trump's anthem criticism: 'Slow news day'",
+   "url": "https://www.espn.com/nba/story/_/id/50251603/president-trump-criticizes-lebron-james-anthem-actions",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 283
   }
  ]
 }
