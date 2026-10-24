@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791067292.3129158,
-   "fb_id": "736504959542737_122187666542935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Knicks' Mike Brown challenges Mo Diawara to 'take a step forward' in 2026-27",
-   "url": "https://sports.yahoo.com/articles/knicks-mike-brown-challenges-mo-185624959.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 357,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791162640.5036466
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791679571.5796573
-   }
-  },
-  {
    "ts": 1791070877.2927856,
    "fb_id": "122187672002935957",
    "ig_id": "",
@@ -12405,6 +12377,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 293
+  },
+  {
+   "ts": 1792869204.8395765,
+   "fb_id": "736504959542737_122191033148935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Warriors rookie Yaxel Lendeborg doubles down on jawing with Luka Dončić: 'He's not Michael Jordan'",
+   "url": "https://sports.yahoo.com/nba/article/warriors-rookie-yaxel-lendeborg-doubles-down-on-jawing-with-luka-doncic-hes-not-michael-jordan-190346171.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 537
   }
  ]
 }
