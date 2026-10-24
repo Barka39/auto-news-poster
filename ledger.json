@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790967088.6523423,
-   "fb_id": "736504959542737_122187472934935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "ESPN",
-   "title": "Miami Heat announce 'A Night in Vice City' theme ahead of GTA VI release",
-   "url": "https://www.espn.com/nba/story/_/id/50085674/miami-heat-night-vice-city-game",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 479,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791160742.5581884
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791596201.435693
-   }
-  },
-  {
    "ts": 1790970083.722208,
    "fb_id": "736504959542737_122187477920935957",
    "ig_id": "",
@@ -12602,6 +12574,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 372
+  },
+  {
+   "ts": 1792816304.9788942,
+   "fb_id": "828746100324372_122151895701084055",
+   "ig_id": "",
+   "kind": "page_confession",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "ХОЁР ЕРТӨНЦИЙН ДУНДАХ СОНГОЛТ",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1033,
+   "page": "udesh"
   }
  ]
 }
