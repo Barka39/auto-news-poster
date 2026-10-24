@@ -1,31 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791088335.379124,
-   "fb_id": "828746100324372_122149367061084055",
-   "ig_id": "",
-   "kind": "page_confession",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "udesh",
-   "source": "Үдшийн шивнээ",
-   "title": "Цагаан даашинзны цаана нуугдсан эргэлзээ",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 923,
-   "page": "udesh",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1791336133.1830502
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1791767253.942199
-   }
-  },
-  {
    "ts": 1791090090.8556485,
    "fb_id": "846498595210295_122147185089086375",
    "ig_id": "",
@@ -12372,6 +12347,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 330
+  },
+  {
+   "ts": 1792880476.225189,
+   "fb_id": "736504959542737_122191048616935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Yves Missi Out Indefinitely Due To Bone Bruise In Left Knee",
+   "url": "https://basketball.realgm.com/wiretap/287876/Yves-Missi-Out-Indefinitely-Due-To-Bone-Bruise-In-Left-Knee",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 557
   }
  ]
 }
