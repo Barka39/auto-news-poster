@@ -1,31 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791032499.2513533,
-   "fb_id": "846498595210295_122147100819086375",
-   "ig_id": "",
-   "kind": "page_numerology",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "suns",
-   "source": "Сүнсний код",
-   "title": "Өдрийн тоо 5 · 2026.10.03",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 1257,
-   "page": "suns",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1791160746.6691277
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1791679568.52047
-   }
-  },
-  {
    "ts": 1791034318.2067983,
    "fb_id": "828746100324372_122149280127084055",
    "ig_id": "",
@@ -12471,6 +12446,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 783
+  },
+  {
+   "ts": 1792851431.5445635,
+   "fb_id": "736504959542737_122191004186935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Ex-NBA player Malik Beasley negotiating plea deal in gambling case",
+   "url": "https://www.espn.com/nba/story/_/id/50265720/ex-nba-player-malik-beasley-negotiating-plea-deal-gambling-case",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 365
   }
  ]
 }
