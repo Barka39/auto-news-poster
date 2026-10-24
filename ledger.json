@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791051071.7560852,
-   "fb_id": "122187637010935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "Knicks Prioritizing Center For Final Roster Spot",
-   "url": "https://basketball.realgm.com/wiretap/287508/Knicks-Prioritizing-Center-For-Final-Roster-Spot",
-   "scheduled_for": 1791169200,
-   "slot": "2026-10-05 11:00",
-   "chars": 390
-  },
-  {
    "ts": 1791051082.5409214,
    "fb_id": "122187637064935957",
    "ig_id": "",
@@ -12429,6 +12413,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 907
+  },
+  {
+   "ts": 1792856506.3634605,
+   "fb_id": "736504959542737_122191016822935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "CBS Sports NBA",
+   "title": "NBA closing time: Amen Thompson erases Victor Wembanyama, Jayson Tatum daggers Knicks",
+   "url": "https://www.cbssports.com/nba/news/nba-closing-time-amen-thompson-victor-wembanyama-jayson-tatum-knicks/",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 683
   }
  ]
 }
