@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1790976107.5038648,
-   "fb_id": "736504959542737_122187488636935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "Angel Reese Wins WNBA Defensive Player of the Year Award",
-   "url": "https://basketball.realgm.com/wiretap/287490/Angel-Reese-Wins-WNBA-Defensive-Player-of-the-Year-Award",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 812,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791160744.152759
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791596203.1366413
-   }
-  },
-  {
    "ts": 1790982687.9751987,
    "fb_id": "122187498134935957",
    "ig_id": "",
@@ -12556,6 +12528,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 367
+  },
+  {
+   "ts": 1792831658.7832057,
+   "fb_id": "736504959542737_122190962396935957",
+   "ig_id": "",
+   "kind": "digest",
+   "card": "",
+   "video": false,
+   "score": 0,
+   "category": "",
+   "source": "",
+   "title": "",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 237
   }
  ]
 }
