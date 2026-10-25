@@ -1,31 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791120705.0261748,
-   "fb_id": "828746100324372_122149413321084055",
-   "ig_id": "",
-   "kind": "page_story",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "udesh",
-   "source": "Үдшийн шивнээ",
-   "title": "Хууль бус шөнийн сүүдэр — Төгсгөл",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 2064,
-   "page": "udesh",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1791336135.0461254
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1791767255.6267304
-   }
-  },
-  {
    "ts": 1791125479.7769341,
    "fb_id": "736504959542737_122187782198935957",
    "ig_id": "",
@@ -12564,6 +12539,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 546
+  },
+  {
+   "ts": 1792888877.5520437,
+   "fb_id": "736504959542737_122191058738935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Bucks wanted two second round picks from Lakers in Jericho Sims trade",
+   "url": "https://sports.yahoo.com/articles/bucks-wanted-two-second-round-212420310.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 290
   }
  ]
 }
