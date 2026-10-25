@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791284977.2100863,
-   "fb_id": "736504959542737_122188099334935957",
-   "ig_id": "",
-   "kind": "digest",
-   "card": "",
-   "video": false,
-   "score": 0,
-   "category": "",
-   "source": "",
-   "title": "",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 287,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791510900.4928038
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791939744.793499
-   }
-  },
-  {
    "ts": 1791291710.5947304,
    "fb_id": "846498595210295_122147476761086375",
    "ig_id": "",
@@ -12403,6 +12375,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 204
+  },
+  {
+   "ts": 1792968687.3673055,
+   "fb_id": "736504959542737_122191196858935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "76ers deny Joel Embiid's push to play in back-to-back games, rest him due to injury management vs. Pistons",
+   "url": "https://sports.yahoo.com/nba/article/76ers-deny-joel-embiids-push-to-play-in-back-to-back-games-rest-him-due-to-injury-management-vs-pistons-224601631.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 358
   }
  ]
 }
