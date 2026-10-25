@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791242488.563502,
-   "fb_id": "122188015634935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Lakers rookie hazing confirmed as mom reveals In-N-Out stunt as airplane antics go viral",
-   "url": "https://sports.yahoo.com/articles/lakers-rookie-hazing-confirmed-mom-183015622.html",
-   "scheduled_for": 1791370800,
-   "slot": "2026-10-07 19:00",
-   "chars": 386
-  },
-  {
    "ts": 1791244896.8555064,
    "fb_id": "846498595210295_122147407833086375",
    "ig_id": "",
@@ -12442,6 +12426,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 263
+  },
+  {
+   "ts": 1792948275.5104163,
+   "fb_id": "122191168238935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "CBS Sports NBA",
+   "title": "Nikola Jokić says Nuggets fans who booed during comeback win over Pelicans are 'not welcome anymore'",
+   "url": "https://www.cbssports.com/nba/news/nikola-jokic-nuggets-fans-boos-pelicans/",
+   "scheduled_for": 1793059200,
+   "slot": "2026-10-27 08:00",
+   "chars": 839
   }
  ]
 }
