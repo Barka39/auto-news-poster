@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791235203.3798094,
-   "fb_id": "122188003676935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "ESPN",
-   "title": "James, Embiid, Maxey sit out 76ers' preseason opener vs. Knicks",
-   "url": "https://www.espn.com/nba/story/_/id/50111838/james-embiid-maxey-sit-76ers-preseason-opener-vs-knicks",
-   "scheduled_for": 1791360000,
-   "slot": "2026-10-07 16:00",
-   "chars": 279
-  },
-  {
    "ts": 1791237504.4989872,
    "fb_id": "736504959542737_122188006868935957",
    "ig_id": "",
@@ -12465,6 +12449,23 @@
    "slot": "",
    "chars": 1298,
    "page": "suns"
+  },
+  {
+   "ts": 1792935177.0862644,
+   "fb_id": "828746100324372_122152028037084055",
+   "ig_id": "",
+   "kind": "page_story",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Хуучин дурсамжийн сүүдэр — 3-р хэсэг",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1844,
+   "page": "udesh"
   }
  ]
 }
