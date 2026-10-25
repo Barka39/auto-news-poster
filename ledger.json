@@ -1,31 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791207756.129294,
-   "fb_id": "828746100324372_122149546785084055",
-   "ig_id": "",
-   "kind": "page_story",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "udesh",
-   "source": "Үдшийн шивнээ",
-   "title": "Хүлээлт, хайр, эсвэл үхэл — 1-р хэсэг",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 1558,
-   "page": "udesh",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1791423737.2023783
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1791860184.2750185
-   }
-  },
-  {
    "ts": 1791219088.8742125,
    "fb_id": "122187964454935957",
    "ig_id": "",
@@ -12473,6 +12448,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 355
+  },
+  {
+   "ts": 1792927887.9732091,
+   "fb_id": "736504959542737_122191137980935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Cooper Flagg Injury Update",
+   "url": "https://sports.yahoo.com/articles/cooper-flagg-injury-110800414.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 259
   }
  ]
 }
