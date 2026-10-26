@@ -1,31 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791466622.572655,
-   "fb_id": "828746100324372_122149966491084055",
-   "ig_id": "",
-   "kind": "page_story",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "udesh",
-   "source": "Үдшийн шивнээ",
-   "title": "Хүлээлт, хайр, эсвэл үхэл — 3-р хэсэг",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 1739,
-   "page": "udesh",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1791596206.20746
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1792109503.855753
-   }
-  },
-  {
    "ts": 1791469918.284423,
    "fb_id": "736504959542737_122188448492935957",
    "ig_id": "",
@@ -12700,6 +12675,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 674
+  },
+  {
+   "ts": 1793034463.318225,
+   "fb_id": "122191324574935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "U.S. senators call on NBA to reevaluate Rwanda partnership",
+   "url": "https://www.espn.com/nba/story/_/id/50288053/us-senators-call-nba-reevaluate-rwanda-partnership",
+   "scheduled_for": 1793145600,
+   "slot": "2026-10-28 08:00",
+   "chars": 461
   }
  ]
 }
