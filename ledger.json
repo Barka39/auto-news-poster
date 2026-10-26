@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791492686.8378649,
-   "fb_id": "122188491626935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "quote",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "ESPN",
-   "title": "Tyrese Maxey, Jaylen Brown, VJ Edgecombe make 'Abbott Elementary' cameos",
-   "url": "https://www.espn.com/nba/story/_/id/50134809/abbott-elementary-season-six-premiere-sixers-cameo",
-   "scheduled_for": 1791608400,
-   "slot": "2026-10-10 13:00",
-   "chars": 325
-  },
-  {
    "ts": 1791497480.2886355,
    "fb_id": "122188500668935957",
    "ig_id": "",
@@ -12679,6 +12663,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 526
+  },
+  {
+   "ts": 1793049685.5258355,
+   "fb_id": "122191352642935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Ty Jerome, Tyrese Maxey Named NBA Players Of Week 1",
+   "url": "https://basketball.realgm.com/wiretap/287904/Ty-Jerome-Tyrese-Maxey-Named-NBA-Players-Of-Week-1",
+   "scheduled_for": 1793174400,
+   "slot": "2026-10-28 16:00",
+   "chars": 412
   }
  ]
 }
