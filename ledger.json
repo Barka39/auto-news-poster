@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791372332.387246,
-   "fb_id": "736504959542737_122188259630935957",
-   "ig_id": "",
-   "kind": "digest",
-   "card": "",
-   "video": false,
-   "score": 0,
-   "category": "",
-   "source": "",
-   "title": "",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 232,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791510902.4405012
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792023763.6395795
-   }
-  },
-  {
    "ts": 1791375687.2524714,
    "fb_id": "122188266740935957",
    "ig_id": "",
@@ -12798,6 +12770,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 260
+  },
+  {
+   "ts": 1792989092.9811814,
+   "fb_id": "828746100324372_122152081335084055",
+   "ig_id": "",
+   "kind": "page_confession",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "ХУРИМЫН ӨМНӨХ ГАЛТ ШУУРГА",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 940,
+   "page": "udesh"
   }
  ]
 }
