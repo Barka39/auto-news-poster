@@ -1,31 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791418378.0693197,
-   "fb_id": "846498595210295_122147659083086375",
-   "ig_id": "",
-   "kind": "page_zurhai",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "suns",
-   "source": "Сүнсний код",
-   "title": "Өнөөдрийн зурхай 2026.10.08",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 1579,
-   "page": "suns",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1791510903.7419329
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1792023765.1387298
-   }
-  },
-  {
    "ts": 1791423093.6518114,
    "fb_id": "122188356722935957",
    "ig_id": "",
@@ -12758,6 +12733,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 375
+  },
+  {
+   "ts": 1793018273.3787951,
+   "fb_id": "736504959542737_122191289414935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Hate it or love it, this has always been Jaylen Brown",
+   "url": "https://sports.yahoo.com/articles/hate-love-always-jaylen-brown-100000808.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 398
   }
  ]
 }
