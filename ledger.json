@@ -1,38 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791388904.1131406,
-   "fb_id": "122188292708935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "LeBron James’ helicopter trips are sketchy benefits outside of his Sixers contract",
-   "url": "https://sports.yahoo.com/articles/lebron-james-helicopter-trips-sketchy-143258533.html",
-   "scheduled_for": 1791435600,
-   "slot": "2026-10-08 13:00",
-   "chars": 655
-  },
-  {
-   "ts": 1791388916.8878837,
-   "fb_id": "122188292768935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Designer behind Kobe Bryant's iconic title jacket still shapes NBA fashion",
-   "url": "https://sports.yahoo.com/articles/designer-behind-kobe-bryants-iconic-154117450.html",
-   "scheduled_for": 1791446400,
-   "slot": "2026-10-08 16:00",
-   "chars": 332
-  },
-  {
    "ts": 1791390203.735047,
    "fb_id": "122188295486935957",
    "ig_id": "",
@@ -12770,6 +12738,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 494
+  },
+  {
+   "ts": 1792996872.577309,
+   "fb_id": "736504959542737_122191254188935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Pistons vs. Sixers final score: Detroit delivers total team effort in win over Philly",
+   "url": "https://sports.yahoo.com/articles/pistons-vs-sixers-final-score-023238384.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 465
+  },
+  {
+   "ts": 1792996884.9238307,
+   "fb_id": "736504959542737_122191254284935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Timberwolves 117, Raptors 94: The Sky is the Limit",
+   "url": "https://sports.yahoo.com/articles/timberwolves-117-raptors-94-sky-034041486.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 252
   }
  ]
 }
