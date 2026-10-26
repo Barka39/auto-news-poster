@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791423093.6518114,
-   "fb_id": "122188356722935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 9.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Tyrese Haliburton returns from Achilles injury in preseason game in Ames, where he bought out the Iowa State student sec",
-   "url": "https://sports.yahoo.com/nba/article/tyrese-haliburton-returns-from-achilles-injury-in-preseason-game-in-ames-where-he-bought-out-the-iowa-state-student-section-012220653.html",
-   "scheduled_for": 1791552600,
-   "slot": "2026-10-09 21:30",
-   "chars": 343
-  },
-  {
    "ts": 1791424289.2986279,
    "fb_id": "736504959542737_122188359506935957",
    "ig_id": "",
@@ -12749,6 +12733,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 398
+  },
+  {
+   "ts": 1793019892.4226978,
+   "fb_id": "846498595210295_122149673151086375",
+   "ig_id": "",
+   "kind": "page_numerology",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өдрийн тоо 1 · 2026.10.26",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1182,
+   "page": "suns"
   }
  ]
 }
