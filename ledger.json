@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791553897.577628,
-   "fb_id": "736504959542737_122188627748935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "quote",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "ESPN",
-   "title": "Knicks tabling Karl-Anthony Towns, Josh Hart contract talks",
-   "url": "https://www.espn.com/nba/story/_/id/50140136/knicks-tabling-karl-anthony-towns-josh-hart-contract-talks",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 440,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791679579.768671
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792196160.4698246
-   }
-  },
-  {
    "ts": 1791555101.2755463,
    "fb_id": "736504959542737_122188630220935957",
    "ig_id": "",
@@ -12769,6 +12741,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 259
+  },
+  {
+   "ts": 1793092273.469409,
+   "fb_id": "736504959542737_122191417064935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Flawless Stephen Curry finally gives Warriors a win after Dubs’ ugly start to season",
+   "url": "https://sports.yahoo.com/articles/flawless-stephen-curry-finally-gives-045202453.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 484
   }
  ]
 }
