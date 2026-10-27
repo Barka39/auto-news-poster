@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791568296.6791663,
-   "fb_id": "122188655384935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "J.R. Smith barred from contacting woman after assault accusations",
-   "url": "https://sports.yahoo.com/articles/j-r-smith-barred-contacting-132714264.html",
-   "scheduled_for": 1791687600,
-   "slot": "2026-10-11 11:00",
-   "chars": 335
-  },
-  {
    "ts": 1791573677.4520686,
    "fb_id": "122188667348935957",
    "ig_id": "",
@@ -12733,6 +12717,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 499
+  },
+  {
+   "ts": 1793108680.898064,
+   "fb_id": "846498595210295_122149789881086375",
+   "ig_id": "",
+   "kind": "page_numerology",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өдрийн тоо 2 · 2026.10.27",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 714,
+   "page": "suns"
   }
  ]
 }
