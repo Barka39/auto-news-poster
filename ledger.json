@@ -1,56 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791550914.2099752,
-   "fb_id": "846498595210295_122147843337086375",
-   "ig_id": "",
-   "kind": "page_numerology",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "suns",
-   "source": "Сүнсний код",
-   "title": "Өдрийн тоо 2 · 2026.10.09",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 1265,
-   "page": "suns",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1791679578.5093956
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1792196159.1920106
-   }
-  },
-  {
-   "ts": 1791552715.8884919,
-   "fb_id": "828746100324372_122150085867084055",
-   "ig_id": "",
-   "kind": "page_story",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "udesh",
-   "source": "Үдшийн шивнээ",
-   "title": "Хүлээлт, хайр, эсвэл үхэл — Төгсгөл",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 1901,
-   "page": "udesh",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1791679578.9732852
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1792196159.8684576
-   }
-  },
-  {
    "ts": 1791553897.577628,
    "fb_id": "736504959542737_122188627748935957",
    "ig_id": "",
@@ -12787,6 +12737,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 477
+  },
+  {
+   "ts": 1793083281.592869,
+   "fb_id": "736504959542737_122191402808935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Yaxel Lendeborg has 31 points, 12 rebounds as Warriors blow out Nuggets on road",
+   "url": "https://www.espn.com/nba/story/_/id/50294832/yaxel-lendeborg-31-points-12-rebounds-warriors-blow-nuggets-first-win",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 445
+  },
+  {
+   "ts": 1793083293.9048414,
+   "fb_id": "736504959542737_122191402892935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Game Recap: Booker goes AWOL as Suns fall 125-114 to Thunder",
+   "url": "https://sports.yahoo.com/articles/game-recap-booker-goes-awol-033430769.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 259
   }
  ]
 }
