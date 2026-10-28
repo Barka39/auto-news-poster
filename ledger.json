@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791592894.2726843,
-   "fb_id": "736504959542737_122188704026935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Kings owner’s ‘prolonged roast’ of team backfires before season",
-   "url": "https://sports.yahoo.com/articles/kings-owner-prolonged-roast-team-202456485.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 473,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791679584.0362577
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792281253.7050982
-   }
-  },
-  {
    "ts": 1791604904.673553,
    "fb_id": "122188726682935957",
    "ig_id": "",
@@ -12908,6 +12880,23 @@
    "slot": "",
    "chars": 849,
    "page": "suns"
+  },
+  {
+   "ts": 1793196147.260272,
+   "fb_id": "828746100324372_122152380591084055",
+   "ig_id": "",
+   "kind": "page_story",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Ойрын нарны гүүр — 1-р хэсэг",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1590,
+   "page": "udesh"
   }
  ]
 }
