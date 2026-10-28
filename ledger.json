@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791585687.7871766,
-   "fb_id": "736504959542737_122188689620935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Breaking down the NBA’s second apron — and the Knicks headache that comes with it",
-   "url": "https://sports.yahoo.com/articles/breaking-down-nba-second-apron-181918728.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 590,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791679581.917424
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792196162.9591434
-   }
-  },
-  {
    "ts": 1791587484.3552144,
    "fb_id": "122188691288935957",
    "ig_id": "",
@@ -12723,6 +12695,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 384
+  },
+  {
+   "ts": 1793146883.8612688,
+   "fb_id": "846498595210295_122149850835086375",
+   "ig_id": "",
+   "kind": "page_zurhai",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өнөөдрийн зурхай 2026.10.28",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1269,
+   "page": "suns"
   }
  ]
 }
