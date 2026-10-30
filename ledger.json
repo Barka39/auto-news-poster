@@ -9214,6 +9214,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1793064095.0601993
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324802.5846953
    }
   },
   {
@@ -9236,6 +9242,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1793064095.4077468
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324802.803708
    }
   },
   {
@@ -9258,6 +9270,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1793064095.7770104
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324803.0569394
    }
   },
   {
@@ -9312,6 +9330,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1793149503.4439223
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324803.3762662
    }
   },
   {
@@ -9334,6 +9358,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1793149504.207488
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324803.6316311
    }
   },
   {
@@ -9356,6 +9386,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1793149504.9333196
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324803.991993
    }
   },
   {
@@ -9378,6 +9414,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1793149505.5049195
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324804.3603764
    }
   },
   {
@@ -9400,6 +9442,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1793149506.0742493
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324804.6085398
    }
   },
   {
@@ -9422,6 +9470,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1793149506.683814
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324804.9163933
    }
   },
   {
@@ -9444,6 +9498,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1793149507.2197042
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324805.1996515
    }
   },
   {
@@ -9465,6 +9525,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1793149507.6861398
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1793324805.4979181
    }
   },
   {
@@ -9487,6 +9551,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1793149508.4865816
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324805.7103784
    }
   },
   {
@@ -9508,6 +9578,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1793149508.8931003
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1793324805.9141479
    }
   },
   {
@@ -9530,6 +9604,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1793149509.284937
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324806.2331293
    }
   },
   {
@@ -9552,6 +9632,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1793149509.9591658
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324806.516257
    }
   },
   {
@@ -9568,7 +9654,13 @@
    "url": "https://sports.yahoo.com/articles/opening-night-luka-doncic-walker-060044069.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 333
+   "chars": 333,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324806.7831752
+   }
   },
   {
    "ts": 1792651401.4680138,
@@ -9584,7 +9676,13 @@
    "url": "https://basketball.realgm.com/wiretap/287823/Angel-Reese-Finishes-With-Double-Double-As-Dream-Take-2-1-WNBA-Finals-Lead",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 635
+   "chars": 635,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324807.0640752
+   }
   },
   {
    "ts": 1792652047.0521858,
@@ -9600,7 +9698,13 @@
    "url": "https://sports.yahoo.com/articles/game-recap-suns-suffer-124-043309149.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 395
+   "chars": 395,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324807.3455694
+   }
   },
   {
    "ts": 1792652497.0169868,
@@ -9616,7 +9720,13 @@
    "url": "https://sports.yahoo.com/articles/nba-final-score-wolves-131-044704889.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 289
+   "chars": 289,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324807.6479094
+   }
   },
   {
    "ts": 1792653083.7172086,
@@ -9632,7 +9742,13 @@
    "url": "https://basketball.realgm.com/wiretap/287803/Chet-Holmgren-Rebounds-From-Game-7-Struggles-Shakes-Off-Flagrant-In-Win-Over-Spurs",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 875
+   "chars": 875,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324807.973667
+   }
   },
   {
    "ts": 1792662229.7937946,
@@ -9648,7 +9764,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 950
+   "chars": 950,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324808.2418845
+   }
   },
   {
    "ts": 1792662716.5569975,
@@ -9680,7 +9802,13 @@
    "url": "https://basketball.realgm.com/wiretap/287808/Victor-Wembanyama-After-1-For-13-Opener-I-Might-Be-Overthinking-It",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 790
+   "chars": 790,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324808.5735993
+   }
   },
   {
    "ts": 1792662744.2717197,
@@ -9696,7 +9824,13 @@
    "url": "https://www.cbssports.com/betting/news/timberwolves-vs-heat-nba-odds-can-giannis-antetokounmpo-outduel-lamelo-ball-and-be-a-winner-in-miami-debut/",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 939
+   "chars": 939,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324808.9302547
+   }
   },
   {
    "ts": 1792665965.940573,
@@ -9712,7 +9846,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50247063/luka-doncic-embraces-being-new-face-lakers",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 447
+   "chars": 447,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324809.2594435
+   }
   },
   {
    "ts": 1792665980.1257832,
@@ -9728,7 +9868,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50247214/clippers-open-season-owner-steve-ballmer-rout-kings",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 264
+   "chars": 264,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324809.568035
+   }
   },
   {
    "ts": 1792666275.1726127,
@@ -9744,7 +9890,13 @@
    "url": "https://sports.yahoo.com/articles/walker-kessler-historic-lakers-debut-063332337.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 402
+   "chars": 402,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324809.8331473
+   }
   },
   {
    "ts": 1792666907.6034217,
@@ -9760,7 +9912,13 @@
    "url": "https://sports.yahoo.com/articles/yaxel-lendeborg-rips-luka-don-104642854.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 528
+   "chars": 528,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324810.1517978
+   }
   },
   {
    "ts": 1792668822.9254246,
@@ -9776,7 +9934,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50239219/shai-gilgeous-alexander-sam-presti-bond-okc-thunder",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 378
+   "chars": 378,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324810.4056418
+   }
   },
   {
    "ts": 1792671736.6773703,
@@ -9792,7 +9956,13 @@
    "url": "https://sports.yahoo.com/articles/swanson-post-kawhi-leonard-era-120000952.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 466
+   "chars": 466,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324810.7121625
+   }
   },
   {
    "ts": 1792671750.2008407,
@@ -9808,7 +9978,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50246805/warriors-lakers-lebron-james-luka-doncic",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 422
+   "chars": 422,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324811.0268989
+   }
   },
   {
    "ts": 1792672497.972296,
@@ -9824,7 +10000,13 @@
    "url": "https://basketball.realgm.com/wiretap/287809/Draymond-Green-Plans-To-Play-Next-Season-Even-If-Not-With-Warriors",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 758
+   "chars": 758,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324811.3352995
+   }
   },
   {
    "ts": 1792674102.9459116,
@@ -9840,7 +10022,13 @@
    "url": "https://sports.yahoo.com/articles/pacers-tyrese-haliburton-makes-emotional-124117781.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 417
+   "chars": 417,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324811.7642696
+   }
   },
   {
    "ts": 1792674117.4765406,
@@ -9856,7 +10044,13 @@
    "url": "https://www.cbssports.com/nba/news/kristaps-porzingis-trade-destinations-rumors-warriors/",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 881
+   "chars": 881,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324812.0034094
+   }
   },
   {
    "ts": 1792674131.393365,
@@ -9873,7 +10067,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1366,
-   "page": "suns"
+   "page": "suns",
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1793324812.23931
+   }
   },
   {
    "ts": 1792674697.9984493,
@@ -9889,7 +10087,13 @@
    "url": "https://sports.yahoo.com/articles/davis-offense-coulibaly-defense-wizards-110000811.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 349
+   "chars": 349,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324812.5205436
+   }
   },
   {
    "ts": 1792676772.8098319,
@@ -9906,7 +10110,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1417,
-   "page": "udesh"
+   "page": "udesh",
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1793324812.726916
+   }
   },
   {
    "ts": 1792683790.5062811,
@@ -9922,7 +10130,13 @@
    "url": "https://sports.yahoo.com/articles/bipolarity-andre-drummond-full-display-131435194.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 613
+   "chars": 613,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324812.9631786
+   }
   },
   {
    "ts": 1792684265.3848224,
@@ -9938,7 +10152,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 246
+   "chars": 246,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324813.2256083
+   }
   },
   {
    "ts": 1792686096.378453,
@@ -10002,7 +10222,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50250900/lamelo-ball-really-did-travel-en-route-3-point-attempt-nba-refs-confirm",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 453
+   "chars": 453,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324813.544383
+   }
   },
   {
    "ts": 1792696853.0109913,
@@ -10018,7 +10244,13 @@
    "url": "https://sports.yahoo.com/articles/mitchell-robinson-had-strong-reaction-160645116.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 516
+   "chars": 516,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793324813.7996445
+   }
   },
   {
    "ts": 1792696867.025485,
