@@ -10104,7 +10104,13 @@
    "url": "https://sports.yahoo.com/nba/article/knicks-fans-name-first-born-son-knickson-fyve-in-honor-of-teams-nba-title-run-191415663.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 270
+   "chars": 270,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410099.08917
+   }
   },
   {
    "ts": 1792699089.1898546,
@@ -10120,7 +10126,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50251603/president-trump-criticizes-lebron-james-anthem-actions",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 340
+   "chars": 340,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410099.412579
+   }
   },
   {
    "ts": 1792701601.220283,
@@ -10152,7 +10164,13 @@
    "url": "https://sports.yahoo.com/articles/devin-booker-attempts-zero-threes-190000260.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 274
+   "chars": 274,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410099.727478
+   }
   },
   {
    "ts": 1792708541.6572611,
@@ -10168,7 +10186,13 @@
    "url": "https://sports.yahoo.com/articles/jj-redick-admits-losing-lot-181010859.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 365
+   "chars": 365,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410100.0009139
+   }
   },
   {
    "ts": 1792710604.888328,
@@ -10200,7 +10224,13 @@
    "url": "https://sports.yahoo.com/nba/article/anthony-davis-praises-wizards-crowd-in-home-opener-jokes-that-first-game-last-season-felt-like-dress-like-a-seat-night-224058826.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 427
+   "chars": 427,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410100.2774794
+   }
   },
   {
    "ts": 1792710633.4648004,
@@ -10216,7 +10246,13 @@
    "url": "https://www.cbssports.com/nba/news/myron-gardner-anthony-edwards-trash-talk-heat-timberwolves/",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 842
+   "chars": 842,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410100.547563
+   }
   },
   {
    "ts": 1792713586.008251,
@@ -10232,7 +10268,13 @@
    "url": "https://sports.yahoo.com/articles/james-harden-booed-return-philadelphia-234324065.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 434
+   "chars": 434,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410100.8392384
+   }
   },
   {
    "ts": 1792715601.0310693,
@@ -10248,7 +10290,13 @@
    "url": "https://www.espn.com/soccer/story/_/id/50253148/cavs-coach-atkinson-depressed-lebron-deal-fell-through",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 306
+   "chars": 306,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410101.1272047
+   }
   },
   {
    "ts": 1792715614.6784673,
@@ -10265,7 +10313,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1826,
-   "page": "suns"
+   "page": "suns",
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1793410101.6106226
+   }
   },
   {
    "ts": 1792719350.4738908,
@@ -10297,7 +10349,13 @@
    "url": "https://www.cbssports.com/nba/news/pacers-tyrese-haliburton-emotional-achilles-injury/",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 983
+   "chars": 983,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410101.8790088
+   }
   },
   {
    "ts": 1792720295.6390367,
@@ -10313,7 +10371,13 @@
    "url": "https://sports.yahoo.com/articles/luka-era-lakers-showed-vs-231113223.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 459
+   "chars": 459,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410102.1578484
+   }
   },
   {
    "ts": 1792722747.6921873,
@@ -10329,7 +10393,13 @@
    "url": "https://basketball.realgm.com/wiretap/287836/76ers-Knicks-Sets-Opening-Night-Record-With-771M-Viewers",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 698
+   "chars": 698,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410102.6397917
+   }
   },
   {
    "ts": 1792729895.4112506,
@@ -10345,7 +10415,13 @@
    "url": "https://sports.yahoo.com/articles/sixers-storm-back-lifeless-first-015456396.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 409
+   "chars": 409,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410102.920413
+   }
   },
   {
    "ts": 1792729916.1648014,
@@ -10362,7 +10438,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 962,
-   "page": "udesh"
+   "page": "udesh",
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1793410103.2102432
+   }
   },
   {
    "ts": 1792730487.0104601,
@@ -10378,7 +10458,13 @@
    "url": "https://sports.yahoo.com/articles/shai-gilgeous-alexanders-historic-streak-042119560.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 355
+   "chars": 355,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410103.498513
+   }
   },
   {
    "ts": 1792733145.0426805,
@@ -10395,7 +10481,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1076,
-   "page": "suns"
+   "page": "suns",
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1793410103.7525523
+   }
   },
   {
    "ts": 1792736472.3305745,
@@ -10411,7 +10501,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50255686/maxey-leads-charge-sixers-rally-29-stun-cavs",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 441
+   "chars": 441,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410104.0604823
+   }
   },
   {
    "ts": 1792745476.2827184,
@@ -10427,7 +10523,13 @@
    "url": "https://sports.yahoo.com/articles/boos-roar-sixers-philadelphia-night-043500258.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 545
+   "chars": 545,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410104.3196282
+   }
   },
   {
    "ts": 1792746850.1567376,
@@ -10443,7 +10545,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 245
+   "chars": 245,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410104.5882218
+   }
   },
   {
    "ts": 1792750635.3445396,
@@ -10459,7 +10567,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 390
+   "chars": 390,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410104.8140757
+   }
   },
   {
    "ts": 1792753876.5581324,
@@ -10475,7 +10589,13 @@
    "url": "https://sports.yahoo.com/articles/knicks-finally-got-rings-coaches-085720696.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 307
+   "chars": 307,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410105.098152
+   }
   },
   {
    "ts": 1792754473.4538167,
@@ -10491,7 +10611,13 @@
    "url": "https://sports.yahoo.com/articles/lakers-luka-doncic-went-wonder-110000798.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 465
+   "chars": 465,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410105.4368207
+   }
   },
   {
    "ts": 1792760872.2816117,
@@ -10508,7 +10634,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1354,
-   "page": "suns"
+   "page": "suns",
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1793410105.7029977
+   }
   },
   {
    "ts": 1792762828.1317196,
@@ -10524,7 +10654,13 @@
    "url": "https://basketball.realgm.com/wiretap/287846/LeBron-James-Considered-Cavaliers-Before-Signing-With-Sixers",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 745
+   "chars": 745,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410105.9905598
+   }
   },
   {
    "ts": 1792762843.0742486,
@@ -10540,7 +10676,13 @@
    "url": "https://www.cbssports.com/nba/news/shai-gilgeous-alexander-20-point-streak-record-may-never-be-broken/",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 900
+   "chars": 900,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410106.2747536
+   }
   },
   {
    "ts": 1792762857.7082622,
@@ -10556,7 +10698,13 @@
    "url": "https://www.cbssports.com/nba/news/knicks-duped-employees-championship-ring-email-phishing-test/",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 726
+   "chars": 726,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410106.5571272
+   }
   },
   {
    "ts": 1792763001.452905,
@@ -10573,7 +10721,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 2225,
-   "page": "udesh"
+   "page": "udesh",
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1793410106.8782668
+   }
   },
   {
    "ts": 1792768894.9982715,
@@ -10589,7 +10741,13 @@
    "url": "https://basketball.realgm.com/wiretap/287853/Scouts-Monitoring-Jayson-Tatums-Free-Throw-Rate-As-Indicator-Of-Return-From-Achilles",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 977
+   "chars": 977,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410107.1492078
+   }
   },
   {
    "ts": 1792768914.690994,
@@ -10605,7 +10763,13 @@
    "url": "https://basketball.realgm.com/wiretap/287849/NBA-Teams-Get-Tougher-On-Star-Extensions-Being-Unhappy-Is-Not-A-Negotiating-Position-Anymore",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 830
+   "chars": 830,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410107.4397361
+   }
   },
   {
    "ts": 1792770078.0675719,
@@ -10621,7 +10785,13 @@
    "url": "https://basketball.realgm.com/wiretap/287850/NBA-GM-Repeater-Tax-Bigger-Hurdle-For-Contenders-Than-Apron",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 892
+   "chars": 892,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410107.703187
+   }
   },
   {
    "ts": 1792770093.1264188,
@@ -10637,7 +10807,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50241622/contract-talks-thunder-payroll-opening-week",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 381
+   "chars": 381,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410108.0147078
+   }
   },
   {
    "ts": 1792772476.4242227,
@@ -10685,7 +10861,13 @@
    "url": "https://sports.yahoo.com/articles/sixers-special-level-wild-comeback-123920877.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 402
+   "chars": 402,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410108.304218
+   }
   },
   {
    "ts": 1792785091.769863,
@@ -10733,7 +10915,13 @@
    "url": "https://basketball.realgm.com/wiretap/287858/Fred-VanVleet-Faster-Rockets-What-It-Was-Supposed-To-Look-Like",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 873
+   "chars": 873,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410108.51446
+   }
   },
   {
    "ts": 1792794096.7891796,
@@ -10749,7 +10937,13 @@
    "url": "https://sports.yahoo.com/articles/expect-booker-30-190000556.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 435
+   "chars": 435,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410108.7863867
+   }
   },
   {
    "ts": 1792794109.262284,
@@ -10765,7 +10959,13 @@
    "url": "https://sports.yahoo.com/articles/credits-arrival-191426530.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 356
+   "chars": 356,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410109.0828493
+   }
   },
   {
    "ts": 1792794691.8867817,
@@ -10781,7 +10981,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50251603/president-trump-criticizes-lebron-james-anthem-actions",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 283
+   "chars": 283,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410109.357501
+   }
   },
   {
    "ts": 1792797105.6321876,
@@ -10813,7 +11019,13 @@
    "url": "https://sports.yahoo.com/articles/rui-hachimura-looking-forward-playing-230350510.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 450
+   "chars": 450,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410109.683916
+   }
   },
   {
    "ts": 1792800093.375926,
@@ -10830,7 +11042,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1582,
-   "page": "suns"
+   "page": "suns",
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1793410109.9127376
+   }
   },
   {
    "ts": 1792804885.6390727,
@@ -10846,7 +11062,13 @@
    "url": "https://sports.yahoo.com/nba/article/cooper-flagg-goes-down-after-aaron-nesmith-contact-ruled-out-of-mavs-pacers-with-left-shoulder-soreness-011001118.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 347
+   "chars": 347,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410110.1447084
+   }
   },
   {
    "ts": 1792806678.6937256,
@@ -10878,7 +11100,13 @@
    "url": "https://sports.yahoo.com/nba/article/knicks-become-first-defending-nba-champions-to-begin-season-0-2-in-15-years-lose-107-103-to-celtics-015214731.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 284
+   "chars": 284,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793410110.3976655
+   }
   },
   {
    "ts": 1792807891.838006,
