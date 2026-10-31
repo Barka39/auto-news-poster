@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791642122.9739313,
-   "fb_id": "736504959542737_122188792826935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "Stephen Curry Acknowledges Warriors Roster Building Troubles Since 2022 Title",
-   "url": "https://basketball.realgm.com/wiretap/287580/Stephen-Curry-Acknowledges-Warriors-Roster-Building-Troubles-Since-2022-Title",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 653,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791767260.2404835
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792281259.0331757
-   }
-  },
-  {
    "ts": 1791645697.460646,
    "fb_id": "736504959542737_122188818830935957",
    "ig_id": "",
@@ -13260,6 +13232,23 @@
    "slot": "",
    "chars": 1272,
    "page": "udesh"
+  },
+  {
+   "ts": 1793405474.1335347,
+   "fb_id": "846498595210295_122150185293086375",
+   "ig_id": "",
+   "kind": "page_zurhai",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өнөөдрийн зурхай 2026.10.31",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1405,
+   "page": "suns"
   }
  ]
 }
