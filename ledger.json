@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791658297.4423609,
-   "fb_id": "122188841426935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Film breakdown: How Jaylen Brown can become invaluable to Sixers offense",
-   "url": "https://sports.yahoo.com/articles/film-breakdown-jaylen-brown-become-123800250.html",
-   "scheduled_for": 1791774000,
-   "slot": "2026-10-12 11:00",
-   "chars": 448
-  },
-  {
    "ts": 1791660086.542019,
    "fb_id": "122188845596935957",
    "ig_id": "",
@@ -13455,6 +13439,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 710
+  },
+  {
+   "ts": 1793451684.6448097,
+   "fb_id": "846498595210295_122150259111086375",
+   "ig_id": "",
+   "kind": "page_numerology",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өдрийн тоо 6 · 2026.10.31",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 904,
+   "page": "suns"
   }
  ]
 }
