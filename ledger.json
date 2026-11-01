@@ -10986,6 +10986,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1793410110.3976655
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494373.5017633
    }
   },
   {
@@ -11002,7 +11008,13 @@
    "url": "https://24tsag.mn/a/248929",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 949
+   "chars": 949,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494373.8905878
+   }
   },
   {
    "ts": 1792807905.6975875,
@@ -11018,7 +11030,13 @@
    "url": "https://sports.yahoo.com/articles/brandin-podziemski-back-warriors-starting-020140544.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 322
+   "chars": 322,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494374.2361453
+   }
   },
   {
    "ts": 1792808480.972448,
@@ -11034,7 +11052,13 @@
    "url": "https://sports.yahoo.com/articles/joe-mazzulla-shares-expectations-east-234917186.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 325
+   "chars": 325,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494374.6133246
+   }
   },
   {
    "ts": 1792809173.733527,
@@ -11050,7 +11074,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50262518/nba-atlanta-hawks-dyson-daniels-grabs-seven-steals-dominant-performance-vs-charlotte-hornets",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 385
+   "chars": 385,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494374.9573648
+   }
   },
   {
    "ts": 1792810906.1844862,
@@ -11066,7 +11096,13 @@
    "url": "https://sports.yahoo.com/articles/pistons-lose-starters-jalen-duren-024646958.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 402
+   "chars": 402,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494375.3591886
+   }
   },
   {
    "ts": 1792812081.4897757,
@@ -11082,7 +11118,13 @@
    "url": "https://sports.yahoo.com/articles/knicks-mike-brown-encourages-mikal-025832205.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 411
+   "chars": 411,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494375.759662
+   }
   },
   {
    "ts": 1792812695.8999915,
@@ -11098,7 +11140,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50262849/pelicans-yves-missi-exits-jazz-game-left-leg-injury",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 246
+   "chars": 246,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494375.9855273
+   }
   },
   {
    "ts": 1792814509.1353333,
@@ -11114,7 +11162,13 @@
    "url": "https://sports.yahoo.com/articles/veteran-brook-lopez-producing-strong-034044977.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 361
+   "chars": 361,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494376.3844116
+   }
   },
   {
    "ts": 1792815682.7073874,
@@ -11130,7 +11184,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50263163/giannis-antetokounmpo-stays-hot-confident-0-2-heat-click",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 372
+   "chars": 372,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494376.8365722
+   }
   },
   {
    "ts": 1792816304.9788942,
@@ -11147,7 +11207,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1033,
-   "page": "udesh"
+   "page": "udesh",
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1793494377.237045
+   }
   },
   {
    "ts": 1792818100.6770236,
@@ -11164,7 +11228,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1203,
-   "page": "suns"
+   "page": "suns",
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1793494377.5748887
+   }
   },
   {
    "ts": 1792819289.3642461,
@@ -11180,7 +11248,13 @@
    "url": "https://sports.yahoo.com/articles/austin-reaves-walker-kessler-lead-045426406.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 426
+   "chars": 426,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494378.1056216
+   }
   },
   {
    "ts": 1792819889.9454398,
@@ -11196,7 +11270,13 @@
    "url": "https://sports.yahoo.com/articles/rockets-amen-thompson-blocks-victor-051638068.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 338
+   "chars": 338,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494378.4448087
+   }
   },
   {
    "ts": 1792823483.4340463,
@@ -11212,7 +11292,13 @@
    "url": "https://sports.yahoo.com/articles/knicks-start-title-defense-two-021209807.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 367
+   "chars": 367,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494378.850854
+   }
   },
   {
    "ts": 1792831658.7832057,
@@ -11228,7 +11314,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 237
+   "chars": 237,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494379.292422
+   }
   },
   {
    "ts": 1792833144.3730059,
@@ -11244,7 +11336,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 1037
+   "chars": 1037,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494379.7386875
+   }
   },
   {
    "ts": 1792841486.7629147,
@@ -11260,7 +11358,13 @@
    "url": "https://sports.yahoo.com/articles/miss-him-lakers-reunite-rui-110500283.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 422
+   "chars": 422,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494380.0639582
+   }
   },
   {
    "ts": 1792842088.0293703,
@@ -11276,7 +11380,13 @@
    "url": "https://sports.yahoo.com/articles/luka-doncics-trash-talking-antics-110000567.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 463
+   "chars": 463,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494380.4749312
+   }
   },
   {
    "ts": 1792846927.3760679,
@@ -11293,7 +11403,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1272,
-   "page": "suns"
+   "page": "suns",
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1793494380.7371216
+   }
   },
   {
    "ts": 1792847484.9871378,
@@ -11309,7 +11423,13 @@
    "url": "https://sports.yahoo.com/articles/watch-amen-thompson-block-victor-125439394.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 511
+   "chars": 511,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494381.134561
+   }
   },
   {
    "ts": 1792848090.5070245,
@@ -11325,7 +11445,13 @@
    "url": "https://basketball.realgm.com/wiretap/287862/Jayson-Tatum-Rejects-Shaq-Kobe-Beef-Comparison-With-Jaylen-Brown",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 740
+   "chars": 740,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494381.5141854
+   }
   },
   {
    "ts": 1792848102.8511896,
@@ -11341,7 +11467,13 @@
    "url": "https://basketball.realgm.com/wiretap/287863/Paolo-Banchero-Exits-Magic-Loss-Early-With-Right-Ankle-Injury",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 448
+   "chars": 448,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494381.90854
+   }
   },
   {
    "ts": 1792848744.9332716,
@@ -11358,7 +11490,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1983,
-   "page": "udesh"
+   "page": "udesh",
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1793494382.1843634
+   }
   },
   {
    "ts": 1792849277.725478,
@@ -11374,7 +11510,13 @@
    "url": "https://basketball.realgm.com/wiretap/287861/Ben-Sheppard-To-Miss-Time-Due-To-Torn-Meniscus-In-Left-Knee",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 783
+   "chars": 783,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494382.448743
+   }
   },
   {
    "ts": 1792851431.5445635,
@@ -11390,7 +11532,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50265720/ex-nba-player-malik-beasley-negotiating-plea-deal-gambling-case",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 365
+   "chars": 365,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494382.7818074
+   }
   },
   {
    "ts": 1792851685.0475469,
@@ -11406,7 +11554,13 @@
    "url": "https://basketball.realgm.com/wiretap/287864/Jalen-Duren-Misses-Second-Half-Of-Pistons-Victory-Due-To-Right-Thigh-Injury",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 471
+   "chars": 471,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494383.1321812
+   }
   },
   {
    "ts": 1792851702.2859488,
@@ -11422,7 +11576,13 @@
    "url": "https://sports.yahoo.com/articles/too-many-turnovers-not-enough-120000695.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 421
+   "chars": 421,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494383.522565
+   }
   },
   {
    "ts": 1792851873.4559226,
@@ -11438,7 +11598,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 235
+   "chars": 235,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494383.8738444
+   }
   },
   {
    "ts": 1792855904.707545,
@@ -11454,7 +11620,13 @@
    "url": "https://www.cbssports.com/nba/news/malik-beasley-plea-deal-department-of-justice-illegal-sports-betting/",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 907
+   "chars": 907,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494384.2608168
+   }
   },
   {
    "ts": 1792856506.3634605,
@@ -11470,7 +11642,13 @@
    "url": "https://www.cbssports.com/nba/news/nba-closing-time-amen-thompson-victor-wembanyama-jayson-tatum-knicks/",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 683
+   "chars": 683,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494384.6461868
+   }
   },
   {
    "ts": 1792858877.3306034,
@@ -11534,7 +11712,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50267528/mavericks-flagg-home-opener-mild-left-shoulder-sprain",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 293
+   "chars": 293,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494385.0578039
+   }
   },
   {
    "ts": 1792869204.8395765,
@@ -11550,7 +11734,13 @@
    "url": "https://sports.yahoo.com/nba/article/warriors-rookie-yaxel-lendeborg-doubles-down-on-jawing-with-luka-doncic-hes-not-michael-jordan-190346171.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 537
+   "chars": 537,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494385.411742
+   }
   },
   {
    "ts": 1792875083.6690176,
@@ -11582,7 +11772,13 @@
    "url": "https://basketball.realgm.com/wiretap/287874/Gabby-Williams-Valkyries-Beat-Dream-To-Even-WNBA-Finals",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 504
+   "chars": 504,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494385.8086886
+   }
   },
   {
    "ts": 1792876905.3353078,
@@ -11598,7 +11794,13 @@
    "url": "https://sports.yahoo.com/articles/lakers-guard-showered-praise-raising-163933579.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 330
+   "chars": 330,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494386.1539102
+   }
   },
   {
    "ts": 1792880476.225189,
@@ -11614,7 +11816,13 @@
    "url": "https://basketball.realgm.com/wiretap/287876/Yves-Missi-Out-Indefinitely-Due-To-Bone-Bruise-In-Left-Knee",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 557
+   "chars": 557,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494386.5066762
+   }
   },
   {
    "ts": 1792884070.6737382,
@@ -11646,7 +11854,13 @@
    "url": "https://sports.yahoo.com/articles/lakers-rui-hachimura-were-excited-205944782.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 239
+   "chars": 239,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494386.9438093
+   }
   },
   {
    "ts": 1792886499.7260706,
@@ -11663,7 +11877,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1849,
-   "page": "suns"
+   "page": "suns",
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1793494387.235516
+   }
   },
   {
    "ts": 1792887677.4864259,
@@ -11679,7 +11897,13 @@
    "url": "https://basketball.realgm.com/wiretap/287878/Brandon-Boston-Jr-Signs-With-Trabzonspor-In-Turkey",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 546
+   "chars": 546,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494387.6181638
+   }
   },
   {
    "ts": 1792888877.5520437,
@@ -11695,7 +11919,13 @@
    "url": "https://sports.yahoo.com/articles/bucks-wanted-two-second-round-212420310.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 290
+   "chars": 290,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793494387.995084
+   }
   },
   {
    "ts": 1792891287.8927314,
