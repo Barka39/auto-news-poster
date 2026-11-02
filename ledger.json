@@ -11772,7 +11772,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50272348/giannis-antetokounmpo-fouls-4th-heat-tumble-0-3",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 279
+   "chars": 279,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582668.8118458
+   }
   },
   {
    "ts": 1792892485.87718,
@@ -11804,7 +11810,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50272945/embiid-posts-triple-double-james-less-76ers-stay-unbeaten",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 395
+   "chars": 395,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582669.2318537
+   }
   },
   {
    "ts": 1792900279.063164,
@@ -11820,7 +11832,13 @@
    "url": "https://sports.yahoo.com/articles/nets-push-not-enough-125-025754409.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 378
+   "chars": 378,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582669.6344886
+   }
   },
   {
    "ts": 1792900292.0820382,
@@ -11836,7 +11854,13 @@
    "url": "https://sports.yahoo.com/articles/clippers-glaring-issue-fix-thunder-012613573.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 368
+   "chars": 368,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582670.1211271
+   }
   },
   {
    "ts": 1792900932.2105582,
@@ -11869,7 +11893,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 938,
-   "page": "udesh"
+   "page": "udesh",
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1793582670.5690613
+   }
   },
   {
    "ts": 1792903284.8982894,
@@ -11885,7 +11913,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50273329/76ers-brown-claims-no-beef-says-tatum-stay-ready-all-s",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 339
+   "chars": 339,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582670.9410107
+   }
   },
   {
    "ts": 1792904509.154974,
@@ -11901,7 +11935,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50274046/nikola-jokic-triple-double-fuels-nuggets-ot-win-vs-pelicans",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 394
+   "chars": 394,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582671.3444436
+   }
   },
   {
    "ts": 1792904522.6232398,
@@ -11918,7 +11958,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1148,
-   "page": "suns"
+   "page": "suns",
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1793582671.849361
+   }
   },
   {
    "ts": 1792919008.183045,
@@ -11934,7 +11978,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 208
+   "chars": 208,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582672.2437391
+   }
   },
   {
    "ts": 1792919496.315083,
@@ -11950,7 +12000,13 @@
    "url": "https://sports.yahoo.com/articles/jaylen-brown-confirms-no-beef-065400092.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 463
+   "chars": 463,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582672.6286402
+   }
   },
   {
    "ts": 1792920586.910512,
@@ -11966,7 +12022,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 808
+   "chars": 808,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582673.0256944
+   }
   },
   {
    "ts": 1792920682.740741,
@@ -11982,7 +12044,13 @@
    "url": "https://sports.yahoo.com/articles/sixers-bell-ringer-embiid-triple-041115375.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 355
+   "chars": 355,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582673.4282832
+   }
   },
   {
    "ts": 1792927887.9732091,
@@ -11998,7 +12066,13 @@
    "url": "https://sports.yahoo.com/articles/cooper-flagg-injury-110800414.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 259
+   "chars": 259,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582673.8746212
+   }
   },
   {
    "ts": 1792929693.5068812,
@@ -12014,7 +12088,13 @@
    "url": "https://basketball.realgm.com/wiretap/287866/AJa-Wilson-Breanna-Stewart-Headline-Youth-Infused-All-WNBA",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 565
+   "chars": 565,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582674.3002002
+   }
   },
   {
    "ts": 1792930291.6236038,
@@ -12030,7 +12110,13 @@
    "url": "https://sports.yahoo.com/articles/walsh-celtics-defensive-stopper-neutralizes-100000165.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 284
+   "chars": 284,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582674.715363
+   }
   },
   {
    "ts": 1792933294.5846884,
@@ -12047,7 +12133,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1298,
-   "page": "suns"
+   "page": "suns",
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1793582675.0758536
+   }
   },
   {
    "ts": 1792935177.0862644,
@@ -12064,7 +12154,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1844,
-   "page": "udesh"
+   "page": "udesh",
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1793582675.429049
+   }
   },
   {
    "ts": 1792938134.9067197,
@@ -12080,7 +12174,13 @@
    "url": "https://basketball.realgm.com/wiretap/287880/Jaylen-Brown-Denies-Beef-With-Jayson-Tatum-Credits-Tatums-PR-Team",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 724
+   "chars": 724,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582675.8151767
+   }
   },
   {
    "ts": 1792941333.9313405,
@@ -12096,7 +12196,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50277066/pistons-jalen-duren-hamstring-strain-least-2-weeks",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 263
+   "chars": 263,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582676.1981504
+   }
   },
   {
    "ts": 1792948275.5104163,
@@ -12176,7 +12282,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50281331/kawhi-leonard-miss-timberwolves-game-knee-swelling",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 204
+   "chars": 204,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582676.8973215
+   }
   },
   {
    "ts": 1792968687.3673055,
@@ -12192,7 +12304,13 @@
    "url": "https://sports.yahoo.com/nba/article/76ers-deny-joel-embiids-push-to-play-in-back-to-back-games-rest-him-due-to-injury-management-vs-pistons-224601631.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 358
+   "chars": 358,
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582677.284511
+   }
   },
   {
    "ts": 1792969288.8325715,
@@ -12225,7 +12343,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1878,
-   "page": "suns"
+   "page": "suns",
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1793582677.6644714
+   }
   },
   {
    "ts": 1792980637.458057,
@@ -12257,7 +12379,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50283872/magic-guard-jalen-suggs-helped-floor-injury-win-knicks",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 313
+   "chars": 313,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582678.113733
+   }
   },
   {
    "ts": 1792984875.470379,
@@ -12273,7 +12401,13 @@
    "url": "https://basketball.realgm.com/wiretap/287885/Luka-Doncic-Scores-52-In-Win-At-Jazz",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 895
+   "chars": 895,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582678.4939215
+   }
   },
   {
    "ts": 1792986083.3948357,
@@ -12289,7 +12423,13 @@
    "url": "https://sports.yahoo.com/articles/walker-kessler-makes-utah-return-022755362.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 260
+   "chars": 260,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582678.8667934
+   }
   },
   {
    "ts": 1792989092.9811814,
@@ -12306,7 +12446,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 940,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1793582679.3710124
+   }
   },
   {
    "ts": 1792989674.142674,
@@ -12322,7 +12466,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50284757/lebron-james-hopeful-76ers-need-start-center",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 349
+   "chars": 349,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582679.7795775
+   }
   },
   {
    "ts": 1792990893.734238,
@@ -12339,7 +12489,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1152,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1793582680.151241
+   }
   },
   {
    "ts": 1792992078.9931648,
@@ -12355,7 +12509,13 @@
    "url": "https://basketball.realgm.com/wiretap/287886/X-Rays-On-Ivica-Zubacs-Ankle-Return-Negative",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 457
+   "chars": 457,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582680.559271
+   }
   },
   {
    "ts": 1792996041.5160282,
@@ -12371,7 +12531,13 @@
    "url": "https://sports.yahoo.com/articles/knicks-believe-early-season-struggles-051159665.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 494
+   "chars": 494,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582680.9658377
+   }
   },
   {
    "ts": 1792996872.577309,
@@ -12387,7 +12553,13 @@
    "url": "https://sports.yahoo.com/articles/pistons-vs-sixers-final-score-023238384.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 465
+   "chars": 465,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582681.498676
+   }
   },
   {
    "ts": 1792996884.9238307,
@@ -12403,7 +12575,13 @@
    "url": "https://sports.yahoo.com/articles/timberwolves-117-raptors-94-sky-034041486.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 252
+   "chars": 252,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582681.9134731
+   }
   },
   {
    "ts": 1793008705.5462093,
@@ -12419,7 +12597,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 284
+   "chars": 284,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582682.3253434
+   }
   },
   {
    "ts": 1793008896.9177008,
@@ -12435,7 +12619,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50284757/lebron-james-hopeful-76ers-need-start-center",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 369
+   "chars": 369,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582682.7005842
+   }
   },
   {
    "ts": 1793008910.5672235,
@@ -12451,7 +12641,13 @@
    "url": "https://sports.yahoo.com/articles/amid-three-game-losing-streak-030810028.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 411
+   "chars": 411,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582683.112081
+   }
   },
   {
    "ts": 1793011085.1016126,
@@ -12467,7 +12663,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 684
+   "chars": 684,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582683.5831065
+   }
   },
   {
    "ts": 1793016160.423811,
@@ -12483,7 +12685,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 173
+   "chars": 173,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582683.998081
+   }
   },
   {
    "ts": 1793016167.487164,
@@ -12499,7 +12707,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 190
+   "chars": 190,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582684.4390438
+   }
   },
   {
    "ts": 1793016676.5703788,
@@ -12515,7 +12729,13 @@
    "url": "https://sports.yahoo.com/articles/cooper-flagg-playing-tonight-latest-114146750.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 298
+   "chars": 298,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582684.8245282
+   }
   },
   {
    "ts": 1793016690.4919415,
@@ -12531,7 +12751,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50259828/payton-pritchard-celtics-iso-king",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 375
+   "chars": 375,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1793582685.262447
+   }
   },
   {
    "ts": 1793018273.3787951,
