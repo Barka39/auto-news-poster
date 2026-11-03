@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791717703.5237656,
-   "fb_id": "736504959542737_122188944440935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Jayson Tatum got a ‘surreal’ first look playing alongside Paul George",
-   "url": "https://sports.yahoo.com/articles/jayson-tatum-got-surreal-first-090300081.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 279,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791860188.5169158
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792368226.5947838
-   }
-  },
-  {
    "ts": 1791723712.946583,
    "fb_id": "846498595210295_122148101271086375",
    "ig_id": "",
@@ -14233,6 +14205,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1531,
+   "page": "suns"
+  },
+  {
+   "ts": 1793682674.1631768,
+   "fb_id": "846498595210295_122150707557086375",
+   "ig_id": "",
+   "kind": "page_spirit",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Унах зүүд ба сэтгэлийн тайван байдал",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 657,
    "page": "suns"
   }
  ]
