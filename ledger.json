@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791728500.826065,
-   "fb_id": "736504959542737_122188982690935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "Kyrie Irving Plays For Mavericks For First Time In 19 Months",
-   "url": "https://basketball.realgm.com/wiretap/287589/Kyrie-Irving-Plays-For-Mavericks-For-First-Time-In-19-Months",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 728,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791860190.1213102
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792368227.6147556
-   }
-  },
-  {
    "ts": 1791736487.868085,
    "fb_id": "122188995776935957",
    "ig_id": "",
@@ -14195,6 +14167,23 @@
    "slot": "",
    "chars": 1595,
    "page": "udesh"
+  },
+  {
+   "ts": 1793750523.1679125,
+   "fb_id": "846498595210295_122150792793086375",
+   "ig_id": "",
+   "kind": "page_zurhai",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өнөөдрийн зурхай 2026.11.04",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1529,
+   "page": "suns"
   }
  ]
 }
