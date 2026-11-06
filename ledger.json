@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791775886.9084551,
-   "fb_id": "736504959542737_122189073680935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Lakers’ Walker Kessler ready to play with ‘so much joy’ after lost season",
-   "url": "https://sports.yahoo.com/articles/lakers-walker-kessler-ready-play-230408727.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 618,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791939747.800213
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792457992.2335513
-   }
-  },
-  {
    "ts": 1791779504.9466138,
    "fb_id": "828746100324372_122150427813084055",
    "ig_id": "",
@@ -14281,6 +14253,23 @@
    "scheduled_for": 1793923200,
    "slot": "2026-11-06 08:00",
    "chars": 455
+  },
+  {
+   "ts": 1793925166.572906,
+   "fb_id": "846498595210295_122150991513086375",
+   "ig_id": "",
+   "kind": "page_zurhai",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өнөөдрийн зурхай 2026.11.06",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1554,
+   "page": "suns"
   }
  ]
 }
