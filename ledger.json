@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791835999.5751038,
-   "fb_id": "736504959542737_122189211926935957",
-   "ig_id": "",
-   "kind": "digest",
-   "card": "",
-   "video": false,
-   "score": 0,
-   "category": "",
-   "source": "",
-   "title": "",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 227,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1791939760.2289312
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792458002.96509
-   }
-  },
-  {
    "ts": 1791840074.7037516,
    "fb_id": "122189220134935957",
    "ig_id": "",
@@ -14290,6 +14262,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 185
+  },
+  {
+   "ts": 1794237113.3548422,
+   "fb_id": "828746100324372_122153889357084055",
+   "ig_id": "",
+   "kind": "page_story",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Хөршийн хөдөлгөөн — 2-р хэсэг",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 841,
+   "page": "udesh"
   }
  ]
 }
