@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791824504.188827,
-   "fb_id": "122189162342935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "CBS Sports NBA",
-   "title": "Warriors' Kristaps Porziņģis remains away from team as he deals with mystery illness",
-   "url": "https://www.cbssports.com/nba/news/warriors-kristaps-porzingis-away-from-team-mystery-illness/",
-   "scheduled_for": 1791936000,
-   "slot": "2026-10-14 08:00",
-   "chars": 792
-  },
-  {
    "ts": 1791825094.818548,
    "fb_id": "122189163428935957",
    "ig_id": "",
@@ -14293,6 +14277,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 877,
+   "page": "suns"
+  },
+  {
+   "ts": 1794182485.1749096,
+   "fb_id": "846498595210295_122151296517086375",
+   "ig_id": "",
+   "kind": "page_zurhai",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өнөөдрийн зурхай 2026.11.09",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1528,
    "page": "suns"
   }
  ]
