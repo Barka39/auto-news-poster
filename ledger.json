@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791861694.800469,
-   "fb_id": "122189272334935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "Chris Finch: LaMelo Ball Has Helped Wolves Trade 'Moodiness For Giddiness'",
-   "url": "https://basketball.realgm.com/wiretap/287608/Chris-Finch-LaMelo-Ball-Has-Helped-Wolves-Trade-Moodiness-For-Giddiness",
-   "scheduled_for": 1791984600,
-   "slot": "2026-10-14 21:30",
-   "chars": 619
-  },
-  {
    "ts": 1791861707.9009178,
    "fb_id": "736504959542737_122189272394935957",
    "ig_id": "",
@@ -14294,6 +14278,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 587
+  },
+  {
+   "ts": 1794319335.9413753,
+   "fb_id": "828746100324372_122153991519084055",
+   "ig_id": "",
+   "kind": "page_story",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Хөршийн хөдөлгөөн — 3-р хэсэг",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1207,
+   "page": "udesh"
   }
  ]
 }
