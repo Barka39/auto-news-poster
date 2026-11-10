@@ -1,31 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791849712.3582788,
-   "fb_id": "846498595210295_122148277095086375",
-   "ig_id": "",
-   "kind": "page_zurhai",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "suns",
-   "source": "Сүнсний код",
-   "title": "Өнөөдрийн зурхай 2026.10.13",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 1633,
-   "page": "suns",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1791939761.7761014
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1792458004.3121789
-   }
-  },
-  {
    "ts": 1791850887.8807704,
    "fb_id": "122189246072935957",
    "ig_id": "",
@@ -14301,6 +14276,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 372,
+   "page": "suns"
+  },
+  {
+   "ts": 1794315692.5844586,
+   "fb_id": "846498595210295_122151483939086375",
+   "ig_id": "",
+   "kind": "page_numerology",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өдрийн тоо 4 · 2026.11.10",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1064,
    "page": "suns"
   }
  ]
