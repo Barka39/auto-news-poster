@@ -1,31 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791896509.358684,
-   "fb_id": "846498595210295_122148329427086375",
-   "ig_id": "",
-   "kind": "page_numerology",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "suns",
-   "source": "Сүнсний код",
-   "title": "Өдрийн тоо 6 · 2026.10.13",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 1288,
-   "page": "suns",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1792023768.4002812
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1792542545.5341842
-   }
-  },
-  {
    "ts": 1791898312.1760652,
    "fb_id": "828746100324372_122150647209084055",
    "ig_id": "",
@@ -14257,6 +14232,23 @@
    "scheduled_for": 1794470400,
    "slot": "2026-11-12 16:00",
    "chars": 1222
+  },
+  {
+   "ts": 1794441698.602157,
+   "fb_id": "846498595210295_122151624339086375",
+   "ig_id": "",
+   "kind": "page_zurhai",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өнөөдрийн зурхай 2026.11.12",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1529,
+   "page": "suns"
   }
  ]
 }
