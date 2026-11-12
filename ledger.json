@@ -1,31 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791898312.1760652,
-   "fb_id": "828746100324372_122150647209084055",
-   "ig_id": "",
-   "kind": "page_story",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "udesh",
-   "source": "Үдшийн шивнээ",
-   "title": "ХӨЛДҮҮ ЦАСНЫ ДООРХ ГАЛ — Төгсгөл",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 2193,
-   "page": "udesh",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1792023768.7472122
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1792542545.9709816
-   }
-  },
-  {
    "ts": 1791906697.1737995,
    "fb_id": "736504959542737_122189351924935957",
    "ig_id": "",
@@ -14300,6 +14275,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1529,
+   "page": "suns"
+  },
+  {
+   "ts": 1794459717.3568347,
+   "fb_id": "846498595210295_122151644427086375",
+   "ig_id": "",
+   "kind": "page_spirit",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Чулууны өнгө, сэтгэлийн тод",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 602,
    "page": "suns"
   }
  ]
