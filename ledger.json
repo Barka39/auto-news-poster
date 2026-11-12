@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791911492.7982364,
-   "fb_id": "122189357168935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "The Wizards are considering a rebrand after fan feedback",
-   "url": "https://sports.yahoo.com/articles/wizards-considering-rebrand-fan-feedback-145751340.html",
-   "scheduled_for": 1792040400,
-   "slot": "2026-10-15 13:00",
-   "chars": 652
-  },
-  {
    "ts": 1791913891.8989985,
    "fb_id": "736504959542737_122189359538935957",
    "ig_id": "",
@@ -14283,6 +14267,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 726
+  },
+  {
+   "ts": 1794490357.101503,
+   "fb_id": "828746100324372_122154249915084055",
+   "ig_id": "",
+   "kind": "page_story",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Хөршийн хөдөлгөөн — Төгсгөл",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1544,
+   "page": "udesh"
   }
  ]
 }
