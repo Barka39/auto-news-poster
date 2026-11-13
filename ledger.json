@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791913891.8989985,
-   "fb_id": "736504959542737_122189359538935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Kyle Anderson speaks on Jamal Shead, Lil Wayne, and his place on the Raptors",
-   "url": "https://sports.yahoo.com/articles/kyle-anderson-speaks-jamal-shead-153000454.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 431,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792023769.6283727
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792542546.9878893
-   }
-  },
-  {
    "ts": 1791913904.7952273,
    "fb_id": "736504959542737_122189359628935957",
    "ig_id": "",
@@ -14284,6 +14256,23 @@
    "slot": "",
    "chars": 1544,
    "page": "udesh"
+  },
+  {
+   "ts": 1794528089.7130036,
+   "fb_id": "846498595210295_122151724887086375",
+   "ig_id": "",
+   "kind": "page_zurhai",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өнөөдрийн зурхай 2026.11.13",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1530,
+   "page": "suns"
   }
  ]
 }
