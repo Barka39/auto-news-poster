@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1791917506.3568983,
-   "fb_id": "736504959542737_122189368532935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "CBS Sports NBA",
-   "title": "Why Victor Wembanyama is poised to level up in Year 4 takeover -- and possibly join historic MVP/DPOY company",
-   "url": "https://www.cbssports.com/nba/news/victor-wembanyama-spurs-year-4-level-up-mvp-dpoy/",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 800,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792023770.556394
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792542548.3208294
-   }
-  },
-  {
    "ts": 1791919306.8912647,
    "fb_id": "736504959542737_122189371028935957",
    "ig_id": "",
@@ -14295,6 +14267,22 @@
    "slot": "",
    "chars": 1051,
    "page": "udesh"
+  },
+  {
+   "ts": 1794567696.8858101,
+   "fb_id": "122193936968935957",
+   "ig_id": "",
+   "kind": "mn",
+   "card": "",
+   "video": false,
+   "score": 8.0,
+   "category": "mn_basketball",
+   "source": "Asia-Basket Mongolia",
+   "title": "McDaniels' 27 points and 8 rebounds give him Hoops Agents Player of the Week award",
+   "url": "https://www.asia-basket.com/Mongolia/news/1041460/McDaniels-27-points-and-8-rebounds-give-him-Hoops-Agents-Player-of-the-Week-award",
+   "scheduled_for": 1794576600,
+   "slot": "2026-11-13 21:30",
+   "chars": 553
   }
  ]
 }
