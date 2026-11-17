@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792008712.3364332,
-   "fb_id": "122189522576935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "JJ Redick wants Walker Kessler to be relentless this season",
-   "url": "https://sports.yahoo.com/articles/jj-redick-wants-walker-kessler-170856764.html",
-   "scheduled_for": 1792137600,
-   "slot": "2026-10-16 16:00",
-   "chars": 203
-  },
-  {
    "ts": 1792011102.8983276,
    "fb_id": "736504959542737_122189527928935957",
    "ig_id": "",
@@ -14287,6 +14271,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1523,
+   "page": "suns"
+  },
+  {
+   "ts": 1794891686.6665757,
+   "fb_id": "846498595210295_122152129059086375",
+   "ig_id": "",
+   "kind": "page_spirit",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Гал, хадаг, тэнгэр: гэрийн сэтгэлийн холбоо",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 576,
    "page": "suns"
   }
  ]
