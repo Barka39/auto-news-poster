@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792002095.9508255,
-   "fb_id": "122189513006935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "CBS Sports NBA",
-   "title": "Lakers coach JJ Redick on Bronny James: 'I don't think he's played well' in preseason games",
-   "url": "https://www.cbssports.com/nba/news/bronny-james-lakers-roster-jj-redick-lebron-james/",
-   "scheduled_for": 1792126800,
-   "slot": "2026-10-16 13:00",
-   "chars": 876
-  },
-  {
    "ts": 1792008712.3364332,
    "fb_id": "122189522576935957",
    "ig_id": "",
@@ -14229,6 +14213,23 @@
    "slot": "",
    "chars": 916,
    "page": "udesh"
+  },
+  {
+   "ts": 1794873717.416063,
+   "fb_id": "846498595210295_122152107789086375",
+   "ig_id": "",
+   "kind": "page_zurhai",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өнөөдрийн зурхай 2026.11.17",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1523,
+   "page": "suns"
   }
  ]
 }
