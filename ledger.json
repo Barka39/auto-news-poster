@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792032084.2761376,
-   "fb_id": "122189556836935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Celtics announce starting lineup ahead of preseason vs. Hornets",
-   "url": "https://sports.yahoo.com/articles/celtics-announce-starting-lineup-ahead-231004137.html",
-   "scheduled_for": 1792157400,
-   "slot": "2026-10-16 21:30",
-   "chars": 241
-  },
-  {
    "ts": 1792032096.2344072,
    "fb_id": "736504959542737_122189556968935957",
    "ig_id": "",
@@ -14259,6 +14243,23 @@
    "slot": "",
    "chars": 1575,
    "page": "udesh"
+  },
+  {
+   "ts": 1794960693.6916482,
+   "fb_id": "846498595210295_122152207077086375",
+   "ig_id": "",
+   "kind": "page_zurhai",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өнөөдрийн зурхай 2026.11.18",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1521,
+   "page": "suns"
   }
  ]
 }
