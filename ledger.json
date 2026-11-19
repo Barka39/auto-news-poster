@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792062113.3144524,
-   "fb_id": "736504959542737_122189600360935957",
-   "ig_id": "",
-   "kind": "mn",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "mn_basketball",
-   "source": "ikon.mn",
-   "title": "“Омни Эрдэнэт Майнерс” баг “Апекс Капитал” ҮЦК-тай хамтын ажиллагаагаа эхлүүллээ",
-   "url": "https://ikon.mn/n/3r1e",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 785,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792196168.3305707
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792801515.6651516
-   }
-  },
-  {
    "ts": 1792069321.1579287,
    "fb_id": "846498595210295_122148521361086375",
    "ig_id": "",
@@ -14262,6 +14234,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 394
+  },
+  {
+   "ts": 1795047088.6187665,
+   "fb_id": "846498595210295_122152305459086375",
+   "ig_id": "",
+   "kind": "page_zurhai",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өнөөдрийн зурхай 2026.11.19",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1421,
+   "page": "suns"
   }
  ]
 }
