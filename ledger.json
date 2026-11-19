@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792080692.1259556,
-   "fb_id": "122189627936935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Facing roster crunch, Lakers, Bucks, Grizzlies reportedly exploring trades",
-   "url": "https://sports.yahoo.com/articles/facing-roster-crunch-lakers-bucks-160222418.html",
-   "scheduled_for": 1792195200,
-   "slot": "2026-10-17 08:00",
-   "chars": 441
-  },
-  {
    "ts": 1792080703.3577542,
    "fb_id": "122189627984935957",
    "ig_id": "",
@@ -14271,6 +14255,23 @@
    "scheduled_for": 1795095000,
    "slot": "2026-11-19 21:30",
    "chars": 463
+  },
+  {
+   "ts": 1795094077.956547,
+   "fb_id": "846498595210295_122152355001086375",
+   "ig_id": "",
+   "kind": "page_numerology",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өдрийн тоо 22 · 2026.11.19",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 830,
+   "page": "suns"
   }
  ]
 }
