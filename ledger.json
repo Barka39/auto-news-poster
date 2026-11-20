@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792090802.210278,
-   "fb_id": "736504959542737_122189644706935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "CBS Sports NBA",
-   "title": "Explaining the NBA's mutual option trend: Could it be used to fight back against the dreaded second apron?",
-   "url": "https://www.cbssports.com/nba/news/nba-mutual-option-contract-trend-second-apron/",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 952,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792196171.8044991
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792801520.0528781
-   }
-  },
-  {
    "ts": 1792095680.891344,
    "fb_id": "122189651858935957",
    "ig_id": "",
@@ -14301,6 +14273,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1487,
+   "page": "suns"
+  },
+  {
+   "ts": 1795150885.596275,
+   "fb_id": "846498595210295_122152419711086375",
+   "ig_id": "",
+   "kind": "page_spirit",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Гарагийн урсгал өнөөдөр өөрчлөгдөнө",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 505,
    "page": "suns"
   }
  ]
