@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792156889.152044,
-   "fb_id": "736504959542737_122189733926935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "Tyrese Maxey Says Joel Embiid's Healthy Camp Gives New-Look 76ers An Edge",
-   "url": "https://basketball.realgm.com/wiretap/287661/Tyrese-Maxey-Says-Joel-Embiids-Healthy-Camp-Gives-New-Look-76ers-An-Edge",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 737,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792281266.2200263
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792801531.064267
-   }
-  },
-  {
    "ts": 1792156904.1895733,
    "fb_id": "736504959542737_122189734004935957",
    "ig_id": "",
@@ -14245,6 +14217,23 @@
    "slot": "",
    "chars": 1595,
    "page": "udesh"
+  },
+  {
+   "ts": 1795392114.5161884,
+   "fb_id": "846498595210295_122152710039086375",
+   "ig_id": "",
+   "kind": "page_zurhai",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өнөөдрийн зурхай 2026.11.23",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1531,
+   "page": "suns"
   }
  ]
 }
