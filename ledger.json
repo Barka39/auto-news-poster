@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792174889.3467226,
-   "fb_id": "736504959542737_122189771048935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "NBA Bans Same-Player Under Parlays, Opening-Tip Bets This Season",
-   "url": "https://basketball.realgm.com/wiretap/287682/NBA-Bans-Same-Player-Under-Parlays-Opening-Tip-Bets-This-Season",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 902,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792368230.16305
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792886950.15153
-   }
-  },
-  {
    "ts": 1792174903.1957455,
    "fb_id": "736504959542737_122189771144935957",
    "ig_id": "",
@@ -14103,6 +14075,22 @@
    "scheduled_for": 1795593600,
    "slot": "2026-11-25 16:00",
    "chars": 337
+  },
+  {
+   "ts": 1795475489.1859574,
+   "fb_id": "122195289746935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "NBA Cup 2026: Standings, schedule, stakes and clinching scenarios for final week of group play",
+   "url": "https://sports.yahoo.com/nba/article/nba-cup-2026-standings-schedule-stakes-and-clinching-scenarios-for-final-week-of-group-play-225143666.html",
+   "scheduled_for": 1795604400,
+   "slot": "2026-11-25 19:00",
+   "chars": 340
   }
  ]
 }
