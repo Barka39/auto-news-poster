@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792227308.0214376,
-   "fb_id": "736504959542737_122189862158935957",
-   "ig_id": "",
-   "kind": "digest",
-   "card": "",
-   "video": false,
-   "score": 0,
-   "category": "",
-   "source": "",
-   "title": "",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 253,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792369507.0034533
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792886956.1117241
-   }
-  },
-  {
    "ts": 1792228287.9117095,
    "fb_id": "736504959542737_122189863352935957",
    "ig_id": "",
@@ -13949,6 +13921,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 360
+  },
+  {
+   "ts": 1795524714.9940434,
+   "fb_id": "736504959542737_122195367854935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Lakers eye biggest test of season with more questions than answers",
+   "url": "https://sports.yahoo.com/articles/lakers-eye-biggest-test-season-071131138.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 350
   }
  ]
 }
