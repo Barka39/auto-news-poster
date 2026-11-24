@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792246289.3767586,
-   "fb_id": "736504959542737_122189891606935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Hugo González puts cherry on top of growth-filled preseason",
-   "url": "https://sports.yahoo.com/articles/hugo-gonz-lez-puts-cherry-083138801.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 465,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792369510.640934
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792886958.0085518
-   }
-  },
-  {
    "ts": 1792249897.117849,
    "fb_id": "736504959542737_122189897324935957",
    "ig_id": "",
@@ -13873,6 +13845,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 909
+  },
+  {
+   "ts": 1795534299.48688,
+   "fb_id": "736504959542737_122195384762935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Steve Kerr Tops Highest Paid Coaches At $17.5M",
+   "url": "https://basketball.realgm.com/wiretap/288235/Steve-Kerr-Tops-Highest-Paid-Coaches-At-$175M",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 702
   }
  ]
 }
