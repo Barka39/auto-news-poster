@@ -1,31 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792195301.0923293,
-   "fb_id": "846498595210295_122148667101086375",
-   "ig_id": "",
-   "kind": "page_zurhai",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "suns",
-   "source": "Сүнсний код",
-   "title": "Өнөөдрийн зурхай 2026.10.17",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 1641,
-   "page": "suns",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1792368231.8470044
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1792886952.129292
-   }
-  },
-  {
    "ts": 1792197096.3989227,
    "fb_id": "736504959542737_122189806874935957",
    "ig_id": "",
@@ -14032,6 +14007,22 @@
    "scheduled_for": 1795613400,
    "slot": "2026-11-25 21:30",
    "chars": 305
+  },
+  {
+   "ts": 1795490478.890775,
+   "fb_id": "736504959542737_122195312000935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "NBA National Games Averaging 2.62M Viewers, Up 37 Percent From Last Season",
+   "url": "https://basketball.realgm.com/wiretap/288226/NBA-National-Games-Averaging-262M-Viewers-Up-37-Percent-From-Last-Season",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 818
   }
  ]
 }
