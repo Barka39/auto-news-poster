@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792178510.230975,
-   "fb_id": "736504959542737_122189778680935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "CBS Sports NBA",
-   "title": "NBA instructs sportsbook partners to ban certain bets ripe for manipulation, per report",
-   "url": "https://www.cbssports.com/nba/news/nba-sportsbook-partners-ban-certain-bets/",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 932,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792368231.3285983
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792886951.5380857
-   }
-  },
-  {
    "ts": 1792186886.0065796,
    "fb_id": "122189793428935957",
    "ig_id": "",
@@ -14055,6 +14027,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 300
+  },
+  {
+   "ts": 1795478498.3075218,
+   "fb_id": "846498595210295_122152812099086375",
+   "ig_id": "",
+   "kind": "page_zurhai",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өнөөдрийн зурхай 2026.11.24",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1625,
+   "page": "suns"
   }
  ]
 }
