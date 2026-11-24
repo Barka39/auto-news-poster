@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792253488.3088496,
-   "fb_id": "122189901344935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "CBS Sports NBA",
-   "title": "How LeBron James, in his 24th season and first with the 76ers, can pass Michael Jordan in NBA GOAT debate",
-   "url": "https://www.cbssports.com/nba/news/lebron-james-24th-season-michael-jordan-nba-goat-debate/",
-   "scheduled_for": 1792378800,
-   "slot": "2026-10-19 11:00",
-   "chars": 905
-  },
-  {
    "ts": 1792254696.4593992,
    "fb_id": "736504959542737_122189902610935957",
    "ig_id": "",
@@ -13849,6 +13833,22 @@
    "scheduled_for": 1795662000,
    "slot": "2026-11-26 11:00",
    "chars": 335
+  },
+  {
+   "ts": 1795543297.9040072,
+   "fb_id": "122195394710935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Resurfaced clip reveals Michael Jordan link that changed Kobe Bryant’s entire career",
+   "url": "https://sports.yahoo.com/articles/resurfaced-clip-reveals-michael-jordan-173750607.html",
+   "scheduled_for": 1795669200,
+   "slot": "2026-11-26 13:00",
+   "chars": 536
   }
  ]
 }
