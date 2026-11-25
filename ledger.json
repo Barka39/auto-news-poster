@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792329695.1167066,
-   "fb_id": "736504959542737_122190017402935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Open Thread: A peak at George Hill’s 850 acre ranch",
-   "url": "https://sports.yahoo.com/articles/open-thread-peak-george-hill-110000265.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 359,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792458007.6642394
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792973070.153492
-   }
-  },
-  {
    "ts": 1792330417.1584346,
    "fb_id": "828746100324372_122151243417084055",
    "ig_id": "",
@@ -13646,6 +13618,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 851
+  },
+  {
+   "ts": 1795576295.0447664,
+   "fb_id": "736504959542737_122195441834935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Vintage Paul George drops Kyshawn George to the floor with ankle-breaking crossover in NBA Cup play",
+   "url": "https://sports.yahoo.com/nba/breaking-news/article/vintage-paul-george-drops-kyshawn-george-to-the-floor-with-ankle-breaking-crossover-in-nba-cup-play-030811612.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 376
   }
  ]
 }
