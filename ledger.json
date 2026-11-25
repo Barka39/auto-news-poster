@@ -1,31 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792328507.099623,
-   "fb_id": "846498595210295_122148802311086375",
-   "ig_id": "",
-   "kind": "page_numerology",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "suns",
-   "source": "Сүнсний код",
-   "title": "Өдрийн тоо 2 · 2026.10.18",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 1151,
-   "page": "suns",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1792458007.245823
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1792973069.7522364
-   }
-  },
-  {
    "ts": 1792329695.1167066,
    "fb_id": "736504959542737_122190017402935957",
    "ig_id": "",
@@ -13655,6 +13630,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 303
+  },
+  {
+   "ts": 1795573274.4838164,
+   "fb_id": "736504959542737_122195436680935957",
+   "ig_id": "",
+   "kind": "mn",
+   "card": "news",
+   "video": false,
+   "score": 10,
+   "category": "mn_basketball",
+   "source": "ikon.mn",
+   "title": "ХасБанк охидын сагсан бөмбөгийн хөгжилд хувь нэмрээ оруулж, “Sain Girls League” тэмцээнийг дэмжин ажиллаж байна",
+   "url": "https://ikon.mn/n/3rx5",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 851
   }
  ]
 }
