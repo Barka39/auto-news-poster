@@ -1,31 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792416704.067797,
-   "fb_id": "828746100324372_122151328563084055",
-   "ig_id": "",
-   "kind": "page_story",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "udesh",
-   "source": "Үдшийн шивнээ",
-   "title": "Хуучин дурсамжийн сүүдэр — 1-р хэсэг",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 2234,
-   "page": "udesh",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1792542557.7144942
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1793064087.1640465
-   }
-  },
-  {
    "ts": 1792419087.6086714,
    "fb_id": "736504959542737_122190184160935957",
    "ig_id": "",
@@ -13505,6 +13480,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 859
+  },
+  {
+   "ts": 1795636274.8444014,
+   "fb_id": "736504959542737_122195527880935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Rob Pelinka believes the Lakers are feeding off Luka Dončić’s leadership",
+   "url": "https://sports.yahoo.com/nba/articles/rob-pelinka-believes-lakers-feeding-173210722.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 328
   }
  ]
 }
