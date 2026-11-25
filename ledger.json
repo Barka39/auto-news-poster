@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792354910.5395854,
-   "fb_id": "122190065408935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "Paul George Says He Found 'A Love Again For This Game' After Joining Celtics",
-   "url": "https://basketball.realgm.com/wiretap/287744/Paul-George-Says-He-Found-A-Love-Again-For-This-Game-After-Joining-Celtics",
-   "scheduled_for": 1792465200,
-   "slot": "2026-10-20 11:00",
-   "chars": 679
-  },
-  {
    "ts": 1792357907.0006902,
    "fb_id": "122190073574935957",
    "ig_id": "",
@@ -13718,6 +13702,23 @@
    "slot": "",
    "chars": 990,
    "page": "udesh"
+  },
+  {
+   "ts": 1795582900.8626661,
+   "fb_id": "846498595210295_122152938327086375",
+   "ig_id": "",
+   "kind": "page_spirit",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Гэрээ хэрхэн эерэг эрч хүчээр дүүргэх вэ",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1164,
+   "page": "suns"
   }
  ]
 }
