@@ -1,62 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792410399.7657042,
-   "fb_id": "736504959542737_122190166934935957",
-   "ig_id": "",
-   "kind": "standings",
-   "card": "standings",
-   "video": false,
-   "score": 0,
-   "category": "basketball",
-   "source": "ESPN",
-   "title": "NBA standings ЗҮҮН БҮС 2026.10.19",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 169,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792542555.2541678
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1793064084.8263247
-   }
-  },
-  {
-   "ts": 1792410403.3783946,
-   "fb_id": "736504959542737_122190166994935957",
-   "ig_id": "",
-   "kind": "standings",
-   "card": "standings",
-   "video": false,
-   "score": 0,
-   "category": "basketball",
-   "source": "ESPN",
-   "title": "NBA standings БАРУУН БҮС 2026.10.19",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 175,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792542555.6856558
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1793064085.161803
-   }
-  },
-  {
    "ts": 1792410681.362323,
    "fb_id": "736504959542737_122190167624935957",
    "ig_id": "",
@@ -13586,6 +13530,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 306
+  },
+  {
+   "ts": 1795624289.3445878,
+   "fb_id": "122195507504935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "NBA announces $11 billion investment to build European arenas for new league",
+   "url": "https://sports.yahoo.com/sports-business/articles/nba-announces-11-billion-investment-160848391.html",
+   "scheduled_for": 1795737600,
+   "slot": "2026-11-27 08:00",
+   "chars": 313
+  },
+  {
+   "ts": 1795624303.6684313,
+   "fb_id": "122195507558935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "Lakers latest in NBA to establish partnership with Kalshi",
+   "url": "https://www.espn.com/nba/story/_/id/50586638/lakers-latest-nba-partnership-kalshi",
+   "scheduled_for": 1795748400,
+   "slot": "2026-11-27 11:00",
+   "chars": 291
   }
  ]
 }
