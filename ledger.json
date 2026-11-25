@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792365083.0044916,
-   "fb_id": "736504959542737_122190084236935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 10.0,
-   "category": "basketball",
-   "source": "ESPN",
-   "title": "Sources: Kings guard Ben Simmons believed to have torn Achilles tendon",
-   "url": "https://www.espn.com/nba/story/_/id/50214131/kings-simmons-believed-achilles-tendon-tear",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 335,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792542550.0390747
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792973072.3693566
-   }
-  },
-  {
    "ts": 1792365686.060429,
    "fb_id": "736504959542737_122190085022935957",
    "ig_id": "",
@@ -13719,6 +13691,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 210
+  },
+  {
+   "ts": 1795592205.3905833,
+   "fb_id": "736504959542737_122195462048935957",
+   "ig_id": "",
+   "kind": "mn",
+   "card": "news",
+   "video": false,
+   "score": 10,
+   "category": "mn_basketball",
+   "source": "ikon.mn",
+   "title": "Олимпын төрлийн ДАШТ-ээс Монголын шигшээ баг хоёр хүрэл медаль хүртсэн амжилтаар 87-д жагсаж байна",
+   "url": "https://ikon.mn/n/3rxr",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 559
   }
  ]
 }
