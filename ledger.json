@@ -1,62 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792335093.3722234,
-   "fb_id": "736504959542737_122190025328935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "“I don’t care if the shot is gonna fall or not.” Darko Rajaković thinks Allen Graves should let it fly",
-   "url": "https://sports.yahoo.com/articles/don-t-care-shot-gonna-123000880.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 494,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792458008.8238397
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792973071.5726771
-   }
-  },
-  {
-   "ts": 1792337494.0123837,
-   "fb_id": "736504959542737_122190031496935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "CBS Sports NBA",
-   "title": "Why Kevin Durant completely missed Mat Ishbia's point about his Suns tenure, building a championship culture",
-   "url": "https://www.cbssports.com/nba/news/kevin-durant-mat-ishbia-phoenix-suns-championship-culture/",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 845,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792542549.7185304
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792973071.9640584
-   }
-  },
-  {
    "ts": 1792344417.409379,
    "fb_id": "122190043676935957",
    "ig_id": "",
@@ -13613,6 +13557,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 295
+  },
+  {
+   "ts": 1795580483.4382498,
+   "fb_id": "736504959542737_122195447042935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Raptors, Warriors, Hawks Seen As Teams To Watch If Wizards Make Anthony Davis Available",
+   "url": "https://basketball.realgm.com/wiretap/288242/Raptors-Warriors-Hawks-Seen-As-Teams-To-Watch-If-Wizards-Make-Anthony-Davis-Available",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 794
+  },
+  {
+   "ts": 1795580498.5408435,
+   "fb_id": "736504959542737_122195447120935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Nuggets Seeking Zeke Nnaji Trade, Likely To Keep 2031 Cavaliers Pick",
+   "url": "https://basketball.realgm.com/wiretap/288240/Nuggets-Seeking-Zeke-Nnaji-Trade-Likely-To-Keep-2031-Cavaliers-Pick",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 869
   }
  ]
 }
