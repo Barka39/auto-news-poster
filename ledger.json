@@ -1,62 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792309888.8466384,
-   "fb_id": "736504959542737_122189989292935957",
-   "ig_id": "",
-   "kind": "mn",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "mn_basketball",
-   "source": "Asia-Basket Mongolia",
-   "title": "MBL Round 6 (Regular Season): Bottom-ranked TLG Bagana wins against Warriors",
-   "url": "https://www.asia-basket.com/Mongolia/news/1036852/MBL-Round-6-Regular-Season-Bottom-ranked-TLG-Bagana-wins-against-Warriors",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 675,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792458006.3860288
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792973068.9777553
-   }
-  },
-  {
-   "ts": 1792310507.819652,
-   "fb_id": "736504959542737_122189990306935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Former Warriors No. 2 pick Wiseman plays way onto New York Knicks roster",
-   "url": "https://sports.yahoo.com/articles/former-warriors-no-2-pick-054919106.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 225,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792458006.8336957
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792973069.378007
-   }
-  },
-  {
    "ts": 1792328507.099623,
    "fb_id": "846498595210295_122148802311086375",
    "ig_id": "",
@@ -13679,6 +13623,38 @@
    "scheduled_for": 1795699800,
    "slot": "2026-11-26 21:30",
    "chars": 376
+  },
+  {
+   "ts": 1795572678.4019551,
+   "fb_id": "736504959542737_122195435432935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "CBS Sports NBA",
+   "title": "Why asking Trae Young to score less is a band-aid, not a fix for the Wizards' self-inflicted problem",
+   "url": "https://www.cbssports.com/nba/news/trae-young-wizards-scoring-less-aj-dybantsa-anthony-davis/",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 671
+  },
+  {
+   "ts": 1795572691.658808,
+   "fb_id": "736504959542737_122195435522935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Nets searching for answers as early defensive collapses fuel losing streak",
+   "url": "https://sports.yahoo.com/nba/articles/nets-searching-answers-early-defensive-013356748.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 303
   }
  ]
 }
