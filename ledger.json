@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792365696.843893,
-   "fb_id": "122190085118935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Payton Pritchard doesn’t care about starting",
-   "url": "https://sports.yahoo.com/articles/payton-pritchard-doesn-t-care-202319634.html",
-   "scheduled_for": 1792483200,
-   "slot": "2026-10-20 16:00",
-   "chars": 389
-  },
-  {
    "ts": 1792368109.9336805,
    "fb_id": "846498595210295_122148847533086375",
    "ig_id": "",
@@ -13695,6 +13679,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 387
+  },
+  {
+   "ts": 1795611701.3619297,
+   "fb_id": "846498595210295_122152971243086375",
+   "ig_id": "",
+   "kind": "page_numerology",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өдрийн тоо 1 · 2026.11.25",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1272,
+   "page": "suns"
   }
  ]
 }
