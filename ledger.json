@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792369282.6340775,
-   "fb_id": "122190089156935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "Oso Ighodaro, Suns Agree To Three-Year, $29M Extension",
-   "url": "https://basketball.realgm.com/wiretap/287747/Oso-Ighodaro-Suns-Agree-To-Three-Year-$29M-Extension",
-   "scheduled_for": 1792494000,
-   "slot": "2026-10-20 19:00",
-   "chars": 776
-  },
-  {
    "ts": 1792378279.6879385,
    "fb_id": "122190107774935957",
    "ig_id": "",
@@ -13687,6 +13671,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 358
+  },
+  {
+   "ts": 1795613533.114495,
+   "fb_id": "828746100324372_122155859715084055",
+   "ig_id": "",
+   "kind": "page_story",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Цахилгаан соронзон хорио — 4-р хэсэг",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1605,
+   "page": "udesh"
   }
  ]
 }
