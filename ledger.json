@@ -11510,6 +11510,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1795057434.0843136
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1795582222.3646786
    }
   },
   {
@@ -11532,6 +11536,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1795057434.409463
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795582223.0132186
    }
   },
   {
@@ -11553,6 +11563,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1795057434.808091
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1795582223.4983442
    }
   },
   {
@@ -11574,6 +11588,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1795057435.0911252
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1795582224.046096
    }
   },
   {
@@ -11611,6 +11629,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1795143317.5713232
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1795582224.5524912
    }
   },
   {
@@ -12333,7 +12355,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 912,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1795582225.0694027
+   }
   },
   {
    "ts": 1795441333.7772028,
@@ -12350,7 +12376,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1577,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1795582225.7335038
+   }
   },
   {
    "ts": 1795443418.8503256,
@@ -12366,7 +12396,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 483
+   "chars": 483,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795582226.3560457
+   }
   },
   {
    "ts": 1795443728.5721912,
@@ -12446,7 +12482,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 706
+   "chars": 706,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795582226.817083
+   }
   },
   {
    "ts": 1795449754.4067547,
@@ -12478,7 +12520,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 175
+   "chars": 175,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795582227.6322763
+   }
   },
   {
    "ts": 1795453284.6443486,
@@ -12494,7 +12542,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 189
+   "chars": 189,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795582228.1369624
+   }
   },
   {
    "ts": 1795461077.233811,
@@ -12606,7 +12660,13 @@
    "url": "https://basketball.realgm.com/wiretap/288217/Jerami-Grant-Diagnosed-With-Grade-1-Left-Calf-Strain",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 579
+   "chars": 579,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795582228.719182
+   }
   },
   {
    "ts": 1795476696.1124465,
@@ -12622,7 +12682,13 @@
    "url": "https://www.cbssports.com/nba/news/nba-trade-rumors-lakers-jazz-kyrie-irving-nov-23/",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 898
+   "chars": 898,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795582229.2533963
+   }
   },
   {
    "ts": 1795477874.407444,
@@ -12638,7 +12704,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50577588/grizzlies-cameron-boozer-ankle-reevaluated-4-weeks",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 300
+   "chars": 300,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795582229.8141491
+   }
   },
   {
    "ts": 1795478498.3075218,
@@ -12655,7 +12727,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1625,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1795582230.2898495
+   }
   },
   {
    "ts": 1795480872.8422525,
@@ -12671,7 +12747,13 @@
    "url": "https://sports.yahoo.com/articles/one-walker-kessler-greatest-skills-002235558.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 431
+   "chars": 431,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795582230.8542209
+   }
   },
   {
    "ts": 1795483290.408426,
@@ -12687,7 +12769,13 @@
    "url": "https://sports.yahoo.com/articles/warriors-star-clowns-jayson-tatum-005557787.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 310
+   "chars": 310,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795582231.3693542
+   }
   },
   {
    "ts": 1795486876.5411665,
@@ -12719,7 +12807,13 @@
    "url": "https://basketball.realgm.com/wiretap/288226/NBA-National-Games-Averaging-262M-Viewers-Up-37-Percent-From-Last-Season",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 818
+   "chars": 818,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795582231.9177234
+   }
   },
   {
    "ts": 1795492235.597093,
@@ -12751,7 +12845,13 @@
    "url": "https://sports.yahoo.com/articles/lakers-incoming-owners-sit-jeanie-032346650.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 230
+   "chars": 230,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795582232.477368
+   }
   },
   {
    "ts": 1795493480.3124242,
@@ -12767,7 +12867,13 @@
    "url": "https://sports.yahoo.com/articles/lakers-optimistic-austin-reaves-play-035806821.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 256
+   "chars": 256,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795582233.0467224
+   }
   },
   {
    "ts": 1795493492.9904568,
@@ -12783,7 +12889,13 @@
    "url": "https://sports.yahoo.com/articles/lakers-forward-turned-flavor-flav-034814456.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 378
+   "chars": 378,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795582233.6395237
+   }
   },
   {
    "ts": 1795494074.3547437,
@@ -12799,7 +12911,13 @@
    "url": "https://sports.yahoo.com/articles/josh-kushner-bob-iger-spotted-041021166.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 255
+   "chars": 255,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795582234.1589937
+   }
   },
   {
    "ts": 1795494687.43905,
@@ -12816,7 +12934,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 933,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1795582234.6003778
+   }
   },
   {
    "ts": 1795495288.7000566,
@@ -12832,7 +12954,13 @@
    "url": "https://sports.yahoo.com/articles/lakers-honor-lawrence-tanter-video-042945770.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 354
+   "chars": 354,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795582235.1840825
+   }
   },
   {
    "ts": 1795496491.9518135,
