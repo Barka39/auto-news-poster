@@ -1,31 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792330417.1584346,
-   "fb_id": "828746100324372_122151243417084055",
-   "ig_id": "",
-   "kind": "page_story",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "udesh",
-   "source": "Үдшийн шивнээ",
-   "title": "Хуучин захидлын нууц — Төгсгөл",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 1705,
-   "page": "udesh",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1792458007.9722698
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1792973070.6285813
-   }
-  },
-  {
    "ts": 1792333641.4275138,
    "fb_id": "736504959542737_122190022694935957",
    "ig_id": "",
@@ -13634,6 +13609,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 376
+  },
+  {
+   "ts": 1795576877.6728122,
+   "fb_id": "736504959542737_122195442764935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "Kevin Porter Jr. In Talks With Nuggets, Magic",
+   "url": "https://basketball.realgm.com/wiretap/288239/Kevin-Porter-Jr-In-Talks-With-Nuggets-Magic",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 844
   }
  ]
 }
