@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792333641.4275138,
-   "fb_id": "736504959542737_122190022694935957",
-   "ig_id": "",
-   "kind": "digest",
-   "card": "",
-   "video": false,
-   "score": 0,
-   "category": "",
-   "source": "",
-   "title": "",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 405,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792458008.4062157
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792973071.10008
-   }
-  },
-  {
    "ts": 1792335093.3722234,
    "fb_id": "736504959542737_122190025328935957",
    "ig_id": "",
@@ -13625,6 +13597,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 844
+  },
+  {
+   "ts": 1795579876.6387832,
+   "fb_id": "736504959542737_122195446244935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 9.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "When will Steph Curry return? Latest injury update on Warriors star",
+   "url": "https://sports.yahoo.com/nba/articles/steph-curry-return-latest-injury-035156909.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 295
   }
  ]
 }
