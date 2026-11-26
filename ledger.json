@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792437087.4734,
-   "fb_id": "736504959542737_122190210404935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Knicks Bulletin: ‘Mine is still not washed. It’s in the bag, and I’m afraid to open it.’",
-   "url": "https://sports.yahoo.com/articles/knicks-bulletin-mine-still-not-170000111.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 415,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792629183.036133
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1793064089.2649276
-   }
-  },
-  {
    "ts": 1792437697.8224406,
    "fb_id": "736504959542737_122190211556935957",
    "ig_id": "",
@@ -13437,6 +13409,22 @@
    "scheduled_for": 1795777200,
    "slot": "2026-11-27 19:00",
    "chars": 309
+  },
+  {
+   "ts": 1795653671.7620368,
+   "fb_id": "736504959542737_122195555966935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 10.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "LeBron James records first triple-double with 76ers: Where he ranks on all-time list",
+   "url": "https://sports.yahoo.com/nba/articles/lebron-james-records-first-triple-003220692.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 253
   }
  ]
 }
