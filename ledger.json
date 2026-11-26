@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792432909.2389226,
-   "fb_id": "736504959542737_122190202814935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Tacko Fall is a unique player with a unique opportunity",
-   "url": "https://sports.yahoo.com/articles/tacko-fall-unique-player-unique-155640665.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 245,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792629182.3920698
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1793064088.5415678
-   }
-  },
-  {
    "ts": 1792434703.4425504,
    "fb_id": "736504959542737_122190206876935957",
    "ig_id": "",
@@ -13460,6 +13432,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 201
+  },
+  {
+   "ts": 1795651298.7230728,
+   "fb_id": "846498595210295_122153014617086375",
+   "ig_id": "",
+   "kind": "page_zurhai",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өнөөдрийн зурхай 2026.11.26",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1590,
+   "page": "suns"
   }
  ]
 }
