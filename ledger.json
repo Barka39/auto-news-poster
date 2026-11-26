@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792445486.810667,
-   "fb_id": "736504959542737_122190222338935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 9.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Lakers make final roster decision, waive Dalton Knecht as Bronny stays",
-   "url": "https://sports.yahoo.com/articles/lakers-final-roster-decision-waive-210702115.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 259,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792629184.894516
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1793064092.0289004
-   }
-  },
-  {
    "ts": 1792447309.1906142,
    "fb_id": "736504959542737_122190224516935957",
    "ig_id": "",
@@ -13589,6 +13561,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 613
+  },
+  {
+   "ts": 1795667493.734248,
+   "fb_id": "828746100324372_122155962495084055",
+   "ig_id": "",
+   "kind": "page_confession",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Хил хязгаарыг мартсан үдшийн дурсамж",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1122,
+   "page": "udesh"
   }
  ]
 }
