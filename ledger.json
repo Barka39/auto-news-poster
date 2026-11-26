@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792437697.8224406,
-   "fb_id": "736504959542737_122190211556935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "AJ Dybantsa Day-To-Day With Mild Ankle Sprain",
-   "url": "https://basketball.realgm.com/wiretap/287753/AJ-Dybantsa-Day-To-Day-With-Mild-Ankle-Sprain",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 395,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792629183.3488195
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1793064089.5998802
-   }
-  },
-  {
    "ts": 1792437711.6965702,
    "fb_id": "736504959542737_122190211664935957",
    "ig_id": "",
@@ -13425,6 +13397,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 253
+  },
+  {
+   "ts": 1795659107.386652,
+   "fb_id": "122195564720935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "2026 NBA Cup: Schedule, format, groups, updates and more",
+   "url": "https://www.espn.com/nba/story/_/id/49577473/2026-nba-season-tournament-cup-format-highlights-updates",
+   "scheduled_for": 1795786200,
+   "slot": "2026-11-27 21:30",
+   "chars": 361
   }
  ]
 }
