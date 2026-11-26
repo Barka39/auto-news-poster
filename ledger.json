@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792444294.1777294,
-   "fb_id": "736504959542737_122190220916935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "deal",
-   "video": false,
-   "score": 9.0,
-   "category": "basketball",
-   "source": "ESPN",
-   "title": "Hornets, Brandon Miller agree to 5-year, $209M rookie extension",
-   "url": "https://www.espn.com/nba/story/_/id/50221373/hornets-brandon-miller-agree-5-year-209m-rookie-extension",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 258,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792629184.576946
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1793064091.689404
-   }
-  },
-  {
    "ts": 1792445486.810667,
    "fb_id": "736504959542737_122190222338935957",
    "ig_id": "",
@@ -13377,6 +13349,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 357
+  },
+  {
+   "ts": 1795665077.2433383,
+   "fb_id": "736504959542737_122195573672935957",
+   "ig_id": "",
+   "kind": "mn",
+   "card": "news",
+   "video": false,
+   "score": 10,
+   "category": "mn_basketball",
+   "source": "ikon.mn",
+   "title": "Олимпын төрлийн ДАШТ-ээс Монголын шигшээ баг хоёр хүрэл медаль хүртсэн амжилтаар 87-д жагсаж байна",
+   "url": "https://ikon.mn/n/3rxr",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 613
   }
  ]
 }
