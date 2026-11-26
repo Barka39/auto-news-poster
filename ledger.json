@@ -1,31 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792470823.9136858,
-   "fb_id": "828746100324372_122151409761084055",
-   "ig_id": "",
-   "kind": "page_confession",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "udesh",
-   "source": "Үдшийн шивнээ",
-   "title": "ХУУРАМЧ УУЧЛАЛЫН ГАШУУН АМТ",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 1014,
-   "page": "udesh",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1792629187.094945
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1793149485.63844
-   }
-  },
-  {
    "ts": 1792472503.7367198,
    "fb_id": "736504959542737_122190266576935957",
    "ig_id": "",
@@ -13511,6 +13486,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 396
+  },
+  {
+   "ts": 1795699895.799316,
+   "fb_id": "828746100324372_122156007663084055",
+   "ig_id": "",
+   "kind": "page_story",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Цахилгаан соронзон хорио — Төгсгөл",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1975,
+   "page": "udesh"
   }
  ]
 }
