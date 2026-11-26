@@ -10657,6 +10657,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1795143318.2421837
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1795665728.8039894
    }
   },
   {
@@ -10678,6 +10682,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1795143318.900632
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1795665729.2326312
    }
   },
   {
@@ -10699,6 +10707,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1795143319.5797312
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1795665729.727828
    }
   },
   {
@@ -10721,6 +10733,12 @@
     "shares": 0,
     "engagement": 0.0,
     "fetched_at": 1795143320.18887
+   },
+   "m7d": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665730.179994
    }
   },
   {
@@ -10742,6 +10760,10 @@
    "m24": {
     "engagement": 0.0,
     "fetched_at": 1795143320.8180935
+   },
+   "m7d": {
+    "engagement": 0.0,
+    "fetched_at": 1795665730.6102185
    }
   },
   {
@@ -11980,7 +12002,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1097,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1795665731.031011
+   }
   },
   {
    "ts": 1795500107.0365672,
@@ -11996,7 +12022,13 @@
    "url": "https://sports.yahoo.com/articles/julius-randle-no-hard-feelings-054541757.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 400
+   "chars": 400,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665731.481318
+   }
   },
   {
    "ts": 1795500121.0628943,
@@ -12012,7 +12044,13 @@
    "url": "https://sports.yahoo.com/articles/turner-reignites-trade-discourse-raptors-034254835.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 294
+   "chars": 294,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665731.905854
+   }
   },
   {
    "ts": 1795504271.0703683,
@@ -12028,7 +12066,13 @@
    "url": "https://sports.yahoo.com/articles/shead-approach-every-game-same-040334338.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 502
+   "chars": 502,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665732.3752003
+   }
   },
   {
    "ts": 1795504285.0823472,
@@ -12044,7 +12088,13 @@
    "url": "https://sports.yahoo.com/articles/wolves-142-nets-116-defense-044339965.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 428
+   "chars": 428,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665732.8605359
+   }
   },
   {
    "ts": 1795504879.8517654,
@@ -12060,7 +12110,13 @@
    "url": "https://basketball.realgm.com/wiretap/288230/Magic-Nuggets-Interested-In-Kevin-Porter-Jr",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 383
+   "chars": 383,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665733.2659051
+   }
   },
   {
    "ts": 1795522283.5806525,
@@ -12076,7 +12132,13 @@
    "url": "https://sports.yahoo.com/articles/lebron-log-no-6-rocky-023500875.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 435
+   "chars": 435,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665733.7020495
+   }
   },
   {
    "ts": 1795522917.5669734,
@@ -12092,7 +12154,13 @@
    "url": "https://sports.yahoo.com/articles/rockets-clamber-over-clippers-116-095717675.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 360
+   "chars": 360,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665734.5382283
+   }
   },
   {
    "ts": 1795524714.9940434,
@@ -12108,7 +12176,13 @@
    "url": "https://sports.yahoo.com/articles/lakers-eye-biggest-test-season-071131138.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 350
+   "chars": 350,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665735.189069
+   }
   },
   {
    "ts": 1795525310.3524468,
@@ -12125,7 +12199,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1445,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1795665735.647105
+   }
   },
   {
    "ts": 1795527107.3325768,
@@ -12142,7 +12220,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1918,
-   "page": "udesh"
+   "page": "udesh",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1795665736.0573785
+   }
   },
   {
    "ts": 1795528903.6549163,
@@ -12158,7 +12240,13 @@
    "url": "https://basketball.realgm.com/wiretap/288233/Sports-Franchise-Values-Expected-To-Keep-Climbing-After-12-Percent-Annual-Growth",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 771
+   "chars": 771,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665736.485915
+   }
   },
   {
    "ts": 1795528926.7522988,
@@ -12174,7 +12262,13 @@
    "url": "https://basketball.realgm.com/wiretap/288228/RJ-Luis-Jr-Plans-To-Sue-SEC-Commissioner-Greg-Sankey-Over-Eligibility",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 827
+   "chars": 827,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665736.9413376
+   }
   },
   {
    "ts": 1795530699.7584395,
@@ -12190,7 +12284,13 @@
    "url": "https://sports.yahoo.com/articles/little-things-adding-something-bigger-120000616.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 409
+   "chars": 409,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665737.7396433
+   }
   },
   {
    "ts": 1795533880.21126,
@@ -12206,7 +12306,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 909
+   "chars": 909,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665738.147691
+   }
   },
   {
    "ts": 1795534299.48688,
@@ -12222,7 +12328,13 @@
    "url": "https://basketball.realgm.com/wiretap/288235/Steve-Kerr-Tops-Highest-Paid-Coaches-At-$175M",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 702
+   "chars": 702,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665738.7498877
+   }
   },
   {
    "ts": 1795541487.167565,
@@ -12286,7 +12398,13 @@
    "url": "https://sports.yahoo.com/nba/article/donovan-mitchell-on-9-9-cavs-inconsistent-effort-im-trying-to-figure-out-how-not-to-end-up-on-espn-181255277.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 597
+   "chars": 597,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665739.2125878
+   }
   },
   {
    "ts": 1795547474.66033,
@@ -12302,7 +12420,13 @@
    "url": "https://sports.yahoo.com/articles/prime-joel-embiid-thing-past-163939724.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 356
+   "chars": 356,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665739.6621482
+   }
   },
   {
    "ts": 1795547489.2498693,
@@ -12318,7 +12442,13 @@
    "url": "https://sports.yahoo.com/articles/highlights-spurs-rule-once-again-163150903.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 457
+   "chars": 457,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665740.1212451
+   }
   },
   {
    "ts": 1795553498.6516318,
@@ -12350,7 +12480,13 @@
    "url": "",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 540
+   "chars": 540,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665740.542231
+   }
   },
   {
    "ts": 1795560118.7944727,
@@ -12366,7 +12502,13 @@
    "url": "https://sports.yahoo.com/nba/articles/aj-dybantsa-dunk-favorite-193314005.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 400
+   "chars": 400,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665740.937742
+   }
   },
   {
    "ts": 1795561296.046289,
@@ -12398,7 +12540,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50585929/tracy-morgan-new-york-knicks-rolexes",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 302
+   "chars": 302,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665741.3528733
+   }
   },
   {
    "ts": 1795561892.7719007,
@@ -12414,7 +12562,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50586638/lakers-latest-nba-partnership-kalshi",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 270
+   "chars": 270,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665741.8028688
+   }
   },
   {
    "ts": 1795563102.9547246,
@@ -12430,7 +12584,13 @@
    "url": "https://sports.yahoo.com/nba/articles/lakers-rookie-flexes-gains-coaches-211121739.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 542
+   "chars": 542,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665742.1991987
+   }
   },
   {
    "ts": 1795563687.8741097,
@@ -12446,7 +12606,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50586890/jalen-duren-begin-rehab-assignment-next-step-return-injury",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 346
+   "chars": 346,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665742.77966
+   }
   },
   {
    "ts": 1795564173.2911766,
@@ -12462,7 +12628,13 @@
    "url": "https://sports.yahoo.com/nba/article/pistons-cade-cunningham-to-miss-tuesdays-nba-cup-matchup-vs-magic-with-right-knee-soreness-234518276.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 340
+   "chars": 340,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665743.2049189
+   }
   },
   {
    "ts": 1795564186.71088,
@@ -12478,7 +12650,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50586828/tyrese-jade-haliburton-expecting-first-child",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 285
+   "chars": 285,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665743.6057525
+   }
   },
   {
    "ts": 1795564894.7601552,
@@ -12494,7 +12672,13 @@
    "url": "https://www.espn.com/nba/story/_/id/50587249/kawhi-leonard-return-knee-swelling-least-week-away",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 228
+   "chars": 228,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665744.0215156
+   }
   },
   {
    "ts": 1795564907.0989885,
@@ -12511,7 +12695,11 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 1556,
-   "page": "suns"
+   "page": "suns",
+   "m24": {
+    "engagement": 0.0,
+    "fetched_at": 1795665744.4705122
+   }
   },
   {
    "ts": 1795566077.2474592,
@@ -12527,7 +12715,13 @@
    "url": "https://sports.yahoo.com/nba/articles/injured-warriors-guard-says-t-000353520.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 391
+   "chars": 391,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665745.0812962
+   }
   },
   {
    "ts": 1795569675.8189507,
@@ -12543,7 +12737,13 @@
    "url": "https://basketball.realgm.com/wiretap/288236/Donte-DiVincenzo-Cleared-For-Basketball-Activities-Eyes-Return-Around-New-Years",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 622
+   "chars": 622,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665745.5238934
+   }
   },
   {
    "ts": 1795569690.5261066,
@@ -12559,7 +12759,13 @@
    "url": "https://basketball.realgm.com/wiretap/288235/Steve-Kerr-Tops-Highest-Paid-NBA-Coaches-At-$175M",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 789
+   "chars": 789,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665745.946555
+   }
   },
   {
    "ts": 1795570901.9365811,
@@ -12591,7 +12797,13 @@
    "url": "https://www.cbssports.com/nba/news/trae-young-wizards-scoring-less-aj-dybantsa-anthony-davis/",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 671
+   "chars": 671,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665746.4023933
+   }
   },
   {
    "ts": 1795572691.658808,
@@ -12607,7 +12819,13 @@
    "url": "https://sports.yahoo.com/nba/articles/nets-searching-answers-early-defensive-013356748.html",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 303
+   "chars": 303,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665746.8279238
+   }
   },
   {
    "ts": 1795573274.4838164,
@@ -12623,7 +12841,13 @@
    "url": "https://ikon.mn/n/3rx5",
    "scheduled_for": 0,
    "slot": "",
-   "chars": 851
+   "chars": 851,
+   "m24": {
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0.0,
+    "fetched_at": 1795665747.2599354
+   }
   },
   {
    "ts": 1795576295.0447664,
