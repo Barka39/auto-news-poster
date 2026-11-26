@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792462314.9743133,
-   "fb_id": "122190246686935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "deal",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "ESPN",
-   "title": "Timberwolves agree to 1-year, $40M extension with Jaden McDaniels",
-   "url": "https://www.espn.com/nba/story/_/id/50223341/timberwolves-agree-1-year-40m-extension-mcdaniels",
-   "scheduled_for": 1792589400,
-   "slot": "2026-10-21 21:30",
-   "chars": 346
-  },
-  {
    "ts": 1792470107.3990753,
    "fb_id": "736504959542737_122190263138935957",
    "ig_id": "",
@@ -13522,6 +13506,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 271
+  },
+  {
+   "ts": 1795698095.9701314,
+   "fb_id": "846498595210295_122153070825086375",
+   "ig_id": "",
+   "kind": "page_numerology",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "suns",
+   "source": "Сүнсний код",
+   "title": "Өдрийн тоо 2 · 2026.11.26",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 1303,
+   "page": "suns"
   }
  ]
 }
