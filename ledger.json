@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792434703.4425504,
-   "fb_id": "736504959542737_122190206876935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 9.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "Dwight Powell Waived By Mavericks",
-   "url": "https://basketball.realgm.com/wiretap/287759/Dwight-Powell-Waived-By-Mavericks",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 735,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792629182.712367
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1793064088.8894632
-   }
-  },
-  {
    "ts": 1792437087.4734,
    "fb_id": "736504959542737_122190210404935957",
    "ig_id": "",
@@ -13449,6 +13421,22 @@
    "slot": "",
    "chars": 1590,
    "page": "suns"
+  },
+  {
+   "ts": 1795653090.498119,
+   "fb_id": "122195554580935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "76ers' Jaylen Brown exits with recurrence of hamstring issue",
+   "url": "https://www.espn.com/nba/story/_/id/50599296/76ers-jaylen-brown-exits-recurrence-hamstring-issue",
+   "scheduled_for": 1795777200,
+   "slot": "2026-11-27 19:00",
+   "chars": 309
   }
  ]
 }
