@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792500681.113636,
-   "fb_id": "736504959542737_122190312218935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "ESPN",
-   "title": "How the Knicks celebrated their long-awaited championship in the offseason",
-   "url": "https://www.espn.com/nba/story/_/id/50221526/how-new-york-knicks-celebrated-championship-offseason",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 402,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792973077.7797394
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1793149492.6952739
-   }
-  },
-  {
    "ts": 1792501320.1437879,
    "fb_id": "846498595210295_122148998619086375",
    "ig_id": "",
@@ -13374,6 +13346,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 371
+  },
+  {
+   "ts": 1795731679.5897553,
+   "fb_id": "122195670272935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "The Sixers’ NBA Cup dreams come down to Friday",
+   "url": "https://sports.yahoo.com/nba/articles/sixers-nba-cup-dreams-come-192146036.html",
+   "scheduled_for": 1795852800,
+   "slot": "2026-11-28 16:00",
+   "chars": 235
   }
  ]
 }
