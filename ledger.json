@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792504313.1405091,
-   "fb_id": "736504959542737_122190318758935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "CBS Sports NBA",
-   "title": "76ers vs. Knicks NBA odds: LeBron James and Co. open as biggest title liability, aim to ruin NY's banner night",
-   "url": "https://www.cbssports.com/betting/news/76ers-vs-knicks-nba-odds-lebron-james-and-co-open-as-biggest-title-liability-aim-to-ruin-nys-banner-night/",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 770,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792973079.0061119
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1793149494.3839953
-   }
-  },
-  {
    "ts": 1792506086.293582,
    "fb_id": "736504959542737_122190320684935957",
    "ig_id": "",
@@ -13344,6 +13316,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 393
+  },
+  {
+   "ts": 1795733475.591265,
+   "fb_id": "736504959542737_122195672444935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "RealGM Wiretap",
+   "title": "LaMelo Ball Leaves Win Over Thunder After Turning Ankle",
+   "url": "https://basketball.realgm.com/wiretap/288251/LaMelo-Ball-Leaves-Win-Over-Thunder-After-Turning-Ankle",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 570
   }
  ]
 }
