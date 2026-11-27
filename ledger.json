@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792534831.4637709,
-   "fb_id": "736504959542737_122190367622935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "ESPN",
-   "title": "JJ Redick says Lakers' 'biggest unknown' is how they will deal with adversity",
-   "url": "https://www.espn.com/nba/story/_/id/50232351/redick-lakers-biggest-test-dealing-adversity",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 415,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792973082.4606578
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1793149500.6679144
-   }
-  },
-  {
    "ts": 1792534846.0591455,
    "fb_id": "736504959542737_122190367730935957",
    "ig_id": "",
@@ -13475,6 +13447,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 539
+  },
+  {
+   "ts": 1795789813.9897115,
+   "fb_id": "736504959542737_122195756258935957",
+   "ig_id": "",
+   "kind": "digest",
+   "card": "",
+   "video": false,
+   "score": 0,
+   "category": "",
+   "source": "",
+   "title": "",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 331
   }
  ]
 }
