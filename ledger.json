@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792562521.9927163,
-   "fb_id": "736504959542737_122190410054935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "CBS Sports NBA",
-   "title": "NBA opening night overreactions: Jayson Tatum already misses Jaylen Brown, 76ers have it all figured out",
-   "url": "https://www.cbssports.com/nba/news/nba-opening-night-overreactions-jayson-tatum-jaylen-brown-paul-george-celtics-76ers-spurs/",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 830,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792975043.503718
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1793238031.2065136
-   }
-  },
-  {
    "ts": 1792566689.654758,
    "fb_id": "736504959542737_122190418190935957",
    "ig_id": "",
@@ -13292,6 +13264,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 829
+  },
+  {
+   "ts": 1795822896.234597,
+   "fb_id": "122195804156935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 8.0,
+   "category": "basketball",
+   "source": "ESPN",
+   "title": "MRI on 76ers star Jaylen Brown's left hamstring showed no new injury",
+   "url": "https://www.espn.com/nba/story/_/id/50616033/mri-76ers-star-brown-hamstring-showed-no-new-injury",
+   "scheduled_for": 1795950000,
+   "slot": "2026-11-29 19:00",
+   "chars": 383
   }
  ]
 }
