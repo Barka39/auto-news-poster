@@ -1,22 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792515084.472319,
-   "fb_id": "122190337964935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 8.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "AJ Dybantsa ruled out by Wizards for season opener vs. Bucks due to ankle injury",
-   "url": "https://sports.yahoo.com/nba/breaking-news/article/aj-dybantsa-ruled-out-by-wizards-for-season-opener-vs-bucks-due-to-ankle-injury-164612339.html",
-   "scheduled_for": 1792638000,
-   "slot": "2026-10-22 11:00",
-   "chars": 341
-  },
-  {
    "ts": 1792518685.4217436,
    "fb_id": "122190342302935957",
    "ig_id": "",
@@ -13509,6 +13493,22 @@
    "scheduled_for": 1795872600,
    "slot": "2026-11-28 21:30",
    "chars": 453
+  },
+  {
+   "ts": 1795764684.2111714,
+   "fb_id": "736504959542737_122195713658935957",
+   "ig_id": "",
+   "kind": "mn",
+   "card": "news",
+   "video": false,
+   "score": 10,
+   "category": "mn_basketball",
+   "source": "ikon.mn",
+   "title": "ФОТО: Шинэхэн гавьяатаар удирдуулсан Монголын шигшээ баг Индонезыг 72:64-өөр буулгаж авлаа",
+   "url": "https://ikon.mn/n/3ryr",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 748
   }
  ]
 }
