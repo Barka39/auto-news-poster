@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792525889.76327,
-   "fb_id": "736504959542737_122190355070935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Who will the Suns face in Portland’s opening night lineup?",
-   "url": "https://sports.yahoo.com/articles/suns-face-portland-opening-night-170000350.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 374,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792973081.528598
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1793149499.2754962
-   }
-  },
-  {
    "ts": 1792531277.2873998,
    "fb_id": "122190362810935957",
    "ig_id": "",
@@ -13498,6 +13470,22 @@
    "slot": "",
    "chars": 1363,
    "page": "suns"
+  },
+  {
+   "ts": 1795785682.3721116,
+   "fb_id": "736504959542737_122195748746935957",
+   "ig_id": "",
+   "kind": "mn",
+   "card": "news",
+   "video": false,
+   "score": 10,
+   "category": "mn_basketball",
+   "source": "ikon.mn",
+   "title": "Монголын шигшээ баг Хонконгийг 24 онооны зөрүүгээр ялснаар ААШТ-ий урьдчилсан шатанд өрсөлдөх эрхээ авлаа",
+   "url": "https://ikon.mn/n/3rz3",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 641
   }
  ]
 }
