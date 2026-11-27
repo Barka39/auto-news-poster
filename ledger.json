@@ -1,62 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792561890.7176838,
-   "fb_id": "736504959542737_122190408860935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "CBS Sports NBA",
-   "title": "After celebrating end of 53-year title drought, Knicks get early reminder of how hard repeating will be",
-   "url": "https://www.cbssports.com/nba/news/knicks-nba-championship-celebration-spoiled-76ers-opening-night/",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 608,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792975042.7611303
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1793238029.9162529
-   }
-  },
-  {
-   "ts": 1792562505.4981499,
-   "fb_id": "736504959542737_122190409952935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 10.0,
-   "category": "basketball",
-   "source": "Yahoo NBA",
-   "title": "Healthy Thunder make their statement, beat Spurs 116-104 in season opener",
-   "url": "https://sports.yahoo.com/articles/healthy-thunder-statement-beat-spurs-052144907.html",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 318,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792975043.1140308
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1793238030.757912
-   }
-  },
-  {
    "ts": 1792562521.9927163,
    "fb_id": "736504959542737_122190410054935957",
    "ig_id": "",
@@ -13316,6 +13260,38 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 819
+  },
+  {
+   "ts": 1795819877.8985517,
+   "fb_id": "736504959542737_122195800130935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Warriors won’t have to face Damian Lillard tonight",
+   "url": "https://sports.yahoo.com/nba/articles/warriors-won-t-face-damian-200808222.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 393
+  },
+  {
+   "ts": 1795819892.7628698,
+   "fb_id": "736504959542737_122195800286935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "CBS Sports NBA",
+   "title": "Former lottery pick Rob Dillingham sucker-punched in G League game, leading to scrum, multiple ejections",
+   "url": "https://www.cbssports.com/nba/news/rob-dillingham-punched-ejected-g-league-game-felix-okpara/",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 829
   }
  ]
 }
