@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792581698.9921944,
-   "fb_id": "736504959542737_122190452444935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 7.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "Chet Holmgren Rebounds From Game 7 Struggles, Shakes Off Flagrant In Win Over Spurs",
-   "url": "https://basketball.realgm.com/wiretap/287803/Chet-Holmgren-Rebounds-From-Game-7-Struggles-Shakes-Off-Flagrant-In-Win-Over-Spurs",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 879,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792975045.9231749
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1793238034.7700362
-   }
-  },
-  {
    "ts": 1792582306.7665446,
    "fb_id": "736504959542737_122190453248935957",
    "ig_id": "",
@@ -13397,6 +13369,23 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 342
+  },
+  {
+   "ts": 1795840319.6260192,
+   "fb_id": "828746100324372_122156199597084055",
+   "ig_id": "",
+   "kind": "page_confession",
+   "card": "mystic",
+   "video": false,
+   "score": 0,
+   "category": "udesh",
+   "source": "Үдшийн шивнээ",
+   "title": "Цагаан даашинзны доорх сүүдэр",
+   "url": "",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 888,
+   "page": "udesh"
   }
  ]
 }
