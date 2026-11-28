@@ -1,34 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792581682.3142047,
-   "fb_id": "736504959542737_122190452276935957",
-   "ig_id": "",
-   "kind": "news",
-   "card": "news",
-   "video": false,
-   "score": 9.0,
-   "category": "basketball",
-   "source": "RealGM Wiretap",
-   "title": "LeBron James Shifts To Center As 76ers Beat Knicks In Season Opener",
-   "url": "https://basketball.realgm.com/wiretap/287802/LeBron-James-Shifts-To-Center-As-76ers-Beat-Knicks-In-Season-Opener",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 593,
-   "m24": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1792975045.5740836
-   },
-   "m7d": {
-    "comments": 0,
-    "shares": 0,
-    "engagement": 0.0,
-    "fetched_at": 1793238034.3601573
-   }
-  },
-  {
    "ts": 1792581698.9921944,
    "fb_id": "736504959542737_122190452444935957",
    "ig_id": "",
@@ -13233,6 +13205,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 523
+  },
+  {
+   "ts": 1795835495.1514065,
+   "fb_id": "736504959542737_122195823680935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "NBA Cup 2026: Pistons and Sixers join Mavericks in clinching spot in knockout round",
+   "url": "https://sports.yahoo.com/nba/breaking-news/article/nba-cup-2026-pistons-and-sixers-join-mavericks-in-clinching-spot-in-knockout-round-030208714.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 342
   }
  ]
 }
