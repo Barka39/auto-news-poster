@@ -1,31 +1,6 @@
 {
  "posts": [
   {
-   "ts": 1792589540.2601964,
-   "fb_id": "828746100324372_122151567321084055",
-   "ig_id": "",
-   "kind": "page_story",
-   "card": "mystic",
-   "video": false,
-   "score": 0,
-   "category": "udesh",
-   "source": "Үдшийн шивнээ",
-   "title": "Хуучин дурсамжийн сүүдэр — 3-р хэсэг",
-   "url": "",
-   "scheduled_for": 0,
-   "slot": "",
-   "chars": 1704,
-   "page": "udesh",
-   "m24": {
-    "engagement": 0.0,
-    "fetched_at": 1792975048.1046193
-   },
-   "m7d": {
-    "engagement": 0.0,
-    "fetched_at": 1793238038.4075105
-   }
-  },
-  {
    "ts": 1792592653.3806496,
    "fb_id": "736504959542737_122190470696935957",
    "ig_id": "",
@@ -13330,6 +13305,22 @@
    "scheduled_for": 0,
    "slot": "",
    "chars": 484
+  },
+  {
+   "ts": 1795848836.7820349,
+   "fb_id": "736504959542737_122195851700935957",
+   "ig_id": "",
+   "kind": "news",
+   "card": "news",
+   "video": false,
+   "score": 7.0,
+   "category": "basketball",
+   "source": "Yahoo NBA",
+   "title": "Rapid Recap: Pistons 113, Bucks 98",
+   "url": "https://sports.yahoo.com/nba/articles/rapid-recap-pistons-113-bucks-031950916.html",
+   "scheduled_for": 0,
+   "slot": "",
+   "chars": 315
   }
  ]
 }
